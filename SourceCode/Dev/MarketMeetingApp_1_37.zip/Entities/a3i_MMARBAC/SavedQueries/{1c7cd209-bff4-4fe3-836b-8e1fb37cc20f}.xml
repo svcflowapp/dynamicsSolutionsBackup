@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{1c7cd209-bff4-4fe3-836b-8e1fb37cc20f}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_mmarbacid">
+          <cell name="a3i_user" width="100" />
+          <cell name="a3i_admin" width="100" />
+          <cell name="a3i_canbookuser" width="100" />
+          <cell name="a3i_canbookbusinessunit" width="100" />
+          <cell name="a3i_salesare" width="100" />
+          <cell name="a3i_openterrace" width="100" />
+          <cell name="a3i_openterracelunchdrinks" width="100" />
+          <cell name="a3i_closedterrace" width="100" />
+          <cell name="a3i_closedterracelunchdrinks" width="100" />
+          <cell name="a3i_multifunctionarea" width="100" />
+          <cell name="a3i_meetingrooms" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_mmarbac">
+          <attribute name="a3i_mmarbacid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="a3i_canbookuser" />
+          <attribute name="a3i_canbookbusinessunit" />
+          <attribute name="a3i_salesare" />
+          <attribute name="a3i_openterrace" />
+          <attribute name="a3i_openterracelunchdrinks" />
+          <attribute name="a3i_closedterrace" />
+          <attribute name="a3i_closedterracelunchdrinks" />
+          <attribute name="a3i_multifunctionarea" />
+          <attribute name="a3i_meetingrooms" />
+          <attribute name="a3i_user" />
+          <attribute name="a3i_admin" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active MMA RBACS" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
