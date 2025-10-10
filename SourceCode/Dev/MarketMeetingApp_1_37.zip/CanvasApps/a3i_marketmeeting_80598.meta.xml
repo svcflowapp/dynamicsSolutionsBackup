@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>a3i_marketmeeting_80598</Name>
+  <AppVersion>2025-10-01T14:22:44Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.25094.10.0</CreatedByClientVersion>
+  <MinClientVersion>3.25094.10.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","sienaVersion":"20250930T141910Z-3.25093.16.0","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.25094.10","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","showStatusBar":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(246, 162, 0, 1)</BackgroundColor>
+  <DisplayName>Market Meeting</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{"0a113980-21bb-424c-97d3-3913532c6be6":{"id":"/providers/microsoft.powerapps/apis/shared_office365","displayName":"Office 365 Outlook","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1763/1.0.1763.4311/office365/icon.png","dataSources":["Office365Outlook"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["V4CalendarPostItem","V4CalendarPatchItem","CalendarDeleteItem_V2"]},"0ad415f4-401e-44f5-a2d9-63f57cd0dfbe":{"id":"/providers/microsoft.powerapps/apis/shared_office365users","displayName":"Office 365 Users","iconUri":"https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1767/1.0.1767.4332/office365users/icon.png","dataSources":["Office365Users"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["SearchUserV2","SearchUser","UserPhotoMetadata","UserPhoto_V2","UserProfile_V2"]}}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{"Users":{"entitySetName":"systemusers","logicalName":"systemuser"},"Contacts":{"entitySetName":"contacts","logicalName":"contact"},"Organisations":{"entitySetName":"accounts","logicalName":"account"},"Events":{"entitySetName":"msevtmgt_events","logicalName":"msevtmgt_event"},"Event Registrations":{"entitySetName":"msevtmgt_eventregistrations","logicalName":"msevtmgt_eventregistration"},"Check-ins":{"entitySetName":"msevtmgt_checkins","logicalName":"msevtmgt_checkin"},"Environment Variable Definitions":{"entitySetName":"environmentvariabledefinitions","logicalName":"environmentvariabledefinition"},"Environment Variable Values":{"entitySetName":"environmentvariablevalues","logicalName":"environmentvariablevalue"},"Market Meeting Bookings":{"entitySetName":"a3i_bookingses","logicalName":"a3i_bookings"},"Market Meeting Permissions":{"entitySetName":"a3i_mmarbacs","logicalName":"a3i_mmarbac"},"Market Meeting Tables":{"entitySetName":"a3i_tableses","logicalName":"a3i_tables"},"Market Meeting Hosts":{"entitySetName":"a3i_marketmeetinghostses","logicalName":"a3i_marketmeetinghosts"},"Venues":{"entitySetName":"msevtmgt_venues","logicalName":"msevtmgt_venue"},"Buildings":{"entitySetName":"msevtmgt_buildings","logicalName":"msevtmgt_building"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"systemuser","componenttype":1},{"logicalname":"contact","componenttype":1},{"logicalname":"account","componenttype":1},{"logicalname":"msevtmgt_event","componenttype":1},{"logicalname":"msevtmgt_eventregistration","componenttype":1},{"logicalname":"msevtmgt_checkin","componenttype":1},{"logicalname":"environmentvariabledefinition","componenttype":1},{"logicalname":"environmentvariablevalue","componenttype":1},{"logicalname":"a3i_bookings","componenttype":1},{"logicalname":"a3i_mmarbac","componenttype":1},{"logicalname":"a3i_tables","componenttype":1},{"logicalname":"a3i_marketmeetinghosts","componenttype":1},{"logicalname":"msevtmgt_venue","componenttype":1},{"logicalname":"msevtmgt_building","componenttype":1}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/a3i_marketmeeting_80598_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/a3i_marketmeeting_80598_DocumentUri.msapp</DocumentUri>
+  <AdditionalUris>
+    <AdditionalUri>/CanvasApps/a3i_marketmeeting_80598_AdditionalUris0_identity.json</AdditionalUri>
+  </AdditionalUris>
+</CanvasApp>
