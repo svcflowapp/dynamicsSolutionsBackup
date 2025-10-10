@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{86de137b-1d3a-40f8-a86e-bc590fdcfb7c}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_mmaattendeesid">
+          <cell name="a3i_attendee" width="232" />
+          <cell name="a_6adbfd5fa4ac46edabae863539d27429.a3i_meetinghost" width="100" />
+          <cell name="a_6adbfd5fa4ac46edabae863539d27429.a3i_table" width="100" />
+          <cell name="a_6adbfd5fa4ac46edabae863539d27429.a3i_bookingstarttime" width="100" />
+          <cell name="a_6adbfd5fa4ac46edabae863539d27429.a3i_bookingendtime" width="100" />
+          <cell name="a3i_checkedin" width="100" />
+          <cell name="a_898366bc85ee4158ad9c02e8fa8531a2.a3i_dietaryrequirements" width="100" />
+          <cell name="a_898366bc85ee4158ad9c02e8fa8531a2.a3i_dietaryrequirementsother" width="100" />
+          <cell name="a3i_dietaryrequirementsdone" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_mmaattendees">
+          <attribute name="a3i_mmaattendeesid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="a3i_attendee" />
+          <attribute name="a3i_checkedin" />
+          <attribute name="a3i_dietaryrequirementsdone" />
+          <link-entity alias="a_6adbfd5fa4ac46edabae863539d27429" name="a3i_bookings" to="a3i_booking" from="a3i_bookingsid" link-type="outer" visible="false">
+            <attribute name="a3i_meetinghost" />
+            <attribute name="a3i_table" />
+            <attribute name="a3i_bookingstarttime" />
+            <attribute name="a3i_bookingendtime" />
+          </link-entity>
+          <link-entity alias="a_898366bc85ee4158ad9c02e8fa8531a2" name="contact" to="a3i_attendee" from="contactid" link-type="outer" visible="false">
+            <attribute name="a3i_dietaryrequirements" />
+            <attribute name="a3i_dietaryrequirementsother" />
+          </link-entity>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active MMA Attendees" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
