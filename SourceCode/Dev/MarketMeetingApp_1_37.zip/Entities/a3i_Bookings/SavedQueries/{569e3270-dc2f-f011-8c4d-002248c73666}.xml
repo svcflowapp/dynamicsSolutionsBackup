@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{569e3270-dc2f-f011-8c4d-002248c73666}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_bookingsid">
+          <cell name="a3i_name" width="200" />
+          <cell name="a3i_attendee1" width="102" />
+          <cell name="a3i_attendee2" width="102" />
+          <cell name="a3i_bufferdurationmins" width="170" />
+          <cell name="createdby" width="102" />
+          <cell name="createdonbehalfby" width="166" />
+          <cell name="createdon" width="105" />
+          <cell name="a3i_dietaryrequirements" width="164" />
+          <cell name="a3i_bookingendtime" width="100" />
+          <cell name="a3i_event" width="100" />
+          <cell name="a3i_externalhost" width="115" />
+          <cell name="a3i_meetinghost" width="100" />
+          <cell name="a3i_isexternallyhosted" width="150" />
+          <cell name="a3i_lunchdetails" width="116" />
+          <cell name="a3i_meetingdurationmins" width="180" />
+          <cell name="a3i_meetinglength" width="180" />
+          <cell name="modifiedby" width="112" />
+          <cell name="modifiedonbehalfby" width="175" />
+          <cell name="a3i_mergedmeetingroom" width="178" />
+          <cell name="a3i_numberofattendees" width="157" />
+          <cell name="modifiedon" width="113" />
+          <cell name="ownerid" width="100" />
+          <cell name="a3i_outlookid" width="105" />
+          <cell name="a3i_postmeetingbufferendtime" width="214" />
+          <cell name="owningbusinessunit" width="167" />
+          <cell name="a3i_postmeetingbufferstarttime" width="222" />
+          <cell name="a3i_premeetingbufferendtime" width="209" />
+          <cell name="a3i_premeetingbufferstarttime" width="213" />
+          <cell name="overriddencreatedon" width="149" />
+          <cell name="a3i_specialrequirement" width="153" />
+          <cell name="a3i_typeofbooking" width="135" />
+          <cell name="a3i_bookingtype" width="100" />
+          <cell name="a3i_table" width="100" />
+          <cell name="statuscode" width="119" />
+          <cell name="statecode" width="100" />
+          <cell name="a3i_bookingstarttime" width="100" />
+          <cell name="a3i_specialrequirementsdone" width="189" />
+          <cell name="a3i_specialrequirementdetails" width="198" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_bookings">
+          <attribute name="a3i_name" />
+          <attribute name="a3i_bookingsid" />
+          <attribute name="a3i_attendee1" />
+          <attribute name="a3i_attendee2" />
+          <attribute name="a3i_bufferdurationmins" />
+          <attribute name="createdby" />
+          <attribute name="createdonbehalfby" />
+          <attribute name="createdon" />
+          <attribute name="a3i_dietaryrequirements" />
+          <attribute name="a3i_bookingendtime" />
+          <attribute name="a3i_event" />
+          <attribute name="a3i_externalhost" />
+          <attribute name="a3i_meetinghost" />
+          <attribute name="a3i_isexternallyhosted" />
+          <attribute name="a3i_lunchdetails" />
+          <attribute name="a3i_meetingdurationmins" />
+          <attribute name="a3i_meetinglength" />
+          <attribute name="modifiedby" />
+          <attribute name="modifiedonbehalfby" />
+          <attribute name="a3i_mergedmeetingroom" />
+          <attribute name="a3i_numberofattendees" />
+          <attribute name="modifiedon" />
+          <attribute name="ownerid" />
+          <attribute name="a3i_outlookid" />
+          <attribute name="a3i_postmeetingbufferendtime" />
+          <attribute name="owningbusinessunit" />
+          <attribute name="a3i_postmeetingbufferstarttime" />
+          <attribute name="a3i_premeetingbufferendtime" />
+          <attribute name="a3i_premeetingbufferstarttime" />
+          <attribute name="overriddencreatedon" />
+          <attribute name="a3i_specialrequirement" />
+          <attribute name="a3i_typeofbooking" />
+          <attribute name="a3i_bookingtype" />
+          <attribute name="a3i_table" />
+          <attribute name="statuscode" />
+          <attribute name="statecode" />
+          <attribute name="a3i_bookingstarttime" />
+          <attribute name="a3i_specialrequirementsdone" />
+          <attribute name="a3i_specialrequirementdetails" />
+          <filter type="and">
+            <condition attribute="a3i_event" operator="eq" value="{3be0e0b0-f459-4605-a836-b1803a3e3830}" uiname="MIPCOM 2024" uitype="msevtmgt_event" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.8</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="MIPCOM 2024" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="MIPCOM 2024 Bookings" languagecode="1033" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>
