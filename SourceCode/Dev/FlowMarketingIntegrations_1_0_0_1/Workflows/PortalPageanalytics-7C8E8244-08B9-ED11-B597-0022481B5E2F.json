@@ -1,0 +1,198 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_61216"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_excelonlinebusiness": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedexcelonlinebusiness_e1bc7"
+        },
+        "api": {
+          "name": "shared_excelonlinebusiness"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "ee6c5ca1-17b7-4b49-901d-f8b3cc87bc3f"
+          },
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "contactid": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "actions": {
+        "Initialize_variable_-_Timestamp": {
+          "runAfter": {
+            "Parse_request_JSON": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2c31590f-49b5-490a-bd3e-5b761ee2eb5a"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Timestamp",
+                "type": "string",
+                "value": "@{utcNow()}"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_-_URL": {
+          "runAfter": {
+            "Initialize_variable_-_Timestamp": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "24859172-e58b-4b47-8b67-61f0051d650d"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "URL",
+                "type": "string",
+                "value": "@body('Parse_request_JSON')?['url']"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_-_Contact_ID": {
+          "runAfter": {
+            "Initialize_variable_-_URL": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7d423fbc-b4b9-4b5e-bb1f-125277276929"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Contact ID",
+                "type": "string",
+                "value": "@body('Parse_request_JSON')?['contactid']"
+              }
+            ]
+          }
+        },
+        "Parse_request_JSON": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "4a93e8af-8cc5-4898-b162-15ab04d245f6"
+          },
+          "type": "ParseJson",
+          "inputs": {
+            "content": "@triggerBody()",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "contactid": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Get_a_row_by_ID_-_Get_contact": {
+          "runAfter": {
+            "Initialize_variable_-_Contact_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9088eac3-c021-43ee-a5ef-9ca903c76382"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "contacts",
+              "recordId": "@variables('Contact ID')"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Add_a_row_into_a_table_-_Portal_analytics": {
+          "runAfter": {
+            "Get_a_row_by_ID_-_Get_contact": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "0173LWK5OMVDF3PDZANVD2EQESSZJLD6WS": "/General/Portal analytics/Portal analytics.xlsx",
+            "operationMetadataId": "c9274555-0800-487e-b47e-f1c617207db4"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_excelonlinebusiness",
+              "operationId": "AddRowV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness"
+            },
+            "parameters": {
+              "source": "sites/all3media.sharepoint.com,64d2f442-5589-4efc-8f32-e07c2e737f64,3a4bb36d-9f72-4410-b7b7-2b75b9868d6e",
+              "drive": "b!QvTSZIlV_E6PMuB8LnN_ZG2zSzpynxBEt7crdbmGjW5SxXe6-D9zRbtXskAQ-QF_",
+              "file": "0173LWK5OMVDF3PDZANVD2EQESSZJLD6WS",
+              "table": "Analytics",
+              "item/Timestamp": "@variables('Timestamp')",
+              "item/URL": "@variables('URL')",
+              "item/Contact": "@outputs('Get_a_row_by_ID_-_Get_contact')?['body/fullname']",
+              "item/Company": "@outputs('Get_a_row_by_ID_-_Get_contact')?['body/_parentcustomerid_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
