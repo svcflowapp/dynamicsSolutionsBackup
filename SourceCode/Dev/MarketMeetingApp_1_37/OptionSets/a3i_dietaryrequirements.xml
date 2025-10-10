@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_dietaryrequirements" localizedName="Dietary requirements" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.66</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Dietary requirements" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="947140001" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="None" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830000" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Pescatarian" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830001" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Vegetarian" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830002" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Vegan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830003" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Gluten free" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Dairy free" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830005" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Nut allergy" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Halal" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Kosher" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Other, including allergies (please specify)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>
