@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{1e29e022-f421-ed11-9db2-0022481b5e9e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_mmarbacid">
+          <cell name="a3i_user" width="100" />
+          <cell name="a3i_canbookbusinessunit" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" distinct="true">
+        <entity name="a3i_mmarbac">
+          <attribute name="a3i_mmarbacid" />
+          <attribute name="a3i_user" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="a3i_user" operator="eq-userid" />
+            <condition attribute="a3i_canbookbusinessunit" operator="not-null" />
+          </filter>
+          <attribute name="a3i_canbookbusinessunit" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.2</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="My booking business units" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
