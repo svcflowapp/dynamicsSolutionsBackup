@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_allergiesandintolerances" localizedName="Allergies and Intolerances" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="Allergies and Intolerances" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Lactose / Dairy" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830001" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Gluten" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Nuts" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830003" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Eggs" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830004" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Fish" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830005" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Soy" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830006" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Sulphites" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830007" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Shellfish" languagecode="1033" />
+      </labels>
+    </option>
+  </options>
+</optionset>
