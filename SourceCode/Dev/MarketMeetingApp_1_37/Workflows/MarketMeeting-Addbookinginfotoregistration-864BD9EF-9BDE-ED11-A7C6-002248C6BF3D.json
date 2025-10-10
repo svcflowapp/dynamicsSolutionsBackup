@@ -1,0 +1,192 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_61216"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted_-_Registrations": {
+          "metadata": {
+            "operationMetadataId": "559bc482-4d80-42e5-bdbb-a9bea7d9da8b"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 1,
+              "subscriptionRequest/entityname": "msevtmgt_eventregistration",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Condition_-_Check_if_Market_Meeting": {
+          "actions": {
+            "Get_a_row_by_ID_-_Get_booking": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "5264f25c-460c-460f-8409-351cb4b37950"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_bookingses",
+                  "recordId": "@triggerOutputs()?['body/_a3i_booking_value']",
+                  "$select": "a3i_bookingendtime,a3i_isexternallyhosted,a3i_bookingstarttime,_a3i_table_value,_a3i_meetinghost_value"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Get_a_row_by_ID_-_Get_contact_information": {
+              "runAfter": {
+                "Get_a_row_by_ID_-_Get_host": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "8f4c1025-ff62-4b42-827c-b3e24630cf41"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "recordId": "@triggerOutputs()?['body/_msevtmgt_contactid_value']",
+                  "$select": "fullname,_parentcustomerid_value"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Update_a_row_-_Add_booking_details_to_Registration": {
+              "runAfter": {
+                "Get_a_row_by_ID_-_Get_organisation": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "fc08b707-977b-4c08-be26-b792ff2b4def"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "msevtmgt_eventregistrations",
+                  "recordId": "@triggerOutputs()?['body/msevtmgt_eventregistrationid']",
+                  "item/a3i_attendee": "@outputs('Get_a_row_by_ID_-_Get_contact_information')?['body/fullname']",
+                  "item/a3i_company": "@outputs('Get_a_row_by_ID_-_Get_organisation')?['body/name']",
+                  "item/a3i_endtime": "@outputs('Get_a_row_by_ID_-_Get_booking')?['body/a3i_bookingendtime']",
+                  "item/a3i_host": "@if(equals(outputs('Get_a_row_by_ID_-_Get_booking')?['body/a3i_isexternallyhosted'],true),outputs('Get_a_row_by_ID_-_Get_booking')?['body/a3i_externalhost'],outputs('Get_a_row_by_ID_-_Get_host')?['body/fullname'])",
+                  "item/a3i_isexternal": "@outputs('Get_a_row_by_ID_-_Get_booking')?['body/a3i_isexternallyhosted']",
+                  "item/a3i_starttime": "@outputs('Get_a_row_by_ID_-_Get_booking')?['body/a3i_bookingstarttime']",
+                  "item/a3i_table": "@outputs('Get_a_row_by_ID_-_Get_booking')?['body/_a3i_table_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Get_a_row_by_ID_-_Get_host": {
+              "runAfter": {
+                "Get_a_row_by_ID_-_Get_booking": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "53fd0579-8d90-4253-827d-c200455b6f32"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "systemusers",
+                  "recordId": "@outputs('Get_a_row_by_ID_-_Get_booking')?['body/_a3i_meetinghost_value']",
+                  "$select": "fullname"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Get_a_row_by_ID_-_Get_organisation": {
+              "runAfter": {
+                "Get_a_row_by_ID_-_Get_contact_information": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "3d1d5813-958b-4340-b6f1-af9ea511edfc"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "accounts",
+                  "recordId": "@outputs('Get_a_row_by_ID_-_Get_contact_information')?['body/_parentcustomerid_value']",
+                  "$select": "name"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {},
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/a3i_marketmeetingbooking']",
+              true
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8b22bae2-8f39-4400-a182-2a7264ddb7e7"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
