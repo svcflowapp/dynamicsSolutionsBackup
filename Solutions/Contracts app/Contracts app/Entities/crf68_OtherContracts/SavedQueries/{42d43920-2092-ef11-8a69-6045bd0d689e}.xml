@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{42d43920-2092-ef11-8a69-6045bd0d689e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crf68_contractid" select="1" icon="1" preview="1">
+        <row name="result" id="crf68_othercontractsid">
+          <cell name="crf68_contractid" width="200" />
+          <cell name="crf68_datereceivedtoba" width="164" />
+          <cell name="crf68_bastatus" width="100" />
+          <cell name="crf68_contracttype" width="120" />
+          <cell name="crf68_contractstartdate" width="149" />
+          <cell name="crf68_contractenddate" width="145" />
+          <cell name="crf68_contractcategories" width="152" />
+          <cell name="crf68_contractingpartynew" width="170" />
+          <cell name="crf68_legalnotes" width="109" />
+          <cell name="crf68_legalredflags" width="132" />
+          <cell name="owningbusinessunit" width="167" />
+          <cell name="statecode" width="100" />
+          <cell name="statuscode" width="119" />
+          <cell name="ownerid" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="crf68_othercontracts">
+          <attribute name="crf68_contractid" />
+          <attribute name="crf68_othercontractsid" />
+          <attribute name="crf68_datereceivedtoba" />
+          <attribute name="crf68_bastatus" />
+          <attribute name="crf68_contracttype" />
+          <attribute name="crf68_contractstartdate" />
+          <attribute name="crf68_contractenddate" />
+          <attribute name="crf68_contractcategories" />
+          <attribute name="crf68_contractingpartynew" />
+          <attribute name="crf68_legalnotes" />
+          <attribute name="crf68_legalredflags" />
+          <attribute name="owningbusinessunit" />
+          <attribute name="statecode" />
+          <attribute name="statuscode" />
+          <attribute name="ownerid" />
+          <filter type="and">
+            <condition attribute="crf68_bastatus" operator="eq" value="947140002" />
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Other Contracts with BA" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

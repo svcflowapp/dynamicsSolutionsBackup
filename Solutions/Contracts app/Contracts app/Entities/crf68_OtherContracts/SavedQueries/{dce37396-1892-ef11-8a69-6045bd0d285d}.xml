@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{dce37396-1892-ef11-8a69-6045bd0d285d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crf68_contractid" select="1" icon="1" preview="1">
+        <row name="result" id="crf68_othercontractsid">
+          <cell name="crf68_contractid" width="200" />
+          <cell name="crf68_datereceivedtoba" width="164" />
+          <cell name="a_b31fd94ce039429ab4015786a03410dd.name" width="196" />
+          <cell name="a_b31fd94ce039429ab4015786a03410dd.a3i_barequesttype" width="232" />
+          <cell name="crf68_bastatus" width="100" />
+          <cell name="a_7b81ad46373b45be8c3285c774623cb3.a3i_titlegroup" width="195" />
+          <cell name="a_b31fd94ce039429ab4015786a03410dd.parentaccountid" width="166" />
+          <cell name="crf68_contractvalue" width="124" />
+          <cell name="crf68_legalnotes" width="109" />
+          <cell name="crf68_legalredflags" width="132" />
+          <cell name="crf68_contractstartdate" width="149" />
+          <cell name="crf68_contractenddate" width="145" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="crf68_othercontracts">
+          <attribute name="crf68_contractid" />
+          <attribute name="crf68_othercontractsid" />
+          <filter type="and">
+            <condition attribute="crf68_bastatus" operator="eq" value="947140000" />
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <link-entity alias="a_b31fd94ce039429ab4015786a03410dd" name="opportunity" to="crf68_dealslookup" from="opportunityid" link-type="outer" visible="false">
+            <attribute name="name" />
+            <attribute name="a3i_barequesttype" />
+            <attribute name="parentaccountid" />
+          </link-entity>
+          <attribute name="crf68_bastatus" />
+          <link-entity alias="a_7b81ad46373b45be8c3285c774623cb3" name="a3i_series" to="crf68_serieslookup" from="a3i_seriesid" link-type="outer" visible="false">
+            <attribute name="a3i_titlegroup" />
+          </link-entity>
+          <attribute name="crf68_contractvalue" />
+          <attribute name="crf68_legalnotes" />
+          <attribute name="crf68_legalredflags" />
+          <attribute name="crf68_contractenddate" />
+          <attribute name="crf68_contractstartdate" />
+          <attribute name="crf68_datereceivedtoba" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="In Progress" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

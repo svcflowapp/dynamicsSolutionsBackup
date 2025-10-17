@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModuleSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteMapUniqueName>a3i_FlowContracts</SiteMapUniqueName>
+  <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+  <ShowHome>True</ShowHome>
+  <ShowPinned>True</ShowPinned>
+  <ShowRecents>True</ShowRecents>
+  <SiteMap IntroducedVersion="7.0.0.0">
+    <Area Id="area_6cdf84fb" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" ShowGroups="true" IntroducedVersion="7.0.0.0">
+      <Titles>
+        <Title LCID="1033" Title="Area1" />
+      </Titles>
+      <Group Id="group_53cab2a1" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="My Work" />
+        </Titles>
+        <SubArea Id="subarea_ea40b3ba" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="activitypointer" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_6136d176" DescriptionResourceId="Dashboards_Description" Icon="/_imgs/imagestrips/transparent_spacer.gif" Url="/workplace/home_dashboards.aspx" DefaultDashboard="9f0f384d-f891-ef11-8a69-6045bd0d285d" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" ToolTipResourseId="DashboardTooltip">
+          <Titles>
+            <Title LCID="1033" Title="Dashboards" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_d8d0cd58" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="BA Requests" />
+        </Titles>
+        <SubArea Id="subarea_afa750c9" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="a3i_barequests1" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="BA Requests" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_1c3452e2" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/AppCommon/ControlWS/SummaryPageImages/msdyncrm_QuotaLimitsIcon.svg" Icon="/WebResources/AppCommon/ControlWS/SummaryPageImages/msdyncrm_QuotaLimitsIcon.svg" Url="/main.aspx?pagetype=entitylist&amp;etn=a3i_barequests1&amp;viewid=da40e6fd-9b97-ef11-8a68-6045bd0d285d&amp;viewType=1039" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="Review My Requests" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_bf0eeec8" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Rights Out" />
+        </Titles>
+        <SubArea Id="subarea_886fd15c" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="opportunity" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_99d0fdba" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/AppCommon/ControlWS/SummaryPageImages/msdyncrm_QuotaLimitsIcon.svg" Icon="/WebResources/AppCommon/ControlWS/SummaryPageImages/msdyncrm_QuotaLimitsIcon.svg" Url="/main.aspx?pagetype=entitylist&amp;etn=opportunity&amp;viewid=b6ca1450-918c-ef11-8a69-0022481b0dc1&amp;viewType=1039" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="My Deals" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_039d483b" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Rights In" />
+        </Titles>
+        <SubArea Id="subarea_98ffa32e" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="a3i_series" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_141287cf" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/AppCommon/ControlWS/SummaryPageImages/msdyncrm_QuotaLimitsIcon.svg" Icon="/WebResources/AppCommon/ControlWS/SummaryPageImages/msdyncrm_QuotaLimitsIcon.svg" Url="/main.aspx?pagetype=entitylist&amp;etn=a3i_series&amp;viewid=a4bdb8ba-fb91-ef11-8a69-0022481b0dc1&amp;viewType=1039" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="My Series" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_c1a9b521" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Other" />
+        </Titles>
+        <SubArea Id="subarea_5092d3a5" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="crf68_othercontracts" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+        <SubArea Id="subarea_f4760328" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/AppCommon/ControlWS/SummaryPageImages/msdyncrm_QuotaLimitsIcon.svg" Icon="/WebResources/AppCommon/ControlWS/SummaryPageImages/msdyncrm_QuotaLimitsIcon.svg" Url="/main.aspx?pagetype=entitylist&amp;etn=crf68_othercontracts&amp;viewid=456c17c5-0492-ef11-8a69-6045bd0d285d&amp;viewType=1039" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+          <Titles>
+            <Title LCID="1033" Title="My Other Contracts" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_abaa92c2" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Trackers" />
+        </Titles>
+        <SubArea Id="subarea_91b1a7a9" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="a3i_firstlook" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+      </Group>
+    </Area>
+  </SiteMap>
+  <LocalizedNames>
+    <LocalizedName description="Flow Contracts" languagecode="1033" />
+  </LocalizedNames>
+</AppModuleSiteMap>

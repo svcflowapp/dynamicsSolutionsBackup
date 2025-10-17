@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <CustomAction Id="a3i.a3i_series.BrandSlide.CustomAction" Location="Mscrm.Form.a3i_series.MainTab.Save.Controls._children" Sequence="55">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_series.BrandSlide.Alt" Command="a3i_series.BrandSlide" Id="a3i_series.BrandSlide" LabelText="$LocLabels:a3i_series.BrandSlide.LabelText" Sequence="55" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_series.BrandSlide.ToolTipTitle" ToolTipDescription="$LocLabels:a3i_series.BrandSlide.ToolTipDescription" ModernImage="$webresource:a3i_EnableDocuments" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_series.documents.Button.CustomAction" Location="Mscrm.Form.a3i_series.MainTab.Save.Controls._children" Sequence="53">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_series.documents.Button.Alt" Command="a3i_series.documents.Command" Id="a3i_series.documents.Button" LabelText="$LocLabels:a3i_series.documents.Button.LabelText" Sequence="53" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_series.documents.Button.ToolTipTitle" ToolTipDescription="$LocLabels:a3i_series.documents.Button.ToolTipDescription" ModernImage="$webresource:a3i_EnableDocuments" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <HideCustomAction HideActionId="a3i.AccessChecker.OpenDialog.a3i_series.Button.Hide" Location="AccessChecker.OpenDialog.a3i_series.Button" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="a3i_series.BrandSlide">
+      <EnableRules>
+        <EnableRule Id="a3i_series.EnableRule.EnableOnForm" />
+      </EnableRules>
+      <DisplayRules />
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.Series.BrandSlide.TriggerFlow" Library="$webresource:a3i_brandSlideButton.js">
+          <CrmParameter Value="PrimaryControl" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i_series.documents.Command">
+      <EnableRules>
+        <EnableRule Id="a3i.a3i_series.EnableRule.SecurityRoleCheck" />
+        <EnableRule Id="a3i_series.EnableRule.EnableOnForm" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i.a3i_series.documents.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="buttonField" Library="$webresource:a3i_ButtonScripts">
+          <CrmParameter Value="PrimaryControl" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="a3i.a3i_series.documents.DisplayRule">
+        <ValueRule Field="a3i_createdocumentset" Value="1" Default="false" InvertResult="true" />
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules>
+      <EnableRule Id="a3i.a3i_series.EnableRule.SecurityRoleCheck">
+        <CustomRule FunctionName="getUser" Library="$webresource:a3i_documentsFormCustomization" Default="true">
+          <CrmParameter Value="PrimaryControl" />
+        </CustomRule>
+      </EnableRule>
+      <EnableRule Id="a3i_series.EnableRule.EnableOnForm">
+        <CustomRule FunctionName="a3i.Series.BrandSlide.DisplayRule" Library="$webresource:a3i_brandSlideButton.js" Default="true">
+          <CrmParameter Value="PrimaryControl" />
+        </CustomRule>
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="a3i_series.BrandSlide.Alt">
+      <Titles>
+        <Title description="Generate Brand Slide" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_series.BrandSlide.LabelText">
+      <Titles>
+        <Title description="Generate Brand Slide" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_series.BrandSlide.ToolTipDescription">
+      <Titles>
+        <Title description="Generate Brand Slide" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_series.BrandSlide.ToolTipTitle">
+      <Titles>
+        <Title description="Generate Brand Slide" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_series.documents.Button.Alt">
+      <Titles>
+        <Title description="Enable PSD" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_series.documents.Button.LabelText">
+      <Titles>
+        <Title description="Enable PSD" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_series.documents.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Creates a folder for this Series in SharePoint to store PSD documents" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_series.documents.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Enable PSD" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

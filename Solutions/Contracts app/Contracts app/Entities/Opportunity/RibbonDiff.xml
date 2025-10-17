@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <HideCustomAction HideActionId="a3i.AccessChecker.OpenDialog.opportunity.Button.Hide" Location="AccessChecker.OpenDialog.opportunity.Button" />
+    <CustomAction Id="a3i.Mscrm.Form.opportunity.MarkAsLost.CustomAction" Location="Mscrm.Form.opportunity.MainTab.Actions.Controls._children" Sequence="5">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:Mscrm.Form.opportunity.MarkAsLost.Alt" Command="Mscrm.Form.opportunity.MarkAsLost" Id="Mscrm.Form.opportunity.MarkAsLost" Image32by32="/_imgs/sfa/MarkAsLost_32.png" Image16by16="/_imgs/sfa/MarkAsLost_16.png" LabelText="$LocLabels:Mscrm.Form.opportunity.MarkAsLost.LabelText" Sequence="5" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.Form.opportunity.MarkAsLost.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.Form.opportunity.MarkAsLost.ToolTipDescription" ModernImage="MarkAsLost" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.opportunity.MarkAsWon.Hide" Location="Mscrm.Form.opportunity.MarkAsWon" />
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.opportunity.Recalculate.Hide" Location="Mscrm.Form.opportunity.Recalculate" />
+    <CustomAction Id="a3i.Mscrm.HomepageGrid.opportunity.MarkAsLost.CustomAction" Location="Mscrm.HomepageGrid.opportunity.MainTab.Actions.Controls._children" Sequence="6">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:Mscrm.HomepageGrid.opportunity.MarkAsLost.Alt" Command="Mscrm.HomepageGrid.opportunity.MarkAsLost" Id="Mscrm.HomepageGrid.opportunity.MarkAsLost" Image32by32="$webresource:Sales/_imgs/sfa/MarkAsLost_32.png" Image16by16="$webresource:Sales/_imgs/sfa/MarkAsLost_16.png" LabelText="$LocLabels:Mscrm.HomepageGrid.opportunity.MarkAsLost.LabelText" Sequence="6" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.HomepageGrid.opportunity.MarkAsLost.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.HomepageGrid.opportunity.MarkAsLost.ToolTipDescription" ModernImage="MarkAsLost" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <HideCustomAction HideActionId="a3i.Mscrm.HomepageGrid.opportunity.MarkAsWon.Hide" Location="Mscrm.HomepageGrid.opportunity.MarkAsWon" />
+    <CustomAction Id="a3i.Mscrm.SubGrid.opportunity.AddExistingStandard.CustomAction" Location="Mscrm.SubGrid.opportunity.MainTab.Management.Controls._children" Sequence="30">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:Mscrm.SubGrid.opportunity.AddExistingStandard.Alt" Command="Mscrm.AddExistingRecordFromSubGridStandard" Id="Mscrm.SubGrid.opportunity.AddExistingStandard" Image32by32="/_imgs/ribbon/AddExistingStandard_32.png" Image16by16="/_imgs/ribbon/AddExistingStandard_16.png" LabelText="$LocLabels:Mscrm.SubGrid.opportunity.AddExistingStandard.LabelText" Sequence="30" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.SubGrid.opportunity.AddExistingStandard.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.SubGrid.opportunity.AddExistingStandard.ToolTipDescription" ModernImage="AddExisting" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.Mscrm.SubGrid.opportunity.AddNewStandard.CustomAction" Location="Mscrm.SubGrid.opportunity.MainTab.Management.Controls._children" Sequence="20">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:Mscrm.SubGrid.opportunity.AddNewStandard.Alt" Command="Mscrm.AddNewRecordFromSubGridStandard" Id="Mscrm.SubGrid.opportunity.AddNewStandard" Image32by32="/_imgs/ribbon/newrecord32.png" Image16by16="/_imgs/ribbon/New_16.png" LabelText="$LocLabels:Mscrm.SubGrid.opportunity.AddNewStandard.LabelText" Sequence="20" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.SubGrid.opportunity.AddNewStandard.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.SubGrid.opportunity.AddNewStandard.ToolTipDescription" ModernImage="New" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.Mscrm.SubGrid.opportunity.Assign.CustomAction" Location="Mscrm.SubGrid.opportunity.MainTab.Collaborate.Controls._children" Sequence="50">
+      <CommandUIDefinition>
+        <Button Command="Mscrm.AssignSelectedRecord" Id="Mscrm.SubGrid.opportunity.Assign" Image32by32="/_imgs/ribbon/Assign_32.png" Image16by16="/_imgs/ribbon/Assign_16.png" LabelText="$LocLabels:Mscrm.SubGrid.opportunity.Assign.LabelText" Sequence="50" TemplateAlias="o3" ToolTipTitle="$LocLabels:Mscrm.SubGrid.opportunity.Assign.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.SubGrid.opportunity.Assign.ToolTipDescription" ModernImage="Assign" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.Mscrm.SubGrid.opportunity.Delete.CustomAction" Location="Mscrm.SubGrid.opportunity.MainTab.Management.Controls._children" Sequence="80">
+      <CommandUIDefinition>
+        <Button Alt="$Resources:Ribbon.HomepageGrid.MainTab.Management.Delete" Command="Mscrm.DeleteSelectedRecord" Id="Mscrm.SubGrid.opportunity.Delete" Image32by32="/_imgs/Workplace/remove_32.png" Image16by16="/_imgs/ribbon/Delete_16.png" LabelText="$LocLabels:Mscrm.SubGrid.opportunity.Delete.LabelText" Sequence="80" TemplateAlias="o2" ToolTipTitle="$LocLabels:Mscrm.SubGrid.opportunity.Delete.ToolTipTitle" ToolTipDescription="$Resources(EntityPluralDisplayName):Ribbon.HomepageGrid.Tooltip.Delete" ModernImage="Remove" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.Mscrm.SubGrid.opportunity.NewRecord.CustomAction" Location="Mscrm.SubGrid.opportunity.MainTab.Management.Controls._children" Sequence="10">
+      <CommandUIDefinition>
+        <Button Command="Mscrm.NewRecordFromGrid" Id="Mscrm.SubGrid.opportunity.NewRecord" Image32by32="/_imgs/ribbon/newrecord32.png" Image16by16="/_imgs/ribbon/New_16.png" LabelText="$LocLabels:Mscrm.SubGrid.opportunity.NewRecord.LabelText" Sequence="10" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.SubGrid.opportunity.NewRecord.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.SubGrid.opportunity.NewRecord.ToolTipDescription" ModernImage="New" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.opportunity.opportunity.Button.CustomAction" Location="Mscrm.Form.opportunity.MainTab.Actions.Controls._children" Sequence="3">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.opportunity.opportunity.Button.Alt" Command="a3i.opportunity.opportunity.Command" Id="a3i.opportunity.opportunity.Button" LabelText="$LocLabels:a3i.opportunity.opportunity.Button.LabelText" Sequence="3" TemplateAlias="o1" ToolTipTitle="$LocLabels:a3i.opportunity.opportunity.Button.ToolTipTitle" ToolTipDescription="$LocLabels:a3i.opportunity.opportunity.Button.ToolTipDescription" ModernImage="$webresource:a3i_ForwardArrow" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.opportunity.pipeline.Button.CustomAction" Location="Mscrm.Form.opportunity.MainTab.Actions.Controls._children" Sequence="4">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.opportunity.pipeline.Button.Alt" Command="a3i.opportunity.pipeline.Command" Id="a3i.opportunity.pipeline.Button" LabelText="$LocLabels:a3i.opportunity.pipeline.Button.LabelText" Sequence="4" TemplateAlias="o1" ToolTipTitle="$LocLabels:a3i.opportunity.pipeline.Button.ToolTipTitle" ToolTipDescription="$LocLabels:a3i.opportunity.pipeline.Button.ToolTipDescription" ModernImage="$webresource:a3i_MovePipeline" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.opportunity.sandbox.Button.CustomAction" Location="Mscrm.Form.opportunity.MainTab.Actions.Controls._children" Sequence="4">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.opportunity.sandbox.Button.Alt" Command="a3i.opportunity.sandbox.Command" Id="a3i.opportunity.sandbox.Button" LabelText="$LocLabels:a3i.opportunity.sandbox.Button.LabelText" Sequence="4" TemplateAlias="o1" ToolTipTitle="$LocLabels:a3i.opportunity.sandbox.Button.ToolTipTitle" ToolTipDescription="$LocLabels:a3i.opportunity.sandbox.Button.ToolTipDescription" ModernImage="$webresource:a3i_BackwardArrow" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.opportunity.split.Button.CustomAction" Location="Mscrm.Form.opportunity.MainTab.Actions.Controls._children" Sequence="2">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.opportunity.split.Button.Alt" Command="a3i.opportunity.split.Command" Id="a3i.opportunity.split.Button" LabelText="$LocLabels:a3i.opportunity.split.Button.LabelText" Sequence="2" TemplateAlias="o1" ToolTipTitle="$LocLabels:a3i.opportunity.split.Button.ToolTipTitle" ToolTipDescription="$LocLabels:a3i.opportunity.split.Button.ToolTipDescription" ModernImage="$webresource:a3i_SplitDealImg" />
+      </CommandUIDefinition>
+    </CustomAction>
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="a3i.opportunity.opportunity.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="a3i.opportunity.opportunity.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="moveOpportunity" Library="$webresource:a3i_MoveOpportunity">
+          <CrmParameter Value="PrimaryControl" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i.opportunity.pipeline.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="a3i.opportunity.pipeline.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="movePipeline" Library="$webresource:a3i_Pipeline">
+          <CrmParameter Value="PrimaryControl" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i.opportunity.sandbox.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="a3i.opportunity.sandbox.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="moveSandbox" Library="$webresource:a3i_MoveSandbox">
+          <CrmParameter Value="PrimaryControl" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i.opportunity.split.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="a3i.opportunity.split.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="dealSplit" Library="$webresource:a3i_DealSplit">
+          <CrmParameter Value="PrimaryControl" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="Mscrm.Form.opportunity.MarkAsLost">
+      <EnableRules>
+        <EnableRule Id="Mscrm.CanWritePrimary" />
+        <EnableRule Id="Mscrm.OpportunityIsOpen" />
+        <EnableRule Id="Mscrm.IsEntityAvailableForUserInMocaOffline" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="Mscrm.CanWriteOpportunity" />
+        <DisplayRule Id="a3i.opportunity.Cancelled.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Mscrm.OpportunityCommandActions.opportunityClose" Library="$webresource:Sales/Opportunity/Opportunity_main_system_library.js">
+          <BoolParameter Value="false" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="a3i.opportunity.Cancelled.DisplayRule">
+        <OrRule>
+          <Or>
+            <ValueRule Field="statuscode" Value="1" Default="true" InvertResult="false" />
+          </Or>
+          <Or>
+            <ValueRule Field="statuscode" Value="430830006" Default="true" InvertResult="false" />
+          </Or>
+        </OrRule>
+      </DisplayRule>
+      <DisplayRule Id="a3i.opportunity.opportunity.DisplayRule">
+        <ValueRule Field="statuscode" Value="430830006" Default="true" InvertResult="false" />
+      </DisplayRule>
+      <DisplayRule Id="a3i.opportunity.pipeline.DisplayRule">
+        <ValueRule Field="statuscode" Value="1" Default="true" InvertResult="false" />
+      </DisplayRule>
+      <DisplayRule Id="a3i.opportunity.sandbox.DisplayRule">
+        <ValueRule Field="statuscode" Value="1" Default="true" InvertResult="false" />
+      </DisplayRule>
+      <DisplayRule Id="a3i.opportunity.split.DisplayRule">
+        <ValueRule Field="a3i_opportunityhierarchy" Value="430830000" Default="true" InvertResult="false" />
+      </DisplayRule>
+      <DisplayRule Id="Mscrm.CanWriteOpportunity">
+        <EntityPrivilegeRule PrivilegeType="Write" PrivilegeDepth="Basic" EntityName="opportunity" />
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules>
+      <EnableRule Id="Mscrm.CanWritePrimary">
+        <RecordPrivilegeRule PrivilegeType="Write" AppliesTo="PrimaryEntity" />
+      </EnableRule>
+      <EnableRule Id="Mscrm.IsEntityAvailableForUserInMocaOffline">
+        <CustomRule FunctionName="XrmCore.Rules.Online.IsEntityAvailableForUserInMocaOffline" Library="$webresource:Main_system_library.js">
+          <CrmParameter Value="SelectedEntityTypeName" />
+        </CustomRule>
+      </EnableRule>
+      <EnableRule Id="Mscrm.OpportunityIsOpen">
+        <FormStateRule State="Existing" />
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="a3i.opportunity.opportunity.Button.Alt">
+      <Titles>
+        <Title description="Move to Opportunity" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.opportunity.Button.LabelText">
+      <Titles>
+        <Title description="Move to Opportunity" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.opportunity.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Move from Sandbox to Opportunity" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.opportunity.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Move to Opportunity" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.pipeline.Button.Alt">
+      <Titles>
+        <Title description="Move to Pipeline" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.pipeline.Button.LabelText">
+      <Titles>
+        <Title description="Move to Pipeline" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.pipeline.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Move the Opportuntity to Pipeline and send to Rightstracker" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.pipeline.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Move to Pipeline" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.sandbox.Button.Alt">
+      <Titles>
+        <Title description="Move to Sandbox" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.sandbox.Button.LabelText">
+      <Titles>
+        <Title description="Move to Sandbox" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.sandbox.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Move from Opportunity to Sandbox" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.sandbox.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Move to Sandbox" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.split.Button.Alt">
+      <Titles>
+        <Title description="Deal Split" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.split.Button.LabelText">
+      <Titles>
+        <Title description="Deal Split" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.split.Button.ToolTipDescription">
+      <Titles>
+        <Title description="Click this button to split this opportunities ownership between Sales Executives" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.opportunity.split.Button.ToolTipTitle">
+      <Titles>
+        <Title description="Deal Split" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.Form.opportunity.MarkAsLost.Alt">
+      <Titles>
+        <Title description="Set to Cancelled" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.Form.opportunity.MarkAsLost.LabelText">
+      <Titles>
+        <Title description="Set to Cancelled" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.Form.opportunity.MarkAsLost.ToolTipDescription">
+      <Titles>
+        <Title description="Close this opportunity as lost and update the status reason." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.Form.opportunity.MarkAsLost.ToolTipTitle">
+      <Titles>
+        <Title description="Set to Cancelled" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.HomepageGrid.opportunity.MarkAsLost.Alt">
+      <Titles>
+        <Title description="Set to Cancelled" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.HomepageGrid.opportunity.MarkAsLost.LabelText">
+      <Titles>
+        <Title description="Set to Cancelled" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.HomepageGrid.opportunity.MarkAsLost.ToolTipDescription">
+      <Titles>
+        <Title description="Close this opportunity as lost and update the status reason." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.HomepageGrid.opportunity.MarkAsLost.ToolTipTitle">
+      <Titles>
+        <Title description="Set to Cancelled" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.AddExistingStandard.Alt">
+      <Titles>
+        <Title description="Add Existing" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.AddExistingStandard.LabelText">
+      <Titles>
+        <Title description="Add Existing" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.AddExistingStandard.ToolTipDescription">
+      <Titles>
+        <Title description="Add a that already exists to the record you are working with." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.AddExistingStandard.ToolTipTitle">
+      <Titles>
+        <Title description="Add Existing​​" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.AddNewStandard.Alt">
+      <Titles>
+        <Title description="New" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.AddNewStandard.LabelText">
+      <Titles>
+        <Title description="New" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.AddNewStandard.ToolTipDescription">
+      <Titles>
+        <Title description="Add a related to this record." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.AddNewStandard.ToolTipTitle">
+      <Titles>
+        <Title description="Add New" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.Assign.LabelText">
+      <Titles>
+        <Title description="Assign" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.Assign.ToolTipDescription">
+      <Titles>
+        <Title description="Make someone else the owner. &lt;br&gt;&lt;br&gt;If you want to keep ownership, yet let someone else work with them, select Share instead." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.Assign.ToolTipTitle">
+      <Titles>
+        <Title description="Assign" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.Delete.LabelText">
+      <Titles>
+        <Title description="Delete" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.Delete.ToolTipTitle">
+      <Titles>
+        <Title description="Delete" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.NewRecord.LabelText">
+      <Titles>
+        <Title description="New" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.NewRecord.ToolTipDescription">
+      <Titles>
+        <Title description="Create a new record." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="Mscrm.SubGrid.opportunity.NewRecord.ToolTipTitle">
+      <Titles>
+        <Title description="New" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

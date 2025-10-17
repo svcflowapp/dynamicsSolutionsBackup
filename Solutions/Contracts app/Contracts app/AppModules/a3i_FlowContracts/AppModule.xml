@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>a3i_FlowContracts</UniqueName>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="1" schemaName="a3i_barequests1" />
+    <AppModuleComponent type="1" schemaName="a3i_dealseries" />
+    <AppModuleComponent type="1" schemaName="a3i_firstlook" />
+    <AppModuleComponent type="1" schemaName="a3i_series" />
+    <AppModuleComponent type="1" schemaName="activitypointer" />
+    <AppModuleComponent type="1" schemaName="crf68_othercontracts" />
+    <AppModuleComponent type="1" schemaName="goal" />
+    <AppModuleComponent type="1" schemaName="msdyn_timelinepin" />
+    <AppModuleComponent type="1" schemaName="opportunity" />
+    <AppModuleComponent type="26" id="{256ce9fb-9388-ea11-a811-000d3a86a85d}" />
+    <AppModuleComponent type="26" id="{b6ca1450-918c-ef11-8a69-0022481b0dc1}" />
+    <AppModuleComponent type="26" id="{02b47532-928c-ef11-8a69-0022481b0dc1}" />
+    <AppModuleComponent type="26" id="{a4bdb8ba-fb91-ef11-8a69-0022481b0dc1}" />
+    <AppModuleComponent type="26" id="{456c17c5-0492-ef11-8a69-6045bd0d285d}" />
+    <AppModuleComponent type="26" id="{91fca4cd-cd25-40d4-81ab-83d3cda57eec}" />
+    <AppModuleComponent type="60" id="{fdb55301-f069-ef11-a670-000d3a0cbbbb}" />
+    <AppModuleComponent type="60" id="{302d36ea-319d-eb11-b1ac-000d3a86c765}" />
+    <AppModuleComponent type="60" id="{8a883a5d-437f-ef11-ac20-0022481a3099}" />
+    <AppModuleComponent type="60" id="{1f57988f-05dd-ed11-a7c6-002248c6bdfe}" />
+    <AppModuleComponent type="60" id="{42114d6f-4e0c-ee11-8f6e-002248c6f4e0}" />
+    <AppModuleComponent type="60" id="{8c42ac19-a0e6-ee11-904c-002248c80ff6}" />
+    <AppModuleComponent type="60" id="{e3c588ee-8e11-49da-a5fe-3800f3f683de}" />
+    <AppModuleComponent type="60" id="{9f0f384d-f891-ef11-8a69-6045bd0d285d}" />
+    <AppModuleComponent type="60" id="{78bf9a97-4999-44f6-8d3b-908fe549c3d5}" />
+    <AppModuleComponent type="60" id="{24b5ce86-1811-44c3-b1ad-90f7ea02d2d7}" />
+    <AppModuleComponent type="62" schemaName="a3i_FlowContracts" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="Contracts App" languagecode="1033" />
+  </LocalizedNames>
+  <appelements>
+    <appelement uniquename="crf68_a3i_FlowContracts_canvasappid_crf68_page_acfff">
+      <canvasappid>
+        <name>crf68_page_acfff</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>crf68_a3i_FlowContracts_canvasappid_crf68_page_acfff</name>
+    </appelement>
+  </appelements>
+  <appsettings>
+    <appsetting settingdefinitionid.uniquename="AppChannel">
+      <iscustomizable>1</iscustomizable>
+      <value>1</value>
+    </appsetting>
+  </appsettings>
+</AppModule>

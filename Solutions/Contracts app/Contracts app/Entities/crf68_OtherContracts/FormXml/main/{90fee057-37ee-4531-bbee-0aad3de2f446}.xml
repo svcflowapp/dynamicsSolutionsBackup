@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{90fee057-37ee-4531-bbee-0aad3de2f446}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{7e840259-36ce-447b-ac9f-ece7f7c3e83a}" IsUserDefined="1" name="Delete" visible="false" availableforphone="false">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{3cc4e996-2c2f-4e0d-a228-b4a4a76137af}" name="Contract Detail" celllabelposition="Top">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{7be31c9e-9532-4efd-aa3f-601d572cc68a}">
+                        <labels>
+                          <label description="Contract ID" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="crf68_contractid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0e0e6ff7-bf90-4125-a281-fc1cd80c23ff}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6d55e51f-aafa-4ccd-8d9f-6b89d24426f1}">
+                        <labels>
+                          <label description="Contract Category" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractcategories" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="crf68_contractcategories" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4f52080a-51eb-4792-8a3b-6ee8d1dfda88}">
+                        <labels>
+                          <label description="Contract Type" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contracttype" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="crf68_contracttype" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b8edf049-2e36-4d0e-9bc7-484f6bb4aae1}">
+                        <labels>
+                          <label description="ZZZ - DO NOT USE - Contracting Party Old" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractingparty" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="crf68_contractingparty" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f786096f-a199-47cd-ad87-6bfe6f2cdb48}">
+                        <labels>
+                          <label description="Contract Value" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractvalue" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="crf68_contractvalue" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0e84b15e-c6c9-4cfc-9af4-7818b81127a4}">
+                        <labels>
+                          <label description="Contract Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractstartdate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="crf68_contractstartdate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6be11f20-cca6-4ab9-b92f-b356d6fceb04}">
+                        <labels>
+                          <label description="Contract End Date" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractenddate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="crf68_contractenddate" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{78e5b00c-c861-4edc-933c-fba46bfe9a70}">
+                        <labels>
+                          <label description="Renewal Terms" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_renewaltimes" classid="{4273edbd-ac1d-40d3-9fb2-095c621b552d}" datafieldname="crf68_renewaltimes" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Contract Progress" id="c0aa0369-e1c3-4d7b-9420-da3e4e445aa7" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Top" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Contract Progress" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="87159239-820f-4215-ad12-3d3cd3bc353a" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Contract Notes" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section name="tab_2_section_1" id="0afc9387-19ce-4138-b93e-1db2be281704" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Contract Progress" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{e72d4b23-682f-4cc9-b794-f3ad81e0bc46}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Business Affairs Contact #1" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_bacontact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crf68_bacontact" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b8ae583d-970d-4bfc-93b9-292e372423fa}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Business Affairs Contact #2" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_businessaffairscontact2" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crf68_businessaffairscontact2" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6fb190ae-a2eb-45d3-b389-bbd910e8b6f1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="BA Status" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_bastatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="crf68_bastatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2f16f933-6fcb-4ea8-bfdd-6cadd5af3e96}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Date Received To BA" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_datereceivedtoba" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crf68_datereceivedtoba" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8c8e0693-eb01-4e92-9fd3-8b5b635a4029}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Legal Notes" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_legalnotes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="crf68_legalnotes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{11b04a69-582a-489d-b81b-9d4c29bee902}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Legal Notes Last Modified" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_legalnoteslastmodified" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crf68_legalnoteslastmodified" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f4ab2e95-3a8e-40f4-b472-7dae5f4cc5a6}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Legal Red Flags" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_legalredflags" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="crf68_legalredflags" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6745855c-7370-4bfa-a7fa-5e576c0a26d3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Last Amendment Signature Date" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_lastamendmentsignaturedate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crf68_lastamendmentsignaturedate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4dcebcbc-1edd-463e-9fba-19359eae7150}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contract Signature Date" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractsignaturedate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crf68_contractsignaturedate" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_2_section_4" id="5c3886a7-b2c7-46f3-8251-e95f2869f3cd" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Timeline" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{e77f68c8-278c-44b1-8b80-214d438041da}" rowspan="15" colspan="1">
+                        <labels>
+                          <label description="Note Text" languagecode="1033" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="tab_2_section_2" id="49ab5aa5-94cb-4439-8fa4-1eb1156c79a8" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Contract Detail" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{1dbb6375-5264-46ff-afe3-0f4299ec9878}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contract ID" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractid" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="crf68_contractid" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7fd3a55e-ad40-4daa-82b6-8a291b44898f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contract Category" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractcategories" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="crf68_contractcategories" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{013ee2e8-e89d-4870-bc90-8917b8401a73}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contract Type" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contracttype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="crf68_contracttype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5fc21ddf-4c8f-42be-a89d-2d6e30c027ab}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contracting Party" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractingpartynew" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="crf68_contractingpartynew" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{83275348-6259-48f4-9347-9c9810c619b1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contract Value" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractvalue" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="crf68_contractvalue" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1a30d10e-c282-46ee-bedf-598cc370a45a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contract Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crf68_contractstartdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{477d4c06-99d9-465f-ace0-208851816b37}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contract End Date" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_contractenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="crf68_contractenddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{34aeb0a2-f0ab-43a6-a524-d5c184581896}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Renewal Terms" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_renewaltimes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="crf68_renewaltimes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6b3dfaca-612c-4d13-bb05-aac9c07084a9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="First Look" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_firstlook" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_firstlook" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_3" id="6ed59648-bae1-48f6-ba3f-5116cf4105aa" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Documents" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_3_section_1" id="9859fc94-66c7-42d2-9896-4d3d36953b4b" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Documents" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{29cdbc2e-f60f-4bf9-b2a8-8b8367668e7d}" rowspan="4" colspan="1" auto="false" showlabel="true">
+                        <labels>
+                          <label description="New SG control 1747321586427" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <RelationshipName>crf68_othercontracts_SharePointDocuments</RelationshipName>
+                            <TargetEntityType>sharepointdocument</TargetEntityType>
+                            <ViewId>{A5B008AC-07D9-4554-8509-2C05767BFF51}</ViewId>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{af769917-030a-454b-82f2-8ebc403198bb}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{1c17a3a7-66d9-48eb-8b29-3f4377cc0a43}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{bd2a9ae9-cdd6-4272-a512-e4c5cd586ade}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d4af58f7-10b9-492a-9d2d-508ee5bf40f2}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{86a57025-6764-415c-8087-126ddb96b005}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{cbfd2a87-9451-4b12-b46e-f62fafa0aefb}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e20f9c9c-2eb2-4ab4-bbe5-39ff0e858889}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{952357a2-44b4-4b21-9db7-4bdf7b3c05b0}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

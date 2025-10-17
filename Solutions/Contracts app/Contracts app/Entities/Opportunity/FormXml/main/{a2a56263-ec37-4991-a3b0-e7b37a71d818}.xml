@@ -1,0 +1,1389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a2a56263-ec37-4991-a3b0-e7b37a71d818}</formid>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="true" showImage="false" maxWidth="1920" solutionaction="Modified">
+      <tabs>
+        <tab name="general" verticallayout="true" id="{a9dd8610-71e3-4fe3-93d6-cee419cd614d}" IsUserDefined="0" ordinalvalue="0" solutionaction="Removed" />
+        <tab name="Product Line Item Details" verticallayout="true" id="{4C3A3EC2-AB96-4c36-9FEA-1CDAF76A2AC7}" IsUserDefined="0" ordinalvalue="1" solutionaction="Removed" />
+        <tab name="notes and activities" id="{25A511F6-4CF0-4c5e-838F-1AEB9BC07ED9}" IsUserDefined="0" expanded="false" ordinalvalue="2" solutionaction="Removed" />
+        <tab name="Opportunity Quotes" verticallayout="true" id="{379BB2D1-8E92-406f-AD33-1D479367FD75}" IsUserDefined="0" ordinalvalue="3" solutionaction="Removed" />
+        <tab name="Details" id="{4f0d6fd2-1e7d-45ad-9127-0aca662b616c}" IsUserDefined="0" ordinalvalue="1" solutionaction="Modified">
+          <labels>
+            <label description="Details" languagecode="1033" solutionaction="Modified" />
+          </labels>
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="internal information" showlabel="false" showbar="false" id="{4078013e-a827-4bec-bd46-97340b1e0785}" IsUserDefined="0" height="auto" ordinalvalue="0" solutionaction="Modified">
+                  <rows>
+                    <row>
+                      <cell id="{f1d62eb4-e48c-478d-8f24-8cbfd9a72c50}" ordinalvalue="10000" solutionaction="Removed" />
+                      <cell id="{6ef46c40-8ca5-4039-8812-49d08ad74431}" ordinalvalue="20001" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{f6ea7615-6bc6-4b7a-b22f-b0113777d76d}" ordinalvalue="10002" solutionaction="Removed" />
+                      <cell auto="false" showlabel="true" locklevel="0" rowspan="1" colspan="1" id="{86d68687-d31b-4529-8f26-93f86be83c9d}" ordinalvalue="20003" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{42600d49-79b3-4420-b0e4-b44145113b71}" locklevel="0" ordinalvalue="10000" solutionaction="Added">
+                        <labels>
+                          <label description="Re-license" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_relicense" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="a3i_relicense" disabled="true" />
+                      </cell>
+                      <cell id="{6ea138c3-7530-42b9-b142-efed1de49c91}" locklevel="0" ordinalvalue="20001" solutionaction="Added">
+                        <labels>
+                          <label description="Royalties invoice value" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_royaltiesinvoicevalue" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_royaltiesinvoicevalue" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{59684bf3-730d-4417-99fe-a3a15fe71e68}" locklevel="0" ordinalvalue="10002" solutionaction="Added">
+                        <labels>
+                          <label description="Delivering Materials" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_deliveringmaterials" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="a3i_deliveringmaterials" disabled="true" />
+                      </cell>
+                      <cell id="{aef51cb7-2699-415b-88fb-63197f9fe7b5}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20003" solutionaction="Added">
+                        <labels>
+                          <label description="Royalties Invoice Value GBP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_royaltiesinvoicevaluegbp" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_royaltiesinvoicevaluegbp" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1050ff7f-5541-45e2-8c4a-84d312b5e09c}" locklevel="0" ordinalvalue="10004" solutionaction="Added">
+                        <labels>
+                          <label description="Delivered Percentage" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_deliveredpercentage" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="a3i_deliveredpercentage" disabled="true" />
+                      </cell>
+                      <cell id="{7693f100-a79d-4807-855a-4e4200570ea0}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20005" solutionaction="Added">
+                        <labels>
+                          <label description="Royalties Currency" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_royaltiescurrency" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_royaltiescurrency" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{78fd4f4f-a5a4-4dd4-b115-75d19d6c6300}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10006" solutionaction="Added">
+                        <labels>
+                          <label description="BA Request Status" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_bastatusnew" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_bastatusnew" disabled="false" />
+                      </cell>
+                      <cell id="{7921199a-d7ed-41a6-aafd-1badc00365ce}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20007" solutionaction="Added">
+                        <labels>
+                          <label description="Template" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_template" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_template" disabled="false" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{68f4398d-0b73-4c0a-bff8-3bcdd8ebf749}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10008" solutionaction="Added">
+                        <labels>
+                          <label description="Date Received to BA" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_datereceivedtoba" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_datereceivedtoba" disabled="false" />
+                      </cell>
+                      <cell id="{824fc4a7-28f2-4cb3-a398-288b6f7a1f75}" locklevel="0" colspan="1" rowspan="1" auto="true" ordinalvalue="20009" solutionaction="Added">
+                        <labels>
+                          <label description="Legal Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_legalnotes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_legalnotes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{cb10f58b-86c8-4c16-9500-26ded6dfddd0}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10010" solutionaction="Added">
+                        <labels>
+                          <label description="Consultancy Contact" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_consultancycontact" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_consultancycontact" disabled="false" />
+                      </cell>
+                      <cell id="{42252aa4-47c6-4ffc-9521-b6f74b91d823}" locklevel="0" colspan="1" rowspan="1" auto="true" ordinalvalue="20011" solutionaction="Added">
+                        <labels>
+                          <label description="Legal Red Flags" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_legalredflags" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_legalredflags" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e7937ea3-8abc-4318-8424-27d4cb2f4186}" locklevel="0" colspan="1" rowspan="1" showlabel="true" ordinalvalue="10012" solutionaction="Added">
+                        <labels>
+                          <label description="Original owner left All3?" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_deactivatedowner" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_deactivatedowner" disabled="false" uniqueid="{26D03204-EA01-31BE-C2DD-ABB388301C94}" />
+                      </cell>
+                      <cell id="{df15505a-8051-4553-9402-6bd1a2ab2c49}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20013" solutionaction="Added">
+                        <labels>
+                          <label description="BA Category" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_bacategory" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_bacategory" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9e9e822f-5704-4f07-878d-c12acdf9b56e}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10014" solutionaction="Added">
+                        <labels>
+                          <label description="Format Other" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_formatother" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_formatother" disabled="false" uniqueid="{4DB7C99C-08B6-4862-AFC3-D505824CF406}" />
+                      </cell>
+                      <cell locklevel="0" id="{e1cc4115-2076-45f9-ab85-4b433e9dceeb}" showlabel="false" ordinalvalue="20015" solutionaction="Added">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{decb50f0-f5e3-4d93-8d11-a599e75e4045}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="10016" solutionaction="Added">
+                        <labels>
+                          <label description="Original Owner" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_deactivateduser" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_deactivateduser" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{d778f5b3-cc36-4abe-a493-58bb147e89ea}" showlabel="false" ordinalvalue="20017" solutionaction="Added">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Summary" id="1d1b3559-48b4-4649-80e2-7930119a39a6" IsUserDefined="0" locklevel="0" showlabel="true" ordinalvalue="0" solutionaction="Added">
+          <labels>
+            <label description="Summary" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="55%" id="0">
+              <sections>
+                <section name="General" id="91d98c07-981a-436d-a04c-bb6aef20cb24" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" height="auto" ordinalvalue="0">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell colspan="1" id="{a90a6223-6904-443c-b40f-de1e8ad44285}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Deal Name" languagecode="1033" />
+                        </labels>
+                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{8989202b-4cfa-4f82-9e57-ff6647573a73}" locklevel="0" colspan="1" rowspan="1" auto="true" ordinalvalue="10001">
+                        <labels>
+                          <label description="Title(s)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_titles" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_titles" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d1cf0973-ebfb-4b2d-90cc-1af2a72e1428}" locklevel="0" ordinalvalue="10002">
+                        <labels>
+                          <label description="Buyer" languagecode="1033" />
+                        </labels>
+                        <control id="parentaccountid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="parentaccountid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{446de635-748f-463e-8be6-a2d0a8d4954b}" visible="false" ordinalvalue="10003">
+                        <labels>
+                          <label description="Potential Customer" languagecode="1033" />
+                        </labels>
+                        <control id="customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="customerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6d0204a0-f036-4259-990b-4d22745a99f4}" locklevel="0" showlabel="true" ordinalvalue="10004">
+                        <labels>
+                          <label description="Contact" languagecode="1033" />
+                        </labels>
+                        <control id="parentcontactid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="parentcontactid" disabled="false" uniqueid="{c92e776a-54c0-dee9-cbd7-7e5118c584a6}">
+                          <parameters>
+                            <AutoResolve>true</AutoResolve>
+                            <DisableMru>true</DisableMru>
+                            <DisableQuickFind>false</DisableQuickFind>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DefaultViewId>{A2D479C5-53E3-4C69-ADDD-802327E67A0D}</DefaultViewId>
+                            <DependentAttributeType>account</DependentAttributeType>
+                            <AllowFilterOff>false</AllowFilterOff>
+                            <AvailableViewIds>{A2D479C5-53E3-4C69-ADDD-802327E67A0D}</AvailableViewIds>
+                            <useMainFormDialogForCreate>false</useMainFormDialogForCreate>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{402ef514-9f0b-4758-a578-bae05bceed32}" locklevel="0" ordinalvalue="10005">
+                        <labels>
+                          <label description="LPSD" languagecode="1033" />
+                        </labels>
+                        <control id="estimatedclosedate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="estimatedclosedate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d500ad6b-5113-45cb-97ff-4cb364dcdfa6}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10006">
+                        <labels>
+                          <label description="Expected Signature" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_expectedsignature" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_expectedsignature" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{40fb3b43-4c06-48e2-ac43-3955d0054e31}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10007">
+                        <labels>
+                          <label description="Contract Signature Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_contractsignaturedate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_contractsignaturedate" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c2d43b94-34d9-449e-8032-59313ad39927}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10008">
+                        <labels>
+                          <label description="Moved to RightsTracker Pipeline" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_movedtorightstrackerpipeline" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_movedtorightstrackerpipeline" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{87e9dfbd-d566-422d-8e9b-7fff0c72e55d}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10009">
+                        <labels>
+                          <label description="Moved to RightsTracker Signed" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_movedtorightstrackersigned" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_movedtorightstrackersigned" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{676fe5ae-7a23-4e5d-8fcb-18b6d9b7a7f0}" locklevel="0" ordinalvalue="10010">
+                        <labels>
+                          <label description="Deal type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealtype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_dealtype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{33894da0-4c54-452f-b257-ccdc62182453}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10011">
+                        <labels>
+                          <label description="Reporting Territories" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_reportingterritories" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_reportingterritories" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{226056de-19b3-4528-b45b-f07729aa94f2}" locklevel="0" visible="false" ordinalvalue="10012">
+                        <labels>
+                          <label description="Country Detail" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_territorycountries" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_territorycountries" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d7bb1cab-acba-4345-9263-d7a970ac0b6d}" locklevel="0" colspan="1" rowspan="1" showlabel="true" ordinalvalue="10013">
+                        <labels>
+                          <label description="Co Pro" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_copro" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_copro" disabled="false" uniqueid="{D8585C54-AD90-B64B-A336-A3AB981529A1}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3eb3543d-b741-45fc-8cd0-59575ff1e0f4}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10014">
+                        <labels>
+                          <label description="Rev Share" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_revshare" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_revshare" disabled="false" uniqueid="{FA5A59C0-D0CA-43B6-8976-154E64E2AE65}" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{626bb849-24bb-4601-9542-3e0fdc8a0e3e}" locklevel="0" auto="true" ordinalvalue="10015">
+                        <labels>
+                          <label description="Current Situation" languagecode="1033" />
+                        </labels>
+                        <control id="currentsituation" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="currentsituation" disabled="false" uniqueid="{88a103e0-7d08-c13b-ee23-9ee59982397b}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{973e976a-b3cb-d00e-e967-15a969b1bd69}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10016">
+                        <labels>
+                          <label description="Opportunity Status" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{5D68B988-0661-4db2-BC3E-17598AD3BE6C}" datafieldname="statuscode" disabled="false" uniqueid="{5c021888-1795-b00a-59d6-1e382ee15e95}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{63ea1475-ccdd-439e-b177-782282cc77f6}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="10017">
+                        <labels>
+                          <label description="Opportunity Hierarchy" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_opportunityhierarchy" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_opportunityhierarchy" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{09e4a361-7916-4854-8152-270e69d0f874}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10018">
+                        <labels>
+                          <label description="Current Situation Last Modified" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_currentsituationlastmodified" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_currentsituationlastmodified" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0f3b2b4c-0628-407c-abbd-a16809a4982d}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10019">
+                        <labels>
+                          <label description="Link to RT record" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_linktortrecord" classid="{71716B6C-711E-476C-8AB8-5D11542BFB47}" datafieldname="a3i_linktortrecord" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d3b09c74-192b-49f9-8d28-8122c0f2de64}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10020">
+                        <labels>
+                          <label description="Link to RT Contract docs" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_linktortcontractdocs" classid="{71716B6C-711E-476C-8AB8-5D11542BFB47}" datafieldname="a3i_linktortcontractdocs" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f8b2fe47-20fa-41dd-803b-09605b895049}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="10021">
+                        <labels>
+                          <label description="Parent Deal" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_parentopportunity" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_parentopportunity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{34601734-600d-d17a-0ae3-e60910e09de9}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10022">
+                        <labels>
+                          <label description="Deal Value Validation" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealvaluevalidation" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="a3i_dealvaluevalidation" disabled="false" uniqueid="{32a2411e-0ae5-0e24-8887-1ee7289e6b73}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{350734c7-2152-4917-6862-92cb22a9497a}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10023">
+                        <labels>
+                          <label description="Deal Value Validation (Year)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealvaluevalidationyear" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_dealvaluevalidationyear" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8523498b-2c29-e990-8c26-cda7972723d8}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10024">
+                        <labels>
+                          <label description="Deal Value Validation (Split)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealvaluevalidationsplitnew" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_dealvaluevalidationsplitnew" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{668eddc3-eb77-7e67-3907-874698ab6980}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10025">
+                        <labels>
+                          <label description="Deal Value Validation (Series)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealvaluevalidationseriesnew" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_dealvaluevalidationseriesnew" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0d7a6e5b-5e62-465d-a3d1-722e2bfe6ed1}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="10026">
+                        <labels>
+                          <label description="Deal Series Count" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealseriescount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="a3i_dealseriescount" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c928bbdf-00fd-44cf-b9ce-a31b324906da}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="10027">
+                        <labels>
+                          <label description="Document Set ID" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_documentsetid" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_documentsetid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c7b66e26-5e62-4ff1-ba7a-253faa85127b}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="10028">
+                        <labels>
+                          <label description="Show Files" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_showfiles" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_showfiles" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Deal Value" id="f1a0d02d-0988-4123-a7d4-4784d3a3624a" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115" ordinalvalue="1">
+                  <labels>
+                    <label description="Deal Value" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3e4b0cae-518d-4316-8c9f-93077723b7d8}" ordinalvalue="10000">
+                        <labels>
+                          <label description="Currency" languagecode="1033" />
+                        </labels>
+                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" />
+                      </cell>
+                      <cell id="{6ff2e3e6-2b9b-4741-b20a-cfb83728f54f}" locklevel="0" colspan="1" rowspan="1" showlabel="true" ordinalvalue="20001">
+                        <labels>
+                          <label description="Pre 2021 Value" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_pre2021value" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_pre2021value" disabled="false" uniqueid="{52445585-D4D9-A91E-3785-62AD54608201}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e97caefd-955c-42dc-998a-ac52a54a477b}" locklevel="0" ordinalvalue="10002">
+                        <labels>
+                          <label description="Deal Value CCY" languagecode="1033" />
+                        </labels>
+                        <control id="estimatedvalue" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="estimatedvalue" disabled="false" />
+                      </cell>
+                      <cell id="{cefc8137-6b6c-471d-9b5f-246c653199ee}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20003">
+                        <labels>
+                          <label description="Deal Value GBP " languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealvaluegbp" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_dealvaluegbp" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5cc77d76-e9b1-5723-08c2-59a1d41b2d8a}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10004">
+                        <labels>
+                          <label description="Deal Validation Message (Year)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealvalidationmessageyear" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_dealvalidationmessageyear" disabled="false" uniqueid="{E923EE16-887D-1636-3D83-81214BD2E3C4}" />
+                      </cell>
+                      <cell id="{cebf9f90-b7ef-4e63-8fc5-a6673daf3854}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20005">
+                        <labels>
+                          <label description="2027 GBP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_gbp2027" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_gbp2027" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{85a4341a-266c-244b-937d-96594ec0491b}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10006">
+                        <labels>
+                          <label description="Deal Validation Message (Split)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealvalidationmessagesplit" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_dealvalidationmessagesplit" disabled="false" uniqueid="{ABEDE21B-B344-B375-4E37-7309D9C274BA}" />
+                      </cell>
+                      <cell id="{76035cff-dcbc-4019-b795-af7c91d3c94d}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20007">
+                        <labels>
+                          <label description="2027 GBP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_gbp" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_gbp" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{863e1373-9c9b-c749-3790-e30ae54a11b1}" showlabel="true" locklevel="0" visible="false" ordinalvalue="10008">
+                        <labels>
+                          <label description="Deal Validation Message (Series)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealvalidationmessageseries" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_dealvalidationmessageseries" disabled="false" uniqueid="{D62BA3B5-661C-9426-2929-DADE577B851B}" />
+                      </cell>
+                      <cell id="{886ddd30-bdce-4a34-b464-790b72840de2}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20009">
+                        <labels>
+                          <label description="2026 GBP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_gbp2026" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_gbp2026" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2f3e0538-cafb-4ca8-a9ef-d9a65b6a0c87}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10010">
+                        <labels>
+                          <label description="2027 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ccy2027" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_ccy2027" disabled="false" />
+                      </cell>
+                      <cell id="{93924564-3d3e-437c-92c6-228a17b27bd3}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20011">
+                        <labels>
+                          <label description="2025 GBP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_gbp2025" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_gbp2025" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d7e6117f-a656-421c-ac0f-0f8d1c12f939}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10012">
+                        <labels>
+                          <label description="2026 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ccy2026" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_ccy2026" disabled="false" />
+                      </cell>
+                      <cell id="{12a506af-beff-4a2c-9f89-0cf49ced9932}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20013">
+                        <labels>
+                          <label description="2024 GBP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_gbp2024" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_gbp2024" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{426f420a-6aa0-42cc-af64-40a017f1efed}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10014">
+                        <labels>
+                          <label description="2025 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ccy2025" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_ccy2025" disabled="false" />
+                      </cell>
+                      <cell id="{f1b77662-66af-4344-aff7-488df33d47db}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20015">
+                        <labels>
+                          <label description="2023 GBP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_gbp2023" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_gbp2023" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{39b0a257-1e6c-abc5-0893-231782d9ea87}" showlabel="true" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10016">
+                        <labels>
+                          <label description="2024 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_threeyearstimeccy" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_threeyearstimeccy" disabled="false" />
+                      </cell>
+                      <cell id="{c3cfed0c-4cb4-461e-a7ee-e60f19de5aaa}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20017">
+                        <labels>
+                          <label description="2022 GBP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_gbp2022" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_gbp2022" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b2734fe3-91a7-4860-8bca-dfb2a5fb801e}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10018">
+                        <labels>
+                          <label description="2023 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_twoyearstimeccy" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_twoyearstimeccy" disabled="false" uniqueid="{d1d687b3-1292-b03e-3005-2bc935de2586}" />
+                      </cell>
+                      <cell id="{f3e620c3-b503-4afa-86c9-352e6957b7f1}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20019">
+                        <labels>
+                          <label description="2021 GBP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_gbp2021" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_gbp2021" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a62ea8fb-b686-462f-966e-1e635aaf8104}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10020">
+                        <labels>
+                          <label description="2022 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_nextyearccy" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_nextyearccy" disabled="false" />
+                      </cell>
+                      <cell id="{84f4b54a-f53c-4401-a34b-e28218ae9857}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="20021">
+                        <labels>
+                          <label description="Exchange Rate (Opportunity)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_exchangerateopportunity" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_exchangerateopportunity" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f749dd2e-7034-489d-b579-15e8beff0c26}" locklevel="0" ordinalvalue="10022">
+                        <labels>
+                          <label description="2021 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_currentyearccy" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_currentyearccy" disabled="false" />
+                      </cell>
+                      <cell id="{9abd500b-0800-45b7-90e0-ef76d6a80685}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="20023">
+                        <labels>
+                          <label description="CCY date 2021" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ccydate2021" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_ccydate2021" disabled="false" uniqueid="{7169658b-0a50-bc11-5d5d-bdc74a559465}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{4064e9d7-fdb4-44c3-826b-62659027f1cc}" ordinalvalue="10024">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{0bae31d0-eaef-460f-b9e8-c1b38b8478db}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="20025">
+                        <labels>
+                          <label description="CCY date 2022" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ccydate2022" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_ccydate2022" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{804860e9-80c5-4488-baf7-7b8058a2ac8b}" ordinalvalue="10026">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{8fe517d0-8671-433a-921e-664b330008f8}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="20027">
+                        <labels>
+                          <label description="CCY date 2023" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ccydate2023" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_ccydate2023" disabled="false" uniqueid="{e2ce5dcc-c22d-ed90-0743-168736e67eac}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{0cd8299d-de91-421b-bc87-db85772a13d5}" ordinalvalue="10028">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{188e1dd2-b034-ecdc-273d-810c5e706e9c}" showlabel="true" locklevel="0" visible="false" ordinalvalue="20029">
+                        <labels>
+                          <label description="CCY date 2024" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ccydate2024" classid="{5B773807-9FB2-42db-97C3-7A91EFF8ADFF}" datafieldname="a3i_ccydate2024" disabled="false" uniqueid="{0e0227a7-8c89-a994-6825-2b6d5eb4693b}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="45%" id="1">
+              <sections>
+                <section name="Deal_Actions" id="82409e49-9f47-4da3-8be5-7f2c33cea8c1" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="0">
+                  <labels>
+                    <label description="Deal Actions" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2492bb15-fd1f-43ac-ae43-5b2768ecda76}" locklevel="0" colspan="1" rowspan="1" showlabel="true" ordinalvalue="10000">
+                        <labels>
+                          <label description="Send to BA" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealwithba" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_dealwithba" disabled="false" uniqueid="{3C28A458-1AA3-80B0-0042-4864A3DAB40A}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5b7170f5-2d42-442e-8b60-4a1fdd9d9c8b}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10001">
+                        <labels>
+                          <label description="Under Review by BA" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_underreviewbyba" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_underreviewbyba" disabled="false" uniqueid="{43CCD3A2-9FFC-4878-87C8-AE06894C99CF}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{32294991-b4b6-476e-9866-0a203d9a6729}" locklevel="0" colspan="1" rowspan="1" showlabel="true" visible="false" ordinalvalue="10002">
+                        <labels>
+                          <label description="Business Affairs Contact" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_bateammember" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_bateammember" disabled="false">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4c6eed79-2a30-448f-8f06-02c03cbac7d2}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="10003">
+                        <labels>
+                          <label description="BA Request Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_barequesttype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_barequesttype" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_3_section_2" id="419e90a1-725e-4d9e-9c03-c10b10383b10" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="1">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{424d29b9-c132-45e5-adf1-edeb8b26e80c}" rowspan="1" ordinalvalue="10000">
+                        <labels>
+                          <label description="Note Text" languagecode="1033" />
+                        </labels>
+                        <control id="notescontrol" classid="{06375649-C143-495E-A496-C962E5B4488E}" disabled="false">
+                          <parameters>
+                            <UClientModules>Activities,Notes</UClientModules>
+                            <UClientActivities>appointment,email,phonecall,task</UClientActivities>
+                            <UClientDisplayActivityUsing>defaultfields</UClientDisplayActivityUsing>
+                            <UClientActivityCardMap>appointment:4201:,campaignactivity:4402:,campaignresponse:4401:,email:4202:,fax:4204:,incidentresolution:4206:,letter:4207:,opportunityclose:4208:,orderclose:4209:,phonecall:4210:,quoteclose:4211:,recurringappointmentmaster:4251:,serviceappointment:4214:,socialactivity:4216:,task:4212:,msfp_alert:10220:,msfp_surveyinvite:10229:,msfp_surveyresponse:10231:,</UClientActivityCardMap>
+                            <UClientActivitiesConfigurationJSON>{"msfp_surveyresponse":{"showStatus":true,"canCreate":false},"msfp_surveyinvite":{"showStatus":true,"canCreate":false},"msfp_alert":{"showStatus":true,"canCreate":true},"socialactivity":{"showStatus":true,"canCreate":false},"recurringappointmentmaster":{"showStatus":true,"canCreate":false},"quoteclose":{"showStatus":false,"canCreate":false},"orderclose":{"showStatus":false,"canCreate":false},"opportunityclose":{"showStatus":false,"canCreate":false},"letter":{"showStatus":true,"canCreate":false},"incidentresolution":{"showStatus":false,"canCreate":false},"fax":{"showStatus":true,"canCreate":false},"campaignactivity":{"showStatus":true,"canCreate":false}}</UClientActivitiesConfigurationJSON>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Summary_section_5" id="22298947-1158-484b-9163-914d37bd2426" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false" ordinalvalue="2">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2bf4485c-3d3e-444f-ac11-8a6262083d88}" visible="true" ordinalvalue="10000">
+                        <labels>
+                          <label description="Price List" languagecode="1033" />
+                        </labels>
+                        <events>
+                          <event name="setadditionalparams" application="true" active="true">
+                            <InternalHandlers>
+                              <Handler functionName="Mscrm.pricelevelid_setadditionalparams" libraryName="Sales/Opportunity/Opportunity_main_system_library.js" handlerUniqueId="1191cc10-3daa-4368-9615-e3fb183f2189" enabled="true" passExecutionContext="true">
+                                <dependencies>
+                                  <dependency id="transactioncurrencyid" />
+                                </dependencies>
+                              </Handler>
+                            </InternalHandlers>
+                          </event>
+                        </events>
+                        <control id="pricelevelid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="pricelevelid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell colspan="1" id="{13653c24-5e5f-4b04-bd2f-f412dac510aa}" showlabel="true" visible="true" ordinalvalue="10001">
+                        <labels>
+                          <label description="Revenue" languagecode="1033" />
+                        </labels>
+                        <control id="isrevenuesystemcalculated" classid="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}" datafieldname="isrevenuesystemcalculated" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_4" id="9410c29a-59ab-4eb7-9b6a-71f3e00c67fa" IsUserDefined="0" locklevel="0" showlabel="true" visible="true" ordinalvalue="2" solutionaction="Added">
+          <labels>
+            <label description="Series" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="tab_4_section_1" id="42523c12-af3f-40ee-ae58-197ec3ee74dc" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="0">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row height="auto">
+                      <cell locklevel="0" id="{dd01fad6-c0e5-4902-976f-c387d898dcee}" rowspan="1" colspan="1" auto="true" ordinalvalue="10000">
+                        <labels>
+                          <label description="Deal Series" languagecode="1033" />
+                        </labels>
+                        <control id="Subgrid_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                          <parameters>
+                            <RecordsPerPage>10</RecordsPerPage>
+                            <AutoExpand>Auto</AutoExpand>
+                            <TargetEntityType>a3i_dealseries</TargetEntityType>
+                            <ViewId>{BC0199B8-AC4B-4D33-95A4-2F07A62218A8}</ViewId>
+                            <ViewIds>{BC0199B8-AC4B-4D33-95A4-2F07A62218A8}</ViewIds>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <RelationshipName>a3i_DealSeries_Deal_Opportunity</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="DealSplit" id="4504254e-80c0-4405-bfe4-3b62db86771b" IsUserDefined="0" locklevel="0" showlabel="true" ordinalvalue="3" solutionaction="Added">
+          <labels>
+            <label description="Deal Split" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="tab_3_section_1" id="e6feb42a-fd49-4ec0-a5a0-bfd515f32103" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" height="auto" ordinalvalue="0">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{ed7ec96b-89d8-4596-a105-604861db0f00}" rowspan="4" colspan="1" auto="true" showlabel="false" ordinalvalue="10000">
+                        <labels>
+                          <label description="Deal Split" languagecode="1033" />
+                        </labels>
+                        <control id="DealSplitSubgrid" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" indicationOfSubgrid="true" uniqueid="{40400124-70C1-E13B-77EB-2EC7C6AA9356}">
+                          <parameters>
+                            <TargetEntityType>opportunity</TargetEntityType>
+                            <ViewId>{7069BA3E-2F0B-EC11-B6E6-000D3A86DD0F}</ViewId>
+                            <ViewIds>{7069BA3E-2F0B-EC11-B6E6-000D3A86DD0F}</ViewIds>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <RelationshipName>a3i_Opportunity_ParentOpportunity_Opportunity</RelationshipName>
+                            <AutoExpand>Auto</AutoExpand>
+                            <RecordsPerPage>10</RecordsPerPage>
+                            <HeaderColorCode>#F5FBFD</HeaderColorCode>
+                            <IsUserView>false</IsUserView>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>All</ChartGridMode>
+                            <VisualizationId>{8BC5FB18-48F2-4782-9E16-3D452FA4DDCE}</VisualizationId>
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>true</EnableChartPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row height="auto" />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Files" id="2c3c3347-6c18-4801-bb8e-983366fb19a0" IsUserDefined="0" locklevel="0" showlabel="true" ordinalvalue="4" solutionaction="Added">
+          <labels>
+            <label description="Documents" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="Documents" id="f5cc63aa-65bc-44f1-b728-90933a8b8a83" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" ordinalvalue="0">
+                  <labels>
+                    <label description="Documents" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2a8549fd-78d3-4dc1-ad2e-3fef1d7922a0}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10000">
+                        <labels>
+                          <label description="Quote Comments" languagecode="1033" />
+                        </labels>
+                        <control id="DocumentSubGrid" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{cdf1fb31-27e3-4cde-bc24-eed9c0b24562}">
+                          <parameters>
+                            <ViewId>{0016F9F3-41CC-4276-9D11-04308D15858D}</ViewId>
+                            <IsUserView>false</IsUserView>
+                            <RelationshipName>Opportunity_SharepointDocument</RelationshipName>
+                            <TargetEntityType>sharepointdocument</TargetEntityType>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <ViewIds />
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <RecordsPerPage>10</RecordsPerPage>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{c23f3530-ef08-440c-9b8b-e16aa5864063}" celllabelposition="Top">
+        <rows>
+          <row>
+            <cell id="{c0461474-c12b-4999-1492-2b6788509325}" ordinalvalue="10000" solutionaction="Removed" />
+            <cell id="{8a766718-3312-0b37-556c-663a1a1d4024}" ordinalvalue="20001" solutionaction="Removed" />
+            <cell id="{c2ad82b8-9d2b-28cd-ae2d-11ccb974788c}" ordinalvalue="30002" solutionaction="Removed" />
+          </row>
+          <row>
+            <cell id="{6929910e-f046-4741-af29-bd9cbaf5cfb6}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10000" solutionaction="Added">
+              <labels>
+                <label description="Deal Value CCY" languagecode="1033" />
+              </labels>
+              <control id="header_estimatedvalue" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="estimatedvalue" disabled="false" />
+            </cell>
+            <cell id="{0b75c3f9-16ae-4429-aee7-08967e075c3a}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20001" solutionaction="Added">
+              <labels>
+                <label description="Flow ID" languagecode="1033" />
+              </labels>
+              <control id="header_a3i_oppid" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_oppid" disabled="true" />
+            </cell>
+            <cell id="{8045fdfc-1e56-4356-9686-7dfc2589d124}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="30002" solutionaction="Added">
+              <labels>
+                <label description="Deal Status" languagecode="1033" />
+              </labels>
+              <control id="header_statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="true" />
+            </cell>
+          </row>
+          <row>
+            <cell id="{21fba8b1-d24b-4639-bc21-23609786fb57}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="10003" solutionaction="Added">
+              <labels>
+                <label description="RT Status" languagecode="1033" />
+              </labels>
+              <control id="header_a3i_dealstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_dealstatus" disabled="true" />
+            </cell>
+            <cell id="{6a4a4c43-a036-4827-949e-a4561ae377f5}" showlabel="false" ordinalvalue="20004" solutionaction="Added">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1471f288-0320-478d-a4c2-5d029d226faa}" showlabel="false" ordinalvalue="30005" solutionaction="Added">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+          <row>
+            <cell id="{c31648a6-5a91-4069-92d4-b12f79631748}" locklevel="0" colspan="1" rowspan="1" visible="false" ordinalvalue="10006" solutionaction="Added">
+              <labels>
+                <label description="RT Deal Number" languagecode="1033" />
+              </labels>
+              <control id="header_a3i_rtdealid" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_rtdealid" disabled="true" />
+            </cell>
+            <cell id="{31e4d526-1b34-4867-83c6-9c5341466583}" showlabel="false" ordinalvalue="20007" solutionaction="Added">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c9b08ebc-bf56-4e02-b2f1-9e7afadad543}" showlabel="false" ordinalvalue="30008" solutionaction="Added">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+          <row>
+            <cell id="{f1d62eb4-e48c-478d-8f24-8cbfd9a72c50}" colspan="1" rowspan="1" ordinalvalue="10009" solutionaction="Added">
+              <labels>
+                <label description="Sales Executive" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+            <cell id="{ad72f095-5e95-4ea5-8e9c-91ea8b1b8390}" showlabel="false" ordinalvalue="20010" solutionaction="Added">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b46ff893-7b6f-4435-85cf-461ebe5ad22c}" showlabel="false" ordinalvalue="30011" solutionaction="Added">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <events>
+        <event name="onload" application="true" active="true">
+          <Handlers solutionaction="Added">
+            <Handler functionName="splitDetails" libraryName="a3i_SplitDetails" handlerUniqueId="{5cd23656-7c3a-5136-e429-50cdb15db476}" enabled="true" parameters="" passExecutionContext="true" ordinalvalue="0" />
+            <Handler functionName="filesTab" libraryName="a3i_FilesTab" handlerUniqueId="{5d7ca7b1-aba5-91bc-8eb2-381ea3b21566}" enabled="true" parameters="" passExecutionContext="true" ordinalvalue="1" />
+          </Handlers>
+        </event>
+        <event name="onsave" application="false" active="false" solutionaction="Added">
+          <Handlers>
+            <Handler functionName="splitDetails" libraryName="a3i_SplitDetails" handlerUniqueId="{e524a917-ab3e-8259-5889-e7373249e2ab}" enabled="true" parameters="" passExecutionContext="true" ordinalvalue="0" />
+          </Handlers>
+        </event>
+      </events>
+      <Navigation>
+        <NavBar>
+          <NavBarByRelationshipItem RelationshipName="opportunity_customer_opportunity_roles" Id="navRelationship" TitleResourceId="Tab_Label_Relationship" Sequence="20" Area="Info" solutionaction="Modified">
+            <Titles solutionaction="Added">
+              <Title LCID="1033" Text="Relationships" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="Opportunity_ActivityPointers" Id="navActivities" Icon="/_imgs/ico_18_act.gif" Sequence="20" Area="Info" solutionaction="Modified">
+            <Titles solutionaction="Added">
+              <Title LCID="1033" Text="Activities" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="Opportunity_ActivityPointers" Id="navActivityHistory" TitleResourceId="Tab_Label_History" Icon="/_imgs/ico_18_history.gif" ViewId="21E2B905-6FDB-470d-8517-AD69B4C01268" Sequence="20" Area="Info" solutionaction="Modified">
+            <Titles solutionaction="Added">
+              <Title LCID="1033" Text="Closed Activities" />
+            </Titles>
+          </NavBarByRelationshipItem>
+        </NavBar>
+        <NavBarAreas solutionaction="Added">
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <footer id="{f1370e9f-df8d-474f-92ae-b9fd649b136f}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left" solutionaction="Added">
+        <rows />
+      </footer>
+      <controlDescriptions solutionaction="Added">
+        <controlDescription forControl="{D8585C54-AD90-B64B-A336-A3AB981529A1}">
+          <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_copro</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="-1" name="MscrmControls.Orchestration.FieldControls.FlipSwitchControl">
+            <parameters>
+              <value>a3i_copro</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_copro</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_copro</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_copro</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{3C28A458-1AA3-80B0-0042-4864A3DAB40A}">
+          <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_dealwithba</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_dealwithba</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_dealwithba</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_dealwithba</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{26D03204-EA01-31BE-C2DD-ABB388301C94}">
+          <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_deactivatedowner</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_deactivatedowner</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_deactivatedowner</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_deactivatedowner</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{40400124-70C1-E13B-77EB-2EC7C6AA9356}">
+          <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" formFactor="0">
+            <parameters>
+              <TargetEntityType>opportunity</TargetEntityType>
+              <ViewId>{7069BA3E-2F0B-EC11-B6E6-000D3A86DD0F}</ViewId>
+              <ViewIds>{7069BA3E-2F0B-EC11-B6E6-000D3A86DD0F}</ViewIds>
+              <EnableViewPicker>false</EnableViewPicker>
+              <RelationshipName>a3i_Opportunity_ParentOpportunity_Opportunity</RelationshipName>
+              <AutoExpand>Auto</AutoExpand>
+              <RecordsPerPage>10</RecordsPerPage>
+              <HeaderColorCode>#F5FBFD</HeaderColorCode>
+              <IsUserView>false</IsUserView>
+              <EnableQuickFind>false</EnableQuickFind>
+              <EnableJumpBar>false</EnableJumpBar>
+              <ChartGridMode>All</ChartGridMode>
+              <VisualizationId>{8BC5FB18-48F2-4782-9E16-3D452FA4DDCE}</VisualizationId>
+              <IsUserChart>false</IsUserChart>
+              <EnableChartPicker>true</EnableChartPicker>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{7069BA3E-2F0B-EC11-B6E6-000D3A86DD0F}</ViewId>
+                <columnsDefaultView />
+                <IsUserView>false</IsUserView>
+                <RelationshipName>a3i_Opportunity_ParentOpportunity_Opportunity</RelationshipName>
+                <TargetEntityType>opportunity</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{7069BA3E-2F0B-EC11-B6E6-000D3A86DD0F}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
+              <EnableEditing static="true" type="Enum">yes</EnableEditing>
+              <ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+              <ListLayoutDirection static="true" type="Enum">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse static="true" type="Enum">false</EnableSubGridAutoCollapse>
+              <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+              <HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+              <EnableJumpBar static="true" type="Enum">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{7069BA3E-2F0B-EC11-B6E6-000D3A86DD0F}</ViewId>
+                <columnsDefaultView />
+                <IsUserView>false</IsUserView>
+                <RelationshipName>a3i_Opportunity_ParentOpportunity_Opportunity</RelationshipName>
+                <TargetEntityType>opportunity</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{7069BA3E-2F0B-EC11-B6E6-000D3A86DD0F}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
+              <EnableEditing static="true" type="Enum">yes</EnableEditing>
+              <ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+              <ListLayoutDirection static="true" type="Enum">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse static="true" type="Enum">false</EnableSubGridAutoCollapse>
+              <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+              <HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+              <EnableJumpBar static="true" type="Enum">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{52445585-D4D9-A91E-3785-62AD54608201}">
+          <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_pre2021value</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_pre2021value</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_pre2021value</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_pre2021value</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{4DB7C99C-08B6-4862-AFC3-D505824CF406}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_formatother</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_formatother</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_formatother</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_formatother</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{E923EE16-887D-1636-3D83-81214BD2E3C4}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>a3i_dealvalidationmessageyear</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.SimpleNotification">
+            <parameters>
+              <fakeAttribute>a3i_dealvalidationmessageyear</fakeAttribute>
+              <messageType static="true" type="Enum">Warning</messageType>
+              <message static="true" type="SingleLine.Text">Year values do not add up to overall deal value. Please amend</message>
+              <showLink static="true" type="Enum">No</showLink>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.SimpleNotification">
+            <parameters>
+              <fakeAttribute>a3i_dealvalidationmessageyear</fakeAttribute>
+              <messageType static="true" type="Enum">Warning</messageType>
+              <message static="true" type="SingleLine.Text">Year values do not add up to overall deal value. Please amend</message>
+              <showLink static="true" type="Enum">No</showLink>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.SimpleNotification">
+            <parameters>
+              <fakeAttribute>a3i_dealvalidationmessageyear</fakeAttribute>
+              <messageType static="true" type="Enum">Warning</messageType>
+              <message static="true" type="SingleLine.Text">Year values do not add up to overall deal value. Please amend</message>
+              <showLink static="true" type="Enum">No</showLink>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{ABEDE21B-B344-B375-4E37-7309D9C274BA}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>a3i_dealvalidationmessagesplit</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.SimpleNotification">
+            <parameters>
+              <fakeAttribute>a3i_dealvalidationmessagesplit</fakeAttribute>
+              <messageType static="true" type="Enum">Warning</messageType>
+              <message static="true" type="SingleLine.Text">Deal split values do not add up to overall deal value. Please amend</message>
+              <showLink static="true" type="Enum">No</showLink>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.SimpleNotification">
+            <parameters>
+              <fakeAttribute>a3i_dealvalidationmessagesplit</fakeAttribute>
+              <messageType static="true" type="Enum">Warning</messageType>
+              <message static="true" type="SingleLine.Text">Deal split values do not add up to overall deal value. Please amend</message>
+              <showLink static="true" type="Enum">No</showLink>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.SimpleNotification">
+            <parameters>
+              <fakeAttribute>a3i_dealvalidationmessagesplit</fakeAttribute>
+              <messageType static="true" type="Enum">Warning</messageType>
+              <message static="true" type="SingleLine.Text">Deal split values do not add up to overall deal value. Please amend</message>
+              <showLink static="true" type="Enum">No</showLink>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{D62BA3B5-661C-9426-2929-DADE577B851B}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>a3i_dealvalidationmessageseries</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.SimpleNotification">
+            <parameters>
+              <fakeAttribute>a3i_dealvalidationmessageseries</fakeAttribute>
+              <messageType static="true" type="Enum">Warning</messageType>
+              <message static="true" type="SingleLine.Text">Series values do not add up to overall deal value. Please amend</message>
+              <showLink static="true" type="Enum">No</showLink>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.SimpleNotification">
+            <parameters>
+              <fakeAttribute>a3i_dealvalidationmessageseries</fakeAttribute>
+              <messageType static="true" type="Enum">Warning</messageType>
+              <message static="true" type="SingleLine.Text">Series values do not add up to overall deal value. Please amend</message>
+              <showLink static="true" type="Enum">No</showLink>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.SimpleNotification">
+            <parameters>
+              <fakeAttribute>a3i_dealvalidationmessageseries</fakeAttribute>
+              <messageType static="true" type="Enum">Warning</messageType>
+              <message static="true" type="SingleLine.Text">Series values do not add up to overall deal value. Please amend</message>
+              <showLink static="true" type="Enum">No</showLink>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{43CCD3A2-9FFC-4878-87C8-AE06894C99CF}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_underreviewbyba</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="PowerApps.CoreControls.Checkbox">
+            <parameters>
+              <value type="TwoOptions">a3i_underreviewbyba</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="PowerApps.CoreControls.Checkbox">
+            <parameters>
+              <value type="TwoOptions">a3i_underreviewbyba</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="PowerApps.CoreControls.Checkbox">
+            <parameters>
+              <value type="TwoOptions">a3i_underreviewbyba</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{FA5A59C0-D0CA-43B6-8976-154E64E2AE65}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_revshare</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="-1" name="MscrmControls.Orchestration.FieldControls.FlipSwitchControl">
+            <parameters>
+              <value type="TwoOptions">a3i_revshare</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_revshare</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_revshare</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_revshare</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <formLibraries solutionaction="Added">
+        <Library name="msdyn_/ActivityFeeds.Form.js" libraryUniqueId="{4181da4c-6d13-ba3c-c859-be404e4ee2e3}" />
+        <Library name="a3i_SplitDetails" libraryUniqueId="{b252dc6e-4b28-44a3-8334-901c35dd5062}" />
+        <Library name="a3i_FilesTab" libraryUniqueId="{411d0e03-d697-9271-433d-25c4662153c3}" />
+      </formLibraries>
+      <DisplayConditions FallbackForm="true" Order="2" solutionaction="Added">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

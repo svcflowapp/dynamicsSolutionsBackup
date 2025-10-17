@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{aa99cc44-2d6c-ef11-a670-0022481a53a5}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="name" select="1" icon="1" preview="1">
+        <row name="result" id="opportunityid">
+          <cell name="a3i_bateammember" width="145" />
+          <cell name="name" width="90" />
+          <cell name="a3i_barequesttype" width="139" />
+          <cell name="a3i_titles" width="100" />
+          <cell name="a3i_dealtype" width="100" />
+          <cell name="parentaccountid" width="100" />
+          <cell name="ownerid" width="130" />
+          <cell name="estimatedclosedate" width="100" />
+          <cell name="a3i_reportingterritories" width="158" />
+          <cell name="a_4830304fa3f94c65934b90bdf4b922d1.isocurrencycode" width="128" />
+          <cell name="estimatedvalue" width="135" />
+          <cell name="a3i_datereceivedtoba" width="160" />
+          <cell name="a3i_dealstatus" width="100" />
+          <cell name="statuscode" width="105" />
+          <cell name="currentsituation" width="137" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="opportunity">
+          <attribute name="name" />
+          <attribute name="opportunityid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="ne" value="2" />
+          </filter>
+          <attribute name="a3i_bateammember" />
+          <attribute name="a3i_titles" />
+          <attribute name="a3i_dealtype" />
+          <attribute name="parentaccountid" />
+          <attribute name="ownerid" />
+          <attribute name="a3i_barequesttype" />
+          <attribute name="a3i_reportingterritories" />
+          <attribute name="estimatedclosedate" />
+          <link-entity alias="a_4830304fa3f94c65934b90bdf4b922d1" name="transactioncurrency" to="a3i_royaltiescurrency" from="transactioncurrencyid" link-type="outer" visible="false">
+            <attribute name="isocurrencycode" />
+          </link-entity>
+          <attribute name="estimatedvalue" />
+          <attribute name="a3i_datereceivedtoba" />
+          <attribute name="a3i_dealstatus" />
+          <attribute name="statuscode" />
+          <attribute name="currentsituation" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Business Affairs Tracker" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

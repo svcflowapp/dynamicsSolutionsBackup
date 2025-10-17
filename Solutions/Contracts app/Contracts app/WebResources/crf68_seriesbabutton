@@ -1,0 +1,5 @@
+function setCreateBADocumentSet(primaryControl) {
+    var formContext = primaryControl;
+    formContext.getAttribute("a3i_createbadocumentset").setValue(true);
+    formContext.data.save();
+}

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="My Allocations" languagecode="1033" />
+  </LocalizedNames>
+  <FormId>{9f0f384d-f891-ef11-8a69-6045bd0d285d}</FormId>
+  <IsCustomizable>1</IsCustomizable>
+  <IsDefault>0</IsDefault>
+  <FormXml>
+    <forms type="dashboard">
+      <form>
+        <tabs>
+          <tab showlabel="false" verticallayout="true" id="{bf715468-9d8e-46e3-b110-d3821a5a2758}">
+            <labels>
+              <label description="Tab" languagecode="1033" />
+            </labels>
+            <columns>
+              <column width="100%">
+                <sections>
+                  <section showlabel="false" showbar="false" columns="1111" id="{1de83a77-0958-4659-b5df-9865fa186624}" name="{1de83a77-0958-4659-b5df-9865fa186624}" locklevel="0" labelwidth="130">
+                    <labels>
+                      <label description="My Allocations" languagecode="1033" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell colspan="2" rowspan="12" showlabel="true" id="{c1a47edd-457e-41f1-b02b-dd63114ed470}" auto="false">
+                          <labels>
+                            <label description="My Allocated Deals" languagecode="1033" />
+                          </labels>
+                          <control id="Componentce0f009" uniqueid="{d065648a-9e88-5343-1620-0dceb50783b4}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>opportunity</TargetEntityType>
+                              <ChartGridMode>Grid</ChartGridMode>
+                              <EnableQuickFind>true</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>true</EnableJumpBar>
+                              <RecordsPerPage>8</RecordsPerPage>
+                              <HeaderColorCode>#F5FBFD</HeaderColorCode>
+                              <ViewId>{B6CA1450-918C-EF11-8A69-0022481B0DC1}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds>{B6CA1450-918C-EF11-8A69-0022481B0DC1}</ViewIds>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{8BC5FB18-48F2-4782-9E16-3D452FA4DDCE}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="2" rowspan="12" showlabel="true" id="{59d87429-1038-47e7-9734-1d4dcc2bd2ab}" auto="false">
+                          <labels>
+                            <label description="My Allocated Series" languagecode="1033" />
+                          </labels>
+                          <control id="Component4bdb284" uniqueid="{41a4d554-0d98-e3d5-b0da-aeb581357d1e}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>a3i_series</TargetEntityType>
+                              <ChartGridMode>Grid</ChartGridMode>
+                              <EnableQuickFind>true</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>true</EnableJumpBar>
+                              <RecordsPerPage>8</RecordsPerPage>
+                              <HeaderColorCode>#F5FBFD</HeaderColorCode>
+                              <ViewId>{A4BDB8BA-FB91-EF11-8A69-0022481B0DC1}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds>{A4BDB8BA-FB91-EF11-8A69-0022481B0DC1}</ViewIds>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId />
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row>
+                        <cell colspan="2" rowspan="12" showlabel="true" id="{5349a3c2-5b19-4913-8d10-31d796037ea1}" auto="false">
+                          <labels>
+                            <label description="My Allocated Other Contracts" languagecode="1033" />
+                          </labels>
+                          <control id="Componentdb5ed1a" uniqueid="{5cd27a56-6a82-5dd9-6ced-84de99a1955c}" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>crf68_othercontracts</TargetEntityType>
+                              <ChartGridMode>Grid</ChartGridMode>
+                              <EnableQuickFind>true</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>true</EnableJumpBar>
+                              <RecordsPerPage>8</RecordsPerPage>
+                              <HeaderColorCode>#F5FBFD</HeaderColorCode>
+                              <ViewId>{456C17C5-0492-EF11-8A69-6045BD0D285D}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds>{91FCA4CD-CD25-40D4-81AB-83D3CDA57EEC}</ViewIds>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId />
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="2" rowspan="12" showlabel="false" ispreviewcell="true" id="{2962a36b-253b-466c-9473-2562167bde62}">
+                          <labels>
+                            <label description="" languagecode="1033" />
+                          </labels>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+        <controlDescriptions />
+      </form>
+    </forms>
+  </FormXml>
+  <IntroducedVersion>1.0.0.4</IntroducedVersion>
+  <IsTabletEnabled>0</IsTabletEnabled>
+</Dashboard>

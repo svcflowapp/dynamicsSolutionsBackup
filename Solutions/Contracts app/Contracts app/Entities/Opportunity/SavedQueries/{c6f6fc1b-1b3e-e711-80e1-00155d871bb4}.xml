@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{c6f6fc1b-1b3e-e711-80e1-00155d871bb4}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="name" select="1" preview="1" icon="1">
+        <row name="result" id="opportunityid">
+          <cell name="name" width="90" />
+          <cell name="a3i_dealtype" width="88" />
+          <cell name="parentaccountid" width="100" />
+          <cell name="a3i_titles" width="100" />
+          <cell name="a3i_reportingterritories" width="100" />
+          <cell name="estimatedvalue" width="148" />
+          <cell name="a3i_dealvaluegbp" width="183" />
+          <cell name="a3i_ccy2025" width="101" />
+          <cell name="a3i_ccy2026" width="101" />
+          <cell name="currentsituation" width="131" />
+          <cell name="a3i_dealstatus" width="100" />
+          <cell name="ownerid" width="168" />
+          <cell name="parentcontactid" width="100" />
+          <cell name="a3i_bateammember" width="145" />
+          <cell name="statuscode" width="100" />
+          <cell name="modifiedon" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="opportunity">
+          <attribute name="name" />
+          <attribute name="parentaccountid" />
+          <attribute name="a3i_dealtype" />
+          <attribute name="estimatedvalue" />
+          <attribute name="ownerid" />
+          <attribute name="a3i_titles" />
+          <attribute name="a3i_reportingterritories" />
+          <attribute name="a3i_dealstatus" />
+          <attribute name="statuscode" />
+          <attribute name="currentsituation" />
+          <attribute name="opportunityid" />
+          <attribute name="modifiedon" />
+          <attribute name="a3i_dealvaluegbp" />
+          <order attribute="a3i_dealvaluegbp" descending="true" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="a3i_opportunityhierarchy" operator="ne" value="430830002" />
+            <condition attribute="statuscode" operator="ne" value="430830006" />
+          </filter>
+          <attribute name="a3i_ccy2025" />
+          <attribute name="parentcontactid" />
+          <attribute name="a3i_ccy2026" />
+          <attribute name="a3i_bateammember" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Deals" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Shows all the opportunities" languagecode="1033" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

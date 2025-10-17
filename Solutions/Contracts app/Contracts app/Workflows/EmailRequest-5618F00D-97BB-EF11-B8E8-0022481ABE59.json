@@ -1,0 +1,210 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_office365": {
+        "api": {
+          "name": "shared_office365"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedoffice365_53f2c"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_conversionservice": {
+        "api": {
+          "name": "shared_conversionservice"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedconversionservice_9e85f"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_61216"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_sharepointonline": {
+        "api": {
+          "name": "shared_sharepointonline"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedsharepointonline_b7aba"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "When_a_new_email_arrives_in_a_shared_mailbox_(V2)": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "mailboxAddress": "busa@all3media.com;",
+              "importance": "Any",
+              "hasAttachments": false,
+              "includeAttachments": true,
+              "folderId": "Inbox"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+              "operationId": "SharedMailboxOnNewEmailV2",
+              "connectionName": "shared_office365"
+            }
+          },
+          "recurrence": {
+            "interval": 1,
+            "frequency": "Minute"
+          },
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "dfd62e01-1513-48ad-9971-e8d1185b3fca"
+          }
+        }
+      },
+      "actions": {
+        "Convert_Body_HTML_to_Text": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "Content": "<p>@{triggerOutputs()?['body/body']}</p>"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_conversionservice",
+              "operationId": "HtmlToText",
+              "connectionName": "shared_conversionservice"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "1d7f320b-494e-4ffe-a287-954682e63d4b"
+          }
+        },
+        "Add_a_new_BA_Request_row": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "a3i_barequests1s",
+              "item/a3i_bastatus": 430830000,
+              "item/a3i_notes": "@body('Convert_Body_HTML_to_Text')",
+              "item/a3i_requesttype": 430830009,
+              "item/a3i_requestedby": "@triggerOutputs()?['body/from']",
+              "item/a3i_subject": "@triggerOutputs()?['body/subject']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "CreateRecord",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Convert_Body_HTML_to_Text": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0961d280-3093-4705-805c-0e2f899d9276"
+          }
+        },
+        "Condition": {
+          "type": "If",
+          "expression": {
+            "equals": [
+              "@triggerOutputs()?['body/hasAttachments']",
+              true
+            ]
+          },
+          "actions": {
+            "Apply_to_each": {
+              "type": "Foreach",
+              "foreach": "@triggerOutputs()?['body/attachments']",
+              "actions": {
+                "Create_Attachment_File_in_SharePoint_Library": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "dataset": "https://all3media.sharepoint.com/sites/A3I-BusinessAffairs",
+                      "folderPath": "/BA Request Attachments Dev",
+                      "name": "@items('Apply_to_each')?['name']",
+                      "body": "@items('Apply_to_each')?['contentBytes']"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                      "operationId": "CreateFile",
+                      "connectionName": "shared_sharepointonline"
+                    }
+                  },
+                  "runtimeConfiguration": {
+                    "contentTransfer": {
+                      "transferMode": "Chunked"
+                    }
+                  },
+                  "metadata": {
+                    "operationMetadataId": "edb90b10-c627-4c26-a026-71951f822a6c"
+                  }
+                },
+                "Add_a_new_Document_Location_row": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "entityName": "sharepointdocumentlocations",
+                      "item/name": "@items('Apply_to_each')?['name']",
+                      "item/servicetype": 0,
+                      "item/relativeurl": "test",
+                      "item/a3i_sharepointid": "@outputs('Create_Attachment_File_in_SharePoint_Library')?['body/ItemId']"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                      "operationId": "CreateRecord",
+                      "connectionName": "shared_commondataserviceforapps"
+                    }
+                  },
+                  "runAfter": {
+                    "Create_Attachment_File_in_SharePoint_Library": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "bc96e424-dac6-46a8-9b64-1067cbe1da0b"
+                  }
+                }
+              },
+              "metadata": {
+                "operationMetadataId": "459ffe25-2591-4390-bd02-95d700725219"
+              }
+            }
+          },
+          "else": {
+            "actions": {}
+          },
+          "runAfter": {
+            "Add_a_new_BA_Request_row": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b69508b7-0459-4240-9a71-95ced42197d8"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

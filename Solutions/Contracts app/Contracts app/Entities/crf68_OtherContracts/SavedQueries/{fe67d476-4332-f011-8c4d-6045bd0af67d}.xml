@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{fe67d476-4332-f011-8c4d-6045bd0af67d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crf68_contractid" select="1" icon="1" preview="1">
+        <row name="result" id="crf68_othercontractsid">
+          <cell name="crf68_contractid" width="200" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="crf68_othercontracts">
+          <attribute name="crf68_contractid" />
+          <attribute name="crf68_othercontractsid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.12</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Linked Other Contracts" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

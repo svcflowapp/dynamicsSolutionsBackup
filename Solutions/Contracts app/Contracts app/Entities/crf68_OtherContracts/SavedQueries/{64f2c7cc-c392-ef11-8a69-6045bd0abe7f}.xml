@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{64f2c7cc-c392-ef11-8a69-6045bd0abe7f}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="crf68_contractid" select="1" icon="1" preview="1">
+        <row name="result" id="crf68_othercontractsid">
+          <cell name="crf68_contractid" width="200" />
+          <cell name="a_6cda29f4151a4aacb9f37b2267fbd22f.a3i_bateammember" width="237" />
+          <cell name="crf68_contracttype" width="120" />
+          <cell name="crf68_contractingpartynew" width="170" />
+          <cell name="crf68_contractvalue" width="124" />
+          <cell name="crf68_bastatus" width="100" />
+          <cell name="crf68_datereceivedtoba" width="164" />
+          <cell name="crf68_legalnotes" width="109" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="crf68_othercontracts">
+          <attribute name="crf68_contractid" />
+          <attribute name="crf68_othercontractsid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <link-entity alias="a_6cda29f4151a4aacb9f37b2267fbd22f" name="opportunity" to="crf68_dealslookup" from="opportunityid" link-type="outer" visible="false">
+            <attribute name="a3i_bateammember" />
+          </link-entity>
+          <attribute name="crf68_contracttype" />
+          <attribute name="crf68_contractingpartynew" />
+          <attribute name="crf68_contractvalue" />
+          <attribute name="crf68_bastatus" />
+          <attribute name="crf68_datereceivedtoba" />
+          <attribute name="crf68_legalnotes" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Business Affairs Tracker" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

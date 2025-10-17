@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{44796989-9a8c-ef11-8a69-6045bd0abe7f}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_dealseriesid">
+          <cell name="a3i_name" width="200" />
+          <cell name="a3i_series" width="100" />
+          <cell name="a_787c84948b6e48448a9584e692948253.a3i_rightstrackerseriesstatus" width="246" />
+          <cell name="a_787c84948b6e48448a9584e692948253.a3i_saleswarning" width="168" />
+          <cell name="a_787c84948b6e48448a9584e692948253.a3i_creditline" width="152" />
+          <cell name="a_787c84948b6e48448a9584e692948253.a3i_deliverytype" width="168" />
+          <cell name="a_787c84948b6e48448a9584e692948253.a3i_fullydelivereddate" width="206" />
+          <cell name="a_787c84948b6e48448a9584e692948253.a3i_bacontact" width="227" />
+          <cell name="a_48a048e1d3114b1a985f1546250c61ad.a3i_legalnotes" width="148" />
+          <cell name="a_787c84948b6e48448a9584e692948253.a3i_distributioncontractsignaturedate" width="294" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="a3i_dealseries">
+          <attribute name="a3i_name" />
+          <attribute name="a3i_dealseriesid" />
+          <attribute name="a3i_series" />
+          <link-entity alias="a_787c84948b6e48448a9584e692948253" name="a3i_series" to="a3i_series" from="a3i_seriesid" link-type="outer" visible="false">
+            <attribute name="a3i_rightstrackerseriesstatus" />
+            <attribute name="a3i_saleswarning" />
+            <attribute name="a3i_creditline" />
+            <attribute name="a3i_deliverytype" />
+            <attribute name="a3i_fullydelivereddate" />
+            <attribute name="a3i_bacontact" />
+            <attribute name="a3i_distributioncontractsignaturedate" />
+          </link-entity>
+          <link-entity alias="a_48a048e1d3114b1a985f1546250c61ad" name="opportunity" to="a3i_deal" from="opportunityid" link-type="outer" visible="false">
+            <attribute name="a3i_legalnotes" />
+          </link-entity>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.61</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Deal Series Associated View - BA" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>
