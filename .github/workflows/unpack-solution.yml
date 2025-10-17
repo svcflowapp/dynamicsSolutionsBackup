@@ -1,0 +1,105 @@
+name: Unpack solution using sidecar metadata
+
+on:
+  push:
+    paths:
+      - 'Solutions/**/*.zip'
+      - 'Solutions/**/*.meta.json'
+
+jobs:
+  unpack:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Power Platform Tools
+        uses: microsoft/powerplatform-actions/actions-install@v1
+
+      # Locate ZIP changed in this push (fallback: newest)
+      - name: Locate ZIP
+        id: findzip
+        shell: bash
+        run: |
+          set -e
+          ZIP="$(git diff --name-only HEAD^ HEAD | grep -E '^Solutions/.+/.+\.zip$' | head -n1 || true)"
+          [ -z "$ZIP" ] && ZIP="$(ls -1t Solutions/*/*.zip | head -n1 || true)"
+          [ -z "$ZIP" ] && { echo "No ZIP found"; exit 1; }
+          DIR="$(dirname "$ZIP")"; BASE="$(basename "$ZIP" .zip)"
+          echo "zip=$ZIP" >> "$GITHUB_OUTPUT"
+          echo "dir=$DIR" >> "$GITHUB_OUTPUT"
+          echo "name_no_ext=$BASE" >> "$GITHUB_OUTPUT"
+
+      # Read metadata (with sensible defaults)
+      - name: Read metadata
+        id: meta
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const dir = core.getInput('dir'); const base = core.getInput('name_no_ext');
+            const metaPath = path.join(dir, `${base}.meta.json`);
+            let m = { managed:false, version:'', environment:'', deleteZip:true };
+            if (fs.existsSync(metaPath)) {
+              try { Object.assign(m, JSON.parse(fs.readFileSync(metaPath,'utf8'))); }
+              catch { core.warning(`Invalid JSON in ${metaPath}; using defaults`); }
+            } else {
+              core.warning(`No ${base}.meta.json found; using defaults`);
+            }
+            const solutionType = m.managed ? 'Managed' : 'Unmanaged';
+            core.setOutput('solution_type', solutionType);
+            core.setOutput('version', String(m.version||'').trim());
+            core.setOutput('environment', String(m.environment||'').trim());
+            core.setOutput('deleteZip', String(m.deleteZip !== false)); // default true
+        env:
+          dir: ${{ steps.findzip.outputs.dir }}
+          name_no_ext: ${{ steps.findzip.outputs.name_no_ext }}
+
+      # Clean target folder and unpack beside the ZIP
+      - name: Unpack solution
+        uses: microsoft/powerplatform-actions/unpack-solution@v1
+        with:
+          solution-file: '${{ steps.findzip.outputs.zip }}'
+          solution-folder: '${{ steps.findzip.outputs.dir }}/${{ steps.findzip.outputs.name_no_ext }}'
+          overwrite-files: true
+          solution-type: '${{ steps.meta.outputs.solution_type }}'
+
+      # Persist normalised metadata inside the unpacked folder
+      - name: Write normalised metadata
+        shell: bash
+        run: |
+          TARGET='${{ steps.findzip.outputs.dir }}/${{ steps.findzip.outputs.name_no_ext }}/.solution-meta.json'
+          printf '{\n  "version": "%s",\n  "managed": "%s",\n  "environment": "%s"\n}\n' \
+            '${{ steps.meta.outputs.version }}' \
+            '${{ steps.meta.outputs.solution_type }}' \
+            '${{ steps.meta.outputs.environment }}' \
+            > "$TARGET"
+
+      # Optionally delete the ZIP if meta says so
+      - name: Delete ZIP (optional)
+        if: ${{ steps.meta.outputs.deleteZip == 'true' }}
+        shell: bash
+        run: rm -f '${{ steps.findzip.outputs.zip }}'
+
+      # Commit and tag
+      - name: Commit changes
+        shell: bash
+        run: |
+          set -e
+          git config user.name  "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          MSG="Unpack ${{ steps.findzip.outputs.name_no_ext }} (${{ steps.meta.outputs.solution_type }})"
+          [ -n "${{ steps.meta.outputs.environment }}" ] && MSG="$MSG env ${{ steps.meta.outputs.environment }}"
+          [ -n "${{ steps.meta.outputs.version }}" ] && MSG="$MSG version ${{ steps.meta.outputs.version }}"
+          git commit -m "$MSG"
+          git push
+          if [ -n "${{ steps.meta.outputs.version }}" ]; then
+            TAG="${{ steps.findzip.outputs.name_no_ext }}-v${{ steps.meta.outputs.version }}"
+            git tag -f "$TAG" || true
+            git push -f origin "refs/tags/$TAG" || true
+          fi
