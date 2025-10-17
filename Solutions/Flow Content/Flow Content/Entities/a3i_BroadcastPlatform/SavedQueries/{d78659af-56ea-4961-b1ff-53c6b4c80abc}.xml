@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{d78659af-56ea-4961-b1ff-53c6b4c80abc}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" preview="1" icon="1" select="1" jump="a3i_name">
+        <row id="a3i_broadcastplatformid" name="result">
+          <cell name="a3i_name" width="300" />
+          <cell name="a3i_commissioningcountry" width="100" />
+          <cell name="a3i_parentorganisation" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch mapping="logical" version="1.0">
+        <entity name="a3i_broadcastplatform">
+          <attribute name="a3i_broadcastplatformid" />
+          <attribute name="a3i_name" />
+          <order descending="false" attribute="a3i_name" />
+          <filter type="and">
+            <condition attribute="statecode" value="1" operator="eq" />
+          </filter>
+          <attribute name="a3i_parentorganisation" />
+          <attribute name="a3i_commissioningcountry" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.12</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Broadcast Platforms" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

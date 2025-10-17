@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{0e3766d8-7e12-46b6-b681-571e61b1800e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_filename" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_sharepointdocumentindexid">
+          <cell name="a3i_documentgroup" width="105" />
+          <cell name="a3i_documenttype" width="136" />
+          <cell name="a_0acf078126494445a67853de161491ba.a3i_contenttype" width="100" />
+          <cell name="a3i_series" width="168" />
+          <cell name="a_e5b3d5b04c7745a08b9e1e1578ad6100.a3i_producer1" width="236" />
+          <cell name="a3i_filename" width="300" />
+          <cell name="a3i_url" width="300" />
+          <cell name="a3i_documentmodified" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_sharepointdocumentindex">
+          <attribute name="a3i_sharepointdocumentindexid" />
+          <attribute name="a3i_filename" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="a3i_documentgroup" />
+          <attribute name="a3i_documenttype" />
+          <attribute name="a3i_series" />
+          <attribute name="a3i_url" />
+          <attribute name="a3i_documentmodified" />
+          <order attribute="a3i_documentmodified" descending="true" />
+          <link-entity alias="a_e5b3d5b04c7745a08b9e1e1578ad6100" name="a3i_series" to="a3i_series" from="a3i_seriesid" link-type="outer" visible="false">
+            <attribute name="a3i_producer1" />
+          </link-entity>
+          <link-entity alias="a_0acf078126494445a67853de161491ba" name="a3i_programme" to="a3i_programme" from="a3i_programmeid" link-type="outer" visible="false">
+            <attribute name="a3i_contenttype" />
+          </link-entity>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active SharePoint documents" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{9a2a48a1-0552-41e0-8190-8f088101afd6}</formid>
+    <IntroducedVersion>1.0.0.66</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{7eeee60b-4341-41f1-9698-6cbc078978d1}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{dcd4e8ed-72a8-48b5-a0f0-fcca191bc31a}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e79967ed-9256-4fc8-ac73-f1fd39100239}" locklevel="0">
+                        <labels>
+                          <label description="Notification Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_notificationtype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_notificationtype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e13b310e-1543-4a99-be10-b10a2cb62e05}" locklevel="0">
+                        <labels>
+                          <label description="Created On" languagecode="1033" />
+                        </labels>
+                        <control id="createdon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="createdon" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1191d67c-1356-463c-8c5c-6cd2ee01adc4}">
+                        <labels>
+                          <label description="Title" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{23b4dbce-3ac5-44fa-966d-584d124bee13}" locklevel="0">
+                        <labels>
+                          <label description="Content Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_contenttype" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_contenttype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{99892819-c552-4be5-a541-152a36420285}" locklevel="0">
+                        <labels>
+                          <label description="TX Date Status" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_txdatestatus" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_txdatestatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fb4e37a3-20ec-4afd-9614-20e31d68cf88}" locklevel="0">
+                        <labels>
+                          <label description="TX Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_txdate" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_txdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{efeab128-4df9-4466-94ba-790a67aca136}" locklevel="0">
+                        <labels>
+                          <label description="TX Pattern" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_txpattern" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_txpattern" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{34ed1343-1cc3-435b-8629-d7d65fd3b8a6}" locklevel="0">
+                        <labels>
+                          <label description="Run Time" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_runtime" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_runtime" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{788e95ba-6c35-4e0d-9987-54c6ba59ed79}" locklevel="0">
+                        <labels>
+                          <label description="Delivery Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_deliverytype" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_deliverytype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b54c4c35-8c44-4ecf-b30d-f81765ecba7d}" locklevel="0">
+                        <labels>
+                          <label description="Delivery Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_deliverydate" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_deliverydate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6e6ddbb3-a38f-4ed7-a4b5-91ceb529eefa}" locklevel="0">
+                        <labels>
+                          <label description="Fully Delivered Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_fullydelivereddate" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_fullydelivereddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ab3b6e2a-3566-4021-b9eb-47e0cafdc656}" locklevel="0">
+                        <labels>
+                          <label description="Link" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_link" classid="{71716B6C-711E-476C-8AB8-5D11542BFB47}" datafieldname="a3i_link" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{bad40805-8f01-412a-8df7-426e5bb091bd}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{ee8fa5ea-1efc-4d79-a031-4b6c4b23f5ea}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4cd6f883-3b16-4928-9efb-5a9cb729bee3}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1df18770-0e0f-459b-91d5-1a5800160622}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{1c20b7cd-04ad-456f-aa59-6b85af2d1c06}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{155c9eba-84e1-4671-8b41-1688fe1b032b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0ed7f9db-e7c5-439f-a3df-df8e4007928f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{16637e58-be79-4c64-a754-8093e9e29c5a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

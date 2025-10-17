@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_distributionagreement" localizedName="Distribution Agreement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.28</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="Distribution Agreement" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830006" IsHidden="0">
+      <labels>
+        <label description="Details Sent to BA" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="On Hold" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830005" IsHidden="0">
+      <labels>
+        <label description="Delivery on Sale" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" IsHidden="0">
+      <labels>
+        <label description="Catalogue Acquisition" languagecode="1033" />
+      </labels>
+    </option>
+  </options>
+</optionset>

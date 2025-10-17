@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_deliverytype" localizedName="Delivery Type" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.17</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Delivery Type" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Standard" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830011" IsHidden="0">
+      <labels>
+        <label description="Audio Only" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830005" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Assets Deleted" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Assets on Tape" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" IsHidden="0">
+      <labels>
+        <label description="Assets Unavailable" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830009" IsHidden="0">
+      <labels>
+        <label description="Assets Unknown" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830001" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Delivery on Sale" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Development" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830002" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Direct by Producer" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830003" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Format Materials Only" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Library Catalogue" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Rolling or Batch" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830012" IsHidden="0">
+      <labels>
+        <label description="Other Assets - Marketing" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830013" IsHidden="0">
+      <labels>
+        <label description="Other Assets - Channels" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830014" IsHidden="0">
+      <labels>
+        <label description="Other Assets - Socials" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

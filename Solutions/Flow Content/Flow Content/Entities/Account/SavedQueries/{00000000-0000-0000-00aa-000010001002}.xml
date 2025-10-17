@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{00000000-0000-0000-00aa-000010001002}</savedqueryid>
+    <queryapi></queryapi>
+    <layoutxml>
+      <grid name="resultset" jump="name" select="1" icon="1" preview="1">
+        <row name="result" id="accountid">
+          <cell name="name" width="300" />
+          <cell name="a3i_organisationtype" width="100" />
+          <cell name="primarycontactid" width="150" />
+          <cell name="a_1c0830b1325e4b7996dd07756a041442.emailaddress1" width="100" />
+          <cell name="description" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="account">
+          <attribute name="name" />
+          <order attribute="name" descending="false" />
+          <attribute name="primarycontactid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="a3i_datavalidationstatus" operator="eq" value="430830001" />
+          </filter>
+          <attribute name="accountid" />
+          <attribute name="description" />
+          <attribute name="a3i_organisationtype" />
+          <link-entity alias="a_1c0830b1325e4b7996dd07756a041442" name="contact" to="primarycontactid" from="contactid" link-type="outer" visible="false">
+            <attribute name="emailaddress1" />
+          </link-entity>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Organisations" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

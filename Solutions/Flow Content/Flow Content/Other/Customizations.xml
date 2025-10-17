@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25094.157" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.25094.00157">
+  <Entities />
+  <Roles />
+  <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <Dashboards />
+  <InteractionCentricDashboards />
+  <WebResources />
+  <CustomControls />
+  <AppModuleSiteMaps />
+  <AppModules />
+  <EntityDataProviders />
+  <CanvasApps />
+  <connectionreferences>
+    <connectionreference connectionreferencelogicalname="a3i_sharedcommondataservice_7e072">
+      <connectionreferencedisplayname>Common Data Service</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataservice</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedcommondataserviceforapps_12eb3">
+      <connectionreferencedisplayname>Microsoft Dataverse Flow-12eb3</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedcommondataserviceforapps_32b14">
+      <connectionreferencedisplayname>Microsoft Dataverse</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedcommondataserviceforapps_4d2b8">
+      <connectionreferencedisplayname>Microsoft Dataverse Flow-4d2b8</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedcommondataserviceforapps_6f1eb">
+      <connectionreferencedisplayname>Microsoft Dataverse</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedcommondataserviceforapps_831f1">
+      <connectionreferencedisplayname>Common Data Service (current environment)</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedconversionservice_662f6">
+      <connectionreferencedisplayname>Content Conversion Flow-662f6</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_conversionservice</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <promptingbehavior>0</promptingbehavior>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedexcelonlinebusiness_9250f">
+      <connectionreferencedisplayname>Excel Online (Business) Flow-9250f</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedoffice365_48fa5">
+      <connectionreferencedisplayname>Office 365 Outlook</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedoffice365_bec23">
+      <connectionreferencedisplayname>Office 365 Outlook Flow-bec23</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedonedriveforbusiness_04c9b">
+      <connectionreferencedisplayname>OneDrive for Business SalesSlate-04c9b</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedsendmail_a84df">
+      <connectionreferencedisplayname>Mail</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_sendmail</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedsharepointonline_b7aba">
+      <connectionreferencedisplayname>SharePoint</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_sharepointonline</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedteams_4434d">
+      <connectionreferencedisplayname>Microsoft Teams</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_teams</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="a3i_sharedwordonlinebusiness_8e497">
+      <connectionreferencedisplayname>Word Online (Business) EpisodesVersions-8e497</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_wordonlinebusiness</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="new_sharedoffice365users_44c48">
+      <connectionreferencedisplayname>Office 365 Users Default-44c48</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_office365users</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+    <connectionreference connectionreferencelogicalname="new_sharedsharepointonline_09215">
+      <connectionreferencedisplayname>SharePoint</connectionreferencedisplayname>
+      <connectorid>/providers/Microsoft.PowerApps/apis/shared_sharepointonline</connectorid>
+      <iscustomizable>1</iscustomizable>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </connectionreference>
+  </connectionreferences>
+  <msdyn_dataflows>
+    <msdyn_dataflow msdyn_dataflowid="2af87dd4-2087-f011-b4cc-002248c73666">
+      <iscustomizable>1</iscustomizable>
+      <msdyn_internalversion>6925a768-2e1a-4159-ba56-5f1cfce32b1f</msdyn_internalversion>
+      <msdyn_mashupdocument>section Section1;
+shared a3i_episode = let
+  Source = CommonDataService.Database("a3idev.crm11.dynamics.com", [CreateNavigationProperties = null]),
+  #"Navigation 1" = Source{[Schema = "dbo", Item = "a3i_episode"]}[Data],
+  #"Merged queries" = Table.NestedJoin(#"Navigation 1", {"a3i_version"}, a3i_version, {"a3i_versionid"}, "a3i_version (2)", JoinKind.LeftOuter),
+  #"Expanded a3i_version (2)" = Table.ExpandTableColumn(#"Merged queries", "a3i_version (2)", {"a3i_leadversionname", "a3i_series", "a3i_seriesname"}, {"a3i_leadversionname", "a3i_series.1", "a3i_seriesname.1"}),
+  #"Filtered rows 2" = Table.SelectRows(#"Expanded a3i_version (2)", each ([a3i_leadversionname] = "Yes")),
+  #"Merged queries 1" = Table.NestedJoin(#"Filtered rows 2", {"a3i_series.1"}, a3i_series, {"a3i_seriesid"}, "a3i_series (2)", JoinKind.LeftOuter),
+  #"Expanded a3i_series (2)" = Table.ExpandTableColumn(#"Merged queries 1", "a3i_series (2)", {"statecode", "statecodename", "a3i_rightstrackerseriesstatus", "a3i_rightstrackerseriesstatusname", "a3i_rightstrackerid", "a3i_txdate", "a3i_programme", "a3i_programmename", "a3i_ip","a3i_ipname"}, {"statecode.1", "statecodename.1", "a3i_rightstrackerseriesstatus", "a3i_rightstrackerseriesstatusname", "a3i_rightstrackerid.1", "a3i_txdate", "a3i_programme", "a3i_programmename", "a3i_ip","a3i_ipname"}),
+  #"Filtered rows 1" = Table.SelectRows(#"Expanded a3i_series (2)", each not (([statecode.1] = 1 or [a3i_rightstrackerid.1] = null) or ([a3i_rightstrackerid.1] &lt;&gt; null and List.Contains({430830006, 430830009, 430830007}, [a3i_rightstrackerseriesstatus])))),
+  #"Choose columns" = Table.SelectColumns(#"Filtered rows 1", {"a3i_episodeid", "a3i_episodepremieredate", "a3i_isnontx", "a3i_txdate", "a3i_version", "a3i_versionname", "a3i_series.1", "a3i_seriesname.1","a3i_programme", "a3i_programmename", "a3i_ip","a3i_ipname"})
+in
+  #"Choose columns";
+shared a3i_series = let
+  Source = CommonDataService.Database("a3idev.crm11.dynamics.com", [CreateNavigationProperties = null]),
+  Navigation = Source{[Schema = "dbo", Item = "a3i_series"]}[Data]
+in
+  Navigation;
+shared a3i_version = let
+  Source = CommonDataService.Database("a3idev.crm11.dynamics.com", [CreateNavigationProperties = null]),
+  #"Navigation 1" = Source{[Schema = "dbo", Item = "a3i_version"]}[Data]
+in
+  #"Navigation 1";
+shared a3i_ip = let
+  Source = CommonDataService.Database("a3idev.crm11.dynamics.com", [CreateNavigationProperties = null]),
+  #"Navigation 1" = Source{[Schema = "dbo", Item = "a3i_ip"]}[Data]
+in
+  #"Navigation 1";
+shared a3i_programme = let
+  Source = CommonDataService.Database("a3idev.crm11.dynamics.com", [CreateNavigationProperties = null]),
+  #"Navigation 1" = Source{[Schema = "dbo", Item = "a3i_programme"]}[Data]
+in
+  #"Navigation 1";
+shared #"Series TX" = let
+  Source = a3i_episode,
+  #"Merged queries 1" = Table.NestedJoin(Source, {"a3i_programme"}, a3i_programme, {"a3i_programmeid"}, "a3i_programme (2)", JoinKind.LeftOuter),
+  #"Expanded a3i_programme (2)" = Table.ExpandTableColumn(#"Merged queries 1", "a3i_programme (2)", {"a3i_iptypename"}, {"a3i_iptypename"}),
+  #"Filtered rows" = Table.SelectRows(#"Expanded a3i_programme (2)", each ([a3i_iptypename] = "Broadcast")),
+  SeriesList = List.Distinct(#"Filtered rows"[a3i_series.1]),
+  SeriesTXTable = Table.FromList(SeriesList, each {_}, {"a3i_seriesid"}),
+  WithFirstTX = Table.AddColumn(SeriesTXTable, "a3i_deliverydate", each 
+    let 
+      rows = Table.SelectRows(#"Filtered rows", (r) =&gt; r[a3i_series.1] = [a3i_seriesid] and (r[a3i_isnontx] &lt;&gt; true)),
+      episodeDates = rows[a3i_episodepremieredate],
+      seriesTX = try List.First(List.RemoveNulls(rows[a3i_txdate])) otherwise null 
+    in 
+      if List.NonNullCount(episodeDates) = 0 then seriesTX else List.Min(episodeDates), 
+    type nullable datetime),
+
+  WithLatestTX = Table.AddColumn(WithFirstTX, "a3i_latesttxdate", each 
+    List.Max(
+      Table.SelectRows(#"Filtered rows", (r) =&gt; r[a3i_series.1] = [a3i_seriesid] and (r[a3i_isnontx] &lt;&gt; true))[a3i_episodepremieredate]
+    ), type nullable datetime),
+
+  WithCounts = Table.AddColumn(WithLatestTX, "CountData", each 
+    let rows = Table.SelectRows(#"Filtered rows", (r) =&gt; r[a3i_series.1] = [a3i_seriesid] and (r[a3i_isnontx] &lt;&gt; true)) in [Total = Table.RowCount(rows), WithTX = List.NonNullCount(rows[a3i_episodepremieredate])]),
+
+  WithLastTX = Table.AddColumn(WithCounts, "a3i_lastepisodetxdate", each 
+    let c = [CountData] in if c[Total] = c[WithTX] and c[Total] &gt; 0 then [a3i_latesttxdate] else null, type nullable datetime),
+  Cleaned = Table.RemoveColumns(WithLastTX, {"CountData"}),
+  ContextLookup = Table.Distinct(
+    Table.SelectColumns(#"Filtered rows", {
+      "a3i_episodepremieredate", "a3i_isnontx", "a3i_txdate", "a3i_series.1", "a3i_seriesname.1", "a3i_programme", "a3i_programmename", "a3i_ip", "a3i_ipname"})),
+
+  MergedContext = Table.NestedJoin(Cleaned, {"a3i_seriesid"}, ContextLookup, {"a3i_series.1"}, "Context", JoinKind.LeftOuter),
+
+  #"Expanded Context" = Table.ExpandTableColumn(MergedContext, "Context", {
+    "a3i_episodepremieredate", "a3i_isnontx", "a3i_txdate", "a3i_seriesname.1", "a3i_programme", "a3i_programmename", "a3i_ip", "a3i_ipname"}),
+
+  #"Changed column type" = Table.TransformColumnTypes(#"Expanded Context", {
+    {"a3i_latesttxdate", type date},
+    {"a3i_lastepisodetxdate", type date},
+    {"a3i_txdate", type date},
+    {"a3i_deliverydate", type date}
+  }),
+  #"Merged queries" = Table.NestedJoin(#"Changed column type", {"a3i_seriesid"}, a3i_series, {"a3i_seriesid"}, "a3i_series", JoinKind.LeftOuter),
+  #"Expanded a3i_series" = Table.ExpandTableColumn(#"Merged queries", "a3i_series", {"a3i_seriesid"}, {"a3i_seriesid.1"}),
+  #"Marked key columns" = Table.AddKey(#"Expanded a3i_series", {"a3i_seriesid.1"}, false)
+in
+  #"Marked key columns";
+shared #"Programme TX" = let
+    Source = #"Series TX",
+    ProgrammeList = List.Distinct(Source[a3i_programme]),
+    ProgrammeTXTable = Table.FromList(ProgrammeList, each { _ }, {"a3i_programmeid"}),
+
+    ContextLookup = Table.Distinct(
+        Table.SelectColumns(Source, {"a3i_programme", "a3i_programmename", "a3i_ip", "a3i_ipname"})
+    ),
+    MergedContext = Table.NestedJoin(ProgrammeTXTable, {"a3i_programmeid"}, ContextLookup, {"a3i_programme"}, "Context", JoinKind.LeftOuter),
+    #"Expanded Context" = Table.ExpandTableColumn(MergedContext, "Context", {"a3i_programmename", "a3i_ip", "a3i_ipname"}),
+    WithProgrammeFirstTX = Table.AddColumn(
+        #"Expanded Context", "programme_firsttxdate", each List.Min(Table.SelectRows(Source, (r) =&gt; r[a3i_programme] = [a3i_programmeid])[a3i_deliverydate]),type nullable datetime),
+    WithProgrammeLatestTX = Table.AddColumn(
+        WithProgrammeFirstTX, "programme_latesttxdate",
+        each List.Max( Table.SelectRows(Source, (r) =&gt; r[a3i_programme] = [a3i_programmeid])[a3i_latesttxdate]), type nullable datetime),
+    #"Changed column type" = Table.TransformColumnTypes(WithProgrammeLatestTX, {
+        {"programme_firsttxdate", type date},
+        {"programme_latesttxdate", type date} }),
+    #"Reordered columns" = Table.ReorderColumns(#"Changed column type", {"a3i_programmeid", "a3i_programmename", "programme_firsttxdate", "programme_latesttxdate", "a3i_ipname", "a3i_ip"}),
+  #"Changed column type 1" = Table.TransformColumnTypes(#"Reordered columns", {{"programme_firsttxdate", type datetime}, {"programme_latesttxdate", type datetime}}),
+  #"Merged queries" = Table.NestedJoin(#"Changed column type 1", {"a3i_programmeid"}, a3i_programme, {"a3i_programmeid"}, "a3i_programme", JoinKind.LeftOuter),
+  #"Expanded a3i_programme" = Table.ExpandTableColumn(#"Merged queries", "a3i_programme", {"a3i_programmeid"}, {"a3i_programmeid.1"}),
+  #"Marked key columns" = Table.AddKey(#"Expanded a3i_programme", {"a3i_programmeid.1"}, false)
+in
+    #"Marked key columns";
+shared #"IP TX" = let
+    Source = #"Programme TX",
+    #"Merged queries 1" = Table.NestedJoin(Source, {"a3i_programmeid"}, a3i_programme, {"a3i_programmeid"}, "a3i_programme", JoinKind.LeftOuter),
+    #"Expanded a3i_programme" = Table.ExpandTableColumn(#"Merged queries 1", "a3i_programme", {"a3i_iptypename"}, {"a3i_iptypename"}),
+    #"Filtered rows" = Table.SelectRows(#"Expanded a3i_programme", each [a3i_iptypename] = "Broadcast"),
+    IPList = List.Distinct(#"Filtered rows"[a3i_ip]),
+    IPTXTable = Table.FromList(IPList, each {_}, {"a3i_ipid"}),
+    WithIPFirstTX = Table.AddColumn(IPTXTable, "ip_firsttxdate",
+        each List.Min(
+            Table.SelectRows(#"Filtered rows", (r) =&gt; r[a3i_ip] = [a3i_ipid])[programme_firsttxdate]
+        ),
+        type nullable datetime),
+    WithIPLatestTX = Table.AddColumn(WithIPFirstTX, "ip_latesttxdate",
+        each List.Max(
+            Table.SelectRows(#"Filtered rows", (r) =&gt; r[a3i_ip] = [a3i_ipid])[programme_latesttxdate]
+        ),
+        type nullable datetime),
+    ContextLookup = Table.Distinct(
+        Table.SelectColumns(#"Filtered rows", {"a3i_ip", "a3i_ipname"})
+    ),
+    MergedContext = Table.NestedJoin(WithIPLatestTX, {"a3i_ipid"}, ContextLookup, {"a3i_ip"}, "Context", JoinKind.LeftOuter),
+    #"Expanded Context" = Table.ExpandTableColumn(MergedContext, "Context", {"a3i_ipname"}, {"a3i_ipname"}),
+    #"Changed column type" = Table.TransformColumnTypes(#"Expanded Context", {{"ip_firsttxdate", type datetime}, {"ip_latesttxdate", type datetime}}),
+  #"Merged queries" = Table.NestedJoin(#"Changed column type", {"a3i_ipid"}, a3i_ip, {"a3i_ipid"}, "a3i_ip", JoinKind.LeftOuter),
+  #"Expanded a3i_ip" = Table.ExpandTableColumn(#"Merged queries", "a3i_ip", {"a3i_ipid"}, {"a3i_ipid.1"}),
+  #"Filtered rows 1" = Table.SelectRows(#"Expanded a3i_ip", each ([a3i_ipid.1] &lt;&gt; null)),
+  #"Marked key columns" = Table.AddKey(#"Filtered rows 1", {"a3i_ipid.1"}, false)
+in
+    #"Marked key columns";
+</msdyn_mashupdocument>
+      <msdyn_mashupsettings>{"QueryGroups":[{"Id":"3e598c64-053c-4b0b-b10f-a6aec6203a6a","Name":"Content","Description":"","ParentId":null,"Order":0},{"Id":"d70eb015-22e3-4299-b661-8375f761d9c0","Name":"TX Dates","Description":"","ParentId":null,"Order":1}],"DocumentLocale":"en-GB","QueriesMetadata":{"a3i_episode":{"QueryId":"fa73d8c2-bec5-4645-80f0-b3c207d49e94","QueryName":"a3i_episode","QueryGroupId":"3e598c64-053c-4b0b-b10f-a6aec6203a6a","EntityName":null,"LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":null,"LoadEnabled":false,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{},"HostProperties":{"MappingEditorProperties":"{}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null},"a3i_series":{"QueryId":"72f49bb1-1ce3-4eff-a029-4efa23b427c4","QueryName":"a3i_series","QueryGroupId":"3e598c64-053c-4b0b-b10f-a6aec6203a6a","EntityName":null,"LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":null,"LoadEnabled":false,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{},"HostProperties":{"MappingEditorProperties":"{}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null},"a3i_version":{"QueryId":"8137b09e-98ca-4633-aec1-7c758f9c5ceb","QueryName":"a3i_version","QueryGroupId":"3e598c64-053c-4b0b-b10f-a6aec6203a6a","EntityName":null,"LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":null,"LoadEnabled":false,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{},"HostProperties":{"MappingEditorProperties":"{}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null},"a3i_ip":{"QueryId":"b6ca31de-2c1b-4034-be3b-95cbf52d22d4","QueryName":"a3i_ip","QueryGroupId":"3e598c64-053c-4b0b-b10f-a6aec6203a6a","EntityName":null,"LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":null,"LoadEnabled":false,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{},"HostProperties":{"MappingEditorProperties":"{}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null},"a3i_programme":{"QueryId":"10c63648-6b9c-40f2-9f17-a1c417b54f3a","QueryName":"a3i_programme","QueryGroupId":"3e598c64-053c-4b0b-b10f-a6aec6203a6a","EntityName":null,"LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":null,"LoadEnabled":false,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{},"HostProperties":{"MappingEditorProperties":"{}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null},"Series TX":{"QueryId":"b9966d05-1074-4661-8970-b2782c90206c","QueryName":"Series TX","QueryGroupId":"d70eb015-22e3-4299-b661-8375f761d9c0","EntityName":"a3i_Series","LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":null,"LoadEnabled":true,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{"a3i_DeliveryDate":{"SourceColumnName":"a3i_deliverydate","DestinationFieldType":"DateOnly","AutoNumberSettings":null},"a3i_LastEpisodeTXDate":{"SourceColumnName":"a3i_lastepisodetxdate","DestinationFieldType":"DateOnly","AutoNumberSettings":null},"a3i_LatestTXDate":{"SourceColumnName":"a3i_latesttxdate","DestinationFieldType":"DateOnly","AutoNumberSettings":null},"a3i_SeriesId":{"SourceColumnName":"a3i_seriesid.1","DestinationFieldType":"Memo","AutoNumberSettings":null},"a3i_TXDate":{"SourceColumnName":"a3i_txdate","DestinationFieldType":"DateOnly","AutoNumberSettings":null}},"HostProperties":{"NewEntityPrimaryNameField":"crf68_Name","MappingEditorProperties":"{\"primaryKeyLogicalName\":\"a3i_seriesid\"}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null},"Programme TX":{"QueryId":"f4dfdfa7-6084-41af-98f0-8b6d08d5d50d","QueryName":"Programme TX","QueryGroupId":"d70eb015-22e3-4299-b661-8375f761d9c0","EntityName":"a3i_Programme","LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":null,"LoadEnabled":true,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{"a3i_LatestTXDate":{"SourceColumnName":"programme_latesttxdate","DestinationFieldType":"DateAndTime","AutoNumberSettings":null},"a3i_ProgrammeId":{"SourceColumnName":"a3i_programmeid.1","DestinationFieldType":"Memo","AutoNumberSettings":null},"a3i_TXDate":{"SourceColumnName":"programme_firsttxdate","DestinationFieldType":"DateAndTime","AutoNumberSettings":null}},"HostProperties":{"NewEntityPrimaryNameField":"crf68_Name","MappingEditorProperties":"{\"primaryKeyLogicalName\":\"a3i_programmeid\"}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null},"IP TX":{"QueryId":"de7ffb7e-2fb7-4560-aa7e-4227556d4c5c","QueryName":"IP TX","QueryGroupId":"d70eb015-22e3-4299-b661-8375f761d9c0","EntityName":"a3i_IP","LastKnownIsCalculatedEntity":false,"LastKnownIsLinkedEntity":false,"LastKnownIsParameter":false,"IsHidden":null,"LastKnownResultTypeName":null,"LoadEnabled":true,"DeleteExistingDataOnLoad":false,"FieldsMetadata":{"a3i_IPId":{"SourceColumnName":"a3i_ipid.1","DestinationFieldType":"Memo","AutoNumberSettings":null},"a3i_LatestTXDate":{"SourceColumnName":"ip_latesttxdate","DestinationFieldType":"DateAndTime","AutoNumberSettings":null},"a3i_TXDate":{"SourceColumnName":"ip_firsttxdate","DestinationFieldType":"DateAndTime","AutoNumberSettings":null}},"HostProperties":{"NewEntityPrimaryNameField":"crf68_Name","MappingEditorProperties":"{\"primaryKeyLogicalName\":\"a3i_ipid\"}"},"JsonOutputDestinations":null,"BindToDefaultOutputDestination":null,"JsonIncrementalRefreshSettings":null,"JsonStagingDefinition":null}},"FastCombine":false,"AllowNativeQueries":false,"HostContext":{"Type":"CdsT","Details":{"EnvironmentId":"f98c243e-288b-4602-8642-e4c84c1b5fdb"}},"HostProperties":null,"SkipAutomaticTypeAndHeaderDetection":false,"DisableAutoAnonymousConnectionUpsert":false,"AllowedModules":null,"DataflowMetadata":"{\"DataflowType\":\"Cdst\",\"DataflowId\":\"5ce1ff12-9938-46a4-b3dd-6a624bee9774\",\"OwnerUserId\":\"0ed16f01-5222-46e8-b80d-24ea8d1c6e32\",\"OwnerName\":\"svc.flowapp@all3media.com\",\"OwnerTenantId\":\"97f2cca4-9889-4e76-b360-9d7b562df685\",\"GatewayObjectId\":null,\"ModelSnapshotUri\":\"\",\"GroupId\":\"f98c243e-288b-4602-8642-e4c84c1b5fdb\",\"DataflowState\":\"Active\",\"LastUpdateTime\":\"2025-09-01T10:45:42.2088626+00:00\",\"LastStateChangedTime\":null,\"CreatedTime\":\"2025-09-01T10:45:42.2088626+00:00\",\"ExpiresAfter\":null,\"AllowedModules\":null,\"UseHostConnectionProvider\":false,\"SkipAutomaticTypeAndHeaderDetection\":false,\"EditingSessionId\":null,\"HostInformation\":null,\"HostContext\":{\"Type\":\"CdsT\",\"Details\":{\"EnvironmentId\":\"f98c243e-288b-4602-8642-e4c84c1b5fdb\"}},\"HostProperties\":{\"ServiceFeatureFlag_EnableNewCdstDataflowOrchestration\":\"true\",\"CdsUploadExecutorKey\":\"CdsUploader\"},\"DisableAutoAnonymousConnectionUpsert\":null,\"RelatedDataflowId\":\"d6e4fe68-92a9-475d-a43f-5e850f4889b4\",\"TrustedConnections\":null,\"DataflowStorageId\":null,\"DataflowCreatedByPQInGroupId\":null,\"ConnectionOverrides\":[{\"Path\":\"a3idev.crm11.dynamics.com\",\"Kind\":\"CommonDataService\",\"Provider\":\"PowerApps\",\"EnvironmentName\":\"f98c243e-288b-4602-8642-e4c84c1b5fdb\",\"ApiName\":\"dataverse\",\"ConnectionName\":\"716ee74066114879a1e2600018aaad0a\",\"ExtensionData\":{},\"CredentialDetails\":{},\"ConnectionParameters\":{},\"PrivacyGroup\":\"None\"}]}","Dataflow":"{\"name\":\"Copy of - TX Dates\",\"ppdf:entityThumbprintVersion\":\"1.0\",\"ppdf:dataflowId\":\"5ce1ff12-9938-46a4-b3dd-6a624bee9774\",\"ppdf:owner\":{\"tenantId\":\"97f2cca4-9889-4e76-b360-9d7b562df685\",\"userId\":\"0ed16f01-5222-46e8-b80d-24ea8d1c6e32\"},\"ppdf:fastCopy\":false,\"ppdf:parametric\":false,\"ppdf:partitionedCompute\":false,\"ppdf:allowModernEvaluationEngine\":false,\"version\":\"1.0\",\"culture\":\"en-GB\",\"modifiedTime\":\"2025-09-01T10:45:59.1507554+00:00\",\"ppdf:outputFileFormat\":\"Csv\",\"pbi:mashup\":{\"fastCombine\":false,\"allowNativeQueries\":false,\"queriesMetadata\":{\"a3i_episode\":{\"queryId\":\"fa73d8c2-bec5-4645-80f0-b3c207d49e94\",\"queryName\":\"a3i_episode\",\"queryGroupId\":\"3e598c64-053c-4b0b-b10f-a6aec6203a6a\",\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"MappingEditorProperties\":\"{}\"}},\"a3i_series\":{\"queryId\":\"72f49bb1-1ce3-4eff-a029-4efa23b427c4\",\"queryName\":\"a3i_series\",\"queryGroupId\":\"3e598c64-053c-4b0b-b10f-a6aec6203a6a\",\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"MappingEditorProperties\":\"{}\"}},\"a3i_version\":{\"queryId\":\"8137b09e-98ca-4633-aec1-7c758f9c5ceb\",\"queryName\":\"a3i_version\",\"queryGroupId\":\"3e598c64-053c-4b0b-b10f-a6aec6203a6a\",\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"MappingEditorProperties\":\"{}\"}},\"a3i_ip\":{\"queryId\":\"b6ca31de-2c1b-4034-be3b-95cbf52d22d4\",\"queryName\":\"a3i_ip\",\"queryGroupId\":\"3e598c64-053c-4b0b-b10f-a6aec6203a6a\",\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"MappingEditorProperties\":\"{}\"}},\"a3i_programme\":{\"queryId\":\"10c63648-6b9c-40f2-9f17-a1c417b54f3a\",\"queryName\":\"a3i_programme\",\"queryGroupId\":\"3e598c64-053c-4b0b-b10f-a6aec6203a6a\",\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"MappingEditorProperties\":\"{}\"}},\"Series TX\":{\"queryId\":\"b9966d05-1074-4661-8970-b2782c90206c\",\"queryName\":\"Series TX\",\"queryGroupId\":\"d70eb015-22e3-4299-b661-8375f761d9c0\",\"entityName\":\"a3i_Series\",\"loadEnabled\":true,\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"NewEntityPrimaryNameField\":\"crf68_Name\",\"MappingEditorProperties\":\"{\\\"primaryKeyLogicalName\\\":\\\"a3i_seriesid\\\"}\"},\"fieldsMetadata\":{\"a3i_DeliveryDate\":{\"sourceColumnName\":\"a3i_deliverydate\",\"destinationFieldType\":\"DateOnly\"},\"a3i_LastEpisodeTXDate\":{\"sourceColumnName\":\"a3i_lastepisodetxdate\",\"destinationFieldType\":\"DateOnly\"},\"a3i_LatestTXDate\":{\"sourceColumnName\":\"a3i_latesttxdate\",\"destinationFieldType\":\"DateOnly\"},\"a3i_SeriesId\":{\"sourceColumnName\":\"a3i_seriesid.1\",\"destinationFieldType\":\"Memo\"},\"a3i_TXDate\":{\"sourceColumnName\":\"a3i_txdate\",\"destinationFieldType\":\"DateOnly\"}}},\"Programme TX\":{\"queryId\":\"f4dfdfa7-6084-41af-98f0-8b6d08d5d50d\",\"queryName\":\"Programme TX\",\"queryGroupId\":\"d70eb015-22e3-4299-b661-8375f761d9c0\",\"entityName\":\"a3i_Programme\",\"loadEnabled\":true,\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"NewEntityPrimaryNameField\":\"crf68_Name\",\"MappingEditorProperties\":\"{\\\"primaryKeyLogicalName\\\":\\\"a3i_programmeid\\\"}\"},\"fieldsMetadata\":{\"a3i_LatestTXDate\":{\"sourceColumnName\":\"programme_latesttxdate\",\"destinationFieldType\":\"DateAndTime\"},\"a3i_ProgrammeId\":{\"sourceColumnName\":\"a3i_programmeid.1\",\"destinationFieldType\":\"Memo\"},\"a3i_TXDate\":{\"sourceColumnName\":\"programme_firsttxdate\",\"destinationFieldType\":\"DateAndTime\"}}},\"IP TX\":{\"queryId\":\"de7ffb7e-2fb7-4560-aa7e-4227556d4c5c\",\"queryName\":\"IP TX\",\"queryGroupId\":\"d70eb015-22e3-4299-b661-8375f761d9c0\",\"entityName\":\"a3i_IP\",\"loadEnabled\":true,\"lastKnownIsCalculatedEntity\":false,\"lastKnownIsLinkedEntity\":false,\"lastKnownIsParameter\":false,\"deleteExistingDataOnLoad\":false,\"hostProperties\":{\"NewEntityPrimaryNameField\":\"crf68_Name\",\"MappingEditorProperties\":\"{\\\"primaryKeyLogicalName\\\":\\\"a3i_ipid\\\"}\"},\"fieldsMetadata\":{\"a3i_IPId\":{\"sourceColumnName\":\"a3i_ipid.1\",\"destinationFieldType\":\"Memo\"},\"a3i_LatestTXDate\":{\"sourceColumnName\":\"ip_latesttxdate\",\"destinationFieldType\":\"DateAndTime\"},\"a3i_TXDate\":{\"sourceColumnName\":\"ip_firsttxdate\",\"destinationFieldType\":\"DateAndTime\"}}}},\"document\":\"section Section1;\\r\\nshared a3i_episode = let\\n  Source = CommonDataService.Database(\\\"a3idev.crm11.dynamics.com\\\", [CreateNavigationProperties = null]),\\n  #\\\"Navigation 1\\\" = Source{[Schema = \\\"dbo\\\", Item = \\\"a3i_episode\\\"]}[Data],\\n  #\\\"Merged queries\\\" = Table.NestedJoin(#\\\"Navigation 1\\\", {\\\"a3i_version\\\"}, a3i_version, {\\\"a3i_versionid\\\"}, \\\"a3i_version (2)\\\", JoinKind.LeftOuter),\\n  #\\\"Expanded a3i_version (2)\\\" = Table.ExpandTableColumn(#\\\"Merged queries\\\", \\\"a3i_version (2)\\\", {\\\"a3i_leadversionname\\\", \\\"a3i_series\\\", \\\"a3i_seriesname\\\"}, {\\\"a3i_leadversionname\\\", \\\"a3i_series.1\\\", \\\"a3i_seriesname.1\\\"}),\\r\\n  #\\\"Filtered rows 2\\\" = Table.SelectRows(#\\\"Expanded a3i_version (2)\\\", each ([a3i_leadversionname] = \\\"Yes\\\")),\\n  #\\\"Merged queries 1\\\" = Table.NestedJoin(#\\\"Filtered rows 2\\\", {\\\"a3i_series.1\\\"}, a3i_series, {\\\"a3i_seriesid\\\"}, \\\"a3i_series (2)\\\", JoinKind.LeftOuter),\\n  #\\\"Expanded a3i_series (2)\\\" = Table.ExpandTableColumn(#\\\"Merged queries 1\\\", \\\"a3i_series (2)\\\", {\\\"statecode\\\", \\\"statecodename\\\", \\\"a3i_rightstrackerseriesstatus\\\", \\\"a3i_rightstrackerseriesstatusname\\\", \\\"a3i_rightstrackerid\\\", \\\"a3i_txdate\\\", \\\"a3i_programme\\\", \\\"a3i_programmename\\\", \\\"a3i_ip\\\",\\\"a3i_ipname\\\"}, {\\\"statecode.1\\\", \\\"statecodename.1\\\", \\\"a3i_rightstrackerseriesstatus\\\", \\\"a3i_rightstrackerseriesstatusname\\\", \\\"a3i_rightstrackerid.1\\\", \\\"a3i_txdate\\\", \\\"a3i_programme\\\", \\\"a3i_programmename\\\", \\\"a3i_ip\\\",\\\"a3i_ipname\\\"}),\\n  #\\\"Filtered rows 1\\\" = Table.SelectRows(#\\\"Expanded a3i_series (2)\\\", each not (([statecode.1] = 1 or [a3i_rightstrackerid.1] = null) or ([a3i_rightstrackerid.1] &lt;&gt; null and List.Contains({430830006, 430830009, 430830007}, [a3i_rightstrackerseriesstatus])))),\\r\\n  #\\\"Choose columns\\\" = Table.SelectColumns(#\\\"Filtered rows 1\\\", {\\\"a3i_episodeid\\\", \\\"a3i_episodepremieredate\\\", \\\"a3i_isnontx\\\", \\\"a3i_txdate\\\", \\\"a3i_version\\\", \\\"a3i_versionname\\\", \\\"a3i_series.1\\\", \\\"a3i_seriesname.1\\\",\\\"a3i_programme\\\", \\\"a3i_programmename\\\", \\\"a3i_ip\\\",\\\"a3i_ipname\\\"})\\nin\\n  #\\\"Choose columns\\\";\\r\\nshared a3i_series = let\\r\\n  Source = CommonDataService.Database(\\\"a3idev.crm11.dynamics.com\\\", [CreateNavigationProperties = null]),\\r\\n  Navigation = Source{[Schema = \\\"dbo\\\", Item = \\\"a3i_series\\\"]}[Data]\\r\\nin\\r\\n  Navigation;\\r\\nshared a3i_version = let\\r\\n  Source = CommonDataService.Database(\\\"a3idev.crm11.dynamics.com\\\", [CreateNavigationProperties = null]),\\r\\n  #\\\"Navigation 1\\\" = Source{[Schema = \\\"dbo\\\", Item = \\\"a3i_version\\\"]}[Data]\\r\\nin\\r\\n  #\\\"Navigation 1\\\";\\r\\nshared a3i_ip = let\\r\\n  Source = CommonDataService.Database(\\\"a3idev.crm11.dynamics.com\\\", [CreateNavigationProperties = null]),\\r\\n  #\\\"Navigation 1\\\" = Source{[Schema = \\\"dbo\\\", Item = \\\"a3i_ip\\\"]}[Data]\\r\\nin\\r\\n  #\\\"Navigation 1\\\";\\r\\nshared a3i_programme = let\\r\\n  Source = CommonDataService.Database(\\\"a3idev.crm11.dynamics.com\\\", [CreateNavigationProperties = null]),\\r\\n  #\\\"Navigation 1\\\" = Source{[Schema = \\\"dbo\\\", Item = \\\"a3i_programme\\\"]}[Data]\\r\\nin\\r\\n  #\\\"Navigation 1\\\";\\r\\nshared #\\\"Series TX\\\" = let\\n  Source = a3i_episode,\\r\\n  #\\\"Merged queries 1\\\" = Table.NestedJoin(Source, {\\\"a3i_programme\\\"}, a3i_programme, {\\\"a3i_programmeid\\\"}, \\\"a3i_programme (2)\\\", JoinKind.LeftOuter),\\r\\n  #\\\"Expanded a3i_programme (2)\\\" = Table.ExpandTableColumn(#\\\"Merged queries 1\\\", \\\"a3i_programme (2)\\\", {\\\"a3i_iptypename\\\"}, {\\\"a3i_iptypename\\\"}),\\r\\n  #\\\"Filtered rows\\\" = Table.SelectRows(#\\\"Expanded a3i_programme (2)\\\", each ([a3i_iptypename] = \\\"Broadcast\\\")),\\n  SeriesList = List.Distinct(#\\\"Filtered rows\\\"[a3i_series.1]),\\n  SeriesTXTable = Table.FromList(SeriesList, each {_}, {\\\"a3i_seriesid\\\"}),\\n  WithFirstTX = Table.AddColumn(SeriesTXTable, \\\"a3i_deliverydate\\\", each \\n    let \\n      rows = Table.SelectRows(#\\\"Filtered rows\\\", (r) =&gt; r[a3i_series.1] = [a3i_seriesid] and (r[a3i_isnontx] &lt;&gt; true)),\\n      episodeDates = rows[a3i_episodepremieredate],\\n      seriesTX = try List.First(List.RemoveNulls(rows[a3i_txdate])) otherwise null \\n    in \\n      if List.NonNullCount(episodeDates) = 0 then seriesTX else List.Min(episodeDates), \\n    type nullable datetime),\\n\\n  WithLatestTX = Table.AddColumn(WithFirstTX, \\\"a3i_latesttxdate\\\", each \\n    List.Max(\\n      Table.SelectRows(#\\\"Filtered rows\\\", (r) =&gt; r[a3i_series.1] = [a3i_seriesid] and (r[a3i_isnontx] &lt;&gt; true))[a3i_episodepremieredate]\\n    ), type nullable datetime),\\n\\n  WithCounts = Table.AddColumn(WithLatestTX, \\\"CountData\\\", each \\n    let rows = Table.SelectRows(#\\\"Filtered rows\\\", (r) =&gt; r[a3i_series.1] = [a3i_seriesid] and (r[a3i_isnontx] &lt;&gt; true)) in [Total = Table.RowCount(rows), WithTX = List.NonNullCount(rows[a3i_episodepremieredate])]),\\n\\n  WithLastTX = Table.AddColumn(WithCounts, \\\"a3i_lastepisodetxdate\\\", each \\n    let c = [CountData] in if c[Total] = c[WithTX] and c[Total] &gt; 0 then [a3i_latesttxdate] else null, type nullable datetime),\\n  Cleaned = Table.RemoveColumns(WithLastTX, {\\\"CountData\\\"}),\\n  ContextLookup = Table.Distinct(\\n    Table.SelectColumns(#\\\"Filtered rows\\\", {\\n      \\\"a3i_episodepremieredate\\\", \\\"a3i_isnontx\\\", \\\"a3i_txdate\\\", \\\"a3i_series.1\\\", \\\"a3i_seriesname.1\\\", \\\"a3i_programme\\\", \\\"a3i_programmename\\\", \\\"a3i_ip\\\", \\\"a3i_ipname\\\"})),\\n\\n  MergedContext = Table.NestedJoin(Cleaned, {\\\"a3i_seriesid\\\"}, ContextLookup, {\\\"a3i_series.1\\\"}, \\\"Context\\\", JoinKind.LeftOuter),\\n\\n  #\\\"Expanded Context\\\" = Table.ExpandTableColumn(MergedContext, \\\"Context\\\", {\\n    \\\"a3i_episodepremieredate\\\", \\\"a3i_isnontx\\\", \\\"a3i_txdate\\\", \\\"a3i_seriesname.1\\\", \\\"a3i_programme\\\", \\\"a3i_programmename\\\", \\\"a3i_ip\\\", \\\"a3i_ipname\\\"}),\\n\\n  #\\\"Changed column type\\\" = Table.TransformColumnTypes(#\\\"Expanded Context\\\", {\\n    {\\\"a3i_latesttxdate\\\", type date},\\n    {\\\"a3i_lastepisodetxdate\\\", type date},\\n    {\\\"a3i_txdate\\\", type date},\\n    {\\\"a3i_deliverydate\\\", type date}\\n  }),\\n  #\\\"Merged queries\\\" = Table.NestedJoin(#\\\"Changed column type\\\", {\\\"a3i_seriesid\\\"}, a3i_series, {\\\"a3i_seriesid\\\"}, \\\"a3i_series\\\", JoinKind.LeftOuter),\\n  #\\\"Expanded a3i_series\\\" = Table.ExpandTableColumn(#\\\"Merged queries\\\", \\\"a3i_series\\\", {\\\"a3i_seriesid\\\"}, {\\\"a3i_seriesid.1\\\"}),\\r\\n  #\\\"Marked key columns\\\" = Table.AddKey(#\\\"Expanded a3i_series\\\", {\\\"a3i_seriesid.1\\\"}, false)\\nin\\n  #\\\"Marked key columns\\\";\\r\\nshared #\\\"Programme TX\\\" = let\\n    Source = #\\\"Series TX\\\",\\n    ProgrammeList = List.Distinct(Source[a3i_programme]),\\n    ProgrammeTXTable = Table.FromList(ProgrammeList, each { _ }, {\\\"a3i_programmeid\\\"}),\\n\\n    ContextLookup = Table.Distinct(\\n        Table.SelectColumns(Source, {\\\"a3i_programme\\\", \\\"a3i_programmename\\\", \\\"a3i_ip\\\", \\\"a3i_ipname\\\"})\\n    ),\\n    MergedContext = Table.NestedJoin(ProgrammeTXTable, {\\\"a3i_programmeid\\\"}, ContextLookup, {\\\"a3i_programme\\\"}, \\\"Context\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded Context\\\" = Table.ExpandTableColumn(MergedContext, \\\"Context\\\", {\\\"a3i_programmename\\\", \\\"a3i_ip\\\", \\\"a3i_ipname\\\"}),\\n    WithProgrammeFirstTX = Table.AddColumn(\\n        #\\\"Expanded Context\\\", \\\"programme_firsttxdate\\\", each List.Min(Table.SelectRows(Source, (r) =&gt; r[a3i_programme] = [a3i_programmeid])[a3i_deliverydate]),type nullable datetime),\\n    WithProgrammeLatestTX = Table.AddColumn(\\n        WithProgrammeFirstTX, \\\"programme_latesttxdate\\\",\\n        each List.Max( Table.SelectRows(Source, (r) =&gt; r[a3i_programme] = [a3i_programmeid])[a3i_latesttxdate]), type nullable datetime),\\n    #\\\"Changed column type\\\" = Table.TransformColumnTypes(WithProgrammeLatestTX, {\\n        {\\\"programme_firsttxdate\\\", type date},\\n        {\\\"programme_latesttxdate\\\", type date} }),\\n    #\\\"Reordered columns\\\" = Table.ReorderColumns(#\\\"Changed column type\\\", {\\\"a3i_programmeid\\\", \\\"a3i_programmename\\\", \\\"programme_firsttxdate\\\", \\\"programme_latesttxdate\\\", \\\"a3i_ipname\\\", \\\"a3i_ip\\\"}),\\r\\n  #\\\"Changed column type 1\\\" = Table.TransformColumnTypes(#\\\"Reordered columns\\\", {{\\\"programme_firsttxdate\\\", type datetime}, {\\\"programme_latesttxdate\\\", type datetime}}),\\r\\n  #\\\"Merged queries\\\" = Table.NestedJoin(#\\\"Changed column type 1\\\", {\\\"a3i_programmeid\\\"}, a3i_programme, {\\\"a3i_programmeid\\\"}, \\\"a3i_programme\\\", JoinKind.LeftOuter),\\r\\n  #\\\"Expanded a3i_programme\\\" = Table.ExpandTableColumn(#\\\"Merged queries\\\", \\\"a3i_programme\\\", {\\\"a3i_programmeid\\\"}, {\\\"a3i_programmeid.1\\\"}),\\r\\n  #\\\"Marked key columns\\\" = Table.AddKey(#\\\"Expanded a3i_programme\\\", {\\\"a3i_programmeid.1\\\"}, false)\\nin\\n    #\\\"Marked key columns\\\";\\r\\nshared #\\\"IP TX\\\" = let\\n    Source = #\\\"Programme TX\\\",\\n    #\\\"Merged queries 1\\\" = Table.NestedJoin(Source, {\\\"a3i_programmeid\\\"}, a3i_programme, {\\\"a3i_programmeid\\\"}, \\\"a3i_programme\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded a3i_programme\\\" = Table.ExpandTableColumn(#\\\"Merged queries 1\\\", \\\"a3i_programme\\\", {\\\"a3i_iptypename\\\"}, {\\\"a3i_iptypename\\\"}),\\n    #\\\"Filtered rows\\\" = Table.SelectRows(#\\\"Expanded a3i_programme\\\", each [a3i_iptypename] = \\\"Broadcast\\\"),\\n    IPList = List.Distinct(#\\\"Filtered rows\\\"[a3i_ip]),\\n    IPTXTable = Table.FromList(IPList, each {_}, {\\\"a3i_ipid\\\"}),\\n    WithIPFirstTX = Table.AddColumn(IPTXTable, \\\"ip_firsttxdate\\\",\\n        each List.Min(\\n            Table.SelectRows(#\\\"Filtered rows\\\", (r) =&gt; r[a3i_ip] = [a3i_ipid])[programme_firsttxdate]\\n        ),\\n        type nullable datetime),\\n    WithIPLatestTX = Table.AddColumn(WithIPFirstTX, \\\"ip_latesttxdate\\\",\\n        each List.Max(\\n            Table.SelectRows(#\\\"Filtered rows\\\", (r) =&gt; r[a3i_ip] = [a3i_ipid])[programme_latesttxdate]\\n        ),\\n        type nullable datetime),\\n    ContextLookup = Table.Distinct(\\n        Table.SelectColumns(#\\\"Filtered rows\\\", {\\\"a3i_ip\\\", \\\"a3i_ipname\\\"})\\n    ),\\n    MergedContext = Table.NestedJoin(WithIPLatestTX, {\\\"a3i_ipid\\\"}, ContextLookup, {\\\"a3i_ip\\\"}, \\\"Context\\\", JoinKind.LeftOuter),\\n    #\\\"Expanded Context\\\" = Table.ExpandTableColumn(MergedContext, \\\"Context\\\", {\\\"a3i_ipname\\\"}, {\\\"a3i_ipname\\\"}),\\n    #\\\"Changed column type\\\" = Table.TransformColumnTypes(#\\\"Expanded Context\\\", {{\\\"ip_firsttxdate\\\", type datetime}, {\\\"ip_latesttxdate\\\", type datetime}}),\\r\\n  #\\\"Merged queries\\\" = Table.NestedJoin(#\\\"Changed column type\\\", {\\\"a3i_ipid\\\"}, a3i_ip, {\\\"a3i_ipid\\\"}, \\\"a3i_ip\\\", JoinKind.LeftOuter),\\r\\n  #\\\"Expanded a3i_ip\\\" = Table.ExpandTableColumn(#\\\"Merged queries\\\", \\\"a3i_ip\\\", {\\\"a3i_ipid\\\"}, {\\\"a3i_ipid.1\\\"}),\\r\\n  #\\\"Filtered rows 1\\\" = Table.SelectRows(#\\\"Expanded a3i_ip\\\", each ([a3i_ipid.1] &lt;&gt; null)),\\r\\n  #\\\"Marked key columns\\\" = Table.AddKey(#\\\"Filtered rows 1\\\", {\\\"a3i_ipid.1\\\"}, false)\\nin\\n    #\\\"Marked key columns\\\";\\r\\n\"},\"annotations\":[{\"name\":\"pbi:QueryGroups\",\"value\":\"[{\\\"Id\\\":\\\"3e598c64-053c-4b0b-b10f-a6aec6203a6a\\\",\\\"Name\\\":\\\"Content\\\",\\\"Description\\\":\\\"\\\",\\\"ParentId\\\":null,\\\"Order\\\":0},{\\\"Id\\\":\\\"d70eb015-22e3-4299-b661-8375f761d9c0\\\",\\\"Name\\\":\\\"TX Dates\\\",\\\"Description\\\":\\\"\\\",\\\"ParentId\\\":null,\\\"Order\\\":1}]\"}],\"entities\":[{\"$type\":\"LocalEntity\",\"name\":\"Series TX\",\"description\":\"\",\"pbi:refreshPolicy\":{\"$type\":\"FullRefreshPolicy\",\"location\":\"Series%20TX.csv\"},\"annotations\":[{\"name\":\"ppdf:entityKeys\",\"value\":\"[{\\\"columns\\\":[\\\"a3i_seriesid.1\\\"]}]\"}],\"attributes\":[{\"name\":\"a3i_seriesid\",\"dataType\":\"string\"},{\"name\":\"a3i_deliverydate\",\"dataType\":\"dateTime\"},{\"name\":\"a3i_latesttxdate\",\"dataType\":\"dateTime\"},{\"name\":\"a3i_lastepisodetxdate\",\"dataType\":\"dateTime\"},{\"name\":\"a3i_episodepremieredate\",\"dataType\":\"dateTime\"},{\"name\":\"a3i_isnontx\",\"dataType\":\"boolean\"},{\"name\":\"a3i_txdate\",\"dataType\":\"dateTime\"},{\"name\":\"a3i_seriesname.1\",\"dataType\":\"string\"},{\"name\":\"a3i_programme\",\"dataType\":\"string\"},{\"name\":\"a3i_programmename\",\"dataType\":\"string\"},{\"name\":\"a3i_ip\",\"dataType\":\"string\"},{\"name\":\"a3i_ipname\",\"dataType\":\"string\"},{\"name\":\"a3i_seriesid.1\",\"dataType\":\"string\"}]},{\"$type\":\"LocalEntity\",\"name\":\"Programme TX\",\"description\":\"\",\"pbi:refreshPolicy\":{\"$type\":\"FullRefreshPolicy\",\"location\":\"Programme%20TX.csv\"},\"annotations\":[{\"name\":\"pbi:EntityTypeDisplayHint\",\"value\":\"CalculatedEntity\"},{\"name\":\"ppdf:entityKeys\",\"value\":\"[{\\\"columns\\\":[\\\"a3i_programmeid.1\\\"]}]\"}],\"attributes\":[{\"name\":\"a3i_programmeid\",\"dataType\":\"string\"},{\"name\":\"a3i_programmename\",\"dataType\":\"string\"},{\"name\":\"programme_firsttxdate\",\"dataType\":\"dateTime\"},{\"name\":\"programme_latesttxdate\",\"dataType\":\"dateTime\"},{\"name\":\"a3i_ipname\",\"dataType\":\"string\"},{\"name\":\"a3i_ip\",\"dataType\":\"string\"},{\"name\":\"a3i_programmeid.1\",\"dataType\":\"string\"}]},{\"$type\":\"LocalEntity\",\"name\":\"IP TX\",\"description\":\"\",\"pbi:refreshPolicy\":{\"$type\":\"FullRefreshPolicy\",\"location\":\"IP%20TX.csv\"},\"annotations\":[{\"name\":\"pbi:EntityTypeDisplayHint\",\"value\":\"CalculatedEntity\"},{\"name\":\"ppdf:entityKeys\",\"value\":\"[{\\\"columns\\\":[\\\"a3i_ipid.1\\\"]}]\"}],\"attributes\":[{\"name\":\"a3i_ipid\",\"dataType\":\"string\"},{\"name\":\"ip_firsttxdate\",\"dataType\":\"dateTime\"},{\"name\":\"ip_latesttxdate\",\"dataType\":\"dateTime\"},{\"name\":\"a3i_ipname\",\"dataType\":\"string\"},{\"name\":\"a3i_ipid.1\",\"dataType\":\"string\"}]}]}"}</msdyn_mashupsettings>
+      <msdyn_name>Copy of - TX Dates</msdyn_name>
+      <msdyn_originaldataflowid>5ce1ff12-9938-46a4-b3dd-6a624bee9774</msdyn_originaldataflowid>
+      <msdyn_refreshhistory>[{"DataflowId":"5ce1ff12-9938-46a4-b3dd-6a624bee9774","TransactionId":"753926be-7852-4ee2-bac2-4e444f69f7ad","DataflowName":"Copy of - TX Dates","RequestId":"369c13d9-b025-42f1-bb05-7e18d63571b5","SessionId":null,"StartTime":"2025-09-01T10:46:04.0386077+00:00","EndTime":"2025-09-01T10:48:20.5075428+00:00","RefreshType":"RefreshTypeOneTime","RefreshStatus":"Success","ErrorInfo":null,"EntitiesRefreshHistory":[{"DataflowId":"5ce1ff12-9938-46a4-b3dd-6a624bee9774","DataflowName":"Copy of - TX Dates","EntityName":"IP TX","StartTime":"2025-09-01T10:47:51.0740756+00:00","EndTime":"2025-09-01T10:48:14.7197831+00:00","RefreshStatus":"Success","ErrorInfo":null,"ExceptionInfo":null,"Warnings":[],"ErrorCount":0,"UpsertCount":10,"PartitionsRefreshHistory":[{"Name":"IP TX.csv","StartTime":"2025-09-01T10:47:51.0740756+00:00","EndTime":"2025-09-01T10:47:59.5842088+00:00","LastUpdateTime":"2025-09-01T10:47:59.5842088+00:00","RefreshStatus":"Success","ComputeEngines":[],"DataSourceStatistics":[{"DataSourceType":"CommonDataService","BytesRead":0,"BytesWritten":0,"RowsRead":40228,"RowsWritten":0},{"DataSourceType":"AzureDataLakeStorage","BytesRead":3600,"BytesWritten":1202,"RowsRead":0,"RowsWritten":0}],"ErrorInfo":null,"Warnings":[],"ExceptionInfo":null}],"InsertCount":0,"GroupId":null,"UserTenantId":null},{"DataflowId":"5ce1ff12-9938-46a4-b3dd-6a624bee9774","DataflowName":"Copy of - TX Dates","EntityName":"Programme TX","StartTime":"2025-09-01T10:47:42.0270125+00:00","EndTime":"2025-09-01T10:48:13.9016242+00:00","RefreshStatus":"Success","ErrorInfo":null,"ExceptionInfo":null,"Warnings":[],"ErrorCount":0,"UpsertCount":22,"PartitionsRefreshHistory":[{"Name":"Programme TX.csv","StartTime":"2025-09-01T10:47:42.0426432+00:00","EndTime":"2025-09-01T10:47:51.0584499+00:00","LastUpdateTime":"2025-09-01T10:47:51.0584499+00:00","RefreshStatus":"Success","ComputeEngines":[],"DataSourceStatistics":[{"DataSourceType":"CommonDataService","BytesRead":0,"BytesWritten":0,"RowsRead":15082,"RowsWritten":0},{"DataSourceType":"AzureDataLakeStorage","BytesRead":31788,"BytesWritten":3600,"RowsRead":0,"RowsWritten":0}],"ErrorInfo":null,"Warnings":[],"ExceptionInfo":null}],"InsertCount":0,"GroupId":null,"UserTenantId":null},{"DataflowId":"5ce1ff12-9938-46a4-b3dd-6a624bee9774","DataflowName":"Copy of - TX Dates","EntityName":"Series TX","StartTime":"2025-09-01T10:47:00.135346+00:00","EndTime":"2025-09-01T10:48:13.0181774+00:00","RefreshStatus":"Success","ErrorInfo":null,"ExceptionInfo":null,"Warnings":[],"ErrorCount":0,"UpsertCount":127,"PartitionsRefreshHistory":[{"Name":"Series TX.csv","StartTime":"2025-09-01T10:47:00.1509047+00:00","EndTime":"2025-09-01T10:47:42.0114459+00:00","LastUpdateTime":"2025-09-01T10:47:42.0114459+00:00","RefreshStatus":"Success","ComputeEngines":[],"DataSourceStatistics":[{"DataSourceType":"CommonDataService","BytesRead":0,"BytesWritten":0,"RowsRead":26633,"RowsWritten":0},{"DataSourceType":"AzureDataLakeStorage","BytesRead":0,"BytesWritten":31788,"RowsRead":0,"RowsWritten":0}],"ErrorInfo":null,"Warnings":[],"ExceptionInfo":null}],"InsertCount":0,"GroupId":null,"UserTenantId":null}],"ActionsRefreshHistory":[],"ModelSnapshotPath":"","GroupId":"f98c243e-288b-4602-8642-e4c84c1b5fdb","UserTenantId":"97f2cca4-9889-4e76-b360-9d7b562df685"}]</msdyn_refreshhistory>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+    </msdyn_dataflow>
+  </msdyn_dataflows>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

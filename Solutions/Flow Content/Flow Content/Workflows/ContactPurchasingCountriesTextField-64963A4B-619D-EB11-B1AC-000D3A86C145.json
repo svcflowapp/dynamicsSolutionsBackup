@@ -1,0 +1,574 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_2": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_12eb3"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedoffice365_48fa5"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Contact_Modified": {
+          "metadata": {
+            "operationMetadataId": "a842d7ce-538b-4541-ba37-e6ecdc5933ce"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "contact",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filterexpression": "a3i_editpurchasingcountries eq 'Edit Countries'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Scope": {
+          "actions": {
+            "Get_Contact": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "f0d8cc28-aea5-4163-8660-22190c7e4607"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "recordId": "@triggerOutputs()?['body/contactid']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "List_Purchasing_Countries": {
+              "runAfter": {
+                "Get_Contact": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7c9d89c6-e812-4f91-a0c4-bc912e4df773"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_countries",
+                  "fetchXml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"true\">\n  <entity name=\"a3i_country\">\n    <attribute name=\"a3i_countryid\" />\n    <attribute name=\"a3i_countryname\" />\n    <order attribute=\"a3i_countryname\" descending=\"false\" />\n    <filter type=\"and\">\n      <condition attribute=\"a3i_type\" operator=\"eq\" value=\"0\" />\n    </filter>\n    <link-entity name=\"a3i_contact_country\" from=\"a3i_countryid\" to=\"a3i_countryid\" visible=\"false\" intersect=\"true\">\n      <link-entity name=\"contact\" from=\"contactid\" to=\"contactid\" alias=\"ad\">\n        <filter type=\"and\">\n          <condition attribute=\"contactid\" operator=\"eq\" uiname=\"@{outputs('Get_Contact')?['body/fullname']}\" uitype=\"contact\" value=\"{@{outputs('Get_Contact')?['body/contactid']}}\" />\n        </filter>\n      </link-entity>\n    </link-entity>\n  </entity>\n</fetch>"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Select_Country_Name": {
+              "runAfter": {
+                "List_Purchasing_Countries": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "b818bcfc-9f70-473a-9892-600a178f3949"
+              },
+              "type": "Select",
+              "inputs": {
+                "from": "@outputs('List_Purchasing_Countries')?['body/value']",
+                "select": {
+                  "Country": "@item()?['a3i_countryname']"
+                }
+              }
+            },
+            "Join_Countries": {
+              "runAfter": {
+                "Select_Country_Name": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "7dcf9b79-1543-40c8-be0b-676f92fc1031"
+              },
+              "type": "Join",
+              "inputs": {
+                "from": "@body('Select_Country_Name')",
+                "joinWith": "; "
+              }
+            },
+            "Replace_Starting_Text": {
+              "runAfter": {
+                "Join_Countries": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "87ca1029-661f-409c-9edb-6a7abb3df27f"
+              },
+              "type": "Compose",
+              "inputs": "@replace(body('Join_Countries'),'{\"Country\":\"','')"
+            },
+            "Replace_End_Text": {
+              "runAfter": {
+                "Replace_Starting_Text": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "60e4c1f9-d2f6-4433-acbf-631b18b9963a"
+              },
+              "type": "Compose",
+              "inputs": "@replace(outputs('Replace_Starting_Text'),'\"}','')"
+            },
+            "Set_Purchasing_Countries": {
+              "runAfter": {
+                "Replace_End_Text": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "41a70346-c272-4cab-bdd4-9db0a67e24ec"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "recordId": "@outputs('Get_Contact')?['body/contactid']",
+                  "item/a3i_purchasingcountriesmulti": "@outputs('Replace_End_Text')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Variables": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6d90310d-1ff1-4385-91f1-3b9192eec06e"
+          },
+          "type": "Scope"
+        },
+        "Success": {
+          "actions": {
+            "Set_Power_Automate_Log_Succeeded": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "77ba6408-95d4-4bc1-99dd-49aa72fc69fb"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "recordId": "@outputs('Create_Power_Automate_Log')?['body/a3i_powerautomatelogid']",
+                  "item/statuscode": 3
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Success_Clear_Edit_Purchasing_Countries": {
+              "runAfter": {
+                "Set_Power_Automate_Log_Succeeded": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f3a4e3c4-1f57-4615-b640-86eb77407aca"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "recordId": "@triggerOutputs()?['body/contactid']",
+                  "item/a3i_editpurchasingcountries": "@null"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Scope": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "acc1f0b0-927c-499c-8cc6-6cf12c9e1daf"
+          },
+          "type": "Scope"
+        },
+        "Failure": {
+          "actions": {
+            "Send_Failure_Email": {
+              "runAfter": {
+                "Failure_Clear_Edit_Purchasing_Countries": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "48986b13-550e-4260-b5da-ae16f8c3a93f"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                },
+                "parameters": {
+                  "emailMessage/To": "@variables('ErrorEmail')",
+                  "emailMessage/Subject": "@{variables('Environment')} - Contact. Purchasing Countries Text Field - Purchasing Countries Failed to Update",
+                  "emailMessage/Body": "<p>Purchasing Countries Failed to Update for @{triggerOutputs()?['body/fullname']}<br>\nAccess the <a href=\"@{variables('PALog')}\">Power Automate Log</a>&nbsp;</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_Power_Automate_Log_Failed": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9cd93c9c-476f-43f9-94d5-8279707d024c"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "recordId": "@outputs('Create_Power_Automate_Log')?['body/a3i_powerautomatelogid']",
+                  "item/statuscode": 4
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Failure_Clear_Edit_Purchasing_Countries": {
+              "runAfter": {
+                "Set_Power_Automate_Log_Failed": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "279a14c5-32f3-4acc-9858-24df39048154"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "recordId": "@triggerOutputs()?['body/contactid']",
+                  "item/a3i_editpurchasingcountries": "@null"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Scope": [
+              "Failed",
+              "Skipped",
+              "TimedOut"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "20736f7c-727a-4ec1-ac30-3c59bb476b0e"
+          },
+          "type": "Scope"
+        },
+        "Initialize_Power_Automate_Log": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "a2d74e8a-d975-4549-8b13-d0683b02e4fb"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "PALog",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_Environment": {
+          "runAfter": {
+            "Initialize_Power_Automate_Log": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a1b23c1a-6575-427d-88d2-7a02933e4aca"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Environment",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_Error_Email": {
+          "runAfter": {
+            "Initialize_Environment": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1e4946a9-6ee3-44ef-8eac-90422cfd935b"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ErrorEmail",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Variables": {
+          "actions": {
+            "Create_Power_Automate_Log": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "5d605f75-5e8c-402a-a1d2-dab1eb26ac1e"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "CreateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "item/a3i_name": "Contact. Purchasing Countries Text Field - @{utcNow()}",
+                  "item/a3i_cloudflow": 430830002,
+                  "item/a3i_entityrecordid": "@triggerOutputs()?['body/contactid']",
+                  "item/a3i_RelatedContact@odata.bind": "contacts(@{triggerOutputs()?['body/contactid']})",
+                  "item/a3i_runhistory": "@concat('https://unitedkingdom.flow.microsoft.com/manage/environments/',workflow()['tags']['environmentName'],'/flows/',workflow()['name'],'/runs/',workflow()['run']['name'])"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Get_Environment": {
+              "runAfter": {
+                "Create_Power_Automate_Log": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e0e6352e-0517-410e-b8f6-b4d976ef3195"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'Environment'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Get_Error_Email": {
+              "runAfter": {
+                "Loop_Set_Environment": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "adda2389-e77b-418e-820e-292e2f24ab69"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'ErrorEmail'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Get_URL": {
+              "runAfter": {
+                "Loop_Set_Error_Email": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5d12639e-8acf-4990-b64c-9d9e28196c00"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'URL'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Loop_Set_Environment": {
+              "foreach": "@outputs('Get_Environment')?['body/value']",
+              "actions": {
+                "Set_Environment": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "d44c77f0-a7a0-4901-9c5b-e83d2134f233"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "Environment",
+                    "value": "@items('Loop_Set_Environment')?['a3i_value']"
+                  }
+                }
+              },
+              "runAfter": {
+                "Get_Environment": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "9699df75-9d94-445a-a9d4-2e5c8ce459e4"
+              },
+              "type": "Foreach"
+            },
+            "Loop_Set_Error_Email": {
+              "foreach": "@outputs('Get_Error_Email')?['body/value']",
+              "actions": {
+                "Set_Error_Email": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "21991534-4550-4d40-8a48-2f33a1598ff9"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "ErrorEmail",
+                    "value": "@items('Loop_Set_Error_Email')?['a3i_value']"
+                  }
+                }
+              },
+              "runAfter": {
+                "Get_Error_Email": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d6559548-7a26-4699-b60f-ef804b8a28ec"
+              },
+              "type": "Foreach"
+            },
+            "Loop_Set_Power_Automate_Log": {
+              "foreach": "@outputs('Get_URL')?['body/value']",
+              "actions": {
+                "Set_Power_Automate_Log": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "a3f2398c-2b5b-4838-8b7c-5136945d7444"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "PALog",
+                    "value": "@{items('Loop_Set_Power_Automate_Log')?['a3i_value']}a3i_powerautomatelog&id=@{outputs('Create_Power_Automate_Log')?['body/a3i_powerautomatelogid']}"
+                  }
+                }
+              },
+              "runAfter": {
+                "Get_URL": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "51ecac94-c5de-4c18-b16c-d1101206bf43"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Initialize_Error_Email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "97fe671f-aa78-48e2-93b5-dc70c63afed0"
+          },
+          "type": "Scope"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

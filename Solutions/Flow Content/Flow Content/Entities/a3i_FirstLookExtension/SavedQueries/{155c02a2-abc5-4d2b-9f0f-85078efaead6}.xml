@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{155c02a2-abc5-4d2b-9f0f-85078efaead6}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_firstlookextensionid">
+          <cell name="a3i_name" width="98" />
+          <cell name="a3i_termofextensiondecimal" width="104" />
+          <cell name="a3i_totalvalueofextension" width="100" />
+          <cell name="a3i_primaryfirstlook" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_firstlookextension">
+          <attribute name="a3i_firstlookextensionid" />
+          <attribute name="a3i_name" />
+          <order attribute="a3i_name" descending="false" />
+          <attribute name="a3i_termofextensiondecimal" />
+          <attribute name="a3i_totalvalueofextension" />
+          <attribute name="a3i_primaryfirstlook" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="First Look Extension Advanced Find View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

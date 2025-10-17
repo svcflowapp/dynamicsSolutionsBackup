@@ -1,0 +1,10 @@
+<environmentvariabledefinition schemaname="a3i_nonscriptedsharepointdigestrecipients">
+  <displayname default="Non-scripted SharePoint digest recipients">
+    <label description="Non-scripted SharePoint digest recipients" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

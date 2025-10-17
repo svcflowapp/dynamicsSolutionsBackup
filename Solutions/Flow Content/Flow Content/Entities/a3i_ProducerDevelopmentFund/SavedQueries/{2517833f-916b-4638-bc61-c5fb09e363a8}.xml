@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{2517833f-916b-4638-bc61-c5fb09e363a8}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_producerdevelopmentfundid">
+          <cell name="a3i_name" width="300" />
+          <cell name="a3i_year" width="76" />
+          <cell name="a3i_termstartdate" width="152" />
+          <cell name="a3i_termenddate" width="140" />
+          <cell name="a3i_developmentspendbudget" width="215" />
+          <cell name="a3i_developmentspendactual" width="214" />
+          <cell name="a3i_developmentspendfundsavailable" width="278" />
+          <cell name="a3i_discretionarybudget" width="178" />
+          <cell name="a3i_discretionaryactual" width="185" />
+          <cell name="a3i_discretionaryfundsavailable" width="231" />
+          <cell name="modifiedon" width="158" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_producerdevelopmentfund">
+          <attribute name="a3i_producerdevelopmentfundid" />
+          <attribute name="a3i_name" />
+          <attribute name="modifiedon" />
+          <order attribute="modifiedon" descending="true" />
+          <attribute name="a3i_year" />
+          <attribute name="a3i_termstartdate" />
+          <attribute name="a3i_termenddate" />
+          <attribute name="a3i_developmentspendbudget" />
+          <attribute name="a3i_developmentspendactual" />
+          <attribute name="a3i_developmentspendfundsavailable" />
+          <attribute name="a3i_discretionarybudget" />
+          <attribute name="a3i_discretionaryactual" />
+          <attribute name="a3i_discretionaryfundsavailable" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Producer Development Pots" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

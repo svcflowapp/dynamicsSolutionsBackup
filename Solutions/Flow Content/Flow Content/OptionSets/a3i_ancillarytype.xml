@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_ancillarytype" localizedName="Ancillary Type" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.130</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Ancillary Type" languagecode="1033" />
+  </displaynames>
+  <options>
+    <option value="430830003" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="AR Gaming" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830000" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Accessories" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830001" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Advertising" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830002" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Apparel" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830044" IsHidden="0">
+      <labels>
+        <label description="Back to School" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830045" IsHidden="0">
+      <labels>
+        <label description="Bags and Luggage" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Board Game" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830005" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Book Publisher" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Brand Agency" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Broadcaster - Commercial" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Browser Gaming" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830046" IsHidden="0">
+      <labels>
+        <label description="Calendars" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830009" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Card Game" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Console Gaming" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830011" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Design Studio" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830012" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Digital Gaming" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830013" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Dress Up" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830014" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Food / Drink" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830015" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Gambling" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830016" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Gambling Agent" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830017" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Giftware" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830047" IsHidden="0">
+      <labels>
+        <label description="Greetings Cards" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830018" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Homeware" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830019" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Immersive Experience" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830020" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="In Show" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830021" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Inflight Apps" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830022" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Interactive" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830048" IsHidden="0">
+      <labels>
+        <label description="Jigsaws" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830023" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Licensing" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830024" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Licensing Agent" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830049" IsHidden="0">
+      <labels>
+        <label description="Licensing Consultant" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830025" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Live Events" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830026" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Live Tour" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830027" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Magazine" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830028" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Media Agency" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830029" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Merchandise" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830030" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Metaverse" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830031" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Mobile Apps" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830032" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Music Soundtrack" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830050" IsHidden="0">
+      <labels>
+        <label description="Novelty Gifts" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830051" IsHidden="0">
+      <labels>
+        <label description="Partworks" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830033" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Plush Toys" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830034" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Podcasts" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830035" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Producer - Commercial" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830036" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Retailer" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830037" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Social Media" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830038" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Stationary" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830052" IsHidden="0">
+      <labels>
+        <label description="Toiletries" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830039" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Toys" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830040" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Travel Game" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830042" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="VR Gaming" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830041" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="Voice Activated Gaming" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830043" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="YouTube" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

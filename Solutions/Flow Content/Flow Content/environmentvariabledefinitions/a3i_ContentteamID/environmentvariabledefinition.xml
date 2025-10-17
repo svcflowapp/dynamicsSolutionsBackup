@@ -1,0 +1,10 @@
+<environmentvariabledefinition schemaname="a3i_ContentteamID">
+  <displayname default="Content team ID">
+    <label description="Content team ID" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.94</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

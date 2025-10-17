@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <CustomAction Id="a3i.a3i_episode.Form.Activate.CustomAction" Location="Mscrm.Form.a3i_episode.MainTab.Save.Controls._children" Sequence="2">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_episode.Form.Activate.Alt" Command="a3i_episode.Activate.Form" Id="a3i_episode.Form.Activate" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i_episode.Form.Activate.LabelText" Sequence="2" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_episode.Form.Activate.ToolTipTitle" ModernImage="Activate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_episode.Form.Deactivate.CustomAction" Location="Mscrm.Form.a3i_episode.MainTab.Save.Controls._children" Sequence="0">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_episode.Form.Deactivate.Alt" Command="a3i_episode.Deactivate.Form" Id="a3i_episode.Form.Deactivate" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i_episode.Form.Deactivate.LabelText" Sequence="0" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_episode.Form.Deactivate.ToolTipTitle" ToolTipDescription="$Resources(EntityPluralDisplayName):Ribbon.Tooltip.Deactivate" ModernImage="DeActivate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_episode.Form.Withdraw.CustomAction" Location="Mscrm.Form.a3i_episode.MainTab.Save.Controls._children" Sequence="1">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_episode.Form.Withdraw.Alt" Command="a3i_episode.Withdraw.Form" Id="a3i_episode.Form.Withdraw" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i_episode.Form.Withdraw.LabelText" Sequence="1" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_episode.Form.Withdraw.ToolTipTitle" ToolTipDescription="$LocLabels:a3i_episode.Form.Withdraw.ToolTipDescription" ModernImage="DeActivate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_episode.HomepageGrid.Activate.CustomAction" Location="Mscrm.HomepageGrid.a3i_episode.MainTab.Management.Controls._children" Sequence="2">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_episode.HomepageGrid.Activate.Alt" Command="a3i_episode.Activate.Grid" Id="a3i_episode.HomepageGrid.Activate" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i_episode.HomepageGrid.Activate.LabelText" Sequence="2" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_episode.HomepageGrid.Activate.ToolTipTitle" ModernImage="Activate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_episode.HomepageGrid.Deactivate.CustomAction" Location="Mscrm.HomepageGrid.a3i_episode.MainTab.Management.Controls._children" Sequence="0">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_episode.HomepageGrid.Deactivate.Alt" Command="a3i_episode.Deactivate.Grid" Id="a3i_episode.HomepageGrid.Deactivate" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i_episode.HomepageGrid.Deactivate.LabelText" Sequence="0" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_episode.HomepageGrid.Deactivate.ToolTipTitle" ToolTipDescription="$LocLabels:a3i_episode.HomepageGrid.Deactivate.ToolTipDescription" ModernImage="DeActivate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_episode.HomepageGrid.Withdraw.CustomAction" Location="Mscrm.HomepageGrid.a3i_episode.MainTab.Management.Controls._children" Sequence="1">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_episode.HomepageGrid.Withdraw.Alt" Command="a3i_episode.Withdraw.Gird" Id="a3i_episode.HomepageGrid.Withdraw" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i_episode.HomepageGrid.Withdraw.LabelText" Sequence="1" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_episode.HomepageGrid.Withdraw.ToolTipTitle" ToolTipDescription="$LocLabels:a3i_episode.HomepageGrid.Withdraw.ToolTipDescription" ModernImage="DeActivate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_episode.SubGrid.Activate.CustomAction" Location="Mscrm.SubGrid.a3i_episode.MainTab.Management.Controls._children" Sequence="2">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_episode.SubGrid.Activate.Alt" Command="a3i_episode.Activate.Grid" Id="a3i_episode.SubGrid.Activate" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i_episode.SubGrid.Activate.LabelText" Sequence="2" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_episode.SubGrid.Activate.ToolTipTitle" ModernImage="Activate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_episode.SubGrid.Deactivate.CustomAction" Location="Mscrm.SubGrid.a3i_episode.MainTab.Management.Controls._children" Sequence="0">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_episode.SubGrid.Deactivate.Alt" Command="a3i_episode.Deactivate.Grid" Id="a3i_episode.SubGrid.Deactivate" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i_episode.SubGrid.Deactivate.LabelText" Sequence="0" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_episode.SubGrid.Deactivate.ToolTipTitle" ToolTipDescription="$LocLabels:a3i_episode.SubGrid.Deactivate.ToolTipDescription" ModernImage="DeActivate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_episode.SubGrid.Withdraw.CustomAction" Location="Mscrm.SubGrid.a3i_episode.MainTab.Management.Controls._children" Sequence="1">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i_episode.SubGrid.Withdraw.Alt" Command="a3i_episode.Withdraw.Gird" Id="a3i_episode.SubGrid.Withdraw" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i_episode.SubGrid.Withdraw.LabelText" Sequence="1" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i_episode.SubGrid.Withdraw.ToolTipTitle" ToolTipDescription="$LocLabels:a3i_episode.SubGrid.Withdraw.ToolTipDescription" ModernImage="DeActivate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.a3i_episode.Activate.Hide" Location="Mscrm.Form.a3i_episode.Activate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.a3i_episode.Deactivate.Hide" Location="Mscrm.Form.a3i_episode.Deactivate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.a3i_episode.NewRecord.Hide" Location="Mscrm.Form.a3i_episode.NewRecord" />
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.a3i_episode.NewRecordForBPFEntity.Hide" Location="Mscrm.Form.a3i_episode.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="a3i.Mscrm.HomepageGrid.a3i_episode.Activate.Hide" Location="Mscrm.HomepageGrid.a3i_episode.Activate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.HomepageGrid.a3i_episode.Deactivate.Hide" Location="Mscrm.HomepageGrid.a3i_episode.Deactivate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.HomepageGrid.a3i_episode.NewRecord.Hide" Location="Mscrm.HomepageGrid.a3i_episode.NewRecord" />
+    <HideCustomAction HideActionId="a3i.Mscrm.HomepageGrid.a3i_episode.NewRecordForBPFEntity.Hide" Location="Mscrm.HomepageGrid.a3i_episode.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="a3i.Mscrm.SubGrid.a3i_episode.Activate.Hide" Location="Mscrm.SubGrid.a3i_episode.Activate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.SubGrid.a3i_episode.AddExistingAssoc.Hide" Location="Mscrm.SubGrid.a3i_episode.AddExistingAssoc" />
+    <HideCustomAction HideActionId="a3i.Mscrm.SubGrid.a3i_episode.AddExistingStandard.Hide" Location="Mscrm.SubGrid.a3i_episode.AddExistingStandard" />
+    <HideCustomAction HideActionId="a3i.Mscrm.SubGrid.a3i_episode.AddNewStandard.Hide" Location="Mscrm.SubGrid.a3i_episode.AddNewStandard" />
+    <HideCustomAction HideActionId="a3i.Mscrm.SubGrid.a3i_episode.Deactivate.Hide" Location="Mscrm.SubGrid.a3i_episode.Deactivate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.SubGrid.a3i_episode.NewRecord.Hide" Location="Mscrm.SubGrid.a3i_episode.NewRecord" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="a3i_episode.Activate.Form">
+      <EnableRules>
+        <EnableRule Id="Mscrm.CanEditPrimary" />
+        <EnableRule Id="Mscrm.FormStateNotNew" />
+        <EnableRule Id="a3i_episode.Activate.EnableRule.Form" />
+        <EnableRule Id="Mscrm.AnySelection" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i_episode.WritePrimaryEntity" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeFormStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="1" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i_episode.Activate.Grid">
+      <EnableRules>
+        <EnableRule Id="Mscrm.CanEditPrimary" />
+        <EnableRule Id="Mscrm.FormStateNotNew" />
+        <EnableRule Id="Mscrm.AnySelection" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i_episode.WritePrimaryEntity" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeMultipleStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <CrmParameter Value="SelectedEntityTypeName" />
+          <CrmParameter Value="SelectedControlSelectedItemIds" />
+          <IntParameter Value="1" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i_episode.Deactivate.Form">
+      <EnableRules>
+        <EnableRule Id="a3i_episode.Deactivate.EnableRule.Form" />
+        <EnableRule Id="Mscrm.AnySelection" />
+        <EnableRule Id="Mscrm.CanEditPrimary" />
+        <EnableRule Id="Mscrm.FormStateNotNew" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i_episode.WritePrimaryEntity" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeFormStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="430830000" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i_episode.Deactivate.Grid">
+      <EnableRules>
+        <EnableRule Id="Mscrm.AnySelection" />
+        <EnableRule Id="Mscrm.CanEditPrimary" />
+        <EnableRule Id="Mscrm.FormStateNotNew" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i_episode.WritePrimaryEntity" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeMultipleStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <CrmParameter Value="SelectedEntityTypeName" />
+          <CrmParameter Value="SelectedControlSelectedItemIds" />
+          <IntParameter Value="430830000" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i_episode.Withdraw.Form">
+      <EnableRules>
+        <EnableRule Id="a3i_episode.Withdraw.EnableRule.Form" />
+        <EnableRule Id="Mscrm.AnySelection" />
+        <EnableRule Id="Mscrm.CanEditPrimary" />
+        <EnableRule Id="Mscrm.FormStateNotNew" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i_episode.WritePrimaryEntity" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeFormStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="430830001" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i_episode.Withdraw.Gird">
+      <EnableRules>
+        <EnableRule Id="Mscrm.AnySelection" />
+        <EnableRule Id="Mscrm.CanEditPrimary" />
+        <EnableRule Id="Mscrm.FormStateNotNew" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i_episode.WritePrimaryEntity" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeMultipleStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <CrmParameter Value="SelectedEntityTypeName" />
+          <CrmParameter Value="SelectedControlSelectedItemIds" />
+          <IntParameter Value="430830001" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="a3i_episode.WritePrimaryEntity">
+        <EntityPrivilegeRule PrivilegeType="Write" PrivilegeDepth="Basic" AppliesTo="PrimaryEntity" Default="true" />
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules>
+      <EnableRule Id="a3i_episode.Activate.EnableRule.Form">
+        <CustomRule FunctionName="a3i.StatusChange.CheckFormStatus" Library="$webresource:a3i_statusChange.js" Default="true">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="1" />
+        </CustomRule>
+      </EnableRule>
+      <EnableRule Id="a3i_episode.Deactivate.EnableRule.Form">
+        <CustomRule FunctionName="a3i.StatusChange.CheckFormStatus" Library="$webresource:a3i_statusChange.js" Default="true">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="430830000" />
+        </CustomRule>
+      </EnableRule>
+      <EnableRule Id="a3i_episode.Withdraw.EnableRule.Form">
+        <CustomRule FunctionName="a3i.StatusChange.CheckFormStatus" Library="$webresource:a3i_statusChange.js" Default="true">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="430830001" />
+        </CustomRule>
+      </EnableRule>
+      <EnableRule Id="Mscrm.CanEditPrimary">
+        <RecordPrivilegeRule PrivilegeType="Write" AppliesTo="PrimaryEntity" />
+      </EnableRule>
+      <EnableRule Id="Mscrm.FormStateNotNew">
+        <FormStateRule State="Create" InvertResult="true" />
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="a3i_episode.Form.Activate.Alt">
+      <Titles>
+        <Title description="Activate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.Form.Activate.LabelText">
+      <Titles>
+        <Title description="Activate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.Form.Activate.ToolTipTitle">
+      <Titles>
+        <Title description="Activate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.Form.Deactivate.Alt">
+      <Titles>
+        <Title description="Deactivate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.Form.Deactivate.LabelText">
+      <Titles>
+        <Title description="Deactivate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.Form.Deactivate.ToolTipTitle">
+      <Titles>
+        <Title description="Deactivate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.Form.Withdraw.Alt">
+      <Titles>
+        <Title description="Withdraw Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.Form.Withdraw.LabelText">
+      <Titles>
+        <Title description="Withdraw Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.Form.Withdraw.ToolTipDescription">
+      <Titles>
+        <Title description="Withdraw these Episodes. &lt;br&gt;&lt;br&gt;You can reactivate these Episodes from the Inactive Episodes View." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.Form.Withdraw.ToolTipTitle">
+      <Titles>
+        <Title description="Withdraw Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Activate.Alt">
+      <Titles>
+        <Title description="Activate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Activate.LabelText">
+      <Titles>
+        <Title description="Activate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Activate.ToolTipTitle">
+      <Titles>
+        <Title description="Activate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Deactivate.Alt">
+      <Titles>
+        <Title description="Deactivate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Deactivate.LabelText">
+      <Titles>
+        <Title description="Deactivate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Deactivate.ToolTipDescription">
+      <Titles>
+        <Title description="Deactivate these Episodes. &lt;br&gt;&lt;br&gt;You can reactivate these Episodes from the Inactive Episodes View." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Deactivate.ToolTipTitle">
+      <Titles>
+        <Title description="Deactivate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Withdraw.Alt">
+      <Titles>
+        <Title description="Withdraw Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Withdraw.LabelText">
+      <Titles>
+        <Title description="Withdraw Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Withdraw.ToolTipDescription">
+      <Titles>
+        <Title description="Withdraw these Episodes. &lt;br&gt;&lt;br&gt;You can reactivate these Episodes from the Inactive Episodes View." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.HomepageGrid.Withdraw.ToolTipTitle">
+      <Titles>
+        <Title description="Withdraw Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Activate.Alt">
+      <Titles>
+        <Title description="Activate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Activate.LabelText">
+      <Titles>
+        <Title description="Activate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Activate.ToolTipTitle">
+      <Titles>
+        <Title description="Activate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Deactivate.Alt">
+      <Titles>
+        <Title description="Deactivate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Deactivate.LabelText">
+      <Titles>
+        <Title description="Deactivate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Deactivate.ToolTipDescription">
+      <Titles>
+        <Title description="Deactivate these Episodes. &lt;br&gt;&lt;br&gt;You can reactivate these Episodes from the Inactive Episodes View." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Deactivate.ToolTipTitle">
+      <Titles>
+        <Title description="Deactivate Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Withdraw.Alt">
+      <Titles>
+        <Title description="Withdraw Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Withdraw.LabelText">
+      <Titles>
+        <Title description="Withdraw Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Withdraw.ToolTipDescription">
+      <Titles>
+        <Title description="Withdraw these Episodes. &lt;br&gt;&lt;br&gt;You can reactivate these Episodes from the Inactive Episodes View." languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i_episode.SubGrid.Withdraw.ToolTipTitle">
+      <Titles>
+        <Title description="Withdraw Episode" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

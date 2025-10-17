@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{d2b87caf-80b8-ed11-b597-0022481b5983}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_producerreporttitleslateid">
+          <cell name="a3i_name" width="200" />
+          <cell name="a3i_series" width="182" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_producerreporttitleslate">
+          <attribute name="a3i_name" />
+          <attribute name="a3i_producerreporttitleslateid" />
+          <link-entity name="a3i_year" alias="ab" link-type="inner" from="a3i_yearid" to="a3i_year">
+            <filter type="and">
+              <condition attribute="a3i_currentproducerreportingyear" operator="eq" value="1" />
+            </filter>
+          </link-entity>
+          <attribute name="a3i_series" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.117</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Producer Report Title Slates - This Year" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

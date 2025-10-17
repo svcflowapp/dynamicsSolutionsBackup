@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{2c1ebcaa-4c4b-ec11-8f8e-000d3a0ced82}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="true" showImage="false" maxWidth="1920">
+      <tabs>
+        <tab verticallayout="true" id="{4f801462-51cc-429b-b5c9-9b673bd7a6ea}" IsUserDefined="1" labelid="{eb1c5048-e0f1-45a9-b2a1-4228bfe59826}" name="tab_General">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{4dad0a35-aeb8-43ba-83f7-1ed8ecc61bc3}" labelid="{a3e49fec-78ef-44aa-984a-570fc1642e96}" name="tab_General_section_General" columns="1" locklevel="0" labelwidth="130" celllabelalignment="Left" celllabelposition="Left">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b0d51576-a839-499a-a279-5383d9ea15d2}" locklevel="1" colspan="1" rowspan="1" labelid="{e85cab21-5bbf-4a19-87d7-80af535887ee}" showlabel="true">
+                        <labels>
+                          <label description="Version Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_versionname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_versionname" disabled="false" uniqueid="{b080c541-5ee7-2ba1-967e-c1134a1937d2}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ff8bc12e-f471-4f22-ac0e-421bbb478672}" labelid="{a1e52aea-e15c-4936-a01f-68bc1b5fb6d5}" showlabel="true" locklevel="0" colspan="1">
+                        <labels>
+                          <label description="Version Display Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_versiondisplayname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_versiondisplayname" uniqueid="{c3cbc621-181c-c288-933b-b432a66e5ad6}" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{83ee06ed-85da-ebec-273e-0cd0472e4b2b}" showlabel="true" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Series" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_series" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_series" disabled="true" uniqueid="{8c8adcb7-cb2e-4593-0d87-2a784d88948b}">
+                          <parameters>
+                            <AutoResolve>true</AutoResolve>
+                            <DisableMru>false</DisableMru>
+                            <DisableQuickFind>false</DisableQuickFind>
+                            <DisableViewPicker>false</DisableViewPicker>
+                            <DefaultViewId>{495F5012-4E01-4D3F-9498-7BBDD0C54B75}</DefaultViewId>
+                            <AllowFilterOff>false</AllowFilterOff>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_General_section_Guids" id="a7dba4af-9c3d-46b0-931a-cedaf09a3eeb" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="GUIDs" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c1cd6afd-4931-4b81-9113-c4503ab8697a}" locklevel="0" colspan="1" rowspan="1" labelid="{4f357a8a-e8a1-4b09-9a6e-fe0e3896f4fd}">
+                        <labels>
+                          <label description="Version GUID" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_versionguid" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_versionguid" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_Main_section_Notes" showlabel="true" showbar="false" locklevel="0" id="{abb06135-ab45-e4ca-bd0b-1bd639607139}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                  <labels>
+                    <label description="Version Notes" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row height="auto">
+                      <cell id="{94d08b7a-2667-16e4-b5d5-4905bb0598be}" showlabel="true" locklevel="0" colspan="1" auto="true">
+                        <labels>
+                          <label description="Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_notes" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_notes" disabled="false" uniqueid="{a06bed97-9d38-9589-b587-08bdb8ec29e4}" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{814bafff-ab32-4c5e-86f6-2164ac839797}" locklevel="0" colspan="1" rowspan="1" labelid="{4ec30320-b073-437b-906c-93ea0654924b}" showlabel="true" auto="true">
+                        <labels>
+                          <label description="Technical Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_technicalnotes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_technicalnotes" disabled="false" uniqueid="{3929d653-bae1-6961-9ae8-3163ad1e5c79}" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{b560104c-1c3d-b0bd-d78a-aca89dddb3d4}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="Clearance Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_clearancenotes" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_clearancenotes" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="tab_General_section_Detail" id="a1aff4be-c52e-4771-9ad2-95f6fb4fb31a" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Detail" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d834d71b-535a-4f28-a33f-2c192ad06712}" locklevel="0" colspan="1" rowspan="1" labelid="{3e6abeff-14c7-4615-b85a-fba1a4131f5a}">
+                        <labels>
+                          <label description="Lead Version" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_leadversion" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="a3i_leadversion" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fdca9c8a-8585-46c7-b7b4-dbbcff234dd5}" locklevel="0" colspan="1" rowspan="1" labelid="{4d8aefbb-7d59-4836-8d70-fbb40a14a453}">
+                        <labels>
+                          <label description="Marketable" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_marketable" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="a3i_marketable" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6ef0d334-93fc-4436-87bf-1ef671a0487c}" locklevel="0" colspan="1" rowspan="1" labelid="{5f3579e5-320d-4edd-9a0c-a15e0f9aebca}">
+                        <labels>
+                          <label description="Deliverable" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_deliverable" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="a3i_deliverable" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3641afce-b59d-4d20-b602-c0b809b08a98}" locklevel="1" colspan="1" rowspan="1" labelid="{4ac500b6-08a6-45f4-b00c-d0ea312fb088}">
+                        <labels>
+                          <label description="Version Runtime" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_versionruntime" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_versionruntime" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8513ba1b-ee1f-4a01-8c4d-8ac0a7120e6d}" locklevel="0" colspan="1" rowspan="1" labelid="{b49eef68-83f7-4d4f-b7b1-57b0adad31ec}" showlabel="true">
+                        <labels>
+                          <label description="Slot Length Summary" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_typicalslotlength" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_typicalslotlength" disabled="false" uniqueid="{6d540734-b7a8-1d26-cce9-22b5b03aed90}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7c0703df-d493-4dd4-83e4-e0b52c9997ee}" locklevel="0" colspan="1" rowspan="1" labelid="{d98e54de-d96d-4154-aaa4-635ab1deb8b0}">
+                        <labels>
+                          <label description="Version Fully Delivered Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_fullydelivereddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_fullydelivereddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f8372479-06c5-4c04-b4a5-05dff0743d4a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Modified By" languagecode="1033" />
+                        </labels>
+                        <control id="modifiedby" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="modifiedby" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9166fffc-73a4-470a-8228-da4f19151782}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Modified On" languagecode="1033" />
+                        </labels>
+                        <control id="modifiedon" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="modifiedon" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_Deliverables" id="fee8754f-0ae9-4da6-8d1b-53e8112eaaab" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Deliverables" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_Main_section_Detail" showlabel="true" showbar="false" locklevel="0" id="{634b1833-c2e1-703c-dc02-ce31d6a76861}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" height="auto">
+                  <labels>
+                    <label description="Version Detail" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row height="auto">
+                      <cell id="{b8645aeb-63ae-b225-326c-a357bb0108b7}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="Useful Contacts" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_usefulcontacts" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_usefulcontacts" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e7105be6-0bc1-4b9c-8f85-b55dc695d7f7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="QC Facility" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_qcfacility" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_qcfacility" disabled="false" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{552e5963-4d41-4895-9e9c-5659c567ec39}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="QC Booked" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_qcbooked" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_qcbooked" disabled="false" uniqueid="{c757e9d6-aa88-4556-d89a-82910abe4327}" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{80c6ad07-81e5-6d28-9312-c4ed65944a27}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="Passed" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_passed" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_passed" disabled="false" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{819961a0-195b-6004-87eb-b4593035e812}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="Audio Stems" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_audiostems" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_audiostems" disabled="false" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{9105cab1-14b5-94b4-4c91-962c0a8b7276}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="Video" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_video" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_video" disabled="false" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{03584acb-081b-940a-16c6-477c87e08aa7}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="Paperwork" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_paperwork" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_paperwork" disabled="false" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{79dc2481-ed07-b790-65d0-eb496ecad669}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="Materials Publish" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_materialspublish" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_materialspublish" disabled="false" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{7d06d5b5-ab9e-b134-586b-983903ae5ac0}" showlabel="true" locklevel="0" auto="true">
+                        <labels>
+                          <label description="Int’l Delivery Schedule" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_intldeliveryschedule" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="a3i_intldeliveryschedule" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7d762124-fcc7-40f4-bd48-32cef2ce0396}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Delivery Tracker Highlight" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_deliverytrackerhighlight" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_deliverytrackerhighlight" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_Episodes" id="3359ccb2-161d-48c2-844a-cdb9497befef" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Episodes" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_Episodes_section_General" id="c5389b39-91e0-4619-acdc-4d02d0f0e70a" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1c6c57a4-198e-4350-9a36-cc4551637be1}" locklevel="0" colspan="1" rowspan="1" labelid="{8bfdd3f9-3c02-4779-9ba2-9354a7ee3ea4}">
+                        <labels>
+                          <label description="Active Eps in Version" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_episodecount" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="a3i_episodecount" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{33615625-efba-4dd2-a586-879e23e920ea}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Active Hours" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_activehours" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_activehours" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{8b998dbf-09bd-4dc1-8fa7-75103a2c58ed}" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Episodes in Integration" languagecode="1033" />
+                        </labels>
+                        <control id="Subgrid_EpisodesIntegration" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                          <parameters>
+                            <TargetEntityType>a3i_episode</TargetEntityType>
+                            <ViewId>{AC6E27F4-A395-EC11-B400-0022481ACFA6}</ViewId>
+                            <ViewIds>{AD46948C-D658-44B6-8C82-56EBE2B4A061},{AC6E27F4-A395-EC11-B400-0022481ACFA6}</ViewIds>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <RelationshipName>a3i_Version_a3i_Episode</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{66f2c49a-6d66-421f-bd5e-967502414ca7}" rowspan="13" colspan="1" showlabel="true" auto="false">
+                        <labels>
+                          <label description="Active Episodes" languagecode="1033" />
+                        </labels>
+                        <control id="subgrid_Episodes" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" indicationOfSubgrid="true" uniqueid="{153d50ad-dd06-d176-7bc8-2c05c3c8b6c4}">
+                          <parameters>
+                            <TargetEntityType>a3i_episode</TargetEntityType>
+                            <ViewId>{AD46948C-D658-44B6-8C82-56EBE2B4A061}</ViewId>
+                            <ViewIds>{AD46948C-D658-44B6-8C82-56EBE2B4A061}</ViewIds>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <RelationshipName>a3i_Version_a3i_Episode</RelationshipName>
+                            <RecordsPerPage>10</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <HeaderColorCode>#F5FBFD</HeaderColorCode>
+                            <IsUserView>false</IsUserView>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>All</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>true</EnableChartPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{2488b534-c9f0-4776-8416-7605ad597f1c}" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="Inactive Episodes" languagecode="1033" />
+                        </labels>
+                        <control id="Subgrid_InactiveEpisodes" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                          <parameters>
+                            <TargetEntityType>a3i_episode</TargetEntityType>
+                            <ViewId>{CDA536CA-27CD-4801-A1D1-3B2B68CAC00E}</ViewId>
+                            <ViewIds>{AD46948C-D658-44B6-8C82-56EBE2B4A061},{CDA536CA-27CD-4801-A1D1-3B2B68CAC00E}</ViewIds>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <RelationshipName>a3i_Version_a3i_Episode</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_Hidden" id="{bc80a606-da86-b50a-0a2a-6238c11e9a2c}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" visible="false">
+          <labels>
+            <label description="Hidden" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_Hidden_section_Hidden" showlabel="false" showbar="false" locklevel="0" id="{4edd9ac6-13ba-248d-40c5-056e9ee297be}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left">
+                  <labels>
+                    <label description="Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{e589b5a0-d47a-49c7-8d92-3b8806541ca3}" labelid="{51c3ab45-fc20-4f71-8c50-b69d3b579796}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e599607a-60f2-4e41-afd7-11c25787b096}" locklevel="0" colspan="1" rowspan="1" labelid="{1f189f13-891a-475b-86d1-a2a253cd9545}">
+                        <labels>
+                          <label description="Status" languagecode="1033" />
+                        </labels>
+                        <control id="statecode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statecode" disabled="false" uniqueid="{14288b31-80bd-6d04-3c53-a3b1a65471b0}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7f579f5c-256e-4034-af8a-895de8e74b2c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Active" languagecode="1033" />
+                        </labels>
+                        <control id="statuscode" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="statuscode" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e6fdf57f-882e-4e79-9987-6ba9c68933c9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Duration" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_duration" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="a3i_duration" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{90f6b7a9-a057-484b-b2ac-bc7ae442a867}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="RT Integration Status" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_rtintegrationstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_rtintegrationstatus" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5e529466-e613-420b-b23c-11d85a2ee84e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Episodes Created" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_episodescreated" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="a3i_episodescreated" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{86b83661-508e-4c2b-b4c6-b29c0a37ac1b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Episodes Deactivated" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_episodesdeactivated" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="a3i_episodesdeactivated" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{7dcd24c4-4c86-4b46-94be-25820890b1a8}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{be492a6c-4bda-4308-b0c6-8df84d062828}" showlabel="false" labelid="{0302eb03-b489-4504-8668-1877ba243894}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9aa7b834-6f77-431a-a561-187555d39a27}" showlabel="false" labelid="{e40e315f-c6c1-4b40-8939-b439de3b4404}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{ce0381e7-72a6-18d3-b334-2250441e0a4b}" showlabel="true" locklevel="0">
+              <labels>
+                <label description="Version RT ID" languagecode="1033" />
+              </labels>
+              <control id="header_a3i_rightstrackerid" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_rightstrackerid" disabled="true" uniqueid="{453b044e-76c0-71a1-2ee8-8cbaa69e79a9}" />
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{89063a71-0af2-4445-a511-9df5f82bef27}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{4e79c1e2-6ac3-494f-bc1d-004b75ee5c55}" showlabel="false" labelid="{6cf469f5-8edf-4f0c-99a8-34aa9237359b}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4c11d68d-1ee6-4923-9ae1-f03bed312ed0}" showlabel="false" labelid="{325038fd-a926-4e33-9bff-fb483e35c805}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{8d1ad4ba-b8fd-4466-a8fc-59cc4b9e3768}" showlabel="false" labelid="{06e73c8e-1b2b-4ad8-9564-2f7ddfe27b07}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions>
+        <controlDescription forControl="{153d50ad-dd06-d176-7bc8-2c05c3c8b6c4}">
+          <customControl id="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" formFactor="0">
+            <parameters>
+              <TargetEntityType>a3i_episode</TargetEntityType>
+              <ViewId>{AD46948C-D658-44B6-8C82-56EBE2B4A061}</ViewId>
+              <ViewIds>{AD46948C-D658-44B6-8C82-56EBE2B4A061}</ViewIds>
+              <EnableViewPicker>false</EnableViewPicker>
+              <RelationshipName>a3i_Version_a3i_Episode</RelationshipName>
+              <RecordsPerPage>10</RecordsPerPage>
+              <AutoExpand>Fixed</AutoExpand>
+              <HeaderColorCode>#F5FBFD</HeaderColorCode>
+              <IsUserView>false</IsUserView>
+              <EnableQuickFind>false</EnableQuickFind>
+              <EnableJumpBar>false</EnableJumpBar>
+              <ChartGridMode>All</ChartGridMode>
+              <VisualizationId />
+              <IsUserChart>false</IsUserChart>
+              <EnableChartPicker>true</EnableChartPicker>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{AD46948C-D658-44B6-8C82-56EBE2B4A061}</ViewId>
+                <columnsDefaultView />
+                <IsUserView>false</IsUserView>
+                <RelationshipName>a3i_Version_a3i_Episode</RelationshipName>
+                <TargetEntityType>a3i_episode</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{AD46948C-D658-44B6-8C82-56EBE2B4A061}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
+              <EnableEditing static="true" type="Enum">yes</EnableEditing>
+              <ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+              <ListLayoutDirection static="true" type="Enum">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse static="true" type="Enum">false</EnableSubGridAutoCollapse>
+              <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+              <HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+              <EnableJumpBar static="true" type="Enum">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.Grid.GridControl">
+            <parameters>
+              <data-set name="Grid">
+                <ViewId>{AD46948C-D658-44B6-8C82-56EBE2B4A061}</ViewId>
+                <columnsDefaultView />
+                <IsUserView>false</IsUserView>
+                <RelationshipName>a3i_Version_a3i_Episode</RelationshipName>
+                <TargetEntityType>a3i_episode</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{AD46948C-D658-44B6-8C82-56EBE2B4A061}</FilteredViewIds>
+              </data-set>
+              <EnableGroupBy static="true" type="Enum">yes</EnableGroupBy>
+              <EnableEditing static="true" type="Enum">yes</EnableEditing>
+              <ReflowBehavior static="true" type="Enum">GridOnly</ReflowBehavior>
+              <ListLayoutDirection static="true" type="Enum">Vertical</ListLayoutDirection>
+              <EnableSubGridAutoCollapse static="true" type="Enum">false</EnableSubGridAutoCollapse>
+              <EnableFiltering static="true" type="Enum">yes</EnableFiltering>
+              <HideNestedGridColumnHeader static="true" type="Enum">no</HideNestedGridColumnHeader>
+              <EnableJumpBar static="true" type="Enum">yes</EnableJumpBar>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <formLibraries>
+        <Library name="a3i_version.js" libraryUniqueId="{19e1f2d8-ff66-45e7-b971-3626ab79dc3b}" />
+        <Library name="a3i_version_metadata.js" libraryUniqueId="{e7087bae-a69a-e9c0-922a-e75262b010ee}" />
+        <Library name="a3i_series_metadata.js" libraryUniqueId="{ce62c4a3-bae3-2931-b7dc-e735e024d390}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="true" active="true">
+          <Handlers>
+            <Handler functionName="a3i.Version.OnLoad" libraryName="a3i_version.js" handlerUniqueId="{a33111a3-3630-433a-b7e4-16aa137a74c7}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="a3i_versionname">
+          <Handlers>
+            <Handler functionName="a3i.Version.SetVersionDisplayName" libraryName="a3i_version.js" handlerUniqueId="{371a15ff-4a17-46c0-b3c7-d90e3c1056e5}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+          <dependencies>
+            <dependency id="a3i_versionname" />
+            <dependency id="a3i_versionruntime" />
+          </dependencies>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="a3i_versionruntime">
+          <Handlers>
+            <Handler functionName="a3i.Version.SetVersionDisplayName" libraryName="a3i_version.js" handlerUniqueId="{a88361f7-379f-4750-a561-5fb953fcb9d8}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+          <dependencies>
+            <dependency id="a3i_versionname" />
+            <dependency id="a3i_versionruntime" />
+          </dependencies>
+        </event>
+        <event name="onchange" application="true" active="true" attribute="a3i_episodecount">
+          <Handlers>
+            <Handler functionName="a3i.Version.ValidateEpisodeCount" libraryName="a3i_version.js" handlerUniqueId="{18b00943-eda7-4aef-b574-402b12a7606a}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Episodes &amp; Versions" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Form for Episodes &amp; Versions app" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

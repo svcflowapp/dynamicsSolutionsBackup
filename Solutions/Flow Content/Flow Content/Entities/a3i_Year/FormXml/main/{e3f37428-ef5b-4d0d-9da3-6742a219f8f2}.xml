@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e3f37428-ef5b-4d0d-9da3-6742a219f8f2}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" shownavigationbar="true" showImage="false" maxWidth="1920">
+      <tabs>
+        <tab verticallayout="true" id="{c0727973-ae81-4ba9-b913-c2449ee06982}" IsUserDefined="1" name="General">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{e742903f-2b3c-4661-9f11-e63c8e170d9d}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{fafac8ed-fdf4-4d6c-9360-080a612b4d8f}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4941f810-7aae-4d4b-aacf-18f1b0bbb075}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Budget" id="c3a653ba-f058-4c9f-8452-45c40371d8de" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Budget" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Budget" id="5f2e71b9-61d1-4781-a52f-b09df40ea9ea" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Budget" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8ca2db0a-7f78-4d48-8d85-bcacc4815e15}" locklevel="0" colspan="1" rowspan="1" showlabel="true">
+                        <labels>
+                          <label description="Current Tax Year" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_currenttaxyear" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_currenttaxyear" disabled="false" uniqueid="{e36566ad-e234-44a7-581d-21426250456e}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3eb484e2-b217-4304-94a6-6f1abc14ba76}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Current Producer Reporting Year" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_currentproducerreportingyear" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_currentproducerreportingyear" disabled="false" uniqueid="{528604f1-7a26-4f11-b5bf-118e04142eff}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6d313f68-94a5-4cd5-b585-4caf1584bea4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Previous Tax Year" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_previoustaxyear" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_previoustaxyear" disabled="false" uniqueid="{d982b1e6-6ee8-4240-aa6a-428c123a4a2d}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{97364768-d48d-4c41-8a1e-b959905fe3e8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Previous Producer Reporting Year" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_previousproducerreportingyear" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_previousproducerreportingyear" disabled="false" uniqueid="{fb687e5e-7e71-4bac-b093-87b4b2536f71}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bd04887f-6c8f-417c-82cc-5c3cd2c3a143}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Budget Lock Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_budgetlockdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_budgetlockdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cbb366fd-54d2-40f2-864b-11f3bc108ffc}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Budget Processing Status" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_budgetprocessingstatus" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_budgetprocessingstatus" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_3" id="d64d7d3b-5cc5-422c-aa46-9e160b97fd88" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Order Book Title Slate" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{c6c1218f-2920-4085-b7ba-4276e25b572f}" rowspan="1" colspan="1" auto="true" showlabel="false">
+                        <labels>
+                          <label description="Order Book Title Slate sub-grid" languagecode="1033" />
+                        </labels>
+                        <control id="Subgrid_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                          <parameters>
+                            <RecordsPerPage>50</RecordsPerPage>
+                            <AutoExpand>Auto</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>a3i_orderbooktitleslate</TargetEntityType>
+                            <ViewId>{0CBC7864-10C5-4DB9-80C0-618282BAAB54}</ViewId>
+                            <ViewIds>{0CBC7864-10C5-4DB9-80C0-618282BAAB54}</ViewIds>
+                            <RelationshipName>a3i_OrderBookTitleSlate_a3i_Year</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row height="auto" />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{09222c66-2c24-4452-bde0-b8f01285ece1}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{5ff1c280-df4d-43e4-986d-6930852e9a9e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{95f10663-f271-4a74-9473-144230c7c59a}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4604b712-6712-487f-8b96-779cc7a86e65}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{7927d3ec-0404-43c3-bc38-edfeb7173cbd}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{d8831047-d445-470f-aecc-8f374deabac9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{83d34318-475c-418e-b726-ada88067dc44}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b659a7a4-120a-41e8-9db5-d22baa5e7c45}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <formLibraries>
+        <Library name="a3i_processbudget" libraryUniqueId="{736b4663-4b77-bccc-b180-a34487bd0bb2}" />
+      </formLibraries>
+      <controlDescriptions>
+        <controlDescription forControl="{e36566ad-e234-44a7-581d-21426250456e}">
+          <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_currenttaxyear</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_currenttaxyear</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_currenttaxyear</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_currenttaxyear</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{528604f1-7a26-4f11-b5bf-118e04142eff}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_currentproducerreportingyear</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_currentproducerreportingyear</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_currentproducerreportingyear</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_currentproducerreportingyear</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{fb687e5e-7e71-4bac-b093-87b4b2536f71}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_previousproducerreportingyear</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_previousproducerreportingyear</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_previousproducerreportingyear</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_previousproducerreportingyear</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{d982b1e6-6ee8-4240-aa6a-428c123a4a2d}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_previoustaxyear</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_previoustaxyear</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_previoustaxyear</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_previoustaxyear</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{8cbf30fd-daab-ea11-a812-000d3a86a85d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" preview="1" icon="1" select="1" jump="a3i_seriesname">
+        <row id="a3i_seriesid" name="result">
+          <cell name="a3i_all3group" width="100" />
+          <cell name="a3i_producer1" width="100" />
+          <cell name="a3i_seriesname" width="300" />
+          <cell name="a3i_newsynopsis" width="100" />
+          <cell name="a3i_runtime" width="100" />
+          <cell name="a3i_broadcastplatform" width="100" />
+          <cell name="a3i_episodebudget" width="100" />
+          <cell name="a3i_txdatestatusnew" width="100" />
+          <cell name="a3i_txdate" width="100" />
+          <cell name="a3i_txqtrest" width="100" />
+          <cell name="a3i_txyearest" width="100" />
+          <cell name="a3i_deliverydatestatus" width="100" />
+          <cell name="a3i_deliverydate" width="100" />
+          <cell name="a3i_additionalnotescontent" width="100" />
+          <cell name="a3i_paymentterms" width="100" />
+          <cell name="a3i_aafstatus" width="100" />
+          <cell name="a3i_dealmemostatus" width="100" />
+          <cell name="a3i_clearancecosts" width="100" />
+          <cell name="a3i_additionalpaymentterms" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch distinct="false" mapping="logical" version="1.0" output-format="xml-platform">
+        <entity name="a3i_series">
+          <attribute name="a3i_seriesname" />
+          <attribute name="a3i_producer1" />
+          <attribute name="a3i_seriesid" />
+          <attribute name="a3i_broadcastplatform" />
+          <attribute name="a3i_episodebudget" />
+          <attribute name="a3i_all3group" />
+          <attribute name="a3i_runtime" />
+          <attribute name="a3i_txdate" />
+          <attribute name="a3i_deliverydate" />
+          <attribute name="a3i_additionalnotescontent" />
+          <order descending="false" attribute="a3i_seriesname" />
+          <attribute name="a3i_clearancecosts" />
+          <attribute name="a3i_paymentterms" />
+          <attribute name="a3i_additionalpaymentterms" />
+          <attribute name="a3i_txqtrest" />
+          <attribute name="a3i_txyearest" />
+          <attribute name="a3i_deliverydatestatus" />
+          <attribute name="a3i_txdatestatusnew" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <filter type="or">
+              <condition attribute="a3i_deliverydate" operator="last-x-days" value="30" />
+              <condition attribute="a3i_deliverydate" operator="next-x-days" value="500" />
+              <condition attribute="a3i_deliverytype" operator="eq" value="430830001" />
+            </filter>
+          </filter>
+          <link-entity name="a3i_programme" alias="aa" link-type="inner" from="a3i_programmeid" to="a3i_programme">
+            <filter type="and">
+              <condition attribute="a3i_contenttype" operator="eq" value="430830001" />
+            </filter>
+          </link-entity>
+          <attribute name="a3i_aafstatus" />
+          <attribute name="a3i_dealmemostatus" />
+          <attribute name="a3i_newsynopsis" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.11</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Non-Scripted Tracker" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

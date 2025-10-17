@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_additionalowner" localizedName="Additional Owner" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.44</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Additional Owner" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Amanda Pe" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830001" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Anna Maslowska" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830002" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Ben Packwood" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830003" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Caroline Stephenson" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Debra Bergg" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830020" IsHidden="0">
+      <labels>
+        <label description="Emily Lawn" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830021" IsHidden="0">
+      <labels>
+        <label description="Gabriel Andrews" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830005" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Gary Woolf" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Graham Spencer" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830019" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Hannah Collins" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830018" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Jane Sharp" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Janel Downing" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830012" ExternalValue="" Color="#0000ff" IsHidden="0">
+      <labels>
+        <label description="Jennifer Askin" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Jonathan Hughes" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830009" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Julie Dowding" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Kelly Shek" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830011" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Kit Yow" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830022" IsHidden="0">
+      <labels>
+        <label description="Lizzy Ribeiro" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830013" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Paul Corney" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830014" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Peta Sykes" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830015" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Sally Habbershaw" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830016" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Stephen Driscoll" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830017" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Yari Torres" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_organisationtype" localizedName="Organisation Type" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Organisation Type" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830003" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Agent" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" IsHidden="0">
+      <labels>
+        <label description="Awaiting Input" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830009" IsHidden="0">
+      <labels>
+        <label description="Awarding Body" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830000" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Broadcaster" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Client" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830012" IsHidden="0">
+      <labels>
+        <label description="Festival" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" IsHidden="0">
+      <labels>
+        <label description="Finance" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Fulfilment" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" IsHidden="0">
+      <labels>
+        <label description="Legal" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Media Agency" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830005" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Press" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830001" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Producer" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830011" IsHidden="0">
+      <labels>
+        <label description="Supplier" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

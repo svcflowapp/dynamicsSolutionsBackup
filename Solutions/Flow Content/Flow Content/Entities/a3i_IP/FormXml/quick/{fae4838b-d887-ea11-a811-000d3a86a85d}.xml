@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{fae4838b-d887-ea11-a811-000d3a86a85d}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{876ddd22-4a29-405e-af39-f494ac1148e5}">
+          <labels>
+            <label description="Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{192787a2-a9b1-4505-8f91-6981f8c3e564}">
+                  <labels>
+                    <label description="Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ee5f4f69-fe3c-40ef-951e-85eb3295ed00}" showlabel="true" locklevel="0" labelid="{3c0526d3-298b-45c3-8551-b5eb9b2e1fff}">
+                        <labels>
+                          <label description="IP Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ipname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_ipname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3bbbb031-a6ba-149a-b5b7-3e295c1ea716}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Formats Materials Available" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_formatsmaterialsavailable" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_formatsmaterialsavailable" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e29980b4-5cd8-43fc-a0f4-d52ca4b2a19b}" locklevel="0">
+                        <labels>
+                          <label description="Format Materials Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_formatsmaterialsnotes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_formatsmaterialsnotes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9a4ae94d-c133-4ea6-88cf-feca49883526}" showlabel="true" locklevel="0" labelid="{88879c3d-5ac9-4cc7-9702-181aab851a08}">
+                        <labels>
+                          <label description="Option Pack Last Updated" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_optionpacklastupdated" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_optionpacklastupdated" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{72fb66b1-9252-4526-af43-458fd7517bb6}" locklevel="0">
+                        <labels>
+                          <label description="Draft Bible Received From Producer" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_draftbiblereceivedfromproducer" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_draftbiblereceivedfromproducer" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c32da816-779c-428f-b77e-8d1b51532e07}" locklevel="0">
+                        <labels>
+                          <label description="Editor" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_editor" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_editor" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a1b11029-41d3-4e63-b66e-190fabf7c367}" locklevel="0">
+                        <labels>
+                          <label description="Bible Complete" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_biblecomplete" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_biblecomplete" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Formats" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Format specific data on IP Entity" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

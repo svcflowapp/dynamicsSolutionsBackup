@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{c7e43911-8d84-439b-b3e0-8b3e54e6fa65}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_producerreportsalesexecterritoryid">
+          <cell name="a3i_salesexec" width="300" />
+          <cell name="a3i_producerreportterritory" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_producerreportsalesexecterritory">
+          <attribute name="a3i_producerreportsalesexecterritoryid" />
+          <attribute name="createdon" />
+          <attribute name="a3i_salesexec" />
+          <attribute name="a3i_producerreportterritory" />
+          <order attribute="a3i_salesexec" descending="false" />
+          <order attribute="a3i_producerreportterritory" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.104</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Producer Report Sales Exec Territory Advanced Find View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

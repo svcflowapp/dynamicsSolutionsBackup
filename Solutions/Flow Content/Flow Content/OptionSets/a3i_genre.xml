@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_genre" localizedName="Genre" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Genre" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830020" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Arts &amp; Culture" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830028" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Automotive" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830035" IsHidden="0">
+      <labels>
+        <label description="Biographical" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830030" IsHidden="0">
+      <labels>
+        <label description="Book Adaptations" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830031" IsHidden="0">
+      <labels>
+        <label description="Business &amp; Finance" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830029" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Comedy" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830000" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Constructed Reality" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830001" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Crime" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830002" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Dating &amp; Relationships" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830003" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Detective" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Documentary" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830005" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Drama" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Entertainment" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Environment &amp; Nature" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Factual Entertainment" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830009" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Family &amp; Parenting" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830025" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Food &amp; Drink" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Gameshow" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830011" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Health &amp; Wellbeing" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830017" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="History" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830015" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Home &amp; Garden" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830027" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Lifestyle" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830012" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Long-Running Drama" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830013" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Period Drama" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830014" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Pets &amp; Animals" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830034" IsHidden="0">
+      <labels>
+        <label description="Premium Factual" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830033" IsHidden="0">
+      <labels>
+        <label description="Natural History" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830016" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Reality" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830018" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Royalty" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830019" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Scripted Formats" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830021" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Science &amp; Technology" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830032" IsHidden="0">
+      <labels>
+        <label description="Social Experiment" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830022" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Thriller" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830023" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Travel" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830024" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="True Crime" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830026" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Youth" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

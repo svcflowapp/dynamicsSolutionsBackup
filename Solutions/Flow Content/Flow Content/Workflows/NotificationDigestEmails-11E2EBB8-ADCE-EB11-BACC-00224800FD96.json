@@ -1,0 +1,423 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_6f1eb"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedoffice365_48fa5"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "recurrence": {
+            "frequency": "Week",
+            "interval": 1,
+            "timeZone": "GMT Standard Time",
+            "schedule": {
+              "weekDays": [
+                "Monday"
+              ],
+              "hours": [
+                "8"
+              ],
+              "minutes": [
+                0
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "24e78fd9-713c-4d39-82e9-8de7c4369ea6"
+          },
+          "type": "Recurrence"
+        }
+      },
+      "actions": {
+        "Subtract_from_time": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "0b75d6e9-4e7c-4fc1-875c-f531816ec3b3"
+          },
+          "type": "Expression",
+          "kind": "SubtractFromTime",
+          "inputs": {
+            "baseTime": "@{utcNow()}",
+            "interval": 7,
+            "timeUnit": "Day"
+          }
+        },
+        "TX_Actual": {
+          "actions": {
+            "Get_Digest_TX_Actual": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "e6a73934-bd2a-40e0-8002-859f0cd976c1"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_notificationdigests",
+                  "$filter": "createdon gt '@{body('Subtract_from_time')}' and a3i_notificationtype eq 430830001",
+                  "$orderby": "a3i_name asc"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Select_Columns_for_TX_Actual": {
+              "runAfter": {
+                "Get_Digest_TX_Actual": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5470fb95-09e4-4c20-a0b4-2701bc8407f4"
+              },
+              "type": "Select",
+              "inputs": {
+                "from": "@outputs('Get_Digest_TX_Actual')?['body/value']",
+                "select": {
+                  "Series": "@item()?['a3i_name']",
+                  "Runtime": "@item()?['a3i_runtime']",
+                  "TX Start": "@item()?['a3i_txdate']",
+                  "TX Pattern": "@item()?['a3i_txpattern']",
+                  "Delivery": "@item()?['a3i_deliverytypenotification']",
+                  "Content Type": "@item()?['a3i_contenttype']",
+                  "Link": "<a href=\"@{item()?['a3i_link']}\">Link"
+                }
+              }
+            },
+            "Create_Table_for_TX_Actual": {
+              "runAfter": {
+                "Select_Columns_for_TX_Actual": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d4175e55-c864-4267-904a-0939dd50a8df"
+              },
+              "type": "Table",
+              "inputs": {
+                "from": "@body('Select_Columns_for_TX_Actual')",
+                "format": "HTML"
+              }
+            },
+            "Format_Table_for_TX_Actual": {
+              "runAfter": {
+                "Create_Table_for_TX_Actual": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "2835d293-1339-405d-b0f5-f87790568700"
+              },
+              "type": "Compose",
+              "inputs": "<style>\ntable {\n  border: 1px solid #1C6EA4;\n  background-color: #EEEEEE;\n  width: 100%;\n  text-align: left;\n  border-collapse: collapse;\n}\ntable td, table th {\n  border: 1px solid #AAAAAA;\n  padding: 3px 2px;\n}\ntable tbody td {\n  font-size: 13px;\n}\ntable thead {\n  background: #0095C8;\n  border-bottom: 2px solid #D0E4F5;\n}\ntable thead th {\n  font-size: 15px;\n  font-weight: bold;\n  color: #FFFFFF;\n  border-left: 2px solid #D0E4F5;\n}\ntable thead th:first-child {\n  border-left: none;\n}\n</style>\n@{replace(replace(replace(body('Create_Table_For_TX_Actual'), '&lt;a href=&quot;', '<a href=\"'), '&quot;&gt;', '\">'), '&lt;a/&gt;', '</a>')}"
+            }
+          },
+          "runAfter": {
+            "Loop_Set_Digest_Email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "3edea278-ccc4-43c2-ada6-a8441e75e3a1"
+          },
+          "type": "Scope"
+        },
+        "Fully_Delivered_Date": {
+          "actions": {
+            "Get_Digest_Fully_Delivered_Date": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "7f07fca1-b8a9-4950-93a6-6191c39937fa"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_notificationdigests",
+                  "$filter": "createdon gt '@{body('Subtract_from_time')}' and a3i_notificationtype eq 430830002",
+                  "$orderby": "a3i_name asc"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Select_Columns_for_Fully_Delivered_Date": {
+              "runAfter": {
+                "Get_Digest_Fully_Delivered_Date": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "fa9d1e23-d21c-4a9e-adee-0bb1aaca7f34"
+              },
+              "type": "Select",
+              "inputs": {
+                "from": "@outputs('Get_Digest_Fully_Delivered_Date')?['body/value']",
+                "select": {
+                  "Series": "@item()?['a3i_name']",
+                  "Runtime": "@item()?['a3i_runtime']",
+                  "TX Start": "@item()?['a3i_txdate']",
+                  "TX Date Status": "@item()?['a3i_txdatestatus']",
+                  "TX Pattern": "@item()?['a3i_txpattern']",
+                  "Fully Delivered Date": "@item()?['a3i_fullydelivereddate']",
+                  "Link": "<a href=\"@{item()?['a3i_link']}\">Link",
+                  "Content Type": "@item()?['a3i_contenttype']"
+                }
+              }
+            },
+            "Create_Table_for_Fully_Delivered_Date": {
+              "runAfter": {
+                "Select_Columns_for_Fully_Delivered_Date": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "b68e6aa7-c015-45ca-a9b4-a968e0c066f5"
+              },
+              "type": "Table",
+              "inputs": {
+                "from": "@body('Select_Columns_for_Fully_Delivered_Date')",
+                "format": "HTML"
+              }
+            },
+            "Format_Table_for_Fully_Delivered_Date": {
+              "runAfter": {
+                "Create_Table_for_Fully_Delivered_Date": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "ebaaa24b-ff65-473c-81f8-5518cd7b81ed"
+              },
+              "type": "Compose",
+              "inputs": "<style>\ntable {\n  border: 1px solid #1C6EA4;\n  background-color: #EEEEEE;\n  width: 100%;\n  text-align: left;\n  border-collapse: collapse;\n}\ntable td, table th {\n  border: 1px solid #AAAAAA;\n  padding: 3px 2px;\n}\ntable tbody td {\n  font-size: 13px;\n}\ntable thead {\n  background: #0095C8;\n  border-bottom: 2px solid #D0E4F5;\n}\ntable thead th {\n  font-size: 15px;\n  font-weight: bold;\n  color: #FFFFFF;\n  border-left: 2px solid #D0E4F5;\n}\ntable thead th:first-child {\n  border-left: none;\n}\n</style>\n@{replace(replace(replace(body('Create_Table_For_Fully_Delivered_Date'), '&lt;a href=&quot;', '<a href=\"'), '&quot;&gt;', '\">'), '&lt;a/&gt;', '</a>')}"
+            }
+          },
+          "runAfter": {
+            "TX_Actual": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2366e0cd-be3c-4711-96b6-8799f49b6277"
+          },
+          "type": "Scope"
+        },
+        "Digest_Email": {
+          "runAfter": {
+            "Subtract_from_time": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "348cd63a-1489-48bc-967f-a2cc22e48535"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "DigestEmail",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Get_Digest_Email": {
+          "runAfter": {
+            "Digest_Email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b0ea1605-95eb-4b40-b177-fd33bd93416a"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_flowvariableses",
+              "$filter": "a3i_name eq 'Digest Email'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Loop_Set_Digest_Email": {
+          "foreach": "@outputs('Get_Digest_Email')?['body/value']",
+          "actions": {
+            "Set_Digest_Email": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "fef15eec-9a72-42fd-99cc-5d63937e2574"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "DigestEmail",
+                "value": "@items('Loop_Set_Digest_Email')?['a3i_value']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Digest_Email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9c1d9299-2e39-487f-8b4b-ec2b8d47c6c1"
+          },
+          "type": "Foreach"
+        },
+        "Send_Digest_Email": {
+          "runAfter": {
+            "New_Series_Acquired": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "24c336b8-248f-458b-90ad-dedc17275e67"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "@variables('DigestEmail')",
+              "emailMessage/Subject": "Series Update Summary",
+              "emailMessage/Body": "<p><strong>TX Status changed to actual</strong><br>\nThe following Series have their TX date set to Actual in the last 7 days – please see Flow for Delivery Info<br>\n<br>\n@{outputs('Format_Table_for_TX_Actual')}<br>\n<br>\n<strong>Fully delivered</strong><br>\nThe following Series have been marked as Fully delivered in the last 7 days<br>\n<br>\n@{outputs('Format_Table_for_Fully_Delivered_Date')}<br>\n<br>\n<strong>New Series Acquired</strong><br>\nThe following series were added to Flow and RT in the last 7 days<br>\n<br>\n@{outputs('Format_Table_for_New_Series_Acquired')}</p>",
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "New_Series_Acquired": {
+          "actions": {
+            "Get_Digest_New_Series_Acquired": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "17621aef-dae2-461d-91b5-be09ad56df93"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_notificationdigests",
+                  "$filter": "createdon gt '@{body('Subtract_from_time')}' and a3i_notificationtype eq 430830000",
+                  "$orderby": "a3i_name"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Select_Columns_for_New_Series_Acquired": {
+              "runAfter": {
+                "Get_Digest_New_Series_Acquired": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "0c5bdd48-57e7-4578-9e71-a3c5097670f0"
+              },
+              "type": "Select",
+              "inputs": {
+                "from": "@outputs('Get_Digest_New_Series_Acquired')?['body/value']",
+                "select": {
+                  "Series": "@item()?['a3i_name']",
+                  "Runtime": "@item()?['a3i_runtime']",
+                  "TX Start": "@item()?['a3i_txdate']",
+                  "TX Date Status": "@item()?['a3i_txdatestatus']",
+                  "TX Pattern": "@item()?['a3i_txpattern']",
+                  "Delivery": "@item()?['a3i_deliverytypenotification']",
+                  "Content Type": "@item()?['a3i_contenttype']",
+                  "Link": "<a href=\"@{item()?['a3i_link']}\">Link"
+                }
+              }
+            },
+            "Create_Table_for_New_Series_Acquired": {
+              "runAfter": {
+                "Select_Columns_for_New_Series_Acquired": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "fb1aa37e-1ba5-40cd-a472-25c74e08904a"
+              },
+              "type": "Table",
+              "inputs": {
+                "from": "@body('Select_Columns_for_New_Series_Acquired')",
+                "format": "HTML"
+              }
+            },
+            "Format_Table_for_New_Series_Acquired": {
+              "runAfter": {
+                "Create_Table_for_New_Series_Acquired": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "8a8d7c24-5f0c-4b93-8839-2c748b54cc80"
+              },
+              "type": "Compose",
+              "inputs": "<style>\ntable {\n  border: 1px solid #1C6EA4;\n  background-color: #EEEEEE;\n  width: 100%;\n  text-align: left;\n  border-collapse: collapse;\n}\ntable td, table th {\n  border: 1px solid #AAAAAA;\n  padding: 3px 2px;\n}\ntable tbody td {\n  font-size: 13px;\n}\ntable thead {\n  background: #0095C8;\n  border-bottom: 2px solid #D0E4F5;\n}\ntable thead th {\n  font-size: 15px;\n  font-weight: bold;\n  color: #FFFFFF;\n  border-left: 2px solid #D0E4F5;\n}\ntable thead th:first-child {\n  border-left: none;\n}\n</style>\n@{replace(replace(replace(body('Create_Table_For_New_Series_Acquired'), '&lt;a href=&quot;', '<a href=\"'), '&quot;&gt;', '\">'), '&lt;a/&gt;', '</a>')}"
+            }
+          },
+          "runAfter": {
+            "Fully_Delivered_Date": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b94add0e-998b-404f-9dc1-733e6fee5716"
+          },
+          "type": "Scope"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

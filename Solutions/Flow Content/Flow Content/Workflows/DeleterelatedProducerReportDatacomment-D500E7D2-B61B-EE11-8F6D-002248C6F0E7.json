@@ -1,0 +1,116 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_12eb3"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "ed0697cc-3082-4474-9db3-7992b2bc5a07"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "a3i_producerreportdata",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Apply_to_each": {
+          "foreach": "@split(triggerOutputs()?['body/a3i_territory'], ',')",
+          "actions": {
+            "List_Rows:_PRD_to_Delete": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9766072f-a92c-4ac3-8d07-c712e87ead53"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_producerreportdatas",
+                  "fetchXml": "<fetch version=\"1.0\" output-format=\"xml-platform\" mapping=\"logical\" distinct=\"false\">\n  <entity name=\"a3i_producerreportdata\">\n    <attribute name=\"a3i_producerreportdataid\" />\n    <attribute name=\"a3i_name\" />\n    <filter type=\"and\">\n      <condition attribute=\"a3i_producerreporttitleslate\" operator=\"eq\" uitype=\"a3i_producerreporttitleslate\" value=\"@{triggerOutputs()?['body/_a3i_producerreporttitleslate_value']}\" />\n      <condition attribute=\"a3i_territory\" operator=\"like\" value=\"%@{trim(items('Apply_to_each'))}%\" />\n      <condition attribute=\"a3i_producerreportdataid\" operator=\"ne\" uitype=\"a3i_producerreportdata\" value=\"@{triggerOutputs()?['body/a3i_producerreportdataid']}\" />\n    </filter>\n  </entity>\n</fetch>"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each:_PRD_to_Delete": {
+              "foreach": "@outputs('List_Rows:_PRD_to_Delete')?['body/value']",
+              "actions": {
+                "Delete_a_row": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "ecc92cfa-0e82-42a1-87e4-9ecfbaccdb82"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_1",
+                      "operationId": "DeleteRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_producerreportdatas",
+                      "recordId": "@items('Apply_to_each:_PRD_to_Delete')?['a3i_producerreportdataid']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_Rows:_PRD_to_Delete": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "868dfc4f-c937-4100-8c28-1ffb33c3932d"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "a63ded8b-8702-4b58-9053-aa1d373ebb3c"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{d6661d51-0888-ea11-a811-000d3a86a85d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_seriesname" select="1" icon="1" preview="1">
+        <row id="a3i_seriesid" name="result">
+          <cell name="a3i_seriesname" width="200" />
+          <cell name="a3i_runtime" width="100" />
+          <cell name="a3i_producer1" width="300" />
+          <cell name="a3i_producer2" width="100" />
+          <cell name="a3i_broadcastplatform" width="100" />
+          <cell name="a3i_coproducer" width="100" />
+          <cell name="a3i_txdatestatusnew" width="100" />
+          <cell name="a3i_txdate" width="100" />
+          <cell name="a3i_episodebudget" width="100" />
+          <cell name="a3i_all3mediainvestmentperepisodenew" width="100" />
+          <cell name="transactioncurrencyid" width="100" />
+          <cell name="a3i_filmingstartdatestatusnew" width="100" />
+          <cell name="a3i_filmingstartdate" width="100" />
+          <cell name="a3i_deliverydatestatus" width="100" />
+          <cell name="a3i_deliverydate" width="100" />
+          <cell name="a3i_execproducer" width="100" />
+          <cell name="a3i_producer" width="100" />
+          <cell name="a3i_writer" width="100" />
+          <cell name="a3i_director" width="100" />
+          <cell name="a3i_cast" width="100" />
+          <cell name="a3i_generalnotes" width="100" />
+          <cell name="modifiedon" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+        <entity name="a3i_series">
+          <attribute name="a3i_seriesname" />
+          <attribute name="a3i_runtime" />
+          <attribute name="a3i_cast" />
+          <attribute name="a3i_coproducer" />
+          <attribute name="a3i_producer1" />
+          <attribute name="a3i_txdate" />
+          <attribute name="a3i_deliverydate" />
+          <attribute name="a3i_filmingstartdate" />
+          <attribute name="a3i_broadcastplatform" />
+          <attribute name="modifiedon" />
+          <attribute name="a3i_deliverydatestatus" />
+          <attribute name="a3i_episodebudget" />
+          <attribute name="a3i_execproducer" />
+          <attribute name="a3i_producer" />
+          <attribute name="a3i_writer" />
+          <attribute name="a3i_director" />
+          <attribute name="a3i_txdatestatusnew" />
+          <attribute name="a3i_filmingstartdatestatusnew" />
+          <attribute name="a3i_producer2" />
+          <attribute name="a3i_all3mediainvestmentperepisodenew" />
+          <attribute name="a3i_generalnotes" />
+          <order attribute="a3i_seriesname" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="a3i_seriesstatus" operator="eq" value="430830002" />
+            <condition attribute="a3i_slotlength" operator="ne" value="430830005" />
+            <filter type="or">
+              <condition attribute="a3i_txdate" operator="next-x-years" value="5" />
+              <condition attribute="a3i_txdatestatusnew" operator="eq" value="430830000" />
+              <condition attribute="a3i_txdate" operator="last-x-days" value="42" />
+            </filter>
+          </filter>
+          <link-entity name="a3i_programme" from="a3i_programmeid" to="a3i_programme" link-type="inner" alias="a_d1990711eecc4660b111c1ea43121245">
+            <filter type="and">
+              <condition attribute="a3i_contenttype" operator="eq" value="430830000" />
+              <condition attribute="a3i_genre" operator="not-contain-values">
+                <value>430830000</value>
+              </condition>
+              <condition attribute="a3i_iptype" operator="ne" value="430830001" />
+            </filter>
+          </link-entity>
+          <attribute name="a3i_seriesid" />
+          <attribute name="transactioncurrencyid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Scripted Tracker" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

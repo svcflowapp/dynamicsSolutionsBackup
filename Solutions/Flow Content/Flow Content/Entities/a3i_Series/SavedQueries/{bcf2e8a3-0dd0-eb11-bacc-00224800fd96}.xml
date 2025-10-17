@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{bcf2e8a3-0dd0-eb11-bacc-00224800fd96}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_seriesname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_seriesid">
+          <cell name="a3i_seriesname" width="200" />
+          <cell name="a3i_prioritytiering" width="100" />
+          <cell name="a3i_prioritytieringnotes" width="100" />
+          <cell name="a3i_programmemission" width="100" />
+          <cell name="a3i_brandessence" width="100" />
+          <cell name="a3i_clientbenefits" width="100" />
+          <cell name="a3i_reasonstobelieve" width="100" />
+          <cell name="a3i_keyseriespoints" width="100" />
+          <cell name="a3i_clienttakeout" width="100" />
+          <cell name="a3i_tone" width="100" />
+          <cell name="a3i_a3mipositioning" width="100" />
+          <cell name="a3i_seriestagline" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_series">
+          <attribute name="a3i_seriesname" />
+          <attribute name="a3i_seriesid" />
+          <attribute name="a3i_a3mipositioning" />
+          <attribute name="a3i_seriestagline" />
+          <attribute name="a3i_keyseriespoints" />
+          <attribute name="a3i_prioritytiering" />
+          <attribute name="a3i_prioritytieringnotes" />
+          <attribute name="a3i_clientbenefits" />
+          <attribute name="a3i_clienttakeout" />
+          <attribute name="a3i_reasonstobelieve" />
+          <attribute name="a3i_programmemission" />
+          <attribute name="a3i_brandessence" />
+          <attribute name="a3i_tone" />
+          <order attribute="a3i_seriesname" descending="false" />
+          <filter type="and">
+            <condition attribute="a3i_prioritytiering" operator="not-null" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.66</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Programme Brand Slide" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

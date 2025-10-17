@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{3f42be62-ffe1-4767-8cc2-a56fb77c29ab}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_firstlookid">
+          <cell name="a3i_name" width="77" />
+          <cell name="a3i_contenttype2" width="116" />
+          <cell name="a3i_organisation" width="100" />
+          <cell name="a3i_initialtermdecimal" width="100" />
+          <cell name="a3i_totaltermlengthdecimal" width="100" />
+          <cell name="a3i_totalvalue" width="100" />
+          <cell name="a3i_startdate" width="100" />
+          <cell name="a3i_enddate" width="100" />
+          <cell name="a3i_terms" width="100" />
+          <cell name="a3i_firstlookstatus" width="137" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_firstlook">
+          <attribute name="a3i_firstlookid" />
+          <attribute name="a3i_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="a3i_firstlookstatus" operator="eq" value="430830000" />
+          </filter>
+          <attribute name="a3i_organisation" />
+          <attribute name="a3i_startdate" />
+          <attribute name="a3i_enddate" />
+          <attribute name="a3i_totalvalue" />
+          <attribute name="a3i_initialtermdecimal" />
+          <attribute name="a3i_totaltermlengthdecimal" />
+          <attribute name="a3i_terms" />
+          <attribute name="a3i_firstlookstatus" />
+          <attribute name="a3i_contenttype2" />
+          <order attribute="a3i_startdate" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active First Looks" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

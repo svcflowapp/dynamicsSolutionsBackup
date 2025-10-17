@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_worldpremiererelease" localizedName="World Premiere Release" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.28</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="World Premiere Release" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" IsHidden="0">
+      <labels>
+        <label description="Episodic (Other)" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="Series (Other)" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" IsHidden="0">
+      <labels>
+        <label description="Non-broadcast/TX" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830003" IsHidden="0">
+      <labels>
+        <label description="Complete" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830004" IsHidden="0">
+      <labels>
+        <label description="Series (Channel 5)" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830005" IsHidden="0">
+      <labels>
+        <label description="Series (Channel 4/E4)" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830006" IsHidden="0">
+      <labels>
+        <label description="Episodic (ITV1)" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830007" IsHidden="0">
+      <labels>
+        <label description="Episodic (All BBC)" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830008" IsHidden="0">
+      <labels>
+        <label description="Other" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830009" IsHidden="0">
+      <labels>
+        <label description="Series" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" IsHidden="0">
+      <labels>
+        <label description="Episodic " languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

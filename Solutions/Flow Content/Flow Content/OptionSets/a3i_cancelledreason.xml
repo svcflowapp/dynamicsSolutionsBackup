@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_cancelledreason" localizedName="Cancelled Reason" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.17</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="Cancelled Reason" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" IsHidden="0">
+      <labels>
+        <label description="Outbid" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="Passed" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" IsHidden="0">
+      <labels>
+        <label description="Rights Expired" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830003" IsHidden="0">
+      <labels>
+        <label description="Rights Not Available" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830004" IsHidden="0">
+      <labels>
+        <label description="Production Cancelled" languagecode="1033" />
+      </labels>
+    </option>
+  </options>
+</optionset>

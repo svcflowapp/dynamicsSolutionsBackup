@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{05b5a9cf-b0a3-ec11-983f-000d3a0cc6b4}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_filename" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_sharepointdocumentindexid">
+          <cell name="a3i_documenttype" width="136" />
+          <cell name="a3i_series" width="168" />
+          <cell name="a_1340b38d16cf43798211ee4a133cd7fc.a3i_contenttype" width="100" />
+          <cell name="a_328823a452dd4bdb843760626c25615e.a3i_producer1" width="100" />
+          <cell name="a3i_filename" width="164" />
+          <cell name="a3i_url" width="300" />
+          <cell name="a3i_documentmodified" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" distinct="true">
+        <entity name="a3i_sharepointdocumentindex">
+          <attribute name="a3i_sharepointdocumentindexid" />
+          <attribute name="a3i_filename" />
+          <attribute name="a3i_documenttype" />
+          <attribute name="a3i_series" />
+          <attribute name="a3i_url" />
+          <attribute name="a3i_documentmodified" />
+          <order attribute="a3i_documentmodified" descending="true" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="a3i_documentgroup" operator="eq" value="Pitch Support Assets" />
+            <condition attribute="a3i_documenttype" operator="eq" value="Sales Presentations" />
+          </filter>
+          <link-entity alias="a_328823a452dd4bdb843760626c25615e" name="a3i_series" to="a3i_series" from="a3i_seriesid" link-type="outer" visible="false">
+            <attribute name="a3i_producer1" />
+          </link-entity>
+          <link-entity alias="a_1340b38d16cf43798211ee4a133cd7fc" name="a3i_programme" to="a3i_programme" from="a3i_programmeid" link-type="outer" visible="false">
+            <attribute name="a3i_contenttype" />
+          </link-entity>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Pitch Support Assets - Sales presentations" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

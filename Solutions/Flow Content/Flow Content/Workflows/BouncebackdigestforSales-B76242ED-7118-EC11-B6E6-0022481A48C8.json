@@ -1,0 +1,329 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {},
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {},
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "recurrence": {
+            "frequency": "Week",
+            "interval": 1,
+            "timeZone": "GMT Standard Time",
+            "schedule": {
+              "weekDays": [
+                "Monday"
+              ],
+              "hours": [
+                "8"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "78570427-7a70-4869-a74d-96957538b4fb"
+          },
+          "type": "Recurrence"
+        }
+      },
+      "actions": {
+        "Initialize_variable_-_ContactOwnerEmail": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "14daa5f9-77e5-4262-ba72-da3170b70e83"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ContactOwnerEmail",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_variable_-_SalesCo-ordinatorEmail": {
+          "runAfter": {
+            "Initialize_variable_-_ContactOwnerEmail": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e29c020a-537c-4948-afb5-7e31e5207d06"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "SalesCo-ordinatorEmail",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "List_all_sales_executives": {
+          "runAfter": {
+            "Initialize_variable_-_ContactListLength": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9715f169-86f9-46b9-a902-96ff7a119e5a"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "systemusers",
+              "$filter": "a3i_salesexecutive eq true"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_bouncebacks_for_each_sales_exec_and_email_digest": {
+          "foreach": "@outputs('List_all_sales_executives')?['body/value']",
+          "actions": {
+            "Set_variable_-_ContactOwnerEmail": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "1d825904-8b6e-488a-bd59-fee88d080c45"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "ContactOwnerEmail",
+                "value": "@items('Get_bouncebacks_for_each_sales_exec_and_email_digest')?['internalemailaddress']"
+              }
+            },
+            "Get_the_sales_co-ordinator": {
+              "runAfter": {
+                "Set_variable_-_ContactOwnerEmail": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "b2757d1e-2557-4b43-b4e1-dad1a8fdb5a4"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "systemusers",
+                  "recordId": "@items('Get_bouncebacks_for_each_sales_exec_and_email_digest')?['_a3i_salescoordinator_value']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_variable_-_SalesCo-ordinatorEmail": {
+              "runAfter": {
+                "Get_the_sales_co-ordinator": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "f43d6d9b-3785-442a-b479-83bcd858a51b"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "SalesCo-ordinatorEmail",
+                "value": "@outputs('Get_the_sales_co-ordinator')?['body/internalemailaddress']"
+              }
+            },
+            "List_all_contacts_for_the_sales_exec_that_are_active_and_are_hard_bounced": {
+              "runAfter": {
+                "Set_variable_-_SalesCo-ordinatorEmail": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "694d19bf-475b-4afe-b247-14f77c54343b"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "contacts",
+                  "$filter": "crf68_hardbounced eq true and statuscode eq 1 and _ownerid_value eq @{items('Get_bouncebacks_for_each_sales_exec_and_email_digest')?['systemuserid']}",
+                  "$orderby": "lastname asc"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_variable_-_ContactListLength": {
+              "runAfter": {
+                "List_all_contacts_for_the_sales_exec_that_are_active_and_are_hard_bounced": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "dc423e16-eab4-44ea-b522-d5c5200600df"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "ContactListLength",
+                "value": "@length(outputs('List_all_contacts_for_the_sales_exec_that_are_active_and_are_hard_bounced')?['body/value'])"
+              }
+            },
+            "If_list_length_is_greater_than_zero,_email_digest": {
+              "actions": {
+                "Set_columns_for_HTML_table": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "f4757184-cf56-4cc6-8d66-9cd7d26f9c90"
+                  },
+                  "type": "Select",
+                  "inputs": {
+                    "from": "@outputs('List_all_contacts_for_the_sales_exec_that_are_active_and_are_hard_bounced')?['body/value']",
+                    "select": {
+                      "Name": "@item()?['fullname']",
+                      "Email": "@item()?['emailaddress1']"
+                    }
+                  }
+                },
+                "Create_bouncebacks_table": {
+                  "runAfter": {
+                    "Set_columns_for_HTML_table": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "3b77b5ba-908d-4f01-8bac-91029e27110b"
+                  },
+                  "type": "Table",
+                  "inputs": {
+                    "from": "@body('Set_columns_for_HTML_table')",
+                    "format": "HTML"
+                  }
+                },
+                "Email_the_owner_and_co-ordinator": {
+                  "runAfter": {
+                    "Format_bouncebacks_table": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "3b2925fc-db1c-44d3-8d60-229a2bb3eebe"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_office365",
+                      "operationId": "SendEmailV2",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                    },
+                    "parameters": {
+                      "emailMessage/To": "@variables('ContactOwnerEmail')",
+                      "emailMessage/Subject": "Marketing app email bounce backs",
+                      "emailMessage/Body": "<p>The following clients have had a Marketing email bounce back. This is normally due to the mailbox no longer being active, or the email address being incorrect.<br>\n<br>\nPlease log into Flow and navigate to the <em>My Marketing app email bounce backs </em>or the<em> Marketing app email bounce backs </em>view in the Contacts list to resolve this by updating the email address or by deactivating the client.<br>\n<br>\n@{outputs('Format_bouncebacks_table')}</p>",
+                      "emailMessage/From": "svc.flowapp@all3media.onmicrosoft.com",
+                      "emailMessage/Cc": "@variables('SalesCo-ordinatorEmail')",
+                      "emailMessage/Importance": "Normal"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Format_bouncebacks_table": {
+                  "runAfter": {
+                    "Create_bouncebacks_table": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "aad2d70a-a57c-426c-ac91-af0c188d184b"
+                  },
+                  "type": "Compose",
+                  "inputs": "<style>\ntable {\n  border: 1px solid #1C6EA4;\n  background-color: #EEEEEE;\n  width: 100%;\n  text-align: left;\n  border-collapse: collapse;\n}\ntable td, table th {\n  border: 1px solid #AAAAAA;\n  padding: 3px 2px;\n}\ntable tbody td {\n  font-size: 13px;\n}\ntable thead {\n  background: #0095C8;\n  border-bottom: 2px solid #D0E4F5;\n}\ntable thead th {\n  font-size: 15px;\n  font-weight: bold;\n  color: #FFFFFF;\n  border-left: 2px solid #D0E4F5;\n}\ntable thead th:first-child {\n  border-left: none;\n}\n</style>\n@{body('Create_bouncebacks_table')}"
+                }
+              },
+              "runAfter": {
+                "Set_variable_-_ContactListLength": [
+                  "Succeeded"
+                ]
+              },
+              "expression": {
+                "greater": [
+                  "@variables('ContactListLength')",
+                  0
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "79830cf3-779f-482f-b5e2-5afe382f38ce"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "List_all_sales_executives": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5b323bc3-f862-412a-8485-e5edb998ec0b"
+          },
+          "type": "Foreach",
+          "runtimeConfiguration": {
+            "concurrency": {
+              "repetitions": 1
+            }
+          }
+        },
+        "Initialize_variable_-_ContactListLength": {
+          "runAfter": {
+            "Initialize_variable_-_SalesCo-ordinatorEmail": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "75f3823c-426e-418e-bad7-809756a9f289"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ContactListLength",
+                "type": "integer"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

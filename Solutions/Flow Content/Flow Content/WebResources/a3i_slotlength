@@ -1,0 +1,19 @@
+function checkSlot (executionContext) {
+var alertStrings = { confirmButtonLabel: "Ok", text: "Please update the Slot Length to a Valid value", title: "Slot Length Error" };
+var alertOptions = { height: 120, width: 260 };
+	var formContext = executionContext.getFormContext();
+	var slotLength = formContext.getAttribute("a3i_slotlength").getValue();
+	var seriesStatus = formContext.getAttribute("a3i_seriesstatus").getValue();
+	if (slotLength.includes(430830011) && (seriesStatus == 430830002)) {
+		Xrm.Navigation.openAlertDialog(alertStrings, alertOptions).then(
+    		function (success) {
+        		console.log("Alert dialog closed");
+    		},
+    		function (error) {
+        		console.log(error.message);
+    		},
+        )
+
+    }
+
+}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{85aa507c-20eb-ed11-8847-002248c6b4e7}</WebResourceId>
+  <Name>a3i_asseticon3</Name>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0.0.122</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/a3i_asseticon385AA507C-20EB-ED11-8847-002248C6B4E7</FileName>
+</WebResource>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{b1c1ed68-0c88-ea11-a811-000d3a86a78c}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_seriesname" select="1" icon="1" preview="1">
+        <row id="a3i_seriesid" name="result">
+          <cell name="a3i_seriesname" width="300" />
+          <cell name="a3i_broadcastplatform" width="100" />
+          <cell name="a3i_producer1" width="100" />
+          <cell name="a_f6eb33a67ae54e5e821de180718dc03a.a3i_contenttype" width="100" />
+          <cell name="a3i_runtime" width="100" />
+          <cell name="a3i_yearofproduction" width="100" />
+          <cell name="a3i_episodebudget" width="100" />
+          <cell name="a3i_linktoassets" width="121" />
+          <cell name="modifiedon" width="100" />
+          <cell name="a3i_txdate" width="100" />
+          <cell name="a3i_txqtrest" width="100" />
+          <cell name="a3i_txyearest" width="100" />
+          <cell name="a3i_txdatestatusnew" width="100" />
+          <cell name="a_f6eb33a67ae54e5e821de180718dc03a.a3i_language" width="174" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch output-format="xml-platform" version="1.0" mapping="logical">
+        <entity name="a3i_series">
+          <attribute name="a3i_seriesname" />
+          <attribute name="a3i_seriesid" />
+          <attribute name="a3i_runtime" />
+          <attribute name="a3i_yearofproduction" />
+          <attribute name="modifiedon" />
+          <attribute name="a3i_producer1" />
+          <attribute name="a3i_txdate" />
+          <attribute name="a3i_broadcastplatform" />
+          <order attribute="modifiedon" descending="true" />
+          <attribute name="a3i_episodebudget" />
+          <link-entity alias="a_f6eb33a67ae54e5e821de180718dc03a" name="a3i_programme" to="a3i_programme" from="a3i_programmeid" link-type="outer" visible="false">
+            <attribute name="a3i_contenttype" />
+            <attribute name="a3i_language" />
+          </link-entity>
+          <attribute name="a3i_txdatestatusnew" />
+          <attribute name="a3i_txqtrest" />
+          <attribute name="a3i_txyearest" />
+          <attribute name="a3i_linktoassets" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Sales View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

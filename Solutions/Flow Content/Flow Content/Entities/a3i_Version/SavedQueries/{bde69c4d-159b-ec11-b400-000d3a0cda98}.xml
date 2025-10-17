@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{bde69c4d-159b-ec11-b400-000d3a0cda98}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_versiondisplayname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_versionid">
+          <cell name="a3i_rightstrackerid" width="115" />
+          <cell name="a3i_versiondisplayname" width="150" />
+          <cell name="a3i_versionname" width="150" />
+          <cell name="a3i_versionruntime" width="150" />
+          <cell name="a3i_leadversion" width="126" />
+          <cell name="a3i_marketable" width="100" />
+          <cell name="a3i_deliverable" width="100" />
+          <cell name="a3i_typicalslotlength" width="164" />
+          <cell name="a3i_fullydelivereddate" width="221" />
+          <cell name="a3i_episodecount" width="168" />
+          <cell name="a3i_rtintegrationstatus" width="184" />
+          <cell name="a3i_notes" width="206" />
+          <cell name="a3i_clearancenotes" width="226" />
+          <cell name="a_45d159c4a49e4d5cbc2e3470f74969ac.a3i_producer1" width="234" />
+          <cell name="modifiedon" width="145" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_version">
+          <attribute name="a3i_versionid" />
+          <attribute name="a3i_rightstrackerid" />
+          <attribute name="a3i_leadversion" />
+          <attribute name="a3i_marketable" />
+          <attribute name="a3i_deliverable" />
+          <attribute name="a3i_typicalslotlength" />
+          <attribute name="a3i_fullydelivereddate" />
+          <attribute name="a3i_episodecount" />
+          <attribute name="a3i_rtintegrationstatus" />
+          <attribute name="a3i_notes" />
+          <attribute name="a3i_clearancenotes" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <link-entity alias="a_45d159c4a49e4d5cbc2e3470f74969ac" name="a3i_series" to="a3i_series" from="a3i_seriesid" link-type="inner">
+            <attribute name="a3i_producer1" />
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="0" />
+            </filter>
+          </link-entity>
+          <attribute name="modifiedon" />
+          <order attribute="modifiedon" descending="true" />
+          <attribute name="a3i_versionname" />
+          <attribute name="a3i_versionruntime" />
+          <attribute name="a3i_versiondisplayname" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.1</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Versions (Rights)" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

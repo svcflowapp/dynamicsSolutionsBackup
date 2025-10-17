@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_marketingoptin" localizedName="Marketing Opt In" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.32</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="Marketing Opt In" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" IsHidden="0">
+      <labels>
+        <label description="Yes" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="No" languagecode="1033" />
+      </labels>
+    </option>
+  </options>
+</optionset>

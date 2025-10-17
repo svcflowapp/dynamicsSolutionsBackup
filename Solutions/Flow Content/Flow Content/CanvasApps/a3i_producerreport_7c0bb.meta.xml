@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>a3i_producerreport_7c0bb</Name>
+  <AppVersion>2023-11-27T13:29:25Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.23105.18.0</CreatedByClientVersion>
+  <MinClientVersion>3.23105.18.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.23105.18","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false","sienaVersion":"20230719T135119Z-3.23072.20.0","showStatusBar":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>Producer Report</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{"Producer Report Title Slates":{"entitySetName":"a3i_producerreporttitleslates","logicalName":"a3i_producerreporttitleslate"},"Producer Report Sales Exec Territories":{"entitySetName":"a3i_producerreportsalesexecterritories","logicalName":"a3i_producerreportsalesexecterritory"},"Series":{"entitySetName":"a3i_serieses","logicalName":"a3i_series"},"Programmes":{"entitySetName":"a3i_programmes","logicalName":"a3i_programme"},"Organisations":{"entitySetName":"accounts","logicalName":"account"},"Producer Report Data":{"entitySetName":"a3i_producerreportdatas","logicalName":"a3i_producerreportdata"},"Bulk Delete Failures":{"entitySetName":"bulkdeletefailures","logicalName":"bulkdeletefailure"},"Producer Report Territories":{"entitySetName":"a3i_producerreportterritories","logicalName":"a3i_producerreportterritory"},"Broadcast Platforms":{"entitySetName":"a3i_broadcastplatforms","logicalName":"a3i_broadcastplatform"},"Mailbox Auto Tracking Folders":{"entitySetName":"mailboxtrackingfolders","logicalName":"mailboxtrackingfolder"},"Users":{"entitySetName":"systemusers","logicalName":"systemuser"},"Duplicate Records":{"entitySetName":"duplicaterecords","logicalName":"duplicaterecord"}}}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>0</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"a3i_producerreporttitleslate","componenttype":1},{"logicalname":"a3i_producerreportsalesexecterritory","componenttype":1},{"logicalname":"a3i_series","componenttype":1},{"logicalname":"a3i_programme","componenttype":1},{"logicalname":"account","componenttype":1},{"logicalname":"a3i_producerreportdata","componenttype":1},{"logicalname":"bulkdeletefailure","componenttype":1},{"logicalname":"a3i_producerreportterritory","componenttype":1},{"logicalname":"a3i_broadcastplatform","componenttype":1},{"logicalname":"mailboxtrackingfolder","componenttype":1},{"logicalname":"systemuser","componenttype":1},{"logicalname":"duplicaterecord","componenttype":1}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/a3i_producerreport_7c0bb_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/a3i_producerreport_7c0bb_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

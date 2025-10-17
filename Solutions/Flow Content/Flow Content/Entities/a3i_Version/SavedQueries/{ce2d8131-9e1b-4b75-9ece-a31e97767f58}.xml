@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{ce2d8131-9e1b-4b75-9ece-a31e97767f58}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_versiondisplayname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_versionid">
+          <cell name="a3i_rightstrackerid" width="110" />
+          <cell name="a3i_versiondisplayname" width="150" />
+          <cell name="a3i_versionname" width="150" />
+          <cell name="a3i_versionruntime" width="150" />
+          <cell name="a3i_leadversion" width="112" />
+          <cell name="a3i_marketable" width="100" />
+          <cell name="a3i_deliverable" width="98" />
+          <cell name="a3i_typicalslotlength" width="174" />
+          <cell name="a3i_fullydelivereddate" width="202" />
+          <cell name="a3i_episodecount" width="159" />
+          <cell name="modifiedon" width="146" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" distinct="true">
+        <entity name="a3i_version">
+          <attribute name="a3i_versionid" />
+          <attribute name="a3i_leadversion" />
+          <attribute name="a3i_marketable" />
+          <attribute name="a3i_deliverable" />
+          <attribute name="a3i_rightstrackerid" />
+          <attribute name="a3i_typicalslotlength" />
+          <attribute name="a3i_fullydelivereddate" />
+          <attribute name="a3i_episodecount" />
+          <attribute name="modifiedon" />
+          <filter type="and">
+            <condition attribute="statuscode" operator="eq" value="1" />
+          </filter>
+          <link-entity name="a3i_series" alias="ab" link-type="inner" from="a3i_seriesid" to="a3i_series">
+            <filter type="and">
+              <condition attribute="statecode" operator="eq" value="0" />
+            </filter>
+          </link-entity>
+          <attribute name="a3i_versionname" />
+          <attribute name="a3i_versionruntime" />
+          <order attribute="modifiedon" descending="true" />
+          <attribute name="a3i_versiondisplayname" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Versions" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

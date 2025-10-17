@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{b0205378-da00-ec11-94ef-0022481b4a72}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_optionsid">
+          <cell name="a3i_name" width="200" />
+          <cell name="statecode" width="100" />
+          <cell name="a3i_region" width="100" />
+          <cell name="a3i_territories" width="100" />
+          <cell name="a3i_language" width="100" />
+          <cell name="a3i_licensee" width="100" />
+          <cell name="a3i_startdate" width="100" />
+          <cell name="a3i_enddate" width="100" />
+          <cell name="a3i_datepacksent" width="100" />
+          <cell name="a3i_callorganised" width="100" />
+          <cell name="a3i_latestupdate" width="100" />
+          <cell name="a3i_optionyear" width="100" />
+          <cell name="a3i_optionstatus" width="100" />
+          <cell name="a3i_type" width="100" />
+          <cell name="a3i_salesmanager" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="a3i_options">
+          <attribute name="a3i_name" />
+          <attribute name="a3i_optionsid" />
+          <attribute name="a3i_region" />
+          <attribute name="a3i_territories" />
+          <attribute name="a3i_language" />
+          <attribute name="a3i_licensee" />
+          <attribute name="a3i_startdate" />
+          <attribute name="a3i_enddate" />
+          <attribute name="a3i_datepacksent" />
+          <attribute name="a3i_callorganised" />
+          <attribute name="a3i_latestupdate" />
+          <attribute name="a3i_optionyear" />
+          <attribute name="a3i_optionstatus" />
+          <attribute name="a3i_type" />
+          <attribute name="a3i_salesmanager" />
+          <order attribute="a3i_enddate" descending="false" />
+          <attribute name="statecode" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.73</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Options" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

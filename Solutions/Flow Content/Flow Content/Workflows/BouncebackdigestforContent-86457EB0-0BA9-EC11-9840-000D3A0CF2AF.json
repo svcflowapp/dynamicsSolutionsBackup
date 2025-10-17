@@ -1,0 +1,194 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_32b14"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedoffice365_48fa5"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "Content team ID (a3i_ContentteamID)": {
+          "defaultValue": "465993bc-2a7c-eb11-a812-0022481a884a",
+          "type": "String",
+          "metadata": {
+            "schemaName": "a3i_ContentteamID"
+          }
+        },
+        "Content team bounceback email recipients (a3i_Contentteambouncebackemailrecipients)": {
+          "defaultValue": "simon.carter@all3media.com;tom.moody@all3media.com;matt.wild@all3media.com",
+          "type": "String",
+          "metadata": {
+            "schemaName": "a3i_Contentteambouncebackemailrecipients"
+          }
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "recurrence": {
+            "frequency": "Month",
+            "interval": 1,
+            "startTime": "2022-04-01T09:00:00Z"
+          },
+          "metadata": {
+            "operationMetadataId": "d2562099-16ef-4850-ad9e-af2b79c51c9b"
+          },
+          "type": "Recurrence"
+        }
+      },
+      "actions": {
+        "List_all_contacts_for_the_content_team_that_are_active_and_are_hard_bounced": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "890b3bde-7451-4190-92a2-cb68582c9d13"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "contacts",
+              "$filter": "crf68_hardbounced eq true and statuscode eq 1 and _ownerid_value eq @{parameters('Content team ID (a3i_ContentteamID)')}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable": {
+          "runAfter": {
+            "List_all_contacts_for_the_content_team_that_are_active_and_are_hard_bounced": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ec8844be-eaf2-4f98-a6d9-2b9a273b9bb3"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ContactListLength",
+                "type": "integer",
+                "value": "@length(outputs('List_all_contacts_for_the_content_team_that_are_active_and_are_hard_bounced')?['body/value'])"
+              }
+            ]
+          }
+        },
+        "If_list_length_is_greater_than_zero,_email_digest": {
+          "actions": {
+            "Create_bouncebacks_table": {
+              "runAfter": {
+                "Set_columns_for_HTML_table": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "70b51a1c-c1f0-4332-964b-7a9ea5da5133"
+              },
+              "type": "Table",
+              "inputs": {
+                "from": "@body('Set_columns_for_HTML_table')",
+                "format": "HTML"
+              }
+            },
+            "Format_bouncebacks_table": {
+              "runAfter": {
+                "Create_bouncebacks_table": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "243cb3e1-cd54-4e77-870c-ce435d1d83f1"
+              },
+              "type": "Compose",
+              "inputs": "<style>\ntable {\n  border: 1px solid #1C6EA4;\n  background-color: #EEEEEE;\n  width: 100%;\n  text-align: left;\n  border-collapse: collapse;\n}\ntable td, table th {\n  border: 1px solid #AAAAAA;\n  padding: 3px 2px;\n}\ntable tbody td {\n  font-size: 13px;\n}\ntable thead {\n  background: #0095C8;\n  border-bottom: 2px solid #D0E4F5;\n}\ntable thead th {\n  font-size: 15px;\n  font-weight: bold;\n  color: #FFFFFF;\n  border-left: 2px solid #D0E4F5;\n}\ntable thead th:first-child {\n  border-left: none;\n}\n</style>\n@{body('Create_bouncebacks_table')}"
+            },
+            "Email_content_team": {
+              "runAfter": {
+                "Format_bouncebacks_table": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "0534e44a-3e01-4520-8197-af4d8e7fee01"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                },
+                "parameters": {
+                  "emailMessage/To": "@parameters('Content team bounceback email recipients (a3i_Contentteambouncebackemailrecipients)')",
+                  "emailMessage/Subject": "Marketing app email bounce backs",
+                  "emailMessage/Body": "<p>The following clients have had a Marketing email bounce back. This is normally due to the mailbox no longer being active, or the email address being incorrect.<br>\n<br>\nPlease log into Flow and navigate to the <em>Marketing app email bounce backs for Content</em> view in the Contacts list to resolve this by updating the email address or by deactivating the client.<br>\n<br>\n@{outputs('Format_bouncebacks_table')}</p>",
+                  "emailMessage/From": "svc.flowapp@all3media.onmicrosoft.com",
+                  "emailMessage/Importance": "Normal"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_columns_for_HTML_table": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "a5e0563b-3840-46ec-b93f-180270f5b18c"
+              },
+              "type": "Select",
+              "inputs": {
+                "from": "@outputs('List_all_contacts_for_the_content_team_that_are_active_and_are_hard_bounced')?['body/value']",
+                "select": {
+                  "Name": "@item()?['fullname']",
+                  "Email": "@item()?['emailaddress1']"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "expression": {
+            "greater": [
+              "@variables('ContactListLength')",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "61c1c6a2-30ea-4e3e-9b2a-c6d77824ad88"
+          },
+          "type": "If"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

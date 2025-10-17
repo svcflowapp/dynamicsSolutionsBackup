@@ -1,0 +1,362 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_12eb3"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_sharepointonline": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedsharepointonline_b7aba"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      },
+      "shared_commondataserviceforapps_2": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_12eb3"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "recurrence": {
+            "frequency": "Day",
+            "interval": 1,
+            "schedule": {
+              "hours": [
+                "0"
+              ],
+              "minutes": [
+                30
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "6ee57451-f677-4093-8982-3f1f7b583bcd"
+          },
+          "type": "Recurrence"
+        }
+      },
+      "actions": {
+        "List_All_Series": {
+          "runAfter": {
+            "Initialize_Backup_Folder": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8e915c31-6703-4e30-a0a6-ee6c57cf37df"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_serieses",
+              "$filter": "statecode eq 0"
+            },
+            "authentication": "@parameters('$authentication')"
+          },
+          "runtimeConfiguration": {
+            "paginationPolicy": {
+              "minimumItemCount": 20000
+            }
+          }
+        },
+        "Create_CSV_table": {
+          "runAfter": {
+            "List_All_Series": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "36f7c939-dff1-402e-823b-ed04bc1c153a"
+          },
+          "type": "Table",
+          "inputs": {
+            "from": "@outputs('List_All_Series')?['body/value']",
+            "format": "CSV"
+          }
+        },
+        "Create_Backup": {
+          "runAfter": {
+            "Loop_Set_Backup_Folder": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9690762f-9161-47c9-8682-17a1123f7842"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline",
+              "operationId": "CreateFile",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "@variables('BackupSite')",
+              "folderPath": "/Shared Documents/@{variables('BackupFolder')}",
+              "name": "Series-Backup-@{formatDateTime(utcNow(),'dd-MM-yyyy')}.csv",
+              "body": "@body('Create_CSV_table')"
+            },
+            "authentication": "@parameters('$authentication')"
+          },
+          "runtimeConfiguration": {
+            "contentTransfer": {
+              "transferMode": "Chunked"
+            }
+          }
+        },
+        "List_Files_in_Folder": {
+          "runAfter": {
+            "Create_Backup": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "%252fShared%2bDocuments%252fGeneral%252fSeries%2bBackup%2b-%2bDev": "/Shared Documents/General/Series Backup - Dev",
+            "operationMetadataId": "18201f39-b0c7-4dfa-9332-7f98c0bd01c7"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline",
+              "operationId": "ListFolder",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "@variables('BackupSite')",
+              "id": "/Shared Documents/@{variables('BackupFolder')}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Filter_array": {
+          "runAfter": {
+            "List_Files_in_Folder": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "61fdaf2d-1ac5-4cbb-86b8-ae603fc5d188"
+          },
+          "type": "Query",
+          "inputs": {
+            "from": "@body('List_Files_in_Folder')",
+            "where": "@less(item()?['LastModified'], body('Get_30_Days_Ago'))"
+          }
+        },
+        "Get_30_Days_Ago": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "dfdc36d1-95e3-4449-ac53-56344203da65"
+          },
+          "type": "Expression",
+          "kind": "GetPastTime",
+          "inputs": {
+            "interval": 30,
+            "timeUnit": "Day"
+          }
+        },
+        "Loop_Delete_Files": {
+          "foreach": "@body('Filter_array')",
+          "actions": {
+            "Delete_file": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "3101fc28-ad1b-491a-ba39-641672129072"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sharepointonline",
+                  "operationId": "DeleteFile",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                },
+                "parameters": {
+                  "dataset": "@variables('BackupSite')",
+                  "id": "@items('Loop_Delete_Files')?['Id']"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Filter_array": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b06197c5-86d7-470d-8cb9-2f91ad31cd0c"
+          },
+          "type": "Foreach"
+        },
+        "Get_Backup_Site": {
+          "runAfter": {
+            "Create_CSV_table": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d1f6b76a-a5db-455b-b80f-cc823bd43918"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_flowvariableses",
+              "$filter": "a3i_name eq 'BackupSite'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_Backup_Folder": {
+          "runAfter": {
+            "Loop_Set_Backup_Site": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d1f6b76a-a5db-455b-b80f-cc823bd43918"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_flowvariableses",
+              "$filter": "a3i_name eq 'BackupFolder'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_Backup_Site": {
+          "runAfter": {
+            "Get_30_Days_Ago": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fcb37613-7538-4910-8fbb-fa8a06f3e1e3"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "BackupSite",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_Backup_Folder": {
+          "runAfter": {
+            "Initialize_Backup_Site": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "485355a6-7b04-4a2c-bc41-1d4bc84fc891"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "BackupFolder",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Loop_Set_Backup_Site": {
+          "foreach": "@outputs('Get_Backup_Site')?['body/value']",
+          "actions": {
+            "Set_Backup_Site": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "c07cc620-03a0-4f0d-b9c8-8748a6dd0c7f"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "BackupSite",
+                "value": "@items('Loop_Set_Backup_Site')?['a3i_value']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Backup_Site": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1f87e60e-3386-4fd6-b97e-f72c5c4d4dc7"
+          },
+          "type": "Foreach"
+        },
+        "Loop_Set_Backup_Folder": {
+          "foreach": "@outputs('Get_Backup_Folder')?['body/value']",
+          "actions": {
+            "Set_Backup_Folder": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "51d901df-17cc-4c9d-b5fc-5209a93d3587"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "BackupFolder",
+                "value": "@items('Loop_Set_Backup_Folder')?['a3i_value']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Backup_Folder": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2b104b7a-1308-4da4-a72d-9bac816ba52c"
+          },
+          "type": "Foreach"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

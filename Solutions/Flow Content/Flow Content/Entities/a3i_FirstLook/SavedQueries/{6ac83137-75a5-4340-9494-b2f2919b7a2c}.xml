@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{6ac83137-75a5-4340-9494-b2f2919b7a2c}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_firstlookid">
+          <cell name="a3i_name" width="300" />
+          <cell name="a3i_contenttype2" width="116" />
+          <cell name="a3i_organisation" width="100" />
+          <cell name="a3i_initialtermdecimal" width="100" />
+          <cell name="a3i_totaltermlengthdecimal" width="100" />
+          <cell name="a3i_startdate" width="100" />
+          <cell name="a3i_enddate" width="100" />
+          <cell name="a3i_totalvalue" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_firstlook">
+          <attribute name="a3i_firstlookid" />
+          <attribute name="a3i_name" />
+          <order attribute="a3i_name" descending="false" />
+          <attribute name="a3i_organisation" />
+          <attribute name="a3i_initialtermdecimal" />
+          <attribute name="a3i_totaltermlengthdecimal" />
+          <attribute name="a3i_enddate" />
+          <attribute name="a3i_startdate" />
+          <attribute name="a3i_totalvalue" />
+          <attribute name="a3i_contenttype2" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="First Look Advanced Find View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

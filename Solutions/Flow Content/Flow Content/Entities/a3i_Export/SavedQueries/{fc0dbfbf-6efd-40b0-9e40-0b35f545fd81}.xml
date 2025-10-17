@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{fc0dbfbf-6efd-40b0-9e40-0b35f545fd81}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_exportid">
+          <cell name="a3i_entityrecordid" width="263" />
+          <cell name="a3i_exporttype" width="135" />
+          <cell name="a3i_response" width="89" />
+          <cell name="a3i_responsemessage" width="184" />
+          <cell name="statuscode" width="125" />
+          <cell name="createdon" width="125" />
+          <cell name="modifiedon" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_export">
+          <attribute name="a3i_exportid" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="a3i_exporttype" />
+          <attribute name="statuscode" />
+          <attribute name="a3i_response" />
+          <attribute name="a3i_responsemessage" />
+          <attribute name="a3i_entityrecordid" />
+          <attribute name="modifiedon" />
+          <order attribute="modifiedon" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Integration Logs" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

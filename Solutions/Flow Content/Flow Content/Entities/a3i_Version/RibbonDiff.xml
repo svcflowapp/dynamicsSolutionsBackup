@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <CustomAction Id="a3i.a3i_version.Button2.Button.Mscrm.HomepageGrid.a3i_version.Deactivate.CustomAction" Location="Mscrm.HomepageGrid.a3i_version.MainTab.Management.Controls._children" Sequence="0">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.a3i_version.Button2.Button.Mscrm.HomepageGrid.a3i_version.Deactivate.Alt" Command="a3i.a3i_version.Deactivate.Grid" Id="a3i.a3i_version.Button2.Button.Mscrm.HomepageGrid.a3i_version.Deactivate" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i.a3i_version.Button2.Button.Mscrm.HomepageGrid.a3i_version.Deactivate.LabelText" Sequence="0" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i.a3i_version.Button2.Button.Mscrm.HomepageGrid.a3i_version.Deactivate.ToolTipTitle" ToolTipDescription="$Resources(EntityPluralDisplayName):Ribbon.Tooltip.Deactivate" ModernImage="DeActivate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_version.Button3.Button.Mscrm.SubGrid.a3i_version.Deactivate.CustomAction" Location="Mscrm.SubGrid.a3i_version.MainTab.Management.Controls._children" Sequence="0">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.a3i_version.Button3.Button.Mscrm.SubGrid.a3i_version.Deactivate.Alt" Command="a3i.a3i_version.Deactivate.Grid" Id="a3i.a3i_version.Button3.Button.Mscrm.SubGrid.a3i_version.Deactivate" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i.a3i_version.Button3.Button.Mscrm.SubGrid.a3i_version.Deactivate.LabelText" Sequence="0" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i.a3i_version.Button3.Button.Mscrm.SubGrid.a3i_version.Deactivate.ToolTipTitle" ToolTipDescription="$Resources(EntityPluralDisplayName):Ribbon.Tooltip.Deactivate" ModernImage="DeActivate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_version.Button4.Button.Mscrm.Form.a3i_version.Deactivate.CustomAction" Location="Mscrm.Form.a3i_version.MainTab.Save.Controls._children" Sequence="0">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.a3i_version.Button4.Button.Mscrm.Form.a3i_version.Deactivate.Alt" Command="a3i.a3i_version.Deactivate" Id="a3i.a3i_version.Button4.Button.Mscrm.Form.a3i_version.Deactivate" Image32by32="/_imgs/ribbon/Deactivate_32.png" Image16by16="/_imgs/ribbon/Deactivate_16.png" LabelText="$LocLabels:a3i.a3i_version.Button4.Button.Mscrm.Form.a3i_version.Deactivate.LabelText" Sequence="0" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i.a3i_version.Button4.Button.Mscrm.Form.a3i_version.Deactivate.ToolTipTitle" ToolTipDescription="$Resources(EntityPluralDisplayName):Ribbon.Tooltip.Deactivate" ModernImage="DeActivate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_version.Button5.Button.Mscrm.HomepageGrid.a3i_version.Activate.CustomAction" Location="Mscrm.HomepageGrid.a3i_version.MainTab.Management.Controls._children" Sequence="0">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.a3i_version.Button5.Button.Mscrm.HomepageGrid.a3i_version.Activate.Alt" Command="a3i.a3i_version.Activate.Grid" Id="a3i.a3i_version.Button5.Button.Mscrm.HomepageGrid.a3i_version.Activate" Image32by32="/_imgs/ribbon/Activate_32.png" Image16by16="/_imgs/ribbon/Activate_16.png" LabelText="$LocLabels:a3i.a3i_version.Button5.Button.Mscrm.HomepageGrid.a3i_version.Activate.LabelText" Sequence="0" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i.a3i_version.Button5.Button.Mscrm.HomepageGrid.a3i_version.Activate.ToolTipTitle" ToolTipDescription="$Resources(EntityPluralDisplayName):Ribbon.Tooltip.Activate" ModernImage="Activate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_version.Button6.Button.Mscrm.SubGrid.a3i_version.Activate.CustomAction" Location="Mscrm.SubGrid.a3i_version.MainTab.Management.Controls._children" Sequence="65">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.a3i_version.Button6.Button.Mscrm.SubGrid.a3i_version.Activate.Alt" Command="a3i.a3i_version.Activate.Grid" Id="a3i.a3i_version.Button6.Button.Mscrm.SubGrid.a3i_version.Activate" Image32by32="/_imgs/ribbon/Activate_32.png" Image16by16="/_imgs/ribbon/Activate_16.png" LabelText="$LocLabels:a3i.a3i_version.Button6.Button.Mscrm.SubGrid.a3i_version.Activate.LabelText" Sequence="65" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i.a3i_version.Button6.Button.Mscrm.SubGrid.a3i_version.Activate.ToolTipTitle" ToolTipDescription="$Resources(EntityPluralDisplayName):Ribbon.Tooltip.Activate" ModernImage="Activate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="a3i.a3i_version.Button7.Button.Mscrm.Form.a3i_version.Activate.CustomAction" Location="Mscrm.Form.a3i_version.MainTab.Save.Controls._children" Sequence="0">
+      <CommandUIDefinition>
+        <Button Alt="$LocLabels:a3i.a3i_version.Button7.Button.Mscrm.Form.a3i_version.Activate.Alt" Command="a3i.a3i_version.Activate" Id="a3i.a3i_version.Button7.Button.Mscrm.Form.a3i_version.Activate" Image32by32="/_imgs/ribbon/Activate_32.png" Image16by16="/_imgs/ribbon/Activate_16.png" LabelText="$LocLabels:a3i.a3i_version.Button7.Button.Mscrm.Form.a3i_version.Activate.LabelText" Sequence="0" TemplateAlias="o2" ToolTipTitle="$LocLabels:a3i.a3i_version.Button7.Button.Mscrm.Form.a3i_version.Activate.ToolTipTitle" ToolTipDescription="$Resources(EntityPluralDisplayName):Ribbon.Tooltip.Activate" ModernImage="Activate" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.a3i_version.Activate.Hide" Location="Mscrm.Form.a3i_version.Activate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.a3i_version.Deactivate.Hide" Location="Mscrm.Form.a3i_version.Deactivate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.a3i_version.NewRecord.Hide" Location="Mscrm.Form.a3i_version.NewRecord" />
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.a3i_version.NewRecordForBPFEntity.Hide" Location="Mscrm.Form.a3i_version.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="a3i.Mscrm.Form.a3i_version.SaveAndNew.Hide" Location="Mscrm.Form.a3i_version.SaveAndNew" />
+    <HideCustomAction HideActionId="a3i.Mscrm.HomepageGrid.a3i_version.Activate.Hide" Location="Mscrm.HomepageGrid.a3i_version.Activate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.HomepageGrid.a3i_version.Deactivate.Hide" Location="Mscrm.HomepageGrid.a3i_version.Deactivate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.HomepageGrid.a3i_version.NewRecord.Hide" Location="Mscrm.HomepageGrid.a3i_version.NewRecord" />
+    <HideCustomAction HideActionId="a3i.Mscrm.HomepageGrid.a3i_version.NewRecordForBPFEntity.Hide" Location="Mscrm.HomepageGrid.a3i_version.NewRecordForBPFEntity" />
+    <HideCustomAction HideActionId="a3i.Mscrm.SubGrid.a3i_version.Activate.Hide" Location="Mscrm.SubGrid.a3i_version.Activate" />
+    <HideCustomAction HideActionId="a3i.Mscrm.SubGrid.a3i_version.Deactivate.Hide" Location="Mscrm.SubGrid.a3i_version.Deactivate" />
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="a3i.a3i_version.Activate">
+      <EnableRules>
+        <EnableRule Id="a3i.a3i_version.EnableRule.Activate" />
+        <EnableRule Id="Mscrm.AnySelection" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i.a3i_version.Button.BaseDisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeFormStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="1" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i.a3i_version.Activate.Grid">
+      <EnableRules>
+        <EnableRule Id="Mscrm.AnySelection" />
+        <EnableRule Id="Mscrm.CanEditPrimary" />
+        <EnableRule Id="Mscrm.FormStateNotNew" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i_episode.WritePrimaryEntity" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeMultipleStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <CrmParameter Value="SelectedEntityTypeName" />
+          <CrmParameter Value="SelectedControlSelectedItemIds" />
+          <IntParameter Value="1" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i.a3i_version.Deactivate">
+      <EnableRules>
+        <EnableRule Id="a3i.a3i_version.EnableRule.Deactivate" />
+        <EnableRule Id="Mscrm.AnySelection" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i.a3i_version.Button.BaseDisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeFormStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="430830000" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="a3i.a3i_version.Deactivate.Grid">
+      <EnableRules>
+        <EnableRule Id="Mscrm.AnySelection" />
+        <EnableRule Id="Mscrm.CanEditPrimary" />
+        <EnableRule Id="Mscrm.FormStateNotNew" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="a3i_episode.WritePrimaryEntity" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="a3i.StatusChange.ChangeMultipleStatus" Library="$webresource:a3i_statusChange.js">
+          <CrmParameter Value="PrimaryControl" />
+          <CrmParameter Value="SelectedEntityTypeName" />
+          <CrmParameter Value="SelectedControlSelectedItemIds" />
+          <IntParameter Value="430830000" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="a3i.a3i_version.Button.BaseDisplayRule">
+        <EntityPrivilegeRule PrivilegeType="Write" PrivilegeDepth="Basic" AppliesTo="PrimaryEntity" Default="true" />
+      </DisplayRule>
+      <DisplayRule Id="a3i_episode.WritePrimaryEntity">
+        <EntityPrivilegeRule PrivilegeType="Write" PrivilegeDepth="Basic" AppliesTo="PrimaryEntity" Default="true" />
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules>
+      <EnableRule Id="a3i.a3i_version.EnableRule.Activate">
+        <CustomRule FunctionName="a3i.StatusChange.CheckFormStatus" Library="$webresource:a3i_statusChange.js" Default="true">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="1" />
+        </CustomRule>
+      </EnableRule>
+      <EnableRule Id="a3i.a3i_version.EnableRule.Deactivate">
+        <CustomRule FunctionName="a3i.StatusChange.CheckFormStatus" Library="$webresource:a3i_statusChange.js" Default="true">
+          <CrmParameter Value="PrimaryControl" />
+          <IntParameter Value="430830000" />
+        </CustomRule>
+      </EnableRule>
+      <EnableRule Id="Mscrm.CanEditPrimary">
+        <RecordPrivilegeRule PrivilegeType="Write" AppliesTo="PrimaryEntity" />
+      </EnableRule>
+      <EnableRule Id="Mscrm.FormStateNotNew">
+        <FormStateRule State="Create" InvertResult="true" />
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="a3i.a3i_version.Button2.Button.Mscrm.HomepageGrid.a3i_version.Deactivate.Alt">
+      <Titles>
+        <Title description="Deactivate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button2.Button.Mscrm.HomepageGrid.a3i_version.Deactivate.LabelText">
+      <Titles>
+        <Title description="Deactivate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button2.Button.Mscrm.HomepageGrid.a3i_version.Deactivate.ToolTipTitle">
+      <Titles>
+        <Title description="Deactivate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button3.Button.Mscrm.SubGrid.a3i_version.Deactivate.Alt">
+      <Titles>
+        <Title description="Deactivate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button3.Button.Mscrm.SubGrid.a3i_version.Deactivate.LabelText">
+      <Titles>
+        <Title description="Deactivate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button3.Button.Mscrm.SubGrid.a3i_version.Deactivate.ToolTipTitle">
+      <Titles>
+        <Title description="Deactivate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button4.Button.Mscrm.Form.a3i_version.Deactivate.Alt">
+      <Titles>
+        <Title description="Deactivate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button4.Button.Mscrm.Form.a3i_version.Deactivate.LabelText">
+      <Titles>
+        <Title description="Deactivate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button4.Button.Mscrm.Form.a3i_version.Deactivate.ToolTipTitle">
+      <Titles>
+        <Title description="Deactivate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button5.Button.Mscrm.HomepageGrid.a3i_version.Activate.Alt">
+      <Titles>
+        <Title description="Activate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button5.Button.Mscrm.HomepageGrid.a3i_version.Activate.LabelText">
+      <Titles>
+        <Title description="Activate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button5.Button.Mscrm.HomepageGrid.a3i_version.Activate.ToolTipTitle">
+      <Titles>
+        <Title description="Activate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button6.Button.Mscrm.SubGrid.a3i_version.Activate.Alt">
+      <Titles>
+        <Title description="Activate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button6.Button.Mscrm.SubGrid.a3i_version.Activate.LabelText">
+      <Titles>
+        <Title description="Activate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button6.Button.Mscrm.SubGrid.a3i_version.Activate.ToolTipTitle">
+      <Titles>
+        <Title description="Activate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button7.Button.Mscrm.Form.a3i_version.Activate.Alt">
+      <Titles>
+        <Title description="Activate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button7.Button.Mscrm.Form.a3i_version.Activate.LabelText">
+      <Titles>
+        <Title description="Activate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="a3i.a3i_version.Button7.Button.Mscrm.Form.a3i_version.Activate.ToolTipTitle">
+      <Titles>
+        <Title description="Activate Version" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

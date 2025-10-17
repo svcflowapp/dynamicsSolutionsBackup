@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{661157fe-2fc9-4eaa-835f-5bfa2f7b64f7}</formid>
+    <IntroducedVersion>6.0.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="{ee019344-2ac2-4ade-b2b8-630ff38801b1}" name="tab_1" showlabel="false" IsUserDefined="0" ordinalvalue="0">
+          <columns>
+            <column width="33%" id="0">
+              <sections>
+                <section id="{be7e5181-f67d-4fac-9420-ed9e2ac588fd}" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{cc42934a-7770-eace-a535-ca3c4d3e4ca5}" showlabel="false" visible="false" locklevel="0" ordinalvalue="10000" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{a2528d42-720c-9931-81ca-784c1881b8c2}" showlabel="true" locklevel="0" ordinalvalue="10000" solutionaction="Modified" />
+                    </row>
+                    <row>
+                      <cell id="{7a7e1043-ea62-1a5d-44c8-68757777c3d0}" showlabel="true" locklevel="0" ordinalvalue="10001" solutionaction="Modified" />
+                    </row>
+                    <row>
+                      <cell id="{c7039214-3590-a99c-cce7-e18a7895d74e}" showlabel="true" locklevel="0" ordinalvalue="10002" solutionaction="Modified" />
+                    </row>
+                    <row>
+                      <cell id="{64cb3028-1866-28da-8268-c5487ce86317}" showlabel="true" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10003" solutionaction="Modified">
+                        <labels>
+                          <label description="Organisation Name" languagecode="1033" solutionaction="Modified" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%" id="1">
+              <sections>
+                <section id="{b5f2a6a1-d1e1-439d-ab76-fbb48f1381d4}" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{abb75da6-8727-e2a0-dccb-9ce591c107b7}" showlabel="true" locklevel="0" rowspan="1" ordinalvalue="10003" solutionaction="Removed" />
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%" id="2">
+              <sections>
+                <section id="{4e35e9f6-ac81-44cf-b8d6-91149b679634}" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" locklevel="0" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="0">
+                  <labels>
+                    <label description="Responsibilities" languagecode="1033" solutionaction="Modified" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9E47DA5C-45B2-4D9B-8C83-2633E2FB68A5}" showlabel="true" locklevel="0" ordinalvalue="10000" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{67473FA2-07D2-485B-BC63-7B05D02D5230}" showlabel="true" locklevel="0" ordinalvalue="10001" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{F43497C8-73CC-4853-9736-964446900C81}" showlabel="true" locklevel="0" ordinalvalue="10002" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{2AC67B8F-6335-4448-9E85-1601793BF072}" showlabel="true" locklevel="0" ordinalvalue="10003" solutionaction="Removed" />
+                    </row>
+                    <row>
+                      <cell id="{f6fee346-b55e-49f3-a653-e1da725033da}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10000" solutionaction="Added">
+                        <labels>
+                          <label description="Event Priority" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_eventpriority" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_eventpriority" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b59e4efb-0a5b-4158-bc35-61d4738d679a}" locklevel="0" ordinalvalue="10001" solutionaction="Added">
+                        <labels>
+                          <label description="Purchasing Preferences" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_purchasingpreferences" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_purchasingpreferences" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cbcc214a-b4f0-46ae-9320-1bce6283607f}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10002" solutionaction="Added">
+                        <labels>
+                          <label description="Contact Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_contacttype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_contacttype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0ce26d80-d4a4-467d-95a0-2b9136a7ec75}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10003" solutionaction="Added">
+                        <labels>
+                          <label description="Production Country" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_productioncountry" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_productioncountry" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4a5773f0-a92e-4ea5-ada8-e3080cc392ea}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10004" solutionaction="Added">
+                        <labels>
+                          <label description="Ancillary Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ancillarytypemulti" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_ancillarytypemulti" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{401ffaa8-6aaa-4332-b1fc-92469ed9be56}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10005" solutionaction="Added">
+                        <labels>
+                          <label description="Buyer/Non-Buyer" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_buyernonbuyer" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="a3i_buyernonbuyer" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{153980ac-ca4f-4cda-a372-7d29c6f098cc}" locklevel="0" ordinalvalue="10006" solutionaction="Added">
+                        <labels>
+                          <label description="Genre" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_genre" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_genre" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{fa839b94-77cb-4dc7-b026-ebd6bf2bb206}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10007" solutionaction="Added">
+                        <labels>
+                          <label description="Other Client Groups" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_otherclientgroups" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_otherclientgroups" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <events solutionaction="Removed" />
+      <clientresources solutionaction="Removed" />
+      <controlDescriptions>
+        <controlDescription forControl="{0758709B-ABEC-8C87-786A-56116BE5A5DE}" solutionaction="Removed" />
+      </controlDescriptions>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Contact Quick Create" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Default quick create form for Contact" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

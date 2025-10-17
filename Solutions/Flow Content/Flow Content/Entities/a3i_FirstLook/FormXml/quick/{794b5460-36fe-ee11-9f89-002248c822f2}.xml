@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{794b5460-36fe-ee11-9f89-002248c822f2}</formid>
+    <IntroducedVersion>1.0.0.138</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{5b1e0c8b-0147-45e3-8046-5fc95a64813d}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_1_section_3" id="46c7c0bd-d70d-43a7-85ad-773a80dedc0a" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Content Type" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{5c7f9a2c-b344-4da4-a63b-4ca9ea8b4f6a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Content Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_contenttype2" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_contenttype2" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{42786135-6ea4-429a-bce8-f36de184d1e8}" locklevel="0" colspan="1" rowspan="1" showlabel="true">
+                        <labels>
+                          <label description="Organisation" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_organisation" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_organisation" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+        <Role Id="{2f2aa287-a60a-46bc-bb38-0ff9625bbb9c}" />
+        <Role Id="{fc50ebcc-7a92-4f6a-9dbc-38de490fbbab}" />
+        <Role Id="{1185c0f1-ab5d-4e91-b9ad-514d85cd8846}" />
+        <Role Id="{7f12f058-ed0f-41cb-9dee-54bdc3f4300c}" />
+        <Role Id="{9e9d3b8a-05bd-45a0-aae4-98694a73847b}" />
+        <Role Id="{6601883e-6a4d-415e-ae48-a6bc9cb19ed9}" />
+        <Role Id="{0c456bff-223b-4a18-b0a1-ed0893e3cfa1}" />
+        <Role Id="{6a414a4a-a70a-4997-8e4b-fd37ba8d1eba}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="First Look Content Type and Organisation" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

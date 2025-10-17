@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_paymentterms" localizedName="Payment Terms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.20</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="Payment Terms" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" IsHidden="0">
+      <labels>
+        <label description="25% on signature" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="50% on signature" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" IsHidden="0">
+      <labels>
+        <label description="50% on delivery" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830003" IsHidden="0">
+      <labels>
+        <label description="On signature of development DM" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830004" IsHidden="0">
+      <labels>
+        <label description="On delivery of pitches" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830005" IsHidden="0">
+      <labels>
+        <label description="On delivery of sizzle" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830006" IsHidden="0">
+      <labels>
+        <label description="On full delivery" languagecode="1033" />
+      </labels>
+    </option>
+  </options>
+</optionset>

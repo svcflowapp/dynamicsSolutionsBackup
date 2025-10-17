@@ -1,0 +1,7 @@
+function buttonField(primaryControl) {
+	
+	var formContext = primaryControl;
+	formContext.getAttribute("a3i_createdocumentset").setValue(true);
+        formContext.data.save();
+
+}

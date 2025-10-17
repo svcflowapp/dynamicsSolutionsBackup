@@ -1,0 +1,801 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_da0aa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_32b14"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedoffice365_48fa5"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      },
+      "shared_commondataserviceforapps_2": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_61216"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "recurrence": {
+            "frequency": "Day",
+            "interval": 1,
+            "schedule": {
+              "hours": [
+                "14"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "afc5659a-7d8c-4de4-94c8-1be64c2b1b13"
+          },
+          "type": "Recurrence"
+        }
+      },
+      "actions": {
+        "List_rows_from_selected_environment_-_IP": {
+          "runAfter": {
+            "Initialize_variable_-_LatestTXDate": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0cf8a480-e6db-4b8b-9c6d-522b384c1d12"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecordsWithOrganization",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "organization": "current",
+              "entityName": "a3i_ips"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Success": {
+          "actions": {
+            "Set_Power_Automate_Log_Succeeded": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9b36fdb0-5b0a-421c-870d-e4ec5cd46356"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "recordId": "@outputs('Add_a_new_row')?['body/a3i_powerautomatelogid']",
+                  "item/statuscode": 3
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Scope_-_Actual_Solution": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ae41e8e4-4f2d-42df-9993-ed9fae649846"
+          },
+          "type": "Scope"
+        },
+        "Failure": {
+          "actions": {
+            "Send_Failure_Email": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "080dc842-25e1-4172-a2f6-0357ff4b18a8"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                },
+                "parameters": {
+                  "emailMessage/To": "@variables('ErrorEmail')",
+                  "emailMessage/Subject": "@{variables('Environment')} - IP. Get Episode TX Dates 3/3  - Failed",
+                  "emailMessage/Body": "<p>Access the <a href=\"@{variables('PALog')}\">Power Automate Log</a>&nbsp;</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_Power_Automate_Log_Failed": {
+              "runAfter": {
+                "Send_Failure_Email": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "629c8c53-1834-4c35-9d07-9462a992842b"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "recordId": "@outputs('Add_a_new_row')?['body/a3i_powerautomatelogid']",
+                  "item/statuscode": 4
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Terminate": {
+              "runAfter": {
+                "Set_Power_Automate_Log_Failed": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5b738e3b-99cc-48a7-b722-794e89fb6b11"
+              },
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Failed"
+              }
+            }
+          },
+          "runAfter": {
+            "Scope_-_Actual_Solution": [
+              "Failed",
+              "TimedOut",
+              "Skipped"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7679575f-f9f7-4fde-a0fa-3d9c97ee20f4"
+          },
+          "type": "Scope"
+        },
+        "Initialize_ErrorEmail": {
+          "runAfter": {
+            "List_rows_from_selected_environment_-_IP": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ef748b09-cdcf-4956-979e-06d06569b398"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ErrorEmail",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_Environment": {
+          "runAfter": {
+            "Initialize_ErrorEmail": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4693d78b-73bf-462c-a1c6-53d7565316ac"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Environment",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_PA_Log": {
+          "runAfter": {
+            "Initialize_Environment": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c2c3265c-2d54-49d6-94a3-5dbebeb4b795"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "PALog",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Scope_-_audit_log": {
+          "actions": {
+            "List_rows": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "01d9fc4c-ade5-4253-a573-487024154eb9"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'ErrorEmail'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each": {
+              "foreach": "@outputs('List_rows')?['body/value']",
+              "actions": {
+                "Set_Error_Email": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "7f2d1458-b35c-486d-8976-cdba79f67dac"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "ErrorEmail",
+                    "value": "@items('Apply_to_each')?['a3i_value']"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d725c3a3-63be-4510-84e6-a7404a323e24"
+              },
+              "type": "Foreach"
+            },
+            "Add_a_new_row": {
+              "runAfter": {
+                "Apply_to_each": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "bbd6cbc1-f328-4f63-a58a-38ee63bfe8e4"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "item/a3i_name": "IP. Get Episode TX Dates 3/3 - @{utcNow()}",
+                  "item/a3i_runhistory": "@concat('https://unitedkingdom.flow.microsoft.com/manage/environments/', workflow()['tags']['environmentName'], '/flows/', workflow()['name'], '/runs/', workflow()['run']['name'])"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "List_rows_2": {
+              "runAfter": {
+                "Add_a_new_row": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1c0a7a4e-b588-4b40-9d64-45022cc5c097"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'URL'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each_2": {
+              "foreach": "@outputs('List_rows_2')?['body/value']",
+              "actions": {
+                "Set_PA_Log": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "10fe06fe-aeeb-499c-af00-17fbc5c20241"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "PALog",
+                    "value": "@{items('Apply_to_each_2')?['a3i_value']}a3i_powerautomatelog&id=@{outputs('Add_a_new_row')?['body/a3i_powerautomatelogid']}"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "4665f711-2893-43ba-b380-7b0cd1ef6fce"
+              },
+              "type": "Foreach"
+            },
+            "List_rows_3": {
+              "runAfter": {
+                "Apply_to_each_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1f70862e-dbd8-437b-9ca1-20a73a8575c2"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'Environment'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each_3": {
+              "foreach": "@outputs('List_rows_3')?['body/value']",
+              "actions": {
+                "Set_Environment": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "1c149388-48de-4e45-9ba4-15791337ae16"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "Environment",
+                    "value": "@items('Apply_to_each_3')?['a3i_value']"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_3": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "29ae225a-a2d4-4562-8bf7-38588ddaba5f"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Initialize_PA_Log": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e11a41d5-9249-480c-a61a-ee1ed01a9a5c"
+          },
+          "type": "Scope"
+        },
+        "Scope_-_Actual_Solution": {
+          "actions": {
+            "Apply_to_each__-_GetEachIP": {
+              "foreach": "@outputs('List_rows_from_selected_environment_-_IP')?['body/value']",
+              "actions": {
+                "Compose_-_IPName": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "bf66d38e-b3b0-45bb-8a32-27aa7459922b"
+                  },
+                  "type": "Compose",
+                  "inputs": "@items('Apply_to_each__-_GetEachIP')?['a3i_ipname']",
+                  "description": "Here for troubleshooting"
+                },
+                "List_rows_-_ProgrammesRelatedToThatIP": {
+                  "runAfter": {
+                    "Compose_-_IPName": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "7a74de72-add9-482a-b8d5-17541fb989dc"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_2",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_programmes",
+                      "$filter": "_a3i_ip_value eq '@{items('Apply_to_each__-_GetEachIP')?['a3i_ipid']}'",
+                      "$orderby": "a3i_latesttxdate desc",
+                      "$top": 1
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Apply_to_each_-_setlatestTxFromProgramme": {
+                  "foreach": "@outputs('List_rows_-_ProgrammesRelatedToThatIP')?['body/value']",
+                  "actions": {
+                    "Set_variable_-_LatestTXDate": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "5707a7be-b7c2-4e5f-b3b2-aea8e16e2c5d"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "LatestTxDate",
+                        "value": "@items('Apply_to_each_-_setlatestTxFromProgramme')?['a3i_latesttxdate']"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "List_rows_-_ProgrammesRelatedToThatIP": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "990fc6b8-4074-48fc-b2cf-f8c9c9da60f6"
+                  },
+                  "type": "Foreach"
+                },
+                "Condition_-_IslatestTxEmptyinIP": {
+                  "actions": {
+                    "Condition_-_islatesttxProgrammeempty": {
+                      "actions": {
+                        "Set_variable_-_clearfornextrun_2": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "36fab99f-aa08-4a9b-938b-5b83b13e0d7b"
+                          },
+                          "type": "SetVariable",
+                          "inputs": {
+                            "name": "LatestTxDate",
+                            "value": "@{null}"
+                          }
+                        }
+                      },
+                      "runAfter": {},
+                      "else": {
+                        "actions": {
+                          "Update_a_row_-_newlatesttxdatefromprogramme": {
+                            "runAfter": {},
+                            "metadata": {
+                              "operationMetadataId": "192c3ac7-31db-4fea-945c-f43842392396"
+                            },
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "host": {
+                                "connectionName": "shared_commondataserviceforapps_2",
+                                "operationId": "UpdateOnlyRecord",
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                              },
+                              "parameters": {
+                                "entityName": "a3i_ips",
+                                "recordId": "@items('Apply_to_each__-_GetEachIP')?['a3i_ipid']",
+                                "item/a3i_latesttxdate": "@variables('LatestTxDate')"
+                              },
+                              "authentication": "@parameters('$authentication')"
+                            }
+                          },
+                          "Set_variable_-_clearfornextrun": {
+                            "runAfter": {
+                              "Update_a_row_-_newlatesttxdatefromprogramme": [
+                                "Succeeded"
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "905733c8-578f-44e3-8d36-ec4abc821b07"
+                            },
+                            "type": "SetVariable",
+                            "inputs": {
+                              "name": "LatestTxDate",
+                              "value": "@{null}"
+                            }
+                          }
+                        }
+                      },
+                      "expression": {
+                        "equals": [
+                          "@empty(variables('LatestTxDate'))",
+                          true
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "a34250d3-f85e-4e82-9621-7346a0f4f526"
+                      },
+                      "type": "If"
+                    }
+                  },
+                  "runAfter": {
+                    "Apply_to_each_-_setlatestTxFromProgramme": [
+                      "Succeeded"
+                    ]
+                  },
+                  "else": {
+                    "actions": {
+                      "Condition_-_isexistingtxright": {
+                        "actions": {
+                          "Set_variable_-_clearfornext": {
+                            "runAfter": {},
+                            "metadata": {
+                              "operationMetadataId": "50225127-c316-4a03-9fd3-9a4906837b99"
+                            },
+                            "type": "SetVariable",
+                            "inputs": {
+                              "name": "LatestTxDate",
+                              "value": "@{null}"
+                            }
+                          }
+                        },
+                        "runAfter": {},
+                        "else": {
+                          "actions": {
+                            "Update_a_row_-_latesttxdatefromProgramme": {
+                              "runAfter": {},
+                              "metadata": {
+                                "operationMetadataId": "2cf53514-0457-4f48-b5f9-59e641661303"
+                              },
+                              "type": "OpenApiConnection",
+                              "inputs": {
+                                "host": {
+                                  "connectionName": "shared_commondataserviceforapps_2",
+                                  "operationId": "UpdateOnlyRecord",
+                                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                                },
+                                "parameters": {
+                                  "entityName": "a3i_ips",
+                                  "recordId": "@items('Apply_to_each__-_GetEachIP')?['a3i_ipid']",
+                                  "item/a3i_latesttxdate": "@variables('LatestTxDate')"
+                                },
+                                "authentication": "@parameters('$authentication')"
+                              }
+                            },
+                            "Set_variable_-clear": {
+                              "runAfter": {
+                                "Update_a_row_-_latesttxdatefromProgramme": [
+                                  "Succeeded"
+                                ]
+                              },
+                              "metadata": {
+                                "operationMetadataId": "4a062c6b-b9b4-427a-af92-af8bb3896144"
+                              },
+                              "type": "SetVariable",
+                              "inputs": {
+                                "name": "LatestTxDate",
+                                "value": "@{null}"
+                              }
+                            }
+                          }
+                        },
+                        "expression": {
+                          "greater": [
+                            "@items('Apply_to_each__-_GetEachIP')?['a3i_latesttxdate']",
+                            "@variables('LatestTxDate')"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "75bb0a4c-6cdf-4919-92d0-44caef746df5"
+                        },
+                        "type": "If"
+                      }
+                    }
+                  },
+                  "expression": {
+                    "equals": [
+                      "@empty(items('Apply_to_each__-_GetEachIP')?['a3i_latesttxdate'])",
+                      true
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "2a5c6edb-926e-4196-b38d-f6ac37c1479d"
+                  },
+                  "type": "If"
+                }
+              },
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "fba2a016-5b54-49ae-889a-b185a75a70ce"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Scope_-_audit_log": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "424ed5fb-a292-4ad7-a869-c0841c5628a5"
+          },
+          "type": "Scope"
+        },
+        "Initialize_variable_-_LatestTXDate": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "fcfd18d3-71c8-4ba2-a0b2-caa849497d2b"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "LatestTxDate",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Scope_-_moved_because_of_change_requirements": {
+          "actions": {
+            "Apply_to_each_-_is_first_episode_tx_accurate": {
+              "foreach": "@outputs('List_rows_from_selected_environment_-_IP')?['body/value']",
+              "actions": {
+                "Compose_-_Identify": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "b153e369-df65-45de-b136-773f2c7d38ff"
+                  },
+                  "type": "Compose",
+                  "inputs": "IP=@{items('Apply_to_each_-_is_first_episode_tx_accurate')?['a3i_ipname']}",
+                  "description": "Here for troubleshooting"
+                },
+                "Condition_-_Is_IP_First_TX_Date_Empty": {
+                  "actions": {
+                    "Update_a_row_in_selected_environment_-_First": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "762f7c2e-12df-44e2-8e29-7b256e5aba48"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "UpdateRecordWithOrganization",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "organization": "current",
+                          "entityName": "a3i_ips",
+                          "recordId": "@items('Apply_to_each_-_is_first_episode_tx_accurate')?['a3i_ipid']"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Compose_-_Identify": [
+                      "Succeeded"
+                    ]
+                  },
+                  "else": {
+                    "actions": {
+                      "Condition_-_Is_new_first_Tx_date_earlier_than_existing_one": {
+                        "actions": {
+                          "Update_a_row_in_selected_environment": {
+                            "runAfter": {},
+                            "metadata": {
+                              "operationMetadataId": "762f7c2e-12df-44e2-8e29-7b256e5aba48"
+                            },
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "host": {
+                                "connectionName": "shared_commondataserviceforapps",
+                                "operationId": "UpdateRecordWithOrganization",
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                              },
+                              "parameters": {
+                                "organization": "current",
+                                "entityName": "a3i_ips",
+                                "recordId": "@items('Apply_to_each_-_is_first_episode_tx_accurate')?['a3i_ipid']"
+                              },
+                              "authentication": "@parameters('$authentication')"
+                            }
+                          }
+                        },
+                        "runAfter": {},
+                        "expression": {
+                          "less": [
+                            "",
+                            "@items('Apply_to_each_-_is_first_episode_tx_accurate')?['a3i_txdate']"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "7601e07c-97ac-4f82-a80b-4df7214cd3b2"
+                        },
+                        "type": "If"
+                      }
+                    }
+                  },
+                  "expression": {
+                    "equals": [
+                      "@empty(items('Apply_to_each_-_is_first_episode_tx_accurate')?['a3i_txdate'])",
+                      true
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "8c46e13e-f420-459f-a1ad-0932dd468d65"
+                  },
+                  "type": "If"
+                }
+              },
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "27712ccc-1d02-47dc-a2c1-30445f7f93c6"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Failure": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5c7d9f8e-ee7a-47ac-b111-af2adec2b327"
+          },
+          "type": "Scope"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

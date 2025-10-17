@@ -1,0 +1,19 @@
+function getUser()
+{
+    debugger;
+    var value=false;
+    var userRoles=Xrm.Utility.getGlobalContext().userSettings;
+    if(Object.keys(userRoles.roles._collection).length>0)
+    {
+        for ( var rolidcollection in userRoles.roles._collection)
+        {
+           var currentUserRoles= Xrm.Utility.getGlobalContext().userSettings.roles._collection[rolidcollection].name;    
+           if(currentUserRoles.toLowerCase()=="a3mi pitch support doc editors")
+           {
+               value=true;
+               break;
+           }
+        }
+    }
+    return value; 
+}

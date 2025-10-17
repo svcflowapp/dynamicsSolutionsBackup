@@ -1,0 +1,1542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{fb24744e-b177-ed11-81ac-0022481b545f}</formid>
+    <IntroducedVersion>1.0.0.113</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form showImage="true" headerdensity="HighWithControls">
+      <tabs>
+        <tab name="insights" id="{9b554311-af6c-4d07-90be-4b5ab97f1d32}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" labelid="{4d4e303c-ddec-4e87-b137-f822bcd1195d}">
+          <labels>
+            <label description="Insights" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="insights_section_3" id="6da6c7f0-9d69-4acd-ad3a-f962883eec58" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115" labelid="{bef86d7f-6c47-46f6-8134-5a3066bdb7f9}">
+                  <labels>
+                    <label description="Marketing information" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0b34fbad-fb44-4de8-b042-c93dd04843a8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="First Name" languagecode="1033" />
+                        </labels>
+                        <control id="firstname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="firstname" disabled="false" />
+                      </cell>
+                      <cell id="{04e2cefb-4cdb-4431-8732-2bba5bd16067}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Contact Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_contacttype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_contacttype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f2a3fd9b-a3fc-45b8-80b1-72a93b388160}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Last Name" languagecode="1033" />
+                        </labels>
+                        <control id="lastname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="lastname" disabled="false" />
+                      </cell>
+                      <cell id="{3527ab47-cead-4d5f-b35b-c81bb342f620}" locklevel="0" colspan="1" rowspan="1" labelid="{5c13d19e-b7f7-4fa6-aed5-9ceef5483487}">
+                        <labels>
+                          <label description="Event Opt In" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_eventoptinchoice" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_eventoptinchoice" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f58a21b2-efce-4ba9-ba6c-feedb8e8811b}" locklevel="0" colspan="1" rowspan="1" labelid="{bc81c325-0c8c-40be-931a-8496c694ac27}">
+                        <labels>
+                          <label description="Email" languagecode="1033" />
+                        </labels>
+                        <control id="emailaddress1" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="emailaddress1" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{88380ece-cf64-48c9-b15a-cbecec2cf789}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{180f3c89-7d44-4d0a-9a9a-d7c70fce8237}" locklevel="0" colspan="1" rowspan="1" labelid="{296f58e7-85d8-465a-9150-81cc8c404af9}">
+                        <labels>
+                          <label description="Marketing Opt In" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_marketingoptin" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_marketingoptin" disabled="false" />
+                      </cell>
+                      <cell id="{2328f136-ac91-41a8-9b3e-97d03261c599}" locklevel="0" colspan="1" rowspan="1" labelid="{fe7b3400-9554-44fa-9bc7-a055d958cc52}">
+                        <labels>
+                          <label description="Event Priority" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_eventpriority" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_eventpriority" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{83f711a0-17ac-4d05-933c-5599f26a06bc}" locklevel="0" colspan="1" rowspan="1" labelid="{5126ae51-f8d3-40aa-a5b0-fda9f47e4287}">
+                        <labels>
+                          <label description="Do not allow Bulk Emails" languagecode="1033" />
+                        </labels>
+                        <control id="donotbulkemail" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="donotbulkemail" disabled="false" />
+                      </cell>
+                      <cell id="{e3008bc5-fc01-49ad-9297-5308c967cec8}" locklevel="0" colspan="1" rowspan="1" labelid="{ad666de1-2932-4841-8f45-f629002cb35e}">
+                        <labels>
+                          <label description="Dietary requirements" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dietaryrequirements" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_dietaryrequirements" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{986648d8-db80-4469-beef-d27c25a1fc5b}" locklevel="0" colspan="1" rowspan="1" labelid="{45227ed6-0b4e-48a8-ba13-a2852f9143eb}">
+                        <labels>
+                          <label description="Do not allow Emails" languagecode="1033" />
+                        </labels>
+                        <control id="donotemail" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="donotemail" disabled="false" />
+                      </cell>
+                      <cell id="{eec56db8-f97b-4767-a605-fb5f1cfd2364}" locklevel="0" colspan="1" rowspan="1" labelid="{7199f76c-0623-4dab-a62e-682f3d00e69e}">
+                        <labels>
+                          <label description="Dietary requirements (other)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dietaryrequirementsother" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_dietaryrequirementsother" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4be740d9-7367-4fdc-9b9a-88d596ca5a16}" locklevel="1" colspan="1" rowspan="1" labelid="{8ec9d6af-c4fe-48c8-8a28-e7a746409f97}">
+                        <labels>
+                          <label description="Unsubscribed" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_unsubscribed" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="crf68_unsubscribed" disabled="false" />
+                      </cell>
+                      <cell id="{89175ac0-b09a-4587-bdd7-445bb27d1d44}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Accessibility" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_accessibility1" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_accessibility1" disabled="false" uniqueid="{19c41b94-6cde-49b0-a481-33f53d8716ec}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a4bd22c4-422b-41dd-8514-a1bede50e45e}" locklevel="1" colspan="1" rowspan="1" labelid="{c3c3a570-3016-436c-a886-ed2910f53e18}">
+                        <labels>
+                          <label description="Hard bounced" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_hardbounced" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="crf68_hardbounced" disabled="true" />
+                      </cell>
+                      <cell locklevel="0" id="{ef0f86c1-6459-47fa-9432-9e2dec30ad0d}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cc696bdd-f7ac-423b-954d-0860925ab310}" locklevel="0" colspan="1" rowspan="1" labelid="{75f60f69-deac-43a9-b675-a3e6d55021d7}">
+                        <labels>
+                          <label description="Purchasing Preferences" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_purchasingpreferences" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_purchasingpreferences" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{f81c2c3b-bf53-4b8c-90e0-87647c195b01}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="insights_section" showlabel="false" showbar="false" locklevel="0" id="{0b9bcf0f-36ac-453c-abd4-af9ca653f4c7}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{1f78d189-df7d-472b-8cd8-cef50dcb6aed}">
+                  <labels>
+                    <label description="Insights" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1c467cd3-6728-4332-a682-7ed85a135db0}" showlabel="false" locklevel="0" labelid="{6c4857fa-93cc-4ac1-b370-fe99e45e8e30}">
+                        <labels>
+                          <label description="Insights" languagecode="1033" />
+                        </labels>
+                        <control id="ContactInsightsCtrl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{C59D00AA-D4E6-4699-836B-3B93D03949D4}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="Insights" id="{dfa43c60-1caa-4601-950d-ccda14800208}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" visible="false" labelid="{76bbe860-45d1-4e93-87da-443cb3acd19f}">
+          <labels>
+            <label description="Insights" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="Insights_InsightsFilter" showlabel="false" showbar="false" locklevel="0" id="{907cd5dd-09ec-8a8a-2c6d-7e1195d021aa}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{3a74144e-05e5-4896-9ae1-7bf05b9af557}">
+                  <labels>
+                    <label description="Insights Filter" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{de1793d4-70c6-e591-822e-0ca66cba6bab}" showlabel="false" locklevel="0" labelid="{9bf5bd72-fe86-4c97-9f07-451f6a2628f0}">
+                        <labels>
+                          <label description="Insights Filter" languagecode="1033" />
+                        </labels>
+                        <control id="InsightsFilter" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{952B8780-58C5-394A-871C-89C4194A5293}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Insights_TimelineWidgetControlSection" showlabel="false" showbar="false" locklevel="0" id="{b597fd8a-2cd8-4422-8937-60c6c84a8a28}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{19dbd000-6499-40fd-92ec-73a72c732099}">
+                  <labels>
+                    <label description="Interactions timeline" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c6c52363-64e4-4a18-95de-786990363244}" showlabel="false" locklevel="0" labelid="{d1c38496-001e-448d-92b2-8907b9c67d8d}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="InteractionsTimeline" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{66C22EB0-2A20-4E28-B356-77DF60E42BC8}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="Insights_InteractionsBreakdown" showlabel="false" showbar="false" locklevel="0" id="{e1c95a5e-5be7-43e0-8077-3609d414089a}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{97672c38-3f25-4072-83ac-79a52788683c}">
+                  <labels>
+                    <label description="Widget row" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1b2601f8-dbc6-4b3e-8c94-37a02f8cd1b4}" showlabel="false" locklevel="0" labelid="{161bd847-4496-43ae-ae6e-9cb30633f651}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="InteractionsBreakdown" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{B3F6114B-F108-4717-B71F-C78FD99A7BBC}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="EmailInteractions" id="{e50ef22a-d3a6-4aaf-badc-68dbfb07f42e}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" visible="false" labelid="{cecf7f07-4349-4ba0-8410-121ee179cd49}">
+          <labels>
+            <label description="Email interactions" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section name="EmailInteractions_InsightsFilter" showlabel="false" showbar="false" locklevel="0" id="{3cc1e984-795e-1c34-7eaa-57b06c1d4ce6}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{ba1e775e-e1a0-4aa8-9189-b706bdbd50c8}">
+                  <labels>
+                    <label description="Insights Filter" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0e243255-9606-6488-77a8-1b772d1208cb}" showlabel="false" locklevel="0" labelid="{d9faa46e-dfe1-4a09-a828-3735fe56b3e9}">
+                        <labels>
+                          <label description="Insights Filter" languagecode="1033" />
+                        </labels>
+                        <control id="InsightsFilter" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{4A74E6E7-29C5-8ACD-AB8E-327E64DBE30C}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_EmailClickedList" showlabel="false" showbar="false" locklevel="0" id="{b1562b60-35fa-45ba-9de9-fd05e4fc37aa}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{f111daa7-1a5f-4c51-99f1-fe0988574120}">
+                  <labels>
+                    <label description="Email clicked" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ba561c8f-cf46-4e51-b50d-d2330f29620a}" showlabel="false" locklevel="0" labelid="{a484f055-0d72-4569-9a13-e8601ac1d439}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailClickedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{9639BDED-EA6F-4C4E-8D46-034FA68F7B71}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_EmailSentList" showlabel="false" showbar="false" locklevel="0" id="{b149db19-5328-45b1-becf-5cd1a46385bb}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{b68e0638-1d8a-43c8-9876-76af675e639f}">
+                  <labels>
+                    <label description="Email sent" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1cc6d2ff-3499-4909-b1aa-27c286b1e5eb}" showlabel="false" locklevel="0" labelid="{85622bdb-27d1-4f59-86ab-1b1d4b182919}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailSentList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{7058AB72-3B4C-47BD-8329-2CF779558908}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_EmailForwardedList" showlabel="false" showbar="false" locklevel="0" id="{e3163002-6f5b-44cb-bf65-1dbf8836f7db}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{56dd0e1c-fd8b-4440-a88e-9527f14a6442}">
+                  <labels>
+                    <label description="Email forwarded" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{c853ab03-8be2-4135-a674-9333b462fdcc}" showlabel="false" locklevel="0" labelid="{b4043851-8151-4639-9617-d0ca9a1500c6}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailForwardedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{BFDE8B08-8313-43C1-95A0-B70D8CEA1E99}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_EmailFeedbackLoopList" showlabel="false" showbar="false" locklevel="0" id="{97da0b79-b18f-4b48-bc8f-3eb835aaf44a}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{f8aed778-8b8b-43de-8efb-efbf72611309}">
+                  <labels>
+                    <label description="Email feedback loop" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5ef503da-33cb-4323-a5da-f8b775e6b821}" showlabel="false" locklevel="0" labelid="{ca1c3a7e-ace1-41dd-b447-9c5bb7754ab0}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailFeedbackLoopList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{04470D26-0439-4EB4-9EBC-6FDF4E179803}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_EmailOpenedList" showlabel="false" showbar="false" locklevel="0" id="{280d138b-d4fb-4e09-873f-345149df6ca3}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{efb62eab-ed92-44d2-a12a-d16038fa4e31}">
+                  <labels>
+                    <label description="Email opened" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{30d6616c-f594-4b11-83b4-dd05b6c319f4}" showlabel="false" locklevel="0" labelid="{b51765ab-a269-4821-8d71-4283a86badfb}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailOpenedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{5EA2A5F7-7C06-4EEE-A29C-18ADD3CC6A15}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="EmailInteractions_EmailDeliveredList" showlabel="false" showbar="false" locklevel="0" id="{c0d511c0-f210-42a3-ab17-2b3ebc0c5db3}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{c841d04b-65b3-4e05-85ef-8d0614d59340}">
+                  <labels>
+                    <label description="Email delivered" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{dd02ec57-709f-4316-b28b-4f12b23aac58}" showlabel="false" locklevel="0" labelid="{eee9f427-0ee1-4376-b907-4b866d5bc055}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailDeliveredList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{A77BC6B5-2CF5-4A43-AA3B-38F5028D12E8}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_EmailSoftBouncedList" showlabel="false" showbar="false" locklevel="0" id="{55cd5a68-a49b-48a7-ba37-d9f35c8d8cb1}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{70ddd246-61be-4c70-adc7-5117b99940e4}">
+                  <labels>
+                    <label description="Email soft bounced" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{cb2b2ad3-4d53-42ed-a10e-ee2e4811fc95}" showlabel="false" locklevel="0" labelid="{73bb7001-99f7-4efe-be76-954e59acf7c6}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailSoftBouncedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{E9958648-AE57-48D6-A1E9-CA51FC5523BF}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_EmailHardBouncedList" showlabel="false" showbar="false" locklevel="0" id="{d45dae4e-fc50-47e8-abec-cdba0a6b01d0}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{abf32f3a-16fc-48c9-a205-1880473f98aa}">
+                  <labels>
+                    <label description="Email hard bounced" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{938234d9-6ecb-4bd6-ba84-5675a970de7b}" showlabel="false" locklevel="0" labelid="{bd704579-3448-4f2e-9af5-65c00a297197}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailHardBouncedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{A42B2FC8-2674-48AF-8422-2F4F1059B75F}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_EmailBlockedList" showlabel="false" showbar="false" locklevel="0" id="{a32749d0-b8ec-43dc-a37d-cacfb9d01acd}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{f4f99cf0-7f95-4792-b8d2-44ed8bdc632d}">
+                  <labels>
+                    <label description="Email blocked" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{76f0ad4a-c933-455d-8397-fa77171207a2}" showlabel="false" locklevel="0" labelid="{ef5496e2-e738-4f28-9c7e-21e8be8c97ec}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailBlockedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{58B3F2B2-BA9E-40DD-8A5E-91CF5F04C8FF}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_EmailSubscriptionSubmitList" showlabel="false" showbar="false" locklevel="0" id="{c7a189e1-a82a-4890-9501-b0c878ac27de}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{a4a8ccfd-d040-432f-bcb0-c089b6566a62}">
+                  <labels>
+                    <label description="Email subscription submitted" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1d2d7028-33a3-4f02-bf0b-15ba2b0b831e}" showlabel="false" locklevel="0" labelid="{400b4598-1276-4ae9-a0c3-278e55934403}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EmailSubscriptionSubmitList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{7FB43DFD-4F3A-42E6-9F20-253EBE269F80}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EmailInteractions_ActivityBlockedList" showlabel="false" showbar="false" locklevel="0" id="{754dafcc-c08e-4581-8ec7-2e4489d879a6}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{470f68f1-f109-4e0e-8a09-8c92fe10458e}">
+                  <labels>
+                    <label description="Blocked contact activity" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{81e9b050-84cb-4615-9720-01a20ff4bbdc}" showlabel="false" locklevel="0" labelid="{c3793078-52c0-4b2b-a41c-f24d0c0d2166}">
+                        <labels>
+                          <label description="Contact Insights Placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="ActivityBlockedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{5D326917-E6D5-4697-AADA-CF2ABE5D7125}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="WebInteractions" id="{6f000855-4e48-4dc4-b222-c50cf928b663}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" visible="false" labelid="{7f80a9a8-d59b-441c-b181-45c9fef2215a}">
+          <labels>
+            <label description="Web interactions" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="WebInteractions_InsightsFilter" showlabel="false" showbar="false" locklevel="0" id="{6523c5bd-7a02-6822-6716-2ac12e13b092}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{380925ec-6c20-49be-a2d3-5e7a871ab32d}">
+                  <labels>
+                    <label description="Insights Filter" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{51a81db1-d3b9-81c7-7860-cc0e42a863c4}" showlabel="false" locklevel="0" labelid="{81923256-20a0-4c9c-84f3-49247b8bbb5d}">
+                        <labels>
+                          <label description="Insights Filter" languagecode="1033" />
+                        </labels>
+                        <control id="InsightsFilter" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{4E61EC58-2542-EA3B-3CA2-779E4B01C126}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="WebInteractions_WebsiteVisitedList" showlabel="false" showbar="false" locklevel="0" id="{dcc41a35-cea6-4039-9519-1a5e292ce593}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{684f96e8-207c-4c54-8a09-46f9cb7a0fcd}">
+                  <labels>
+                    <label description="Website visited list" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2627f443-2e97-4337-b75f-bbaa0a963b46}" showlabel="false" locklevel="0" labelid="{e85a5ed2-24a7-499d-bbbf-f1b64888ff8a}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="WebsiteVisitedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{F4B1ED52-A247-4510-A201-D387125F4CFD}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="WebInteractions_WebsiteClickedList" showlabel="false" showbar="false" locklevel="0" id="{e44ffe1a-6c9e-4a03-85df-340c1c7ae87b}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{3091a3c7-4cb4-45db-b9c6-bfcfa513c794}">
+                  <labels>
+                    <label description="Website clicked list" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4220261b-5064-48f8-a5ea-a8d1b35d73cf}" showlabel="false" locklevel="0" labelid="{2e2bfcfa-0ab1-4ecf-99b7-1108e02c87c2}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="WebsiteClickedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{CD613153-7AC0-49D1-8274-8A8B9672F7FB}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="WebInteractions_RedirectLinkClickedList" showlabel="false" showbar="false" locklevel="0" id="{41f0b478-df7d-4059-80c9-43bb5842b50e}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{38747497-4d87-4107-b9c4-0386bf6b7334}">
+                  <labels>
+                    <label description="Redirect link clicked list" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2b2c46e8-5fbb-4f49-b0ed-5e556084d0a5}" showlabel="false" locklevel="0" labelid="{a4f20029-4493-486e-9cce-0b35669f4007}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="RedirectLinkClickedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{F24EFA9E-99E5-44AA-9AC7-B9E93ADD0518}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="EventInteractions" id="{dcec73a7-2e7f-4462-bd2a-fb1dd409cfe9}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" visible="false" labelid="{09af84f0-3457-4b75-99dc-728edf0b07fd}">
+          <labels>
+            <label description="Event interactions" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="EventInteractions_InsightsFilter" showlabel="false" showbar="false" locklevel="0" id="{90550c1c-319c-4586-404b-c17dbe2ec314}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{4eeea6cd-01a7-407c-95e4-d838ad25edc9}">
+                  <labels>
+                    <label description="Insights Filter" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5de06039-84b3-a43e-94a7-67b488279147}" showlabel="false" locklevel="0" labelid="{36e48232-ba5b-4143-97c9-c9cc4c2cb89a}">
+                        <labels>
+                          <label description="Insights Filter" languagecode="1033" />
+                        </labels>
+                        <control id="InsightsFilter" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{B454D570-C0ED-3A66-482A-483A8CDB5073}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EventInteractions_TimelineWidgetControlSection" showlabel="false" showbar="false" locklevel="0" id="{c0efe4da-4384-46bc-8a6a-b3234739a217}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" labelid="{e6d9ea65-516b-4ab3-8970-0914dde052cd}">
+                  <labels>
+                    <label description="Interactions timeline" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{1ce83f44-8ccd-4d5b-9667-fca94c83690b}" showlabel="false" locklevel="0" labelid="{1a129a4e-564f-43ec-bc10-affd31d9b87b}">
+                        <labels>
+                          <label description="Contact Insights Placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="InteractionsTimelineLeadEvent" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{055EAE8E-3551-4103-9F5D-166817FFC5E9}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EventInteractions_EventCheckInList" showlabel="false" showbar="false" locklevel="0" id="{6ee13c57-9318-4565-b049-54d3d7d4077a}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{a53803e3-31f6-4e3c-8564-c6cebcebac61}">
+                  <labels>
+                    <label description="Event check-in list" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{557ddb9e-ec7b-40fd-8ae3-41cce90d0e87}" showlabel="false" locklevel="0" labelid="{c8b3a5dd-7298-4fd4-96d6-8bf4bd2a3090}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EventCheckInList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{6625ABF0-4AFF-45DD-86CD-0CE97CA682EB}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EventInteractions_EventRegistrationList" showlabel="false" showbar="false" locklevel="0" id="{9754e1ff-7b67-4b41-bc7a-d44a8627d551}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{bc8445e2-6cca-4b21-8139-875033277b0a}">
+                  <labels>
+                    <label description="Event registration list" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9572e3bd-e80d-4a14-bf43-c0602f26fbb3}" showlabel="false" locklevel="0" labelid="{4ea529f8-a57d-408d-8eda-a701327a65da}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EventRegistrationList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{A5B3E8BB-EFD0-4B54-BDD9-F47AF1CAE41A}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="EventInteractions_EventRegistrationCanceledList" showlabel="false" showbar="false" locklevel="0" id="{f4bca9d4-806e-481b-b3da-8b197247c9a6}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{98e6b230-e02c-44a9-a162-ca26cf3e3572}">
+                  <labels>
+                    <label description="canceled  event registrations" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f6ab7a40-ac9e-4b84-8026-6dba3a853b9f}" showlabel="false" locklevel="0" labelid="{2d884673-01e7-4e45-aa2e-f3b5d9e15528}">
+                        <labels>
+                          <label description="Contact Insights Placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="EventRegistrationCanceledListContact" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{F6B1FE05-3786-4027-8535-C76A212128A6}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="MarketingFormInteractions" id="{780e65e3-698e-4710-9708-55a85ef4a4ca}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" visible="false" labelid="{f9e60e1a-7021-40b5-86b1-7af8bfe3dc38}">
+          <labels>
+            <label description="Marketing form interactions" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="MarketingFormInteractions_InsightsFilter" showlabel="false" showbar="false" locklevel="0" id="{721c9ce0-5db5-cd29-3b04-997912d4b2d8}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{25eb826b-23cd-443e-bab4-628c3b5c4590}">
+                  <labels>
+                    <label description="Insights Filter" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9348a43b-5912-e7ca-db5b-7a54711a2c1e}" showlabel="false" locklevel="0" labelid="{3354341a-d599-4baf-9158-abe847cad2ec}">
+                        <labels>
+                          <label description="Insights Filter" languagecode="1033" />
+                        </labels>
+                        <control id="InsightsFilter" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{85E8CB59-D832-165D-C2BC-CA745AEB4EBD}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="MarketingFormInteractions_FormSubmittedList" showlabel="false" showbar="false" locklevel="0" id="{7953a36d-b042-4b2c-bcbb-e38dc899ba0f}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{cb87dc57-8656-44ba-b9ab-01d9ba1d8d6e}">
+                  <labels>
+                    <label description="Form submitted list" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ee9ad1e0-d7fc-4d1a-9353-c81178e133c0}" showlabel="false" locklevel="0" labelid="{abec2668-0a38-4e2a-8e06-6bfb734213d3}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="FormSubmittedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{3C44FE6C-0BFB-4994-8D6F-6801D444CC37}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="MarketingFormInteractions_FormVisitedList" showlabel="false" showbar="false" locklevel="0" id="{6a58edc9-f40e-4514-be53-5b97a363b224}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" labelid="{95daf9b3-1a43-407a-b2fa-8bbb8f0eb3c6}">
+                  <labels>
+                    <label description="Form visited list" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b4e77f95-d7d5-4227-9b6d-115470359e9f}" showlabel="false" locklevel="0" labelid="{7b2e52e2-fae8-44d4-abc1-2d52c353c2a3}">
+                        <labels>
+                          <label description="Contact insights placeholder" languagecode="1033" />
+                        </labels>
+                        <control id="FormVisitedList" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{B9863801-CAE0-4F94-8B2B-87A852BC5520}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="OptimalEmailSendingTime" verticallayout="true" id="{193c754b-190d-4d21-ac79-b2f2b9b3a684}" IsUserDefined="0" locklevel="0" visible="false" expanded="true" showlabel="true" labelid="{04823c4c-891d-4a9f-9d04-4b5ea06e3c98}">
+          <labels>
+            <label description="Optimal email sending time" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="OptimalEmailSendingTime_Prediction" showlabel="false" showbar="false" id="{fa881e9d-1a04-488c-826b-d845dd73be36}" visible="false" IsUserDefined="0" columns="1" locklevel="0" labelwidth="115" celllabelposition="Left" labelid="{7b47fe07-637a-4bc6-a70c-496211b8f61c}">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{444ed435-90a4-44d0-a877-2a0b5d8de882}" showlabel="false" locklevel="0" labelid="{feeebb89-a9ef-43ce-8e21-b02f8d8cb916}">
+                        <labels>
+                          <label description="Insights" languagecode="1033" />
+                        </labels>
+                        <control id="GwennolOptimalEmailSendingTime" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{21BD1145-1051-41D3-917A-4EA8D4D9A963}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="OptimalEmailSendingTime_TimeToReact" showlabel="false" showbar="false" id="{5693ad37-350f-4f0e-b03a-4212e78c9b6e}" visible="false" IsUserDefined="0" columns="1" locklevel="0" labelwidth="115" celllabelposition="Left" labelid="{495f8b9f-38c1-4667-a432-b73f92e403bd}">
+                  <labels>
+                    <label description="Contact" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ece03e6a-a42b-4484-986e-51e008ac9a6a}" showlabel="false" locklevel="0" labelid="{43cd4094-1e21-437a-be65-b864a5b66c6a}">
+                        <labels>
+                          <label description="Insights" languagecode="1033" />
+                        </labels>
+                        <control id="GwennolTimeToReactControl" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="msdyncrm_insights_placeholder" disabled="false" uniqueid="{CA45B928-06AA-40C8-AB23-BAFA2E6625E9}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_faninfo" id="c105b9a7-4028-44dd-8212-89fa77c63153" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Fan info" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_8_section_1" id="3215991c-9b55-4858-9a53-b2d2f15d0ca0" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Fan info" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{68c1861a-91c1-4368-85ad-0c9f5b211bb8}" locklevel="1" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Fan of" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_fanof" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_fanof" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cd6e188d-f4be-4c91-aef9-95c22ba184e3}" locklevel="1" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Age" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_age" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_age" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ced350ca-c9e9-4e4f-bf4e-58ea2c2138f3}" locklevel="1" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Other brand interest" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_otherbrandinterest" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="a3i_otherbrandinterest" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{059bce48-a8d1-4a9a-9d4f-bad35b7b117a}" locklevel="1" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Country" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_country" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_country" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5c4e5ea4-9c2f-43c3-8064-fd3fbc47bf78}" locklevel="1" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Date subscribed" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_datesubscribed" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_datesubscribed" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{17bd42c6-216d-497b-9481-866782ee5eba}" locklevel="1" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Date unsubscribed" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dateunsubscribed" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_dateunsubscribed" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <controlDescriptions>
+        <controlDescription forControl="{C59D00AA-D4E6-4699-836B-3B93D03949D4}">
+          <customControl formFactor="0" name="MscrmControls.InsightsControl.InsightsControl">
+            <parameters>
+              <configuration static="true" type="SingleLine.Text">ContactInsights</configuration>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.InsightsControl.InsightsControl">
+            <parameters>
+              <configuration static="true" type="SingleLine.Text">ContactInsights</configuration>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.InsightsControl.InsightsControl">
+            <parameters>
+              <configuration static="true" type="SingleLine.Text">ContactInsights</configuration>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{66C22EB0-2A20-4E28-B356-77DF60E42BC8}">
+          <customControl formFactor="2" name="MscrmControls.TimelineHostControl.TimelineHostControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">InteractionsTimeline</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.TimelineHostControl.TimelineHostControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">InteractionsTimeline</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.TimelineHostControl.TimelineHostControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">InteractionsTimeline</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{B3F6114B-F108-4717-B71F-C78FD99A7BBC}">
+          <customControl formFactor="2" name="MscrmControls.MarketingChartControl.MarketingChartControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">InteractionsBreakdown</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+              <showDatePicker static="true" type="SingleLine.Text">false</showDatePicker>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.MarketingChartControl.MarketingChartControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">InteractionsBreakdown</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+              <showDatePicker static="true" type="SingleLine.Text">false</showDatePicker>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.MarketingChartControl.MarketingChartControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">InteractionsBreakdown</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+              <showDatePicker static="true" type="SingleLine.Text">false</showDatePicker>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{9639BDED-EA6F-4C4E-8D46-034FA68F7B71}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailClickedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailClickedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailClickedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{7058AB72-3B4C-47BD-8329-2CF779558908}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailSentList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailSentList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailSentList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{BFDE8B08-8313-43C1-95A0-B70D8CEA1E99}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailForwardedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailForwardedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailForwardedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{04470D26-0439-4EB4-9EBC-6FDF4E179803}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailFeedbackLoopList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailFeedbackLoopList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailFeedbackLoopList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5EA2A5F7-7C06-4EEE-A29C-18ADD3CC6A15}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailOpenedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailOpenedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailOpenedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{A77BC6B5-2CF5-4A43-AA3B-38F5028D12E8}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailDeliveredList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailDeliveredList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailDeliveredList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{E9958648-AE57-48D6-A1E9-CA51FC5523BF}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailSoftBouncedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailSoftBouncedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailSoftBouncedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{A42B2FC8-2674-48AF-8422-2F4F1059B75F}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailHardBouncedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailHardBouncedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailHardBouncedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{58B3F2B2-BA9E-40DD-8A5E-91CF5F04C8FF}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailBlockedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailBlockedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailBlockedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{7FB43DFD-4F3A-42E6-9F20-253EBE269F80}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailSubscriptionSubmitList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailSubscriptionSubmitList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EmailSubscriptionSubmitList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{5D326917-E6D5-4697-AADA-CF2ABE5D7125}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">ActivityBlockedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">ActivityBlockedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">ActivityBlockedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{F4B1ED52-A247-4510-A201-D387125F4CFD}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">WebsiteVisitedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">WebsiteVisitedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">WebsiteVisitedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{CD613153-7AC0-49D1-8274-8A8B9672F7FB}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">WebsiteClickedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">WebsiteClickedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">WebsiteClickedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{F24EFA9E-99E5-44AA-9AC7-B9E93ADD0518}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">RedirectLinkClickedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">RedirectLinkClickedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">RedirectLinkClickedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{055EAE8E-3551-4103-9F5D-166817FFC5E9}">
+          <customControl formFactor="2" name="MscrmControls.TimelineHostControl.TimelineHostControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">InteractionsTimelineLeadEvent</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.TimelineHostControl.TimelineHostControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">InteractionsTimelineLeadEvent</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.TimelineHostControl.TimelineHostControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">InteractionsTimelineLeadEvent</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{6625ABF0-4AFF-45DD-86CD-0CE97CA682EB}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EventCheckInList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EventCheckInList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EventCheckInList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{A5B3E8BB-EFD0-4B54-BDD9-F47AF1CAE41A}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EventRegistrationList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EventRegistrationList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EventRegistrationList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{F6B1FE05-3786-4027-8535-C76A212128A6}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EventRegistrationCanceledListContact</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EventRegistrationCanceledListContact</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">EventRegistrationCanceledListContact</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{B9863801-CAE0-4F94-8B2B-87A852BC5520}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">FormVisitedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">FormVisitedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">FormVisitedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{3C44FE6C-0BFB-4994-8D6F-6801D444CC37}">
+          <customControl formFactor="2" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">FormSubmittedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">FormSubmittedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.ListWidgetControl.ListWidgetControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">FormSubmittedList</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{952B8780-58C5-394A-871C-89C4194A5293}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>msdyncrm_insights_placeholder</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{4A74E6E7-29C5-8ACD-AB8E-327E64DBE30C}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>msdyncrm_insights_placeholder</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{4E61EC58-2542-EA3B-3CA2-779E4B01C126}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>msdyncrm_insights_placeholder</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{B454D570-C0ED-3A66-482A-483A8CDB5073}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>msdyncrm_insights_placeholder</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{85E8CB59-D832-165D-C2BC-CA745AEB4EBD}">
+          <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+            <parameters>
+              <datafieldname>msdyncrm_insights_placeholder</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FilterWidgetControl.FilterWidgetControl">
+            <parameters>
+              <displayDateRange static="true" type="SingleLine.Text">true</displayDateRange>
+              <data-set name="targetEntityDataSet">
+                <ViewId>{fdf1312e-1710-e811-80fe-00155d5d6537}</ViewId>
+                <IsUserView>false</IsUserView>
+                <TargetEntityType>msdyncrm_customerjourney</TargetEntityType>
+              </data-set>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{CA45B928-06AA-40C8-AB23-BAFA2E6625E9}">
+          <customControl formFactor="2" name="MscrmControls.MarketingChartControl.MarketingChartControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">GwennolTimeToReact</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+              <showDatePicker static="true" type="SingleLine.Text">false</showDatePicker>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.MarketingChartControl.MarketingChartControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">GwennolTimeToReact</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+              <showDatePicker static="true" type="SingleLine.Text">false</showDatePicker>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.MarketingChartControl.MarketingChartControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">GwennolTimeToReact</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+              <showDatePicker static="true" type="SingleLine.Text">false</showDatePicker>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{21BD1145-1051-41D3-917A-4EA8D4D9A963}">
+          <customControl formFactor="2" name="MscrmControls.MarketingChartControl.MarketingChartControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">GwennolOptimalEmailSendingTime</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+              <showDatePicker static="true" type="SingleLine.Text">false</showDatePicker>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.MarketingChartControl.MarketingChartControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">GwennolOptimalEmailSendingTime</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+              <showDatePicker static="true" type="SingleLine.Text">false</showDatePicker>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.MarketingChartControl.MarketingChartControl">
+            <parameters>
+              <widgetId static="true" type="SingleLine.Text">GwennolOptimalEmailSendingTime</widgetId>
+              <recordIdProperty static="true" type="SingleLine.Text">ContactId</recordIdProperty>
+              <showDatePicker static="true" type="SingleLine.Text">false</showDatePicker>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{19c41b94-6cde-49b0-a481-33f53d8716ec}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_accessibility1</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_accessibility1</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl name="MscrmControls.FieldControls.ToggleControl" formFactor="-1">
+            <parameters>
+              <value type="TwoOptions">a3i_accessibility1</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_accessibility1</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_accessibility1</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute type="TwoOptions">a3i_accessibility1</booleanAttribute>
+              <layout type="Enum" static="true">Round</layout>
+              <displayLabel type="Enum" static="true">True</displayLabel>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <header id="{9796c189-4098-4943-b48e-466ce2c588e6}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{b1826343-c3f2-4ee8-b195-7d2f24140557}" showlabel="false" labelid="{656f5048-33b7-4dd0-8064-9862ace10b06}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c86cf82e-0a78-44dd-bf3d-b14b51745621}" showlabel="false" labelid="{e798e0b8-f77a-4cca-b978-d9da733db280}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{49686eb6-803e-4f61-96d8-57bab0ad005b}" showlabel="false" labelid="{a50e3c5f-630b-419f-a0be-09eeb6a2efae}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{e82817de-1f7f-4fc8-a941-132229029a39}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{0c86e0a1-a1d1-4415-82a2-65395ff408d0}" showlabel="false" labelid="{a9935ada-8f3a-4126-a9a6-adfcb6e0337f}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{a7efad3c-a107-4dd9-a6ab-7fbf6519f013}" showlabel="false" labelid="{db47f6ec-9238-478d-be97-505db78921f9}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1ba9f5a6-3242-428c-a61b-6be040a5e637}" showlabel="false" labelid="{530a2d07-efb4-414c-b906-21f61fa44b21}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="6" FallbackForm="true">
+        <Role Id="{E7F4211F-9730-F011-8C4D-6045BD0AF67D}" />
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+      <formLibraries>
+        <Library name="a3i_faninfo" libraryUniqueId="{97d71bf9-161d-401f-8477-ec0a5e5ce041}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="hideFanInfoTab" libraryName="a3i_faninfo" handlerUniqueId="{d87f33d4-e76d-4536-991c-6989e2e22233}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+        <event name="onsave" application="false" active="false">
+          <Handlers>
+            <Handler functionName="hideFanInfoTab" libraryName="a3i_faninfo" handlerUniqueId="{440084f3-fd3c-476c-8881-fb83c7373ab5}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Marketing info" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Marketing information for contacts" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

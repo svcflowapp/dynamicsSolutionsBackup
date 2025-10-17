@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{f353f299-125c-ec11-8f8f-0022481b0af9}</formid>
+    <IntroducedVersion>1.0.0.87</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form maxWidth="1920">
+      <tabs>
+        <tab id="F931FFE2-B873-473F-8F95-9502F0AA3F5E" name="tab_1" showlabel="false" labelid="{772fd383-0f82-4218-aefb-0104ed770aaa}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="34%">
+              <sections>
+                <section id="0C655D4E-C6E3-424E-9AF5-71E72D30D12E" name="tab_1_column_1_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{4795cf39-e7d6-404f-ab9d-381c8c9dc0c3}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{372b48d0-e784-4bee-a92a-751bec1ee5b7}" locklevel="0" colspan="1" rowspan="1" labelid="{6084ee2f-6b1c-458f-8e2b-42a3239d76dc}">
+                        <labels>
+                          <label description="Export Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_exporttype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_exporttype" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="02DECBA0-3AE2-484D-A19F-C5353AF4F4F2" name="tab_1_column_2_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{b586b2cf-104b-4804-b2f8-c2cd4a65f4c5}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="266FE48D-4D04-4E9A-8C5A-7DEF9A2F059B" labelid="{79dc560b-40d0-43d9-8e53-c6686ace72be}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="33%">
+              <sections>
+                <section id="46FD66EA-B686-41D9-AAE0-C565BD78EC1F" name="tab_1_column_3_section_1" columns="1" showlabel="true" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{46c3b1b5-ddd0-45c6-a823-99d47565ebad}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="07C04A4E-A482-45CC-BAB7-7FCA3CD02938" labelid="{94426816-05e7-41dd-9d20-4a32e14a51be}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <formLibraries>
+        <Library name="a3i_export.js" libraryUniqueId="{ec2cb8b6-2b28-3b2e-a396-4570684894a1}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="a3i.Export.OnLoadQuickCreate" libraryName="a3i_export.js" handlerUniqueId="{b23ae562-d4d9-4592-959d-955043084276}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+        <Role Id="{2f2aa287-a60a-46bc-bb38-0ff9625bbb9c}" />
+        <Role Id="{fc50ebcc-7a92-4f6a-9dbc-38de490fbbab}" />
+        <Role Id="{1185c0f1-ab5d-4e91-b9ad-514d85cd8846}" />
+        <Role Id="{7f12f058-ed0f-41cb-9dee-54bdc3f4300c}" />
+        <Role Id="{9e9d3b8a-05bd-45a0-aae4-98694a73847b}" />
+        <Role Id="{6601883e-6a4d-415e-ae48-a6bc9cb19ed9}" />
+        <Role Id="{0c456bff-223b-4a18-b0a1-ed0893e3cfa1}" />
+        <Role Id="{6a414a4a-a70a-4997-8e4b-fd37ba8d1eba}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Export quick create form" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

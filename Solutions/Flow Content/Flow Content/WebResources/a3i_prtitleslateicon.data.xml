@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{8922c12d-4d3b-ed11-9db0-0022481b545f}</WebResourceId>
+  <Name>a3i_prtitleslateicon</Name>
+  <DisplayName>PR Title Slate icon</DisplayName>
+  <WebResourceType>5</WebResourceType>
+  <IntroducedVersion>1.0.0.105</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/a3i_prtitleslateicon8922C12D-4D3B-ED11-9DB0-0022481B545F</FileName>
+</WebResource>

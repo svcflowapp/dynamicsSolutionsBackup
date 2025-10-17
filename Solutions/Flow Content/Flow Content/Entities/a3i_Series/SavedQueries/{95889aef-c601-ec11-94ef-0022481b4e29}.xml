@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{95889aef-c601-ec11-94ef-0022481b4e29}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_seriesname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_seriesid">
+          <cell name="a3i_seriesname" width="200" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+        <entity name="a3i_series">
+          <attribute name="a3i_seriesname" />
+          <link-entity name="a3i_programme" from="a3i_programmeid" to="a3i_programme" alias="aa">
+            <filter type="and">
+              <condition attribute="a3i_iptype" operator="eq" value="430830001" />
+            </filter>
+          </link-entity>
+          <attribute name="a3i_seriesid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.73</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Option restricted view" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

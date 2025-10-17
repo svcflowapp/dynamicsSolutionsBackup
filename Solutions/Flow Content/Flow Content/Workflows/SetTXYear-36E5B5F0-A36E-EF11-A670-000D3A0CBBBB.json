@@ -1,0 +1,99 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_61216"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "f40abf67-08df-4954-b400-44881aa42c64"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "a3i_series",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "a3i_txdate, a3i_txyearest"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Update_a_row": {
+          "runAfter": {
+            "Compose:_TX_Year": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b05d9e50-f371-4c8a-b1f2-ecfae493ffcc"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_serieses",
+              "recordId": "@triggerOutputs()?['body/a3i_seriesid']",
+              "item/a3i_derivedtxyear": "@outputs('Compose:_TX_Year')"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose:_TX_Year": {
+          "runAfter": {
+            "Compose:_TX_Date": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1247ac0d-ffbb-46bc-8cfa-1dacb06661e7"
+          },
+          "type": "Compose",
+          "inputs": "@if(empty(outputs('Compose:_TX_Date')), triggerOutputs()?['body/_a3i_txyearest_label'], formatDateTime(outputs('Compose:_TX_Date'), 'yyyy'))"
+        },
+        "Compose:_TX_Date": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "0ee4c615-8d16-459e-bd9b-c9ff875c24ab"
+          },
+          "type": "Compose",
+          "inputs": "@triggerOutputs()?['body/a3i_txdate']"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

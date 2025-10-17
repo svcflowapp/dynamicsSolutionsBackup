@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_exporttype" localizedName="Export Type" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.87</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="Export Type" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="Brand Slide" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" IsHidden="0">
+      <labels>
+        <label description="RT: Version Create" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830003" IsHidden="0">
+      <labels>
+        <label description="RT: Version Update" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" IsHidden="0">
+      <labels>
+        <label description="RT: Episode Update" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830000" ExternalValue="" IsHidden="0">
+      <labels>
+        <label description="ZZZZ Sales Slate" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830005" IsHidden="0">
+      <labels>
+        <label description="RT: Series Export" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" IsHidden="0">
+      <labels>
+        <label description="RT: Programme Update" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" IsHidden="0">
+      <labels>
+        <label description="RT: Content Import" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" IsHidden="0">
+      <labels>
+        <label description="One: Contact Import" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830009" IsHidden="0">
+      <labels>
+        <label description="One: Website Activity Import" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" IsHidden="0">
+      <labels>
+        <label description="RT: Deal Import Array" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830011" IsHidden="0">
+      <labels>
+        <label description="RT: Deal Import" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830012" IsHidden="0">
+      <labels>
+        <label description="RT: Deal Export" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830013" IsHidden="0">
+      <labels>
+        <label description="RT: Deal Export Update" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830014" IsHidden="0">
+      <labels>
+        <label description="KNOX: Version Update" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830015" IsHidden="0">
+      <labels>
+        <label description="KNOX: Episode Update" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830016" IsHidden="0">
+      <labels>
+        <label description="RT: IP Name Changed Export" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830017" IsHidden="0">
+      <labels>
+        <label description="RT: Programme Reparent Update" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830018" IsHidden="0">
+      <labels>
+        <label description="RT: Series Reparent Update" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830019" IsHidden="0">
+      <labels>
+        <label description="RT. Broadcast Platform Export" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830020" IsHidden="0">
+      <labels>
+        <label description="KNOX: IP Export" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830021" IsHidden="0">
+      <labels>
+        <label description="KNOX: Programme Export" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830022" IsHidden="0">
+      <labels>
+        <label description="KNOX: Series Export" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830023" IsHidden="0">
+      <labels>
+        <label description="KNOX: Version Export" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830024" IsHidden="0">
+      <labels>
+        <label description="KNOX: Episode Export" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

@@ -1,0 +1,9 @@
+<environmentvariabledefinition schemaname="a3i_DecodedURL">
+  <displayname default="Decoded URL">
+    <label description="Decoded URL" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.75</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <type>100000000</type>
+</environmentvariabledefinition>

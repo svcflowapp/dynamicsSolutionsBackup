@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{185fe716-33cc-ea11-a812-000d3a86a78c}" Name="Visibility for Delivery Date" Description="Delivery Date to be visible/hidden based on Delivery type" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/VisibilityforDeliveryDate-185FE716-33CC-EA11-A812-000D3A86A78C.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>2</Category>
+  <Mode>1</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0.0.17</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <IsCustomProcessingStepAllowedForOtherPublishers>1</IsCustomProcessingStepAllowedForOtherPublishers>
+  <ProcessTriggerScope>2</ProcessTriggerScope>
+  <PrimaryEntity>a3i_Series</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Visibility for Delivery Date" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="Delivery Date to be visible/hidden based on Delivery type" />
+  </Descriptions>
+</Workflow>

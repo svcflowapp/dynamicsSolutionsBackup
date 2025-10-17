@@ -1,0 +1,1960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_purchasingterritories" localizedName="Purchasing Territories" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.32</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Purchasing Territories" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="N/A" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830002" ExternalValue="" Color="#0000ff" IsHidden="0">
+      <labels>
+        <label description="---AFRICA---" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Algeria" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Angola" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830027" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Benin" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830033" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Botswana" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830040" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Burkina Faso" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830041" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Burundi" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830042" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Cabo Verde" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830044" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Cameroon" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830047" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Central African Republic" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830048" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Chad" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830054" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Comoros (the)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830055" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Congo" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830056" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Congo, Democratic Republic of" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830059" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Côte d'Ivoire" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830066" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Djibouti" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830072" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Equatorial Guinea" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830073" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Eritrea" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830075" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Eswatini" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830076" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Ethiopia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830085" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Gabon" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830086" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Gambia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830089" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Ghana" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830098" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Guinea" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830099" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Guinea-Bissau" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830121" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Kenya" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830129" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Lesotho" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830130" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Liberia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830131" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Libya" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830136" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Madagascar" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830137" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Malawi" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830140" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Mali" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830144" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Mauritania" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830146" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Mayotte" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830154" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Morocco" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830155" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Mozambique" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830157" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Namibia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830164" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Niger" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830165" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Nigeria" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830185" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Réunion" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830188" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Rwanda" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830198" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Sao Tome and Principe" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830200" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Senegal" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830202" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Seychelles" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830203" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Sierra Leone" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830209" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Somalia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830210" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="South Africa" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830213" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="South Sudan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830216" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Sudan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830217" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Suriname" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830224" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Tanzania, the United Republic of" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830227" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Togo" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830231" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Tunisia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830236" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Uganda" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830249" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Western Sahara" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830251" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Zambia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830252" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Zimbabwe" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830003" ExternalValue="" Color="#0000ff" IsHidden="0">
+      <labels>
+        <label description="---ASIA---" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830019" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Azerbaijan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830022" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Bangladesh" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830029" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Bhutan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830038" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Brunei Darussalam" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830043" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Cambodia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830050" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="China" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830095" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Guam" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830105" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Hong Kong" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830108" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="India" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830109" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Indonesia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830117" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Japan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830120" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Kazakhstan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830123" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Korea, The Democratic People's Republic of" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830125" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Kyrgyzstan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830126" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Lao People's Democratic Republic" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830135" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Macao" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830138" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Malaysia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830139" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Maldives" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830145" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Mauritius" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830148" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Micronesia (Federated States of)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830151" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Mongolia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830156" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Myanmar" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830159" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Nepal" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830169" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Northern Mariana Islands" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830172" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Pakistan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830179" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Philippines" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830204" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Singapore" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830212" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="South Korea" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830215" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Sri Lanka" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830222" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Taiwan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830223" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Tajikistan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830225" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Thailand" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830226" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Timor-Leste" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830233" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Turkmenistan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830243" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Uzbekistan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830246" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Vietnam" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830254" ExternalValue="" Color="#0000ff" IsHidden="0">
+      <labels>
+        <label description="---PACIFIC---" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="American Samoa" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830017" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Australia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830057" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Cook Islands" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830079" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Fiji" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830122" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Kiribati" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830142" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Marshall Islands" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830158" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Nauru" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830161" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="New Caledonia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830162" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="New Zealand" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830166" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Niue" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830173" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Palau" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830176" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Papua New Guinea" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830196" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Samoa" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830208" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Solomon Islands" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830229" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Tonga" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830235" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Tuvalu" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830244" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Vanuatu" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830248" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Wallis and Futuna" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830001" ExternalValue="" Color="#0000ff" IsHidden="0">
+      <labels>
+        <label description="---EUROPE---" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Albania" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830009" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Andorra" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830015" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Armenia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830018" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Austria" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830024" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Belarus" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830025" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Belgium" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830032" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Bosnia and Herzegovina" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830039" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Bulgaria" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830060" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Croatia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830063" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Cyprus" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830064" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Czech Republic" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830065" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Denmark" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830074" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Estonia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830078" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Faroe Islands (the)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830080" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Finland" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830081" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="France" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830087" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Georgia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830088" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Germany" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830090" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Gibraltar" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830091" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Greece" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830092" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Greenland" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830097" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Guernsey" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830106" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Hungary" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830107" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Iceland" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830112" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Ireland" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830113" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Isle of Man" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830115" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Italy" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830118" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Jersey" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830127" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Latvia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830132" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Liechtenstein" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830133" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Lithuania" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830134" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Luxembourg" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830141" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Malta" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830149" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Moldova, Republic of" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830150" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Monaco" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830152" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Montenegro" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830160" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Netherlands" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830168" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="North Macedonia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830170" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Norway" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830181" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Poland" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830182" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Portugal" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830186" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Romania" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830187" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Russian Federation" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830197" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="San Marino" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830201" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Serbia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830206" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Slovakia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830207" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Slovenia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830214" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Spain" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830219" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Sweden" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830220" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Switzerland" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830232" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Turkey" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830237" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Ukraine" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830239" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="United Kingdom" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830005" ExternalValue="" Color="#0000ff" IsHidden="0">
+      <labels>
+        <label description="Vatican City State" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830256" ExternalValue="" Color="#0000ff" IsHidden="0">
+      <labels>
+        <label description="---LATAM---" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830014" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Argentina" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830026" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Belize" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830030" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Bolivia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830035" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Brazil" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830049" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Chile" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830053" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Colombia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830058" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Costa Rica" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830069" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Ecuador" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830071" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="El Salvador" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830077" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Falkland Islands" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830082" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="French Guiana" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830096" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Guatemala" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830100" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Guyana" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830104" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Honduras" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830163" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Nicaragua" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830175" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Panama" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830177" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Paraguay" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830178" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Peru" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830242" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Uruguay" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830245" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Venezuela" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830253" ExternalValue="" Color="#0000ff" IsHidden="0">
+      <labels>
+        <label description="---MIDDLE EAST---" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Afghanistan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830021" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Bahrain" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830070" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Egypt" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830110" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Iran" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830111" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Iraq" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830114" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Israel" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830119" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Jordan" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830124" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Kuwait" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830128" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Lebanon" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830171" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Oman" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830174" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Palestine" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830184" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Qatar" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830199" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Saudi Arabia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830221" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Syrian Arab Republic" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830238" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="United Arab Emirates" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830250" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Yemen" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830255" ExternalValue="" Color="#0000ff" IsHidden="0">
+      <labels>
+        <label description="---NORTH AMERICA---" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830011" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Anguilla" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830013" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Antigua and Barbuda" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830016" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Aruba" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830020" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Bahamas" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830023" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Barbados" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830028" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Bermuda" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830031" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Bonaire, Sint Eustatius and Saba" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830037" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="British Virgin Islands" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830045" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Canada" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830046" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Cayman Islands" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830061" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Cuba" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830062" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Curaçao" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830067" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Dominica" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830068" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Dominican Republic" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830083" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="French Polynesia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830094" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Guadeloupe" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830093" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Grenada" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830101" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Haiti" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830116" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Jamaica" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830143" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Martinique" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830147" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Mexico" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830153" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Montserrat" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830183" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Puerto Rico" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830189" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Saint Barthélemy" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830190" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Saint Helena, Ascension and Tristan da Cunha" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830191" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Saint Kitts and Nevis" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830192" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Saint Lucia" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830193" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Saint Martin" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830194" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Saint Pierre and Miquelon" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830195" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Saint Vincent and the Grenadines" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830205" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Sint Maarten" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830234" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Turks and Caicos Islands" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830230" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Trinidad and Tobago" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830240" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="United States of America" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830247" ExternalValue="" Color="" IsHidden="0">
+      <labels>
+        <label description="Virgin Islands (U.S.)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

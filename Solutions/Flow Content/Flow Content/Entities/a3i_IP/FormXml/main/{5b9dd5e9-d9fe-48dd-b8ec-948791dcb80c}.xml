@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{5b9dd5e9-d9fe-48dd-b8ec-948791dcb80c}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{f78e0115-1843-44de-ab94-da69282e105c}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{6f9b7cb7-f480-4f4c-b26b-fed41f1f6685}" columns="1">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{73bb7180-9c5d-4dfe-89a2-dbb851ce99f5}">
+                        <labels>
+                          <label description="IP Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ipname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_ipname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ae6b5eb2-2840-4ab3-aacb-3b3bd53f95e0}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="IP Class" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ipclassnew" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_ipclassnew" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d18cb792-06cb-4c34-b587-cc1bdea39853}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Related IP" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_relatedip" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_relatedip" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9db3dca4-a5e2-47a6-972d-cab707c3f45a}" locklevel="0">
+                        <labels>
+                          <label description="Territories produced in" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_territoriesproducedin" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="a3i_territoriesproducedin" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4f4e043f-ff33-4c8f-8fe2-a9acc70fa608}" locklevel="0" showlabel="true">
+                        <labels>
+                          <label description="Number of Episodes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_numberofepisodes" classid="{C6D124CA-7EDA-4A60-AEA9-7FB8D318B68F}" datafieldname="a3i_numberofepisodes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{52148865-30e8-482f-b03b-cdf6d4e84843}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="First TX Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_txdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_txdate" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{242f6841-4243-4380-89a0-587a567bd6a5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Latest TX Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_latesttxdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_latesttxdate" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell showlabel="false" locklevel="0" id="{a11e3845-3dae-4cf7-a33d-7ad6aff4186e}" rowspan="1" colspan="1">
+                        <labels>
+                          <label description="New SG control 1587909669937" languagecode="1033" />
+                        </labels>
+                        <control id="Subgrid_1" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                          <parameters>
+                            <TargetEntityType>a3i_programme</TargetEntityType>
+                            <ViewId>{E9C718E8-F252-46C0-BB14-2B4CCD23CB0D}</ViewId>
+                            <ViewIds>{E9C718E8-F252-46C0-BB14-2B4CCD23CB0D},{17DE2F65-D7F1-4A75-97EB-25C923001F20}</ViewIds>
+                            <EnableViewPicker>true</EnableViewPicker>
+                            <RelationshipName>a3i_Programme_IP_a3i_IP</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{446db758-f5fd-4b82-8473-f7d4d7d8b124}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_2" id="afc0eaf5-b7c4-48e9-8321-02b90aeb2a33" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Formats" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section name="tab_2_section_1" id="71b5b682-7d8a-41ec-97fa-d494cbcddcf1" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" height="auto">
+                  <labels>
+                    <label description="Formats" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3ded5eff-01d2-426c-81c7-158c22a5f4eb}" locklevel="0" showlabel="true">
+                        <labels>
+                          <label description="Active Format" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_activeformat" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_activeformat" disabled="false" uniqueid="{5db4ddd1-c2c7-9a2b-ebe7-bdd3bd9db47b}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{267c1937-6d0a-4103-a4d5-982369fcf13d}" locklevel="0">
+                        <labels>
+                          <label description="Formats Materials Available" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_formatsmaterialsavailable" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_formatsmaterialsavailable" disabled="false" />
+                      </cell>
+                    </row>
+                    <row height="auto">
+                      <cell id="{9416a34f-197b-4587-9e63-3d2c38aa7c1a}" locklevel="0" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Formats Materials Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_formatsmaterialsnotes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_formatsmaterialsnotes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8166cb8d-90f5-4903-845d-fe67c0197960}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Option Pack Last Updated" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_optionpacklastupdated" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_optionpacklastupdated" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a6d7d9ee-af6a-4757-8935-19e82076abb8}" locklevel="0">
+                        <labels>
+                          <label description="Draft Bible Received From Producer" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_draftbiblereceivedfromproducer" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_draftbiblereceivedfromproducer" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{838cee6f-d7f8-40b8-b01c-04960f751ee4}" locklevel="0">
+                        <labels>
+                          <label description="Editor" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_editor" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_editor" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{91b79cf3-800a-49fa-93e9-6dc0ba70d1c7}" locklevel="0">
+                        <labels>
+                          <label description="Bible Complete" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_biblecomplete" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_biblecomplete" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2cb35779-295f-44e7-8265-31f44cd0ed64}" locklevel="0">
+                        <labels>
+                          <label description="Bible Last Updated" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_biblelastupdated" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_biblelastupdated" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{280b7fc7-3fc5-46da-b489-82b7739ca44a}" locklevel="0" auto="true">
+                        <labels>
+                          <label description="Ancillary Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_ancillarynotes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_ancillarynotes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0268cee8-61f8-41d3-a95e-c0321e2bb69f}" locklevel="0" rowspan="8" auto="true">
+                        <labels>
+                          <label description="Additional Notes (Formats)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_additionalnotesformats" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_additionalnotesformats" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section id="{f6790e08-af86-4a17-a31d-7c67a5a978a8}" name="tab_2_column_3_section_1" columns="11" showlabel="false" showbar="false" IsUserDefined="0">
+                  <labels>
+                    <label description="section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3e6fd783-3dbe-43ac-a7d1-248fe39abe9f}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{982afe52-028f-43e5-b101-23af8d3f4fdb}" showlabel="false">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_3" id="216c7466-d2f6-4be4-b4da-028cfab55c53" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Awards" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_3_section_1" id="b56e8dce-27a4-43f0-988f-aa30b1e689f9" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{bc0d78a6-3fa1-4785-86d0-d299c86c3a5c}" rowspan="4" colspan="1" auto="false">
+                        <labels>
+                          <label description="Nominations" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_2" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>a3i_nominations</TargetEntityType>
+                            <ViewId>{ED00C9AC-D7DA-ED11-A7C6-002248C6BDFE}</ViewId>
+                            <RelationshipName>a3i_a3i_nominations_IP_a3i_ip</RelationshipName>
+                            <ViewIds>{6C23E6C5-CACF-ED11-A7C6-002248C6B831},{FCDC8E04-65FE-430E-AA4C-653597B1A32E},{5FAEE0E2-C9CF-ED11-A7C6-002248C6BD64},{ED00C9AC-D7DA-ED11-A7C6-002248C6BDFE}</ViewIds>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{88ff1a47-e77f-4081-bd6a-7feafdb0ea70}" rowspan="4" colspan="1" auto="false">
+                        <labels>
+                          <label description="Wins" languagecode="1033" />
+                        </labels>
+                        <control indicationOfSubgrid="true" id="Subgrid_new_3" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <ChartGridMode>All</ChartGridMode>
+                            <TargetEntityType>a3i_nominations</TargetEntityType>
+                            <ViewId>{770AFFEB-D7DA-ED11-A7C6-002248C6BD7B}</ViewId>
+                            <ViewIds>{FCDC8E04-65FE-430E-AA4C-653597B1A32E},{5FAEE0E2-C9CF-ED11-A7C6-002248C6BD64},{770AFFEB-D7DA-ED11-A7C6-002248C6BD7B}</ViewIds>
+                            <RelationshipName>a3i_a3i_nominations_IP_a3i_ip</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{a64b0c6a-27cb-41c1-acc4-8a48a5c354d3}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{321352cc-858c-4195-b5cd-d3ad68b475de}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{a1eb2313-d203-4b0f-a79d-144738ec675b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1569254c-d94d-4c95-a689-d33c43930444}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{df3543f9-61fe-4de1-a7a1-05b88fd15b0e}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{be10fe3f-89c3-405f-9d1c-9afc76475c1f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{ed3c21ed-bd46-4590-9314-79d2cc18efed}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d993b001-0341-4bc3-93b0-36c40cad8d17}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions>
+        <controlDescription forControl="{5db4ddd1-c2c7-9a2b-ebe7-bdd3bd9db47b}">
+          <customControl id="{67FAC785-CD58-4f9f-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_activeformat</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_activeformat</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_activeformat</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="mctools_MscrmTools.CustomSwitch">
+            <parameters>
+              <booleanAttribute>a3i_activeformat</booleanAttribute>
+              <layout static="true" type="Enum">Round</layout>
+              <displayLabel static="true" type="Enum">True</displayLabel>
+            </parameters>
+          </customControl>
+          <customControl name="MscrmControls.FieldControls.ToggleControl" formFactor="-1">
+            <parameters>
+              <value>a3i_activeformat</value>
+            </parameters>
+          </customControl>
+          <customControl name="MsdynmktControls.FieldControls.FlipSwitchControl" formFactor="-2">
+            <parameters>
+              <value>a3i_activeformat</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

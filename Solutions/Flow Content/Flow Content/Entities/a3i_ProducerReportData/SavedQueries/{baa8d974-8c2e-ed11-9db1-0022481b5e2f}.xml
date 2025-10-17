@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{baa8d974-8c2e-ed11-9db1-0022481b5e2f}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_producerreportdataid">
+          <cell name="a3i_name" width="300" />
+          <cell name="a3i_territory" width="300" />
+          <cell name="a_2e115abf7dea4c589d21e77ba1f715f7.a3i_producer" width="100" />
+          <cell name="a_2e115abf7dea4c589d21e77ba1f715f7.a3i_commissioningbroadcaster" width="100" />
+          <cell name="a3i_comment" width="300" />
+          <cell name="a_04d798ac1db245d39d050b8fc108bbf7.a3i_contenttype" width="100" />
+          <cell name="createdon" width="155" />
+          <cell name="modifiedon" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_producerreportdata">
+          <attribute name="a3i_producerreportdataid" />
+          <attribute name="a3i_territory" />
+          <attribute name="a3i_comment" />
+          <attribute name="createdon" />
+          <attribute name="a3i_name" />
+          <filter type="and">
+            <condition attribute="ownerid" operator="eq-userid" />
+          </filter>
+          <link-entity alias="a_2e115abf7dea4c589d21e77ba1f715f7" name="a3i_producerreporttitleslate" to="a3i_producerreporttitleslate" from="a3i_producerreporttitleslateid" link-type="inner">
+            <attribute name="a3i_commissioningbroadcaster" />
+            <attribute name="a3i_producer" />
+            <link-entity name="a3i_year" alias="aa" link-type="inner" from="a3i_yearid" to="a3i_year">
+              <filter type="and">
+                <condition attribute="a3i_currentproducerreportingyear" operator="eq" value="1" />
+              </filter>
+            </link-entity>
+          </link-entity>
+          <link-entity alias="a_04d798ac1db245d39d050b8fc108bbf7" name="a3i_programme" to="a3i_programme" from="a3i_programmeid" link-type="outer" visible="false">
+            <attribute name="a3i_contenttype" />
+          </link-entity>
+          <attribute name="modifiedon" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.104</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="My Producer Reports - This Year" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{b8fe0a69-eacd-eb11-bacc-00224800f6c4}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_websiteactivity" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_websiteactivityid">
+          <cell name="a3i_websiteactivity" width="300" />
+          <cell name="a3i_contact" width="100" />
+          <cell name="a_d82e23762627424e9bfa46c33c8b1e8a.parentcustomerid" width="148" />
+          <cell name="a3i_programme" width="220" />
+          <cell name="a3i_series" width="202" />
+          <cell name="a3i_viewtype" width="100" />
+          <cell name="a3i_video" width="100" />
+          <cell name="a3i_timewatched" width="120" />
+          <cell name="a3i_date" width="100" />
+          <cell name="a_7c51f2a8c7dd4816bde3377225d7a9e7.a3i_contenttype" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+        <entity name="a3i_websiteactivity">
+          <attribute name="a3i_websiteactivity" />
+          <attribute name="a3i_contact" />
+          <attribute name="a3i_date" />
+          <attribute name="a3i_programme" />
+          <attribute name="a3i_series" />
+          <attribute name="a3i_video" />
+          <attribute name="a3i_viewtype" />
+          <order attribute="a3i_date" descending="true" />
+          <filter type="and">
+            <condition attribute="a3i_date" operator="last-seven-days" />
+          </filter>
+          <link-entity name="contact" from="contactid" to="a3i_contact" alias="a_d82e23762627424e9bfa46c33c8b1e8a">
+            <attribute name="parentcustomerid" />
+            <filter type="and">
+              <condition attribute="ownerid" operator="eq-userid" />
+            </filter>
+          </link-entity>
+          <link-entity name="a3i_programme" from="a3i_programmeid" to="a3i_programme" visible="false" link-type="outer" alias="a_7c51f2a8c7dd4816bde3377225d7a9e7">
+            <attribute name="a3i_contenttype" />
+          </link-entity>
+          <attribute name="a3i_websiteactivityid" />
+          <attribute name="a3i_timewatched" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.66</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="My Contacts Website Activities last 7 days" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{e58d71ad-83e3-4f1b-b8e4-89c7ed6bc7cc}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab id="{4f2582d3-19d7-49dd-8e74-9bc8b2e61abe}" verticallayout="true" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="{343f9ec3-cdad-444e-8515-2b3bdff9f15d}" IsUserDefined="0" showlabel="false" showbar="false" name="General">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{af8e6fa2-8e32-4f54-8267-3d74b0473a5b}">
+                        <labels>
+                          <label description="Country Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_countryname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_countryname" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{573d858a-d093-4a63-915b-156c227801da}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Country Code" languagecode="1033" />
+                        </labels>
+                        <control disabled="false" id="a3i_countrycode" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_countrycode" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4dcfbd32-9db8-4f6b-8139-5f58f33d0309}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Type" languagecode="1033" />
+                        </labels>
+                        <control disabled="false" id="a3i_type" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="a3i_type" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0d6dc53d-2863-714b-8295-c9ac410e440a}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Region" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_regionid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_regionid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d85b43d5-fae7-49ae-a402-72c161f921f6}" locklevel="0">
+                        <labels>
+                          <label description="Rawnet Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_rawnetname" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_rawnetname" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section id="8f65969e-d5ce-4111-a390-7027a687a786" name="Languages" IsUserDefined="0" columns="1" showlabel="true" showbar="false" locklevel="0" layout="varwidth" celllabelposition="Left" labelwidth="115" celllabelalignment="Left">
+                  <labels>
+                    <label description="Languages" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{856b9b8b-b2b7-36b3-a533-a7d5bbc27b41}" showlabel="false" colspan="1" rowspan="6" auto="false">
+                        <labels>
+                          <label description="Languages" languagecode="1033" />
+                        </labels>
+                        <control id="Languages" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                          <parameters>
+                            <ViewId>{8B9886E9-D14A-4A7D-A89B-F9B113864FFF}</ViewId>
+                            <IsUserView>false</IsUserView>
+                            <RelationshipName>a3i_Language_a3i_Country_a3i_Country</RelationshipName>
+                            <TargetEntityType>a3i_language</TargetEntityType>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <ViewIds>{8B9886E9-D14A-4A7D-A89B-F9B113864FFF}</ViewIds>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>All</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+                <section name="Countries" id="34847d6d-e44a-482e-8f6b-e086a5113ef1" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Countries" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{27269dd2-5a27-4c65-a7f5-83d59a7a0392}" rowspan="1" colspan="1" auto="false" showlabel="false">
+                        <labels>
+                          <label description="Countries" languagecode="1033" />
+                        </labels>
+                        <control id="Countries" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                          <parameters>
+                            <TargetEntityType>a3i_country</TargetEntityType>
+                            <ViewId>{D7E82B14-4B89-EA11-A811-000D3A86A85D}</ViewId>
+                            <ViewIds>{D7E82B14-4B89-EA11-A811-000D3A86A85D}</ViewIds>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <RelationshipName>a3i_region_country</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{89eb4a92-a5c1-47e0-9c1e-609eccc52109}" columns="111" celllabelposition="Top" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{ef0a7ffb-0a9b-4676-9e27-ba501e41bd3d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{df010dfb-3055-4b8b-ab45-77a7427aef8b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{4a8ee8d7-5f54-4b82-be41-05f8d8550b9d}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{91c09c69-9e27-458b-9032-f250e15c84cc}" columns="111" celllabelposition="Top" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{ad8aacbc-40a2-413f-8659-7008d8cabc5b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9de457d8-58ee-49cf-8269-49a25fc3e1b1}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b1aeffbf-0c80-4258-b834-251f9ab75059}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title Text="Common" LCID="1033" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title Text="Sales" LCID="1033" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title Text="Service" LCID="1033" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title Text="Marketing" LCID="1033" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title Text="Process Sessions" LCID="1033" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions />
+      <DisplayConditions FallbackForm="true" Order="0" />
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

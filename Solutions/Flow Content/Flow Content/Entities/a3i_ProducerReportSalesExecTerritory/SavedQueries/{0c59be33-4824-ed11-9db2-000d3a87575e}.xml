@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{0c59be33-4824-ed11-9db2-000d3a87575e}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_producerreportsalesexecterritoryid">
+          <cell name="a3i_producerreportterritory" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_producerreportsalesexecterritory">
+          <attribute name="a3i_producerreportsalesexecterritoryid" />
+          <filter type="and">
+            <condition attribute="a3i_salesexec" operator="eq-userid" />
+          </filter>
+          <attribute name="a3i_producerreportterritory" />
+          <order attribute="a3i_producerreportterritory" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.104</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="My Producer Report Sales Exec Territory" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

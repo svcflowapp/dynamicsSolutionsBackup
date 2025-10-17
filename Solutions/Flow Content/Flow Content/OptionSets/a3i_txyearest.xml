@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_txyearest" localizedName="TX Year (Est)" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.20</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="TX Year (Est)" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" IsHidden="0">
+      <labels>
+        <label description="2020" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="2021" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" IsHidden="0">
+      <labels>
+        <label description="2022" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830003" IsHidden="0">
+      <labels>
+        <label description="2023" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830004" IsHidden="0">
+      <labels>
+        <label description="2024" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830005" IsHidden="0">
+      <labels>
+        <label description="2025" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830006" IsHidden="0">
+      <labels>
+        <label description="2026" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" IsHidden="0">
+      <labels>
+        <label description="2027" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" IsHidden="0">
+      <labels>
+        <label description="2028" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830009" IsHidden="0">
+      <labels>
+        <label description="2029" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" IsHidden="0">
+      <labels>
+        <label description="2030" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830011" IsHidden="0">
+      <labels>
+        <label description="2031" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830012" IsHidden="0">
+      <labels>
+        <label description="2032" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830013" IsHidden="0">
+      <labels>
+        <label description="2033" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830014" IsHidden="0">
+      <labels>
+        <label description="2034" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830015" IsHidden="0">
+      <labels>
+        <label description="2035" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

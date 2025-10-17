@@ -1,0 +1,384 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_da0aa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "invoker",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedoffice365_48fa5"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      },
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_32b14"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "6e9346be-0efb-4946-92fb-0b2130f92a40"
+          },
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "number": {
+                  "title": "Batch",
+                  "type": "number",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter a number",
+                  "x-ms-content-hint": "NUMBER"
+                }
+              },
+              "required": [
+                "number"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Loop_Options": {
+          "foreach": "@outputs('List_Options')?['body/value']",
+          "actions": {
+            "Get_Option": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "6da2847f-d7bf-41a4-8590-f50b73275c92"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "GetItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_optionses",
+                  "recordId": "@items('Loop_Options')?['a3i_optionsid']"
+                },
+                "authentication": {
+                  "type": "Raw",
+                  "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                }
+              }
+            },
+            "Split_Territories": {
+              "runAfter": {
+                "Get_Option": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "84715894-dfb6-466f-8ddd-6825157e41e3"
+              },
+              "type": "Compose",
+              "inputs": "@split(outputs('Get_Option')?['body/a3i_territories'],';')"
+            },
+            "Loop_Countries": {
+              "foreach": "@outputs('Split_Territories')",
+              "actions": {
+                "Individual_Territory": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "16eb09b6-725d-4c62-9851-2155de68046c"
+                  },
+                  "type": "Compose",
+                  "inputs": "@items('Loop_Countries')"
+                },
+                "Get_Countries": {
+                  "runAfter": {
+                    "Trim_White_Space": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "238bfa48-a9a6-441d-934e-1251ff9252d0"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_countries",
+                      "$filter": "a3i_countryname eq '@{outputs('Trim_White_Space')}'"
+                    },
+                    "authentication": {
+                      "type": "Raw",
+                      "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                    }
+                  }
+                },
+                "Check_if_Country_Exists": {
+                  "actions": {
+                    "Get_Country_ID": {
+                      "foreach": "@outputs('Get_Countries')?['body/value']",
+                      "actions": {
+                        "Create_Relationship": {
+                          "runAfter": {
+                            "Get_Country": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "ebc415a2-c5ce-4682-81c6-aad87723362e"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_commondataserviceforapps",
+                              "operationId": "AssociateEntities",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                            },
+                            "parameters": {
+                              "entityName": "a3i_optionses",
+                              "recordId": "@items('Loop_Options')?['a3i_optionsid']",
+                              "associationEntityRelationship": "a3i_Options_a3i_Country_a3i_Country",
+                              "item/@odata.id": "@outputs('Get_Country')?['body/@odata.id']"
+                            },
+                            "authentication": {
+                              "type": "Raw",
+                              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                            }
+                          }
+                        },
+                        "Get_Country": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "30988b7d-3485-4b66-a8cc-a9cc8e2ad64d"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_commondataserviceforapps",
+                              "operationId": "GetItem",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                            },
+                            "parameters": {
+                              "entityName": "a3i_countries",
+                              "recordId": "@items('Get_Country_ID')?['a3i_countryid']"
+                            },
+                            "authentication": {
+                              "type": "Raw",
+                              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                            }
+                          }
+                        }
+                      },
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "ae6f5f35-cd11-437b-89bb-648bc0f7c5df"
+                      },
+                      "type": "Foreach"
+                    }
+                  },
+                  "runAfter": {
+                    "Get_Countries": [
+                      "Succeeded"
+                    ]
+                  },
+                  "else": {
+                    "actions": {
+                      "Append_Failure": {
+                        "runAfter": {},
+                        "metadata": {
+                          "operationMetadataId": "7a272d89-86d2-4a58-80ba-65205d688c39"
+                        },
+                        "type": "AppendToStringVariable",
+                        "inputs": {
+                          "name": "Failures",
+                          "value": "@{outputs('Individual_Territory')}, "
+                        }
+                      }
+                    }
+                  },
+                  "expression": {
+                    "greater": [
+                      "@length(body('Get_Countries')?['value'])",
+                      0
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "57db1e38-5c21-4ea0-a487-c4ee7e934c16"
+                  },
+                  "type": "If"
+                },
+                "Trim_White_Space": {
+                  "runAfter": {
+                    "Individual_Territory": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "9b37839e-b6fb-4eb9-82ab-e8d2f8535b14"
+                  },
+                  "type": "Compose",
+                  "inputs": "@trim(outputs('Individual_Territory'))"
+                }
+              },
+              "runAfter": {
+                "Split_Territories": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e3b26dff-16e8-4f82-bcb8-724e538165d0"
+              },
+              "type": "Foreach"
+            },
+            "Check_for_Failures": {
+              "actions": {},
+              "runAfter": {
+                "Loop_Countries": [
+                  "Succeeded"
+                ]
+              },
+              "else": {
+                "actions": {
+                  "Send_Failure_Email": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "a15a15be-504e-4738-b5f9-9949a948efbf"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_office365",
+                        "operationId": "SendEmailV2",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                      },
+                      "parameters": {
+                        "emailMessage/To": "matt.wild@all3media.com",
+                        "emailMessage/Subject": "Failed to set Territories for Option @{outputs('Get_Option')?['body/a3i_name']} ",
+                        "emailMessage/Body": "<p>@{variables('Failures')}</p>"
+                      },
+                      "authentication": {
+                        "type": "Raw",
+                        "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+                      }
+                    }
+                  },
+                  "Reset_Failures": {
+                    "runAfter": {
+                      "Send_Failure_Email": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "0181f770-080d-4712-a49e-ccd153514034"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "Failures",
+                      "value": "Missing Countries - "
+                    }
+                  }
+                }
+              },
+              "expression": {
+                "equals": [
+                  "@variables('Failures')",
+                  "Missing Countries - "
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "23178b1a-19f0-4a81-aa37-5d9a6366ea7b"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "Failures": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "af0a8b51-9586-473d-97b8-554c05ede7ba"
+          },
+          "type": "Foreach"
+        },
+        "List_Options": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "81fcb53e-ba80-40e8-810f-9c65ac5105d7"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_1",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_optionses",
+              "$filter": "a3i_territories ne null",
+              "$orderby": "a3i_name",
+              "$top": "@triggerBody()['number']"
+            },
+            "authentication": {
+              "type": "Raw",
+              "value": "@json(decodeBase64(triggerOutputs().headers['X-MS-APIM-Tokens']))['$ConnectionKey']"
+            }
+          }
+        },
+        "Failures": {
+          "runAfter": {
+            "List_Options": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "999cc27e-ad55-43f6-a7e5-316731980592"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Failures",
+                "type": "string",
+                "value": "Missing Countries - "
+              }
+            ]
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

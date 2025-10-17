@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{af63d9eb-b787-ea11-a811-000d3a86a85d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_programmename" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_programmeid">
+          <cell name="a3i_programmename" width="200" />
+          <cell name="a3i_rightstrackerid" width="100" />
+          <cell name="a3i_ip" width="100" />
+          <cell name="a_c26c2fcfb489457bb26e3e44be8dd330.a3i_rightstrackerid" width="100" />
+          <cell name="a_c26c2fcfb489457bb26e3e44be8dd330.a3i_ipname" width="100" />
+          <cell name="a_c26c2fcfb489457bb26e3e44be8dd330.a3i_optionpacklastupdated" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="a3i_programme">
+          <attribute name="a3i_programmename" />
+          <attribute name="a3i_ip" />
+          <attribute name="a3i_rightstrackerid" />
+          <link-entity alias="a_c26c2fcfb489457bb26e3e44be8dd330" name="a3i_ip" to="a3i_ip" from="a3i_ipid" link-type="outer" visible="false">
+            <attribute name="a3i_rightstrackerid" />
+            <attribute name="a3i_ipname" />
+            <attribute name="a3i_optionpacklastupdated" />
+          </link-entity>
+          <attribute name="a3i_programmeid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Data Import" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

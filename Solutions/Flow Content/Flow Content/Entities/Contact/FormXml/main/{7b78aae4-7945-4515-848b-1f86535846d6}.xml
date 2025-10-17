@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{7b78aae4-7945-4515-848b-1f86535846d6}</formid>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form showImage="true" headerdensity="HighWithControls" solutionaction="Modified">
+      <tabs>
+        <tab name="insights" id="{9b554311-af6c-4d07-90be-4b5ab97f1d32}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" ordinalvalue="0">
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="insights_section" showlabel="false" showbar="false" locklevel="0" id="{0b9bcf0f-36ac-453c-abd4-af9ca653f4c7}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelalignment="Left" celllabelposition="Left" ordinalvalue="1" solutionaction="Modified">
+                  <rows>
+                    <row>
+                      <cell id="{1c467cd3-6728-4332-a682-7ed85a135db0}" showlabel="false" locklevel="0" ordinalvalue="10000">
+                        <labels>
+                          <label description="Insights" languagecode="1033" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="insights_section_3" id="6da6c7f0-9d69-4acd-ad3a-f962883eec58" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115" ordinalvalue="0" solutionaction="Added">
+                  <labels>
+                    <label description="Marketing information" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f58a21b2-efce-4ba9-ba6c-feedb8e8811b}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10000">
+                        <labels>
+                          <label description="Email" languagecode="1033" />
+                        </labels>
+                        <control id="emailaddress1" classid="{ADA2203E-B4CD-49BE-9DDF-234642B43B52}" datafieldname="emailaddress1" disabled="false" />
+                      </cell>
+                      <cell id="{3527ab47-cead-4d5f-b35b-c81bb342f620}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20001">
+                        <labels>
+                          <label description="Event Opt In" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_eventoptinchoice" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_eventoptinchoice" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{180f3c89-7d44-4d0a-9a9a-d7c70fce8237}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10002">
+                        <labels>
+                          <label description="Marketing Opt In" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_marketingoptin" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_marketingoptin" disabled="false" />
+                      </cell>
+                      <cell id="{2328f136-ac91-41a8-9b3e-97d03261c599}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20003">
+                        <labels>
+                          <label description="Event Priority" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_eventpriority" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_eventpriority" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{83f711a0-17ac-4d05-933c-5599f26a06bc}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10004">
+                        <labels>
+                          <label description="Do not allow Bulk Emails" languagecode="1033" />
+                        </labels>
+                        <control id="donotbulkemail" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="donotbulkemail" disabled="false" />
+                      </cell>
+                      <cell id="{e3008bc5-fc01-49ad-9297-5308c967cec8}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20005">
+                        <labels>
+                          <label description="Dietary requirements" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dietaryrequirements" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_dietaryrequirements" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{986648d8-db80-4469-beef-d27c25a1fc5b}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10006">
+                        <labels>
+                          <label description="Do not allow Emails" languagecode="1033" />
+                        </labels>
+                        <control id="donotemail" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="donotemail" disabled="false" />
+                      </cell>
+                      <cell id="{eec56db8-f97b-4767-a605-fb5f1cfd2364}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="20007">
+                        <labels>
+                          <label description="Dietary requirements (other)" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dietaryrequirementsother" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_dietaryrequirementsother" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4be740d9-7367-4fdc-9b9a-88d596ca5a16}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10008">
+                        <labels>
+                          <label description="Unsubscribed" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_unsubscribed" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="crf68_unsubscribed" disabled="true" />
+                      </cell>
+                      <cell locklevel="0" id="{5c45a405-bde9-44a9-bf44-0587471f358f}" ordinalvalue="20009">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a4bd22c4-422b-41dd-8514-a1bede50e45e}" locklevel="1" colspan="1" rowspan="1" ordinalvalue="10010">
+                        <labels>
+                          <label description="Hard bounced" languagecode="1033" />
+                        </labels>
+                        <control id="crf68_hardbounced" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="crf68_hardbounced" disabled="true" />
+                      </cell>
+                      <cell locklevel="0" id="{19385536-613d-47b2-aad4-49901e2a1c8b}" ordinalvalue="20011">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cc696bdd-f7ac-423b-954d-0860925ab310}" locklevel="0" colspan="1" rowspan="1" ordinalvalue="10012">
+                        <labels>
+                          <label description="Purchasing Preferences" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_purchasingpreferences" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_purchasingpreferences" disabled="false" />
+                      </cell>
+                      <cell id="{d71331d0-28e3-492c-a3c1-39721a6bb6e5}" ordinalvalue="20013">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="OptimalEmailSendingTime" verticallayout="true" id="{193c754b-190d-4d21-ac79-b2f2b9b3a684}" IsUserDefined="0" locklevel="0" visible="false" expanded="true" showlabel="true" ordinalvalue="6">
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="OptimalEmailSendingTime_Prediction" showlabel="false" showbar="false" id="{fa881e9d-1a04-488c-826b-d845dd73be36}" visible="false" IsUserDefined="0" columns="1" locklevel="0" labelwidth="115" celllabelposition="Left" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{444ed435-90a4-44d0-a877-2a0b5d8de882}" showlabel="false" locklevel="0" ordinalvalue="10000">
+                        <labels>
+                          <label description="Insights" languagecode="1033" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="OptimalEmailSendingTime_TimeToReact" showlabel="false" showbar="false" id="{5693ad37-350f-4f0e-b03a-4212e78c9b6e}" visible="false" IsUserDefined="0" columns="1" locklevel="0" labelwidth="115" celllabelposition="Left" ordinalvalue="1">
+                  <rows>
+                    <row>
+                      <cell id="{ece03e6a-a42b-4484-986e-51e008ac9a6a}" showlabel="false" locklevel="0" ordinalvalue="10000">
+                        <labels>
+                          <label description="Insights" languagecode="1033" solutionaction="Added" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <controlDescriptions>
+        <controlDescription forControl="{a9a79a64-9d67-98bb-b753-6539823ad967}" solutionaction="Removed" />
+      </controlDescriptions>
+      <header id="{9796c189-4098-4943-b48e-466ce2c588e6}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left" solutionaction="Added">
+        <rows></rows>
+      </header>
+      <footer id="{e82817de-1f7f-4fc8-a941-132229029a39}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left" solutionaction="Added">
+        <rows></rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true" solutionaction="Added">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Insights" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

@@ -1,0 +1,7 @@
+function editCountries(executionContext) {
+
+	var formContext = executionContext.getFormContext();
+	formContext.ui.tabs.get("EditCountries").setVisible(true);
+	formContext.ui.tabs.get("EditCountries").setFocus();
+
+}

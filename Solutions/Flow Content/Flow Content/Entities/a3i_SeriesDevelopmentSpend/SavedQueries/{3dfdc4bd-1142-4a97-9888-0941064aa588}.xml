@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{3dfdc4bd-1142-4a97-9888-0941064aa588}</savedqueryid>
+    <layoutxml>
+      <grid name="a3i_seriesdevelopmentspends" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="a3i_seriesdevelopmentspend" id="a3i_seriesdevelopmentspendid">
+          <cell name="a3i_name" width="260" />
+          <cell name="a3i_amount" width="82" />
+          <cell name="a3i_devspendsource" width="148" />
+          <cell name="a3i_dateagreed" width="131" />
+          <cell name="a3i_developmentspendtype" width="183" />
+          <cell name="a3i_producerdevelopmentfund" width="237" />
+          <cell name="a3i_comment" width="296" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_seriesdevelopmentspend">
+          <attribute name="a3i_seriesdevelopmentspendid" />
+          <attribute name="a3i_name" />
+          <attribute name="createdon" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="a3i_amount" />
+          <attribute name="a3i_producerdevelopmentfund" />
+          <attribute name="a3i_dateagreed" />
+          <attribute name="a3i_comment" />
+          <attribute name="a3i_developmentspendtype" />
+          <attribute name="a3i_devspendsource" />
+          <order attribute="createdon" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Series Development Spend Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

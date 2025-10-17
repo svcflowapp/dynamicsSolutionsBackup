@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{9a85cb19-358a-ef11-8a69-6045bd0d285d}</formid>
+    <IntroducedVersion>1.0.0.149</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{1c063e1c-6349-4ded-9d4c-a58863c2ce85}">
+          <labels>
+            <label description="New Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_1_section_3" id="2e9ff44a-a147-49e7-b176-1d53b8b02cbb" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="8" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+        <Role Id="{2f2aa287-a60a-46bc-bb38-0ff9625bbb9c}" />
+        <Role Id="{fc50ebcc-7a92-4f6a-9dbc-38de490fbbab}" />
+        <Role Id="{1185c0f1-ab5d-4e91-b9ad-514d85cd8846}" />
+        <Role Id="{7f12f058-ed0f-41cb-9dee-54bdc3f4300c}" />
+        <Role Id="{9e9d3b8a-05bd-45a0-aae4-98694a73847b}" />
+        <Role Id="{6601883e-6a4d-415e-ae48-a6bc9cb19ed9}" />
+        <Role Id="{0c456bff-223b-4a18-b0a1-ed0893e3cfa1}" />
+        <Role Id="{6a414a4a-a70a-4997-8e4b-fd37ba8d1eba}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="IP Class" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="IP Class" languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

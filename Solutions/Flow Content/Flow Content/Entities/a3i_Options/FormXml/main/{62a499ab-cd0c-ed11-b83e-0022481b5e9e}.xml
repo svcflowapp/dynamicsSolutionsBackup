@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{62a499ab-cd0c-ed11-b83e-0022481b5e9e}</formid>
+    <IntroducedVersion>1.0.0.99</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab name="tab_2" id="c01ff9e5-343b-4b4f-ba9f-c051db04adfa" IsUserDefined="0" locklevel="0" showlabel="true" labelid="{b6aa16c4-ccf2-4455-805d-00e3aae23d3e}">
+          <labels>
+            <label description="Summary" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section name="tab_2_section_1" id="e126bcd9-ab46-4c4e-8e7b-01073bbb52b6" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{0c30a0ed-7e26-4230-a35f-8c499cb1848e}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0e84aab0-5466-4267-9be1-6e13d17e8646}" colspan="1" rowspan="1" labelid="{218ea6f0-7bf0-4122-83b5-217c224f1a89}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6dde8df6-3ff3-4053-8406-9bccc733f59a}" locklevel="0" colspan="1" rowspan="1" labelid="{95fd84f7-51c2-4c01-b2f3-bc2bdb4fffdb}">
+                        <labels>
+                          <label description="Series" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_series" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_series" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                            <DefaultViewId>{95889AEF-C601-EC11-94EF-0022481B4E29}</DefaultViewId>
+                            <AvailableViewIds>{4F11E4D3-0FE6-4345-AB4A-4889B0D2A36E},{0655C49D-0A88-EA11-A811-000D3A86A78C},{D7ECADC7-771C-4B4A-850A-CFF57EA4A851},{8CBF30FD-DAAB-EA11-A812-000D3A86A85D},{95889AEF-C601-EC11-94EF-0022481B4E29},{2BDFD787-DBFC-EA11-A813-000D3A86A85D},{BCF2E8A3-0DD0-EB11-BACC-00224800FD96},{C3F2A06A-EECD-EB11-BACC-00224800F6C4},{B1C1ED68-0C88-EA11-A811-000D3A86A78C},{ADE80210-4A35-EB11-A813-000D3A86A78C},{B30CA411-5835-EB11-A813-000D3A86A78C},{D6661D51-0888-EA11-A811-000D3A86A85D},{1A10476C-5A35-EB11-A813-000D3A86A78C},{256CE9FB-9388-EA11-A811-000D3A86A85D},{495F5012-4E01-4D3F-9498-7BBDD0C54B75}</AvailableViewIds>
+                            <DisableViewPicker>true</DisableViewPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f2a1e387-5b98-4bc4-b610-e3014ec5183f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Programme" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_programme" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_programme" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{b0d18052-be38-436d-9dca-3fef7c69eb53}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1739547601849" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1739547601849" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="a3i_programme">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="a3i_programme"&gt;85fad12e-0316-ec11-b6e6-0022481a48c6&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{25a0fd97-0e47-4dcc-8bf8-0f5315f6869d}" locklevel="0" labelid="{973240e7-bea4-452f-8ae4-0fc9909636ce}">
+                        <labels>
+                          <label description="Language" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_language" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_language" disabled="false">
+                          <parameters>
+                            <DisableMru>true</DisableMru>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cbfc7e29-51f4-4af1-9485-c42ec0456022}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Deal Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_dealname" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_dealname" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{3b07151f-67ce-46a8-8ed9-7f6a62c3c579}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1740133973544" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1740133973544" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="a3i_dealname">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="opportunity"&gt;5279c3ee-5fe5-ef11-9341-002248c6bb7e&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7b664ae7-da26-4510-8314-2b286d45c780}" locklevel="0" labelid="{cc92d5ce-67f9-45b1-acbb-ea320bb33349}">
+                        <labels>
+                          <label description="End Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_enddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_enddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{98f547d5-fd0d-41b6-b666-3c0a378a43d1}" visible="false" labelid="{dedd5464-cfaf-4821-9a7e-bef041044c08}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="tab_2_section_4" id="fcbd83ae-02b8-47c5-94dc-dedca74600c6" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{fac4b4a2-2d8d-4db5-ade9-6ca04f518887}">
+                  <labels>
+                    <label description="Troubleshooting" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{858ec13a-75ac-4cff-b1d0-d037d5236de0}" locklevel="0" colspan="1" rowspan="1" labelid="{80e6baa7-4c54-4003-8835-21e2e826a052}">
+                        <labels>
+                          <label description="Edit Option Countries" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_editoptioncountries" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_editoptioncountries" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="EditCountries" id="{56341c0b-5372-d953-cdc8-d438a8ae2a7a}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" visible="false" labelid="{0e029714-394f-429a-9b0a-0e3503e188fe}">
+          <labels>
+            <label description="Countries" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_3_section_1" id="cd5c9e33-a596-4725-a9af-1499d9f633aa" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{bbe0def4-29ff-456d-8de2-7b01dfff7ab4}">
+                  <labels>
+                    <label description="Countries" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{8d32d54d-c3d2-4e52-b279-fff9ffbeebe4}" rowspan="7" colspan="1" auto="false" showlabel="true" labelid="{10f7395e-2ebf-4ce1-a693-d0e48b663f31}">
+                        <labels>
+                          <label description="Option Countries" languagecode="1033" />
+                        </labels>
+                        <control id="OptionCountries" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" indicationOfSubgrid="true" uniqueid="{da3abb8c-c752-dc9e-3123-ada1dd741721}">
+                          <parameters>
+                            <TargetEntityType>a3i_country</TargetEntityType>
+                            <ViewId>{D7E82B14-4B89-EA11-A811-000D3A86A85D}</ViewId>
+                            <ViewIds>{D7E82B14-4B89-EA11-A811-000D3A86A85D},{DEDEF0D7-DDFC-EA11-A813-000D3A86A85D}</ViewIds>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <RelationshipName>a3i_Options_a3i_Country_a3i_Country</RelationshipName>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <HeaderColorCode>#F5FBFD</HeaderColorCode>
+                            <IsUserView>false</IsUserView>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <ChartGridMode>All</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <RelationshipRoleOrdinal>2</RelationshipRoleOrdinal>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{c8533a2a-0c63-4325-87dc-34733d1eb450}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{e99b0b67-4724-4ee8-9749-3b69c7b9c055}" showlabel="false" labelid="{ba45f26e-9172-416b-b4f9-3bf29352c818}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{a257c830-f961-4d7c-b58b-b6afac5eb19c}" showlabel="false" labelid="{557eccc2-2e0c-4edc-9e0a-a6532073f6ce}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c60e4d07-9c63-4338-80d9-3217a685b7b2}" showlabel="false" labelid="{26dc1732-6117-4948-9615-2cc57148c756}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{7b839ad8-783d-43d3-8344-473de3b0eb10}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{5a98c7bf-7e52-408d-ae25-e05704f23e73}" showlabel="false" labelid="{fef9b224-39f1-4b3c-877d-eab31ae0674a}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{ff789d2b-a7f7-4cd1-84a3-e35d8a547cce}" showlabel="false" labelid="{3f7c1525-5378-42af-b351-4ee76044b531}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{038c02c7-3d20-4403-9c50-e6b5b87db1e2}" showlabel="false" labelid="{cc39bd5a-aee7-40cb-8b82-04efd35adbbf}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions>
+        <controlDescription forControl="{da3abb8c-c752-dc9e-3123-ada1dd741721}">
+          <customControl id="{E7A81278-8635-4D9E-8D4D-59480B391C5B}">
+            <parameters />
+          </customControl>
+          <customControl formFactor="0" name="ita_ItAintBoring.PCFControls.TreeRelationships">
+            <parameters>
+              <data-set name="tableGrid">
+                <ViewId>{D7E82B14-4B89-EA11-A811-000D3A86A85D}</ViewId>
+                <IsUserView>false</IsUserView>
+                <RelationshipName>a3i_Options_a3i_Country_a3i_Country</RelationshipName>
+                <RelationshipRoleOrdinal>2</RelationshipRoleOrdinal>
+                <TargetEntityType>a3i_country</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{D7E82B14-4B89-EA11-A811-000D3A86A85D},{DEDEF0D7-DDFC-EA11-A813-000D3A86A85D}</FilteredViewIds>
+              </data-set>
+              <treeEntityName static="true" type="SingleLine.Text">a3i_country</treeEntityName>
+              <treeEntityAttribute static="true" type="SingleLine.Text">a3i_regionid</treeEntityAttribute>
+              <nameAttribute static="true" type="SingleLine.Text">a3i_countryname</nameAttribute>
+              <idAttribute static="true" type="SingleLine.Text">a3i_countryid</idAttribute>
+              <relationshipName static="true" type="SingleLine.Text">a3i_Options_a3i_Country_a3i_Country</relationshipName>
+              <relationshipEntity static="true" type="SingleLine.Text">a3i_options_a3i_country</relationshipEntity>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="ita_ItAintBoring.PCFControls.TreeRelationships">
+            <parameters>
+              <data-set name="tableGrid">
+                <ViewId>{D7E82B14-4B89-EA11-A811-000D3A86A85D}</ViewId>
+                <IsUserView>false</IsUserView>
+                <RelationshipName>a3i_Options_a3i_Country_a3i_Country</RelationshipName>
+                <RelationshipRoleOrdinal>2</RelationshipRoleOrdinal>
+                <TargetEntityType>a3i_country</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{D7E82B14-4B89-EA11-A811-000D3A86A85D},{DEDEF0D7-DDFC-EA11-A813-000D3A86A85D}</FilteredViewIds>
+              </data-set>
+              <treeEntityName static="true" type="SingleLine.Text">a3i_country</treeEntityName>
+              <treeEntityAttribute static="true" type="SingleLine.Text">a3i_regionid</treeEntityAttribute>
+              <nameAttribute static="true" type="SingleLine.Text">a3i_countryname</nameAttribute>
+              <idAttribute static="true" type="SingleLine.Text">a3i_countryid</idAttribute>
+              <relationshipName static="true" type="SingleLine.Text">a3i_Options_a3i_Country_a3i_Country</relationshipName>
+              <relationshipEntity static="true" type="SingleLine.Text">a3i_options_a3i_country</relationshipEntity>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="ita_ItAintBoring.PCFControls.TreeRelationships">
+            <parameters>
+              <data-set name="tableGrid">
+                <ViewId>{D7E82B14-4B89-EA11-A811-000D3A86A85D}</ViewId>
+                <IsUserView>false</IsUserView>
+                <RelationshipName>a3i_Options_a3i_Country_a3i_Country</RelationshipName>
+                <RelationshipRoleOrdinal>2</RelationshipRoleOrdinal>
+                <TargetEntityType>a3i_country</TargetEntityType>
+                <EnableViewPicker>false</EnableViewPicker>
+                <FilteredViewIds>{D7E82B14-4B89-EA11-A811-000D3A86A85D},{DEDEF0D7-DDFC-EA11-A813-000D3A86A85D}</FilteredViewIds>
+              </data-set>
+              <treeEntityName static="true" type="SingleLine.Text">a3i_country</treeEntityName>
+              <treeEntityAttribute static="true" type="SingleLine.Text">a3i_regionid</treeEntityAttribute>
+              <nameAttribute static="true" type="SingleLine.Text">a3i_countryname</nameAttribute>
+              <idAttribute static="true" type="SingleLine.Text">a3i_countryid</idAttribute>
+              <relationshipName static="true" type="SingleLine.Text">a3i_Options_a3i_Country_a3i_Country</relationshipName>
+              <relationshipEntity static="true" type="SingleLine.Text">a3i_options_a3i_country</relationshipEntity>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+      <formLibraries>
+        <Library name="a3i_purchasingcountriesscript" libraryUniqueId="{0b94c9bc-038e-33e7-a7cb-d186e5162956}" />
+      </formLibraries>
+      <events>
+        <event name="onchange" application="false" active="false" attribute="a3i_editoptioncountries">
+          <Handlers>
+            <Handler functionName="editCountries" libraryName="a3i_purchasingcountriesscript" handlerUniqueId="{8ab00c52-4a64-2e70-5b4d-6ba64d7be443}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{3929A204-2F95-EA11-A812-000D3A86A85D}" />
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Admin" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

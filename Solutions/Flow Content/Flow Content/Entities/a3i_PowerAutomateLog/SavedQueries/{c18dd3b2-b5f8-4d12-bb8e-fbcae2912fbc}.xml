@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{c18dd3b2-b5f8-4d12-bb8e-fbcae2912fbc}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_powerautomatelogid">
+          <cell name="a3i_name" width="300" />
+          <cell name="a3i_cloudflow" width="204" />
+          <cell name="a3i_errordetail" width="246" />
+          <cell name="statuscode" width="119" />
+          <cell name="createdon" width="125" />
+          <cell name="modifiedon" width="100" />
+          <cell name="a3i_runhistory" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_powerautomatelog">
+          <attribute name="a3i_powerautomatelogid" />
+          <attribute name="createdon" />
+          <attribute name="modifiedon" />
+          <attribute name="a3i_runhistory" />
+          <attribute name="statuscode" />
+          <attribute name="a3i_errordetail" />
+          <order attribute="modifiedon" descending="true" />
+          <attribute name="a3i_name" />
+          <attribute name="a3i_cloudflow" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Power Automate Logs" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

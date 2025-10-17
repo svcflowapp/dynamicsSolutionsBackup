@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{8b9886e9-d14a-4a7d-a89b-f9b113864fff}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" preview="1" icon="1" select="1" jump="a3i_languagename">
+        <row id="a3i_languageid" name="result">
+          <cell name="a3i_languagename" width="300" />
+          <cell name="a3i_abbreviation" width="100" />
+          <cell name="a3i_isocode" width="100" />
+          <cell name="a3i_id" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_language">
+          <attribute name="a3i_languageid" />
+          <attribute name="a3i_languagename" />
+          <order descending="false" attribute="a3i_languagename" />
+          <filter type="and">
+            <condition attribute="statecode" value="0" operator="eq" />
+          </filter>
+          <attribute name="a3i_isocode" />
+          <attribute name="a3i_abbreviation" />
+          <attribute name="a3i_id" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.12</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Languages" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

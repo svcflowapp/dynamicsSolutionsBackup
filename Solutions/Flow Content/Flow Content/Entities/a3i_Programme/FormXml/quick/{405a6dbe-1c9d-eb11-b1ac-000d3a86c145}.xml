@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{405a6dbe-1c9d-eb11-b1ac-000d3a86c145}</formid>
+    <IntroducedVersion>1.0.0.49</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{48b7bd67-5d45-4741-950f-675bcc30c04e}">
+          <labels>
+            <label description="Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{40141b06-033c-440e-b3df-0c0a64b61963}">
+                  <labels>
+                    <label description="Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8037d123-27f2-4483-88a4-0f06d26548ae}" locklevel="0" showlabel="true" labelid="{ece8b419-7ad0-42af-bacc-a3b13efd69d1}">
+                        <labels>
+                          <label description="Local Version" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_localversion" classid="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}" datafieldname="a3i_localversion" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d4155073-8ad1-46ff-9dde-407db34cddba}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Language" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_language" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_language" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{50a7cc16-021f-4c96-a39c-f7538e0beb34}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Country of Origin" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_countryoforigin" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_countryoforigin" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{35a50dff-b881-4f6d-886d-a44e8bbb9230}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Local Title" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_localtitle" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_localtitle" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="3" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+        <Role Id="{2f2aa287-a60a-46bc-bb38-0ff9625bbb9c}" />
+        <Role Id="{fc50ebcc-7a92-4f6a-9dbc-38de490fbbab}" />
+        <Role Id="{1185c0f1-ab5d-4e91-b9ad-514d85cd8846}" />
+        <Role Id="{7f12f058-ed0f-41cb-9dee-54bdc3f4300c}" />
+        <Role Id="{9e9d3b8a-05bd-45a0-aae4-98694a73847b}" />
+        <Role Id="{6601883e-6a4d-415e-ae48-a6bc9cb19ed9}" />
+        <Role Id="{0c456bff-223b-4a18-b0a1-ed0893e3cfa1}" />
+        <Role Id="{6a414a4a-a70a-4997-8e4b-fd37ba8d1eba}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Programme Local Version" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

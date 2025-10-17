@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{8b369907-961a-f011-9989-0022481ad7c0}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" preview="1" icon="1" select="1" jump="fullname">
+        <row id="contactid" name="result">
+          <cell name="firstname" width="103" />
+          <cell name="lastname" width="102" />
+          <cell name="a3i_address1country" width="150" />
+          <cell name="emailaddress1" width="200" />
+          <cell name="a3i_age" width="100" />
+          <cell name="a3i_fanof" width="100" />
+          <cell name="a3i_otherbrandinterest" width="152" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch mapping="logical" version="1.0" output-format="xml-platform" distinct="true">
+        <entity name="contact">
+          <attribute name="emailaddress1" />
+          <attribute name="contactid" />
+          <attribute name="firstname" />
+          <attribute name="lastname" />
+          <attribute name="a3i_address1country" />
+          <attribute name="a3i_age" />
+          <attribute name="a3i_fanof" />
+          <attribute name="a3i_otherbrandinterest" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="1" />
+            <condition attribute="a3i_contacttype" operator="eq" value="430830011" />
+            <condition attribute="a3i_datavalidationstatus" operator="eq" value="430830001" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.155</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Inactive Fans" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

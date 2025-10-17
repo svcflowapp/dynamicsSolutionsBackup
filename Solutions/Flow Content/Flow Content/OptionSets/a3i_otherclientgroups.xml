@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_otherclientgroups" localizedName="Other Client Groups" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.45</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="Other Client Groups" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830000" IsHidden="0">
+      <labels>
+        <label description="Global" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="Inflight" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" IsHidden="0">
+      <labels>
+        <label description="Digital" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830003" IsHidden="0">
+      <labels>
+        <label description="Ancillary" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830004" IsHidden="0">
+      <labels>
+        <label description="DVD" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830005" IsHidden="0">
+      <labels>
+        <label description="Clip Sales" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" IsHidden="0">
+      <labels>
+        <label description="Kids Buyers" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" IsHidden="0">
+      <labels>
+        <label description="Constructed Reality" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

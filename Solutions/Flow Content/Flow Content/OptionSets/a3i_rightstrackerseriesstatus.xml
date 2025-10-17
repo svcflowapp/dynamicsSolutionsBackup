@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_rightstrackerseriesstatus" localizedName="Rights Tracker Series Status" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.28</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="Rights Tracker Series Status" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830008" IsHidden="0">
+      <labels>
+        <label description="0. Development" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830000" IsHidden="0">
+      <labels>
+        <label description="1. Pending" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="2. Under Review" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" IsHidden="0">
+      <labels>
+        <label description="3. Validated" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830003" IsHidden="0">
+      <labels>
+        <label description="4. Complete" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830005" IsHidden="0">
+      <labels>
+        <label description="5. Subject To Clearances" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" IsHidden="0">
+      <labels>
+        <label description="6. General" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830009" IsHidden="0">
+      <labels>
+        <label description="7. Other Assets" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" IsHidden="0">
+      <labels>
+        <label description="8. Expired or Terminated" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" IsHidden="0">
+      <labels>
+        <label description="9. Cancelled" languagecode="1033" />
+      </labels>
+    </option>
+  </options>
+</optionset>

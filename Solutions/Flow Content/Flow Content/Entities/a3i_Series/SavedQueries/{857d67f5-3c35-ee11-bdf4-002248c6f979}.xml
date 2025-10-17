@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{857d67f5-3c35-ee11-bdf4-002248c6f979}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_seriesname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_seriesid">
+          <cell name="a3i_seriesname" width="200" />
+          <cell name="a3i_broadcastplatform" width="210" />
+          <cell name="a3i_producer1" width="170" />
+          <cell name="a3i_totalbudgetnew" width="143" />
+          <cell name="a_f8fc8638597e4db3a3c91fdb730c6a69.a3i_contenttype" width="194" />
+          <cell name="a_f8fc8638597e4db3a3c91fdb730c6a69.a3i_genre" width="153" />
+          <cell name="modifiedon" width="113" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_series">
+          <attribute name="a3i_seriesname" />
+          <attribute name="a3i_seriesid" />
+          <attribute name="a3i_broadcastplatform" />
+          <attribute name="a3i_producer1" />
+          <attribute name="a3i_totalbudgetnew" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <link-entity alias="a_f8fc8638597e4db3a3c91fdb730c6a69" name="a3i_programme" to="a3i_programme" from="a3i_programmeid" link-type="outer" visible="false">
+            <attribute name="a3i_contenttype" />
+            <attribute name="a3i_genre" />
+          </link-entity>
+          <order attribute="a3i_totalbudgetnew" descending="true" />
+          <attribute name="modifiedon" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.129</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Series Budget" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

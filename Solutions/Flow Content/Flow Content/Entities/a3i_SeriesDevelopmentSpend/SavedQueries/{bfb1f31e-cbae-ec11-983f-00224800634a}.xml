@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{bfb1f31e-cbae-ec11-983f-00224800634a}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_seriesdevelopmentspendid">
+          <cell name="a3i_name" width="300" />
+          <cell name="a3i_series" width="200" />
+          <cell name="a_155692c6f93c4fba997a193bd6990c94.a3i_rightstrackerid" width="150" />
+          <cell name="a3i_amount" width="150" />
+          <cell name="a3i_dateagreed" width="100" />
+          <cell name="a3i_devspendsource" width="150" />
+          <cell name="a3i_developmentspendtype" width="200" />
+          <cell name="a3i_paid" width="100" />
+          <cell name="a3i_comment" width="300" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_seriesdevelopmentspend">
+          <attribute name="a3i_seriesdevelopmentspendid" />
+          <attribute name="a3i_amount" />
+          <attribute name="a3i_comment" />
+          <attribute name="a3i_dateagreed" />
+          <attribute name="a3i_devspendsource" />
+          <attribute name="a3i_paid" />
+          <attribute name="a3i_series" />
+          <filter type="and">
+            <condition attribute="statuscode" operator="eq" value="1" />
+          </filter>
+          <link-entity alias="a_155692c6f93c4fba997a193bd6990c94" name="a3i_series" to="a3i_series" from="a3i_seriesid" link-type="outer" visible="false">
+            <attribute name="a3i_rightstrackerid" />
+          </link-entity>
+          <attribute name="a3i_name" />
+          <attribute name="a3i_developmentspendtype" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Child Series Development Spend" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="View for Producer Development Fund" languagecode="1033" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

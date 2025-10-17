@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>1</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{a07aa498-9bf9-4be1-b3ee-e4175068c25a}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_websiteactivity" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_websiteactivityid">
+          <cell name="a3i_websiteactivity" width="300" />
+          <cell name="createdon" width="125" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>4</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_websiteactivity">
+          <attribute name="a3i_websiteactivityid" />
+          <attribute name="a3i_websiteactivity" />
+          <attribute name="createdon" />
+          <order attribute="a3i_websiteactivity" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <filter type="or" isquickfindfields="1">
+            <condition attribute="a3i_websiteactivity" operator="like" value="{0}" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.44</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Quick Find Active Website Activities" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,1488 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_2": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_6f1eb"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_teams": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedteams_4434d"
+        },
+        "api": {
+          "name": "shared_teams"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_da0aa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_commondataserviceforapps_1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_32b14"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedoffice365_48fa5"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Series_Commissioned_Date": {
+          "metadata": {
+            "operationMetadataId": "cf33f990-877e-4b86-a326-9d77d657507b"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "a3i_series",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "a3i_commissioneddate",
+              "subscriptionRequest/filterexpression": "a3i_seriesstatus ne 430830006 and a3i_seriesstatus ne 430830007"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Environment": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "e68c4686-f7d3-4b15-9036-fbfa0b35baed"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Environment",
+                "type": "string",
+                "value": "https://a3idev.crm11.dynamics.com/main.aspx?appid=e91732eb-d208-4056-8305-678cd851b985&pagetype=entityrecord&etn=a3i_series&id="
+              }
+            ]
+          }
+        },
+        "URL": {
+          "runAfter": {
+            "Environment": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6beb3ebc-7ec4-4436-b0bd-279a8bb7e768"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "URL",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Get_Team": {
+          "runAfter": {
+            "Loop_Set_URL": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7152006b-1986-4cf2-ad0b-8d1785eea3c4"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_flowvariableses",
+              "$filter": "a3i_name eq 'Team'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_URL": {
+          "runAfter": {
+            "Scope": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ffcc320a-a5b5-48bf-8ff5-7baa3fc99d3b"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_flowvariableses",
+              "$filter": "a3i_name eq 'URLSeries'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Loop_Set_URL": {
+          "foreach": "@outputs('Get_URL')?['body/value']",
+          "actions": {
+            "Set_URL": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "8ede7e79-d7ad-4197-b02f-3b21e4853c4c"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "URL",
+                "value": "@{items('Loop_Set_URL')?['a3i_value']}@{triggerOutputs()?['body/a3i_seriesid']}"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_URL": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7e3825dd-c6be-4d6a-a784-fc5a267bc71c"
+          },
+          "type": "Foreach"
+        },
+        "Team": {
+          "runAfter": {
+            "URL": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5b84a2ca-9c9e-4f10-854c-99f0d9551afc"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Team",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Channel": {
+          "runAfter": {
+            "Team": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "624acf63-587f-4852-8a73-3300c1820413"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Channel",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Get_Channel": {
+          "runAfter": {
+            "Loop_Set_Team": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "17490b7c-1583-46e1-8384-abeaa86d567b"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_flowvariableses",
+              "$filter": "a3i_name eq 'New Series Acquired Channel'"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Loop_Set_Channel": {
+          "foreach": "@outputs('Get_Channel')?['body/value']",
+          "actions": {
+            "Set_Channel": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "ce5757c9-a97c-418b-bc0f-0f9492caeffd"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Channel",
+                "value": "@items('Loop_Set_Channel')?['a3i_value']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Channel": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8ae391be-45b0-442b-9f30-c64bb643fb55"
+          },
+          "type": "Foreach"
+        },
+        "Loop_Set_Team": {
+          "foreach": "@outputs('Get_Team')?['body/value']",
+          "actions": {
+            "Set_Team": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "b1f5a03c-b000-4231-b285-0558ae6c074a"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Team",
+                "value": "@items('Loop_Set_Team')?['a3i_value']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Team": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4b616d0f-6f64-4db7-9762-66c1f1ccd19f"
+          },
+          "type": "Foreach"
+        },
+        "TX": {
+          "runAfter": {
+            "Channel": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "03ece9af-3db0-4468-a5c8-a08c97476b70"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "TX",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "TX_Status": {
+          "runAfter": {
+            "TX": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1522d8fd-fed0-4c52-a922-3c48d2806df7"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "TXStatus",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Teams_message_condition": {
+          "actions": {
+            "Condition_12": {
+              "actions": {},
+              "runAfter": {},
+              "else": {
+                "actions": {
+                  "Post_a_message_(V3)_7": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "fb473941-668a-4144-93ec-08811fcc9f83"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_teams",
+                        "operationId": "PostMessageToChannelV3",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
+                      },
+                      "parameters": {
+                        "groupId": "@variables('Team')",
+                        "channelId": "@variables('Channel')",
+                        "body/body/content": "The @{variables('Content Type')} series @{triggerOutputs()?['body/a3i_seriesname']} has been acquired. It has @{variables('TXStatus')} TX date of @{variables('TX')}. \n\nClick this link to open the record in Flow  <a href=\"@{variables('URL')}\">Link</a></p>",
+                        "body/subject": "New Series Acquired - @{triggerOutputs()?['body/a3i_seriesname']}"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                }
+              },
+              "expression": {
+                "equals": [
+                  "@outputs('Get_Series')?['body/a3i_deliverytype']",
+                  430830006
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "8a873653-0e6e-476c-bbcb-0f06c12e18e1"
+              },
+              "type": "If"
+            }
+          },
+          "runAfter": {
+            "TX_Condition": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Condition_3": {
+                "actions": {
+                  "Post_a_message_(V3)_3": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "341f34b3-db36-4a19-b6f1-8121f8d87115"
+                    },
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "host": {
+                        "connectionName": "shared_teams",
+                        "operationId": "PostMessageToChannelV3",
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
+                      },
+                      "parameters": {
+                        "groupId": "@variables('Team')",
+                        "channelId": "@variables('Channel')",
+                        "body/body/content": "The @{variables('Content Type')} series @{triggerOutputs()?['body/a3i_seriesname']} has been acquired. It has @{variables('TXStatus')} TX date of @{variables('TX')}, produced as @{triggerOutputs()?['body/a3i_runtime']}, and will be Delivery on Sale.\n\nClick this link to open the record in Flow  <a href=\"@{variables('URL')}\">Link</a></p>",
+                        "body/subject": "New Series Acquired - @{triggerOutputs()?['body/a3i_seriesname']}"
+                      },
+                      "authentication": "@parameters('$authentication')"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "else": {
+                  "actions": {
+                    "Condition_4": {
+                      "actions": {
+                        "Post_a_message_(V3)_4": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "8c903823-3d14-41b8-a056-d23ffaa442ca"
+                          },
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "host": {
+                              "connectionName": "shared_teams",
+                              "operationId": "PostMessageToChannelV3",
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
+                            },
+                            "parameters": {
+                              "groupId": "@variables('Team')",
+                              "channelId": "@variables('Channel')",
+                              "body/body/content": "The @{variables('Content Type')} series @{triggerOutputs()?['body/a3i_seriesname']} has been acquired. It has @{variables('TXStatus')} TX date of @{variables('TX')}, and we are expecting delivery of @{triggerOutputs()?['body/a3i_runtime']} on @{formatDateTime(triggerOutputs()?['body/a3i_deliverydate'],'dd-MM-yyyy')}.\n\nClick this link to open the record in Flow  <a href=\"@{variables('URL')}\">Link</a></p>",
+                              "body/subject": "New Series Acquired - @{triggerOutputs()?['body/a3i_seriesname']}"
+                            },
+                            "authentication": "@parameters('$authentication')"
+                          }
+                        }
+                      },
+                      "runAfter": {},
+                      "else": {
+                        "actions": {
+                          "Condition_5": {
+                            "actions": {
+                              "Post_a_message_(V3)_5": {
+                                "runAfter": {},
+                                "metadata": {
+                                  "operationMetadataId": "1f74c129-55f2-4b56-840f-5562f52876be"
+                                },
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "host": {
+                                    "connectionName": "shared_teams",
+                                    "operationId": "PostMessageToChannelV3",
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
+                                  },
+                                  "parameters": {
+                                    "groupId": "@variables('Team')",
+                                    "channelId": "@variables('Channel')",
+                                    "body/body/content": "The @{variables('Content Type')} series @{triggerOutputs()?['body/a3i_seriesname']} has been acquired. It has @{variables('TXStatus')} TX date of @{variables('TX')}, and it is delivering @{triggerOutputs()?['body/a3i_runtime']} on @{formatDateTime(triggerOutputs()?['body/a3i_deliverydate'],'dd-MM-yyyy')}.\n\nClick this link to open the record in Flow  <a href=\"@{variables('URL')}\">Link</a></p>",
+                                    "body/subject": "New Series Acquired - @{triggerOutputs()?['body/a3i_seriesname']}"
+                                  },
+                                  "authentication": "@parameters('$authentication')"
+                                }
+                              }
+                            },
+                            "runAfter": {},
+                            "else": {
+                              "actions": {
+                                "Condition_6": {
+                                  "actions": {
+                                    "Post_a_message_(V3)": {
+                                      "runAfter": {},
+                                      "metadata": {
+                                        "operationMetadataId": "978459c1-41e1-4939-a75a-0daecfcf1cef"
+                                      },
+                                      "type": "OpenApiConnection",
+                                      "inputs": {
+                                        "host": {
+                                          "connectionName": "shared_teams",
+                                          "operationId": "PostMessageToChannelV3",
+                                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
+                                        },
+                                        "parameters": {
+                                          "groupId": "@variables('Team')",
+                                          "channelId": "@variables('Channel')",
+                                          "body/body/content": "The @{variables('Content Type')} series @{triggerOutputs()?['body/a3i_seriesname']} has been acquired. It has @{variables('TXStatus')} TX date of @{variables('TX')}, produced as @{triggerOutputs()?['body/a3i_runtime']}, and will be Format Materials Only.\n\nClick this link to open the record in Flow  <a href=\"@{variables('URL')}\">Link</a></p>",
+                                          "body/subject": "New Series Acquired - @{triggerOutputs()?['body/a3i_seriesname']}"
+                                        },
+                                        "authentication": "@parameters('$authentication')"
+                                      }
+                                    }
+                                  },
+                                  "runAfter": {},
+                                  "else": {
+                                    "actions": {
+                                      "Condition_7": {
+                                        "actions": {
+                                          "Post_a_message_(V3)_6": {
+                                            "runAfter": {},
+                                            "metadata": {
+                                              "operationMetadataId": "190b1c67-6f97-4db4-9197-d8a50874b24a"
+                                            },
+                                            "type": "OpenApiConnection",
+                                            "inputs": {
+                                              "host": {
+                                                "connectionName": "shared_teams",
+                                                "operationId": "PostMessageToChannelV3",
+                                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_teams"
+                                              },
+                                              "parameters": {
+                                                "groupId": "@variables('Team')",
+                                                "channelId": "@variables('Channel')",
+                                                "body/body/content": "The @{variables('Content Type')} series @{triggerOutputs()?['body/a3i_seriesname']} has been acquired. It has @{variables('TXStatus')} TX date of @{variables('TX')}, produced as @{triggerOutputs()?['body/a3i_runtime']}, and will be Direct by Producer.\n\nClick this link to open the record in Flow  <a href=\"@{variables('URL')}\">Link</a></p>",
+                                                "body/subject": "New Series Acquired - @{triggerOutputs()?['body/a3i_seriesname']}"
+                                              },
+                                              "authentication": "@parameters('$authentication')"
+                                            }
+                                          }
+                                        },
+                                        "runAfter": {},
+                                        "expression": {
+                                          "equals": [
+                                            "@outputs('Get_Series')?['body/a3i_deliverytype']",
+                                            430830002
+                                          ]
+                                        },
+                                        "metadata": {
+                                          "operationMetadataId": "587e1283-ffb6-47aa-aae5-3c8524546855"
+                                        },
+                                        "type": "If"
+                                      }
+                                    }
+                                  },
+                                  "expression": {
+                                    "equals": [
+                                      "@outputs('Get_Series')?['body/a3i_deliverytype']",
+                                      430830003
+                                    ]
+                                  },
+                                  "metadata": {
+                                    "operationMetadataId": "b9a98c3b-38cc-4e39-a557-6cde97f93503"
+                                  },
+                                  "type": "If"
+                                }
+                              }
+                            },
+                            "expression": {
+                              "and": [
+                                {
+                                  "or": [
+                                    {
+                                      "equals": [
+                                        "@triggerOutputs()?['body/a3i_deliverytype']",
+                                        430830000
+                                      ]
+                                    },
+                                    {
+                                      "equals": [
+                                        "@triggerOutputs()?['body/a3i_deliverytype']",
+                                        430830004
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "equals": [
+                                    "@triggerOutputs()?['body/a3i_deliverydatestatus']",
+                                    true
+                                  ]
+                                }
+                              ]
+                            },
+                            "metadata": {
+                              "operationMetadataId": "26bdf3d5-5a63-480f-a761-d3b1a6a98144"
+                            },
+                            "type": "If"
+                          }
+                        }
+                      },
+                      "expression": {
+                        "and": [
+                          {
+                            "or": [
+                              {
+                                "equals": [
+                                  "@triggerOutputs()?['body/a3i_deliverytype']",
+                                  430830000
+                                ]
+                              },
+                              {
+                                "equals": [
+                                  "@triggerOutputs()?['body/a3i_deliverytype']",
+                                  430830004
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "equals": [
+                              "@triggerOutputs()?['body/a3i_deliverydatestatus']",
+                              false
+                            ]
+                          }
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "082b503a-fdad-4f06-8d6d-4dcd6f429522"
+                      },
+                      "type": "If"
+                    }
+                  }
+                },
+                "expression": {
+                  "equals": [
+                    "@triggerOutputs()?['body/a3i_deliverytype']",
+                    430830001
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "26bb91aa-8a74-4e91-b57b-d10f6f9daef6"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@outputs('Get_Programme')?['body/a3i_localversion']",
+              true
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f62d9fd2-3f42-486e-9c47-c97505612eaf"
+          },
+          "type": "If"
+        },
+        "Get_Programme": {
+          "runAfter": {
+            "Get_Series": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "94a8ecb7-0a24-4cde-b31c-2bf9003de33a"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_programmes",
+              "recordId": "@outputs('Get_Series')?['body/_a3i_programme_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_Series": {
+          "runAfter": {
+            "Loop_Set_Channel": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a123bd1f-3521-4bde-a211-76079141cbf2"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_serieses",
+              "recordId": "@triggerOutputs()?['body/a3i_seriesid']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Content_Type": {
+          "runAfter": {
+            "TX_Date_Status": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "65358f72-83b0-4ae4-b361-8dfeb86a8e65"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Content Type",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Get_Content_Type_from_String_Map": {
+          "runAfter": {
+            "Get_Programme": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9b271ceb-537d-43f7-8d61-5fa5ec9c76f9"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "stringmaps",
+              "$filter": "objecttypecode eq 'a3i_programme' and attributename eq 'a3i_contenttype' and attributevalue eq @{outputs('Get_Programme')?['body/a3i_contenttype']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Setting_Content_Type": {
+          "foreach": "@outputs('Get_Content_Type_from_String_Map')?['body/value']",
+          "actions": {
+            "Set_Content_Type": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "f870b464-a857-4ddc-b97b-3ff824d33b49"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Content Type",
+                "value": "@items('Setting_Content_Type')?['value']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Content_Type_from_String_Map": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9685a271-d998-4aff-816d-4299a2ad585c"
+          },
+          "type": "Foreach"
+        },
+        "TX_Condition": {
+          "actions": {
+            "Set_TX_to_Date_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "596fdced-2314-4f7b-9ad5-e1dfb3148a79"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "TX",
+                "value": "@{formatDateTime(triggerOutputs()?['body/a3i_txdate'], 'dd-MM-yyyy')}"
+              }
+            },
+            "Set_TX_Status_to_Planned": {
+              "runAfter": {
+                "Set_TX_to_Date_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "98b5e425-f6e6-49a6-90a8-cf627ec382df"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "TXStatus",
+                "value": "a Planned"
+              }
+            }
+          },
+          "runAfter": {
+            "Setting_TX_Date_Status": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Condition_9": {
+                "actions": {
+                  "Set_TX_to_Date_3": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "a1232bf6-34da-498a-b693-18861be77665"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "TX",
+                      "value": "@{formatDateTime(triggerOutputs()?['body/a3i_txdate'], 'dd-MM-yyyy')}"
+                    }
+                  },
+                  "Set_TX_Status_to_Actual_2": {
+                    "runAfter": {
+                      "Set_TX_to_Date_3": [
+                        "Succeeded"
+                      ]
+                    },
+                    "metadata": {
+                      "operationMetadataId": "fa833cb6-ec06-4992-b76d-cd99e789e8d1"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "TXStatus",
+                      "value": "an Actual"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "else": {
+                  "actions": {
+                    "Get_Qtr": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "3c4786ef-a84d-479b-87e3-7b1d9a14d189"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "ListRecords",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "stringmaps",
+                          "$filter": "attributename eq 'a3i_txqtrest' and attributevalue eq @{triggerOutputs()?['body/a3i_txqtrest']}"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    },
+                    "Get_Year": {
+                      "runAfter": {
+                        "Get_Qtr": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "a7630b01-b8ed-40a6-9ca4-596357e32709"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_commondataserviceforapps",
+                          "operationId": "ListRecords",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                        },
+                        "parameters": {
+                          "entityName": "stringmaps",
+                          "$filter": "attributename eq 'a3i_txyearest' and attributevalue eq @{triggerOutputs()?['body/a3i_txyearest']}"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    },
+                    "Apply_to_each_3": {
+                      "foreach": "@outputs('Get_Qtr')?['body/value']",
+                      "actions": {
+                        "Apply_to_each_4": {
+                          "foreach": "@outputs('Get_Year')?['body/value']",
+                          "actions": {
+                            "Set_TX_Estimate": {
+                              "runAfter": {},
+                              "metadata": {
+                                "operationMetadataId": "ae282d71-ded2-46d8-bfb4-5347adb4c23e"
+                              },
+                              "type": "SetVariable",
+                              "inputs": {
+                                "name": "TX",
+                                "value": "@{items('Apply_to_each_3')?['value']} @{items('Apply_to_each_4')?['value']}"
+                              }
+                            }
+                          },
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "41ce9cdb-9f7b-4ea7-84c5-755bafbf7a69"
+                          },
+                          "type": "Foreach"
+                        }
+                      },
+                      "runAfter": {
+                        "Get_Year": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "03bcecd4-8ecb-4855-9e7f-0fa2defb83bc"
+                      },
+                      "type": "Foreach"
+                    },
+                    "Set_TX_Status_to_Estimated_2": {
+                      "runAfter": {
+                        "Apply_to_each_3": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "f28e2056-d02a-4186-bc9c-47b850800325"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "TXStatus",
+                        "value": "an Estimated"
+                      }
+                    }
+                  }
+                },
+                "expression": {
+                  "equals": [
+                    "@outputs('Get_Series')?['body/a3i_txdatestatusnew']",
+                    430830002
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "537b673e-622e-4284-b9b2-7932c49c7c43"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@outputs('Get_Series')?['body/a3i_txdatestatusnew']",
+              430830001
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "aa3c071d-c3f3-4fbc-b02e-3a5ccfc15a8f"
+          },
+          "type": "If"
+        },
+        "TX_Date_Status": {
+          "runAfter": {
+            "TX_Status": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e5e6628a-0cb2-468e-8b4c-af7970d7feb4"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "TXDateStatus",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Delivery_Type": {
+          "runAfter": {
+            "Content_Type": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "71ebf14c-32fe-40a9-b11d-303208fe2970"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "DeliveryType",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Get_Delivery_Type_from_String_Map": {
+          "runAfter": {
+            "Setting_Content_Type": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "01360933-6fd0-4e0e-b333-570274e4ae33"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "stringmaps",
+              "$filter": "objecttypecode eq 'a3i_series' and attributename eq 'a3i_deliverytype' and attributevalue eq @{outputs('Get_Series')?['body/a3i_deliverytype']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Setting_Delivery_Type": {
+          "foreach": "@outputs('Get_Delivery_Type_from_String_Map')?['body/value']",
+          "actions": {
+            "Set_Delivery_Type": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "5b9edb43-4967-4d9e-82b0-50166a077ef1"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "DeliveryType",
+                "value": "@items('Setting_Delivery_Type')?['value']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Delivery_Type_from_String_Map": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8b608076-a2fb-4249-9c28-b4250cb7bf79"
+          },
+          "type": "Foreach"
+        },
+        "Getting_TX_Date_Status_from_String_Map": {
+          "runAfter": {
+            "Setting_Delivery_Type": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "83f233d9-d527-434f-a1f5-dd200df28771"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps_2",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "stringmaps",
+              "$filter": "objecttypecode eq 'a3i_series' and attributename eq 'a3i_txdatestatusnew' and attributevalue eq @{outputs('Get_Series')?['body/a3i_txdatestatusnew']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Setting_TX_Date_Status": {
+          "foreach": "@outputs('Getting_TX_Date_Status_from_String_Map')?['body/value']",
+          "actions": {
+            "Set_TX_Date_Status": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "80895eac-e9e6-4e29-ac11-6662d35053e1"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "TXDateStatus",
+                "value": "@items('Setting_TX_Date_Status')?['value']"
+              }
+            }
+          },
+          "runAfter": {
+            "Getting_TX_Date_Status_from_String_Map": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f40750df-35e4-4ee6-810c-a76d734bbdbb"
+          },
+          "type": "Foreach"
+        },
+        "Library_catalogue_condition": {
+          "actions": {},
+          "runAfter": {
+            "Teams_message_condition": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Check_if_Delivery_Date_is_Blank": {
+                "actions": {
+                  "Set_Delivery_Date": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "00108010-cea8-4ee1-ba14-2dfe75aff90f"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "DeliveryDate",
+                      "value": "@{formatDateTime(triggerOutputs()?['body/a3i_deliverydate'],'dd-MM-yyyy')}"
+                    }
+                  }
+                },
+                "runAfter": {},
+                "expression": {
+                  "not": {
+                    "equals": [
+                      "@outputs('Get_Series')?['body/a3i_deliverydate']",
+                      "@null"
+                    ]
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "6d57dd19-0132-435e-add4-fe406e89762b"
+                },
+                "type": "If"
+              },
+              "Add_Notification_Digest": {
+                "runAfter": {
+                  "Check_if_Delivery_Date_is_Blank": [
+                    "Succeeded"
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "352aba6f-2b5e-4ff7-a352-7e42bb6511c5"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps_2",
+                    "operationId": "CreateRecord",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "a3i_notificationdigests",
+                    "item/a3i_name": "@outputs('Get_Series')?['body/a3i_seriesname']",
+                    "item/a3i_contenttype": "@variables('Content Type')",
+                    "item/a3i_deliverydate": "@variables('DeliveryDate')",
+                    "item/a3i_deliverytype": "@variables('DeliveryType')",
+                    "item/a3i_link": "@variables('URL')",
+                    "item/a3i_notificationtype": 430830000,
+                    "item/a3i_runtime": "@outputs('Get_Series')?['body/a3i_runtime']",
+                    "item/a3i_txdate": "@variables('TX')",
+                    "item/a3i_txdatestatus": "@variables('TXDateStatus')",
+                    "item/a3i_txpattern": "@outputs('Get_Series')?['body/a3i_txpattern']"
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "equals": [
+              "@outputs('Get_Series')?['body/a3i_deliverytype']",
+              430830006
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "196075cf-0bee-458e-adee-ec0b7bb87dba"
+          },
+          "type": "If"
+        },
+        "Delivery_Date": {
+          "runAfter": {
+            "Delivery_Type": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "270ee477-c227-45b3-b70f-d5ce72871377"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "DeliveryDate",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_PA_Log": {
+          "runAfter": {
+            "Delivery_Date": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c2c3265c-2d54-49d6-94a3-5dbebeb4b795"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "PALog",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_ErrorEmail": {
+          "runAfter": {
+            "Initialize_PA_Log": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ef748b09-cdcf-4956-979e-06d06569b398"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ErrorEmail",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Scope": {
+          "actions": {
+            "List_rows": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "01d9fc4c-ade5-4253-a573-487024154eb9"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'ErrorEmail'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each": {
+              "foreach": "@outputs('List_rows')?['body/value']",
+              "actions": {
+                "Set_Error_Email": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "7f2d1458-b35c-486d-8976-cdba79f67dac"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "ErrorEmail",
+                    "value": "@items('Apply_to_each')?['a3i_value']"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "d725c3a3-63be-4510-84e6-a7404a323e24"
+              },
+              "type": "Foreach"
+            },
+            "Add_a_new_row": {
+              "runAfter": {
+                "Apply_to_each": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "bbd6cbc1-f328-4f63-a58a-38ee63bfe8e4"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "CreateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "item/a3i_name": "Sales Notification for Commissioned Series - @{utcNow()}",
+                  "item/a3i_runhistory": "@concat('https://unitedkingdom.flow.microsoft.com/manage/environments/', workflow()['tags']['environmentName'], '/flows/', workflow()['name'], '/runs/', workflow()['run']['name'])"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "List_rows_2": {
+              "runAfter": {
+                "Add_a_new_row": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1c0a7a4e-b588-4b40-9d64-45022cc5c097"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'URL'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each_2": {
+              "foreach": "@outputs('List_rows_2')?['body/value']",
+              "actions": {
+                "Set_PA_Log": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "10fe06fe-aeeb-499c-af00-17fbc5c20241"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "PALog",
+                    "value": "@{items('Apply_to_each_2')?['a3i_value']}a3i_powerautomatelog&id=@{outputs('Add_a_new_row')?['body/a3i_powerautomatelogid']}"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "4665f711-2893-43ba-b380-7b0cd1ef6fce"
+              },
+              "type": "Foreach"
+            },
+            "List_rows_3": {
+              "runAfter": {
+                "Apply_to_each_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "1f70862e-dbd8-437b-9ca1-20a73a8575c2"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecords",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'Environment'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each_5": {
+              "foreach": "@outputs('List_rows_3')?['body/value']",
+              "actions": {
+                "Set_Environment": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "1c149388-48de-4e45-9ba4-15791337ae16"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "Environment",
+                    "value": "@items('Apply_to_each_5')?['a3i_value']"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_3": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "29ae225a-a2d4-4562-8bf7-38588ddaba5f"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Initialize_ErrorEmail": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e11a41d5-9249-480c-a61a-ee1ed01a9a5c"
+          },
+          "type": "Scope"
+        },
+        "Success": {
+          "actions": {
+            "Set_Power_Automate_Log_Succeeded": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9b36fdb0-5b0a-421c-870d-e4ec5cd46356"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "recordId": "@outputs('Add_a_new_row')?['body/a3i_powerautomatelogid']",
+                  "item/statuscode": 3
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Library_catalogue_condition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ae41e8e4-4f2d-42df-9993-ed9fae649846"
+          },
+          "type": "Scope"
+        },
+        "Failure": {
+          "actions": {
+            "Send_Failure_Email": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "080dc842-25e1-4172-a2f6-0357ff4b18a8"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                },
+                "parameters": {
+                  "emailMessage/To": "@variables('ErrorEmail')",
+                  "emailMessage/Subject": "@{variables('Environment')}  - Sales Notification for Commissioned Series- Failed",
+                  "emailMessage/Body": "<p>Access the <a href=\"@{variables('PALog')}\">Power Automate Log</a>&nbsp;</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_Power_Automate_Log_Failed": {
+              "runAfter": {
+                "Send_Failure_Email": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "629c8c53-1834-4c35-9d07-9462a992842b"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_1",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "recordId": "@outputs('Add_a_new_row')?['body/a3i_powerautomatelogid']",
+                  "item/statuscode": 4
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Library_catalogue_condition": [
+              "Failed",
+              "Skipped",
+              "TimedOut"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7679575f-f9f7-4fde-a0fa-3d9c97ee20f4"
+          },
+          "type": "Scope"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

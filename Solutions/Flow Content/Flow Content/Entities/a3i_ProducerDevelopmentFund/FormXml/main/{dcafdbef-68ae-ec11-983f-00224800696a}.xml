@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{dcafdbef-68ae-ec11-983f-00224800696a}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{062b3c87-764c-4ae6-afaf-8b9678aac2ab}" IsUserDefined="1" labelid="{bc2bff53-20fc-4216-a46b-89e8f039d506}">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{37f94060-4c5b-435e-82d3-310050758974}" name="General" labelid="{359f2769-c71d-4ad8-b299-3f9d14ce5e15}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ef37c89c-5e4f-4a4c-8671-62fdc17d1747}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_name" classid="{4273EDBD-AC1D-40D3-9FB2-095C621B552D}" datafieldname="a3i_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d38ad50d-4451-4c8e-9c25-da1ad2c99467}" locklevel="0" colspan="1" rowspan="1" labelid="{ed078f7c-07b5-42c5-b94c-fd003f8f9813}">
+                        <labels>
+                          <label description="Organisation" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_account" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_account" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{638fd1b7-3c45-4199-97e5-634e1fab3da5}" locklevel="0" colspan="1" rowspan="1" labelid="{0a100bb3-4bca-44c8-b3a8-dcb1d0c7be49}">
+                        <labels>
+                          <label description="First Look" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_firstlook" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_firstlook" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{140c063a-1222-42d9-9965-ddc9bc281a33}" locklevel="0" colspan="1" rowspan="1" visible="false">
+                        <labels>
+                          <label description="First Look Extension" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_firstlookextension" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_firstlookextension" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1d48378f-d680-4d9d-9883-04d8b2e09de5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Year" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_year" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_year" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{3fcf0ba7-f82f-4f97-beb2-0c1ba5366d67}" locklevel="0" colspan="1" rowspan="1" labelid="{2fc13ac0-81d1-4836-a0a9-54de437fc2aa}">
+                        <labels>
+                          <label description="Pot Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_termstartdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_termstartdate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{18b9ee28-a197-44d2-8ff0-606c1a4e0e9a}" locklevel="0" colspan="1" rowspan="1" labelid="{31047068-759f-46d7-9a87-87722fad6de1}">
+                        <labels>
+                          <label description="Pot End Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_termenddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_termenddate" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="general_discretionary" id="33f9ab49-8a3a-4ba8-a856-55ae6cd7823b" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{c48a5623-3582-4507-abc7-ce71eb54cad8}">
+                  <labels>
+                    <label description="Discretionary" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{65a7f50d-1581-40f2-afe0-315b41c950d4}" locklevel="0" colspan="1" rowspan="1" labelid="{898f323d-a11e-438b-b5dd-19d6a205f804}">
+                        <labels>
+                          <label description="Discretionary Budget" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_discretionarybudget" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_discretionarybudget" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{412e59d5-f65a-4bea-b0f7-843e1340b098}" locklevel="0" colspan="1" rowspan="1" labelid="{8f7f8c25-6686-4a60-b6a3-8a83961b7dc0}">
+                        <labels>
+                          <label description="Discretionary Actual" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_discretionaryactual" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_discretionaryactual" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f2b63ea0-5da9-43db-9e77-dfa7a5598783}" locklevel="0" colspan="1" rowspan="1" labelid="{0adfdd7d-81fb-4461-ba12-8b57940fe599}">
+                        <labels>
+                          <label description="Discretionary Funds Available" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_discretionaryfundsavailable" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_discretionaryfundsavailable" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="general_development_spend" id="4ba01b4d-374c-4e34-998b-8a457515a5b3" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{874e1d76-31b1-451b-b071-24e8353d7aa0}">
+                  <labels>
+                    <label description="Development Spend" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{816ea0ef-718e-4c84-9397-ea57935eeab7}" locklevel="0" colspan="1" rowspan="1" labelid="{1dff8cad-6e90-4ead-9ed1-978a13f2acf7}">
+                        <labels>
+                          <label description="Development Spend Budget" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_developmentspendbudget" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_developmentspendbudget" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e32bae85-cd47-4158-846c-157c7e3dc367}" locklevel="0" colspan="1" rowspan="1" labelid="{ec17aae6-737b-4e34-a3f7-74e41a3d5ba7}">
+                        <labels>
+                          <label description="Development Spend Actual" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_developmentspendactual" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_developmentspendactual" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{51e18b4d-4766-4459-b420-cfa80262d4b0}" locklevel="0" colspan="1" rowspan="1" labelid="{6355e2c5-ea48-46ba-b929-f0aff0304179}">
+                        <labels>
+                          <label description="Development Spend Funds Available" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_developmentspendfundsavailable" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_developmentspendfundsavailable" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_hidden" id="d2e43dbd-90b1-492b-b272-5d109ab041dd" IsUserDefined="0" locklevel="0" showlabel="true" visible="false" labelid="{77c82bfd-2a40-4e11-b745-f2d96ea6a3d6}">
+          <labels>
+            <label description="Hidden" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_2_section_1" id="3c1f99af-0072-475b-b6ff-36affb9d2d70" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{6b4bef80-4021-4c5f-941f-44be09b22017}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2c100ec3-ce2c-4306-acec-129aea7f136a}" colspan="1" rowspan="1" labelid="{448396f0-1d77-4db2-913f-768027f30513}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e1ef2c23-bb6c-4bb8-95ce-ad19c74441b7}" colspan="1" rowspan="1" labelid="{dbfa8f5c-4e6b-48d0-9f3c-9dc9e89d453c}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_hidden_section_3" id="b85a465b-b911-4a08-8a14-badc5900db9a" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{87a68d5f-1b30-421f-8fd4-655d1b233756}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell showlabel="false" locklevel="0" id="{b99b1f35-31b2-402e-b607-ba7756b9fc83}" labelid="{2246b30b-3267-4797-99cb-f9dca7166e80}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_SeriesDevSpend" id="6cc1a70e-0ff7-438d-b347-bce8b91ff42b" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="Series Development Spends" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_SeriesDevSpend_section_SDS" id="640a60e5-8800-485f-a287-13ca31c5cd8c" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Series Development Spends" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell locklevel="0" id="{da1e9611-83ec-4a9f-8610-3c67b057fb06}" rowspan="1" colspan="1" auto="true" showlabel="false">
+                        <labels>
+                          <label description="Series Development Spends" languagecode="1033" />
+                        </labels>
+                        <control id="Subgrid_SeriesDevelopmentSpends" classid="{E7A81278-8635-4D9E-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                          <parameters>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <AutoExpand>Auto</AutoExpand>
+                            <TargetEntityType>a3i_seriesdevelopmentspend</TargetEntityType>
+                            <ViewId>{BFB1F31E-CBAE-EC11-983F-00224800634A}</ViewId>
+                            <ViewIds>{64C6370D-BAF0-4E02-8BDA-064FBC008C7E},{BFB1F31E-CBAE-EC11-983F-00224800634A}</ViewIds>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <RelationshipName>a3i_SeriesDevelopmentSpend_ProdDevFund</RelationshipName>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{c890d99b-7bb9-44fa-9a86-0f5b65495d72}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{5678c6a2-355e-4f29-80d7-5c67bdc7d6e7}" showlabel="false" labelid="{54d912a2-a803-4d75-bc4e-7d64e9514aae}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{e90c58de-7b18-41be-8a17-4b9b7d8a63c9}" showlabel="false" labelid="{186d29b2-bc55-4caa-a012-03b200db426b}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d6ef1fe3-90a9-46c4-affe-498068f1cbcb}" showlabel="false" labelid="{a17d013e-e9ed-40cc-9dcc-d642c7c44ea7}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{984c8467-8b5b-4470-bf74-4c36369aaf9f}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{09ec1559-c4a3-40ef-a874-062ec0b6db71}" showlabel="false" labelid="{7329f63e-a65d-4155-8b23-ebdec2c6ad9a}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{32510450-d412-43c6-a58c-20de3a91268d}" showlabel="false" labelid="{9f8ceb54-7afa-411c-90d9-19b07c1da4cf}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{1f99bb72-54ea-48a2-b823-0b220028ebf5}" showlabel="false" labelid="{66994f10-a106-4797-86b6-93e2ebf878f3}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{9C84AFA0-768F-EA11-A811-000D3A86A78C}" />
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Main form" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

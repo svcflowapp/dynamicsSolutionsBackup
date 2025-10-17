@@ -1,0 +1,25 @@
+function filesTab(executionContext) {
+
+	var formContext = executionContext.getFormContext();
+  	var docSet = formContext.getAttribute("a3i_documentsetid").getValue();
+  	var shwFil = formContext.getAttribute("a3i_showfiles").getValue();
+
+  	if (docSet != null) {
+
+    		formContext.ui.tabs.get("Files").setVisible(true);  
+
+    }  
+
+   	else if (shwFil == 100000001){
+
+    		formContext.ui.tabs.get("Files").setVisible(true);  
+
+    }  
+
+   	else {
+
+    		formContext.ui.tabs.get("Files").setVisible(false);  
+
+    }  
+
+}

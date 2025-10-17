@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{08af7125-2af6-ed11-8848-002248c72857}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_assetsid">
+          <cell name="a3i_name" width="220" />
+          <cell name="a3i_tier" width="100" />
+          <cell name="a3i_marketingtxqtr" width="143" />
+          <cell name="a3i_marketingtxyear" width="150" />
+          <cell name="a3i_marketinglead" width="150" />
+          <cell name="a3i_marketingsupport" width="150" />
+          <cell name="a_0086363ee6f1494c9a157d5eb895623b.a3i_producer1" width="217" />
+          <cell name="a3i_websitepage" width="116" />
+          <cell name="a3i_marketingplan" width="125" />
+          <cell name="a3i_earlypitchdeck" width="125" />
+          <cell name="a3i_screenersepisodes" width="125" />
+          <cell name="a3i_photographygallery" width="125" />
+          <cell name="a3i_photographyunit" width="125" />
+          <cell name="a3i_photographybts" width="149" />
+          <cell name="a3i_photographyplates" width="154" />
+          <cell name="a3i_photographyfirstlook" width="179" />
+          <cell name="a3i_photographyportrait" width="162" />
+          <cell name="a3i_presalekeyartleadimage" width="125" />
+          <cell name="a3i_salespromosizzle" width="125" />
+          <cell name="a3i_presspack" width="125" />
+          <cell name="a3i_pressreleaseannounced" width="193" />
+          <cell name="a3i_pressreleaseannounceddate" width="223" />
+          <cell name="a3i_epk" width="100" />
+          <cell name="a3i_launchpromopretitles" width="125" />
+          <cell name="a3i_iconiclaunchkeyart" width="125" />
+          <cell name="a3i_socialmediaassets" width="125" />
+          <cell name="a3i_deliverycomplete" width="116" />
+          <cell name="a3i_regionaltieringnotes" width="225" />
+          <cell name="a3i_notes" width="225" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical" distinct="true">
+        <entity name="a3i_assets">
+          <attribute name="a3i_name" />
+          <attribute name="a3i_assetsid" />
+          <attribute name="a3i_marketinglead" />
+          <attribute name="a3i_websitepage" />
+          <attribute name="a3i_marketingplan" />
+          <attribute name="a3i_earlypitchdeck" />
+          <attribute name="a3i_screenersepisodes" />
+          <attribute name="a3i_photographygallery" />
+          <attribute name="a3i_photographyunit" />
+          <attribute name="a3i_presalekeyartleadimage" />
+          <attribute name="a3i_salespromosizzle" />
+          <attribute name="a3i_presspack" />
+          <attribute name="a3i_epk" />
+          <attribute name="a3i_launchpromopretitles" />
+          <attribute name="a3i_iconiclaunchkeyart" />
+          <attribute name="a3i_socialmediaassets" />
+          <attribute name="a3i_deliverycomplete" />
+          <attribute name="a3i_notes" />
+          <attribute name="a3i_marketingsupport" />
+          <attribute name="a3i_regionaltieringnotes" />
+          <filter type="and">
+            <condition attribute="a3i_marketingtxyear" operator="eq" value="430830003" />
+          </filter>
+          <link-entity name="a3i_programme" alias="aa" link-type="inner" from="a3i_programmeid" to="a3i_programme">
+            <filter type="and">
+              <condition attribute="a3i_contenttype" operator="eq" value="430830002" />
+            </filter>
+          </link-entity>
+          <attribute name="a3i_tier" />
+          <attribute name="a3i_photographybts" />
+          <attribute name="a3i_photographyfirstlook" />
+          <attribute name="a3i_photographyplates" />
+          <attribute name="a3i_photographyportrait" />
+          <attribute name="a3i_pressreleaseannounced" />
+          <attribute name="a3i_pressreleaseannounceddate" />
+          <attribute name="a3i_marketingtxqtr" />
+          <attribute name="a3i_marketingtxyear" />
+          <order attribute="a3i_marketingtxyear" descending="false" />
+          <order attribute="a3i_marketingtxqtr" descending="false" />
+          <link-entity alias="a_0086363ee6f1494c9a157d5eb895623b" name="a3i_series" to="a3i_series" from="a3i_seriesid" link-type="outer" visible="false">
+            <attribute name="a3i_producer1" />
+          </link-entity>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.122</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Formats 2023" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{00000000-0000-0000-00aa-000010001003}</savedqueryid>
+    <queryapi></queryapi>
+    <layoutxml>
+      <grid name="resultset" jump="fullname" select="1" icon="1" preview="1">
+        <row name="result" id="contactid">
+          <cell name="fullname" width="200" />
+          <cell name="emailaddress1" width="150" />
+          <cell name="telephone1" width="125" />
+          <cell name="parentcustomerid" width="150" />
+          <cell name="a3i_purchasingpreferences" width="100" />
+          <cell name="a3i_genre" width="100" />
+          <cell name="a3i_purchasingcountriesmulti" width="100" />
+          <cell name="a3i_otherclientgroups" width="100" />
+          <cell name="a3i_marketingoptin" width="100" />
+          <cell name="a3i_additionalowner" width="100" />
+          <cell name="a3i_contacttype" width="100" />
+          <cell name="a3i_buyernonbuyer" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="contact">
+          <attribute name="fullname" />
+          <order attribute="fullname" descending="false" />
+          <attribute name="parentcustomerid" />
+          <attribute name="telephone1" />
+          <attribute name="emailaddress1" />
+          <attribute name="contactid" />
+          <attribute name="a3i_genre" />
+          <attribute name="a3i_purchasingpreferences" />
+          <attribute name="a3i_marketingoptin" />
+          <attribute name="a3i_additionalowner" />
+          <attribute name="a3i_otherclientgroups" />
+          <attribute name="a3i_purchasingcountriesmulti" />
+          <attribute name="a3i_contacttype" />
+          <attribute name="a3i_buyernonbuyer" />
+          <filter type="and">
+            <condition attribute="ownerid" operator="eq-userid" />
+            <condition attribute="statecode" operator="eq" value="0" />
+            <condition attribute="a3i_datavalidationstatus" operator="eq" value="430830001" />
+            <condition attribute="a3i_contacttype" operator="ne" value="430830011" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="My Active Contacts" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

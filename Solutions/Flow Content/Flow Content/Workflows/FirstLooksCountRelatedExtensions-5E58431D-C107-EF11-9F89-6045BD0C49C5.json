@@ -1,0 +1,194 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_da0aa"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "metadata": {
+            "operationMetadataId": "6182d5e3-7e99-40c5-bdee-866ced8dbfc9"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 4,
+              "subscriptionRequest/entityname": "a3i_firstlook",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Check_if_First_Look_has_updated": {
+          "actions": {
+            "Update_First_Look": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "90687ae4-8c37-436b-9786-6ad490fb8fa5"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_firstlooks",
+                  "recordId": "@triggerOutputs()?['body/a3i_firstlookid']",
+                  "item/a3i_numberofextensions": "@outputs('Count_First_Look_Extensions')"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Count_First_Look_Extensions": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Terminate": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "89885076-6729-4721-9f2e-6a8ab5c6318c"
+                },
+                "type": "Terminate",
+                "inputs": {
+                  "runStatus": "Cancelled"
+                }
+              }
+            }
+          },
+          "expression": {
+            "not": {
+              "equals": [
+                "@outputs('Count_First_Look_Extensions')",
+                "@variables('CurrentNumOfExtensions')"
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "92f7a17a-352f-4589-aaf5-751a1bf42cff"
+          },
+          "type": "If"
+        },
+        "Initialize_First_Look_Array": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "2650a53f-e58c-4b0d-8d5e-f91588bb72f8"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "StoreFirstLooks",
+                "type": "array"
+              }
+            ]
+          }
+        },
+        "Store_Num_of_Extensions_Current_Value": {
+          "runAfter": {
+            "Initialize_First_Look_Array": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "72d305be-1669-4879-8922-49235ef213e1"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "CurrentNumOfExtensions",
+                "type": "integer",
+                "value": "@triggerOutputs()?['body/a3i_numberofextensions']"
+              }
+            ]
+          }
+        },
+        "List_Extensions_for_First_Look": {
+          "runAfter": {
+            "Store_Num_of_Extensions_Current_Value": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "030f3762-19ba-4bd3-bee3-cbde9987741b"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "a3i_firstlookextensions",
+              "$filter": "_a3i_primaryfirstlook_value eq @{triggerOutputs()?['body/a3i_firstlookid']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Set_StoreFirstLooks_value": {
+          "runAfter": {
+            "List_Extensions_for_First_Look": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "b7b54f4f-8ecb-4323-80ac-ea09b823679d"
+          },
+          "type": "SetVariable",
+          "inputs": {
+            "name": "StoreFirstLooks",
+            "value": "@outputs('List_Extensions_for_First_Look')?['body/value']"
+          }
+        },
+        "Count_First_Look_Extensions": {
+          "runAfter": {
+            "Set_StoreFirstLooks_value": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "936dc269-c1c1-467c-958e-e6b7b88d2eaa"
+          },
+          "type": "Compose",
+          "inputs": "@length(variables('StoreFirstLooks'))"
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{609514c7-8b2e-ed11-9db1-0022481b5e2f}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_producerreportdataid">
+          <cell name="a3i_name" width="274" />
+          <cell name="a_e918a4938bdc4b63b4920f65ca59e76e.a3i_producer" width="100" />
+          <cell name="a_e918a4938bdc4b63b4920f65ca59e76e.a3i_commissioningbroadcaster" width="100" />
+          <cell name="modifiedon" width="100" />
+          <cell name="a3i_territory" width="109" />
+          <cell name="a3i_comment" width="300" />
+          <cell name="a3i_salesexecutive" width="100" />
+          <cell name="createdon" width="152" />
+          <cell name="a_489bed309dfc4d73a67841753be850dc.a3i_contenttype" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="a3i_producerreportdata">
+          <attribute name="a3i_producerreportdataid" />
+          <attribute name="a3i_territory" />
+          <attribute name="a3i_comment" />
+          <attribute name="createdon" />
+          <attribute name="a3i_name" />
+          <attribute name="a3i_salesexecutive" />
+          <link-entity alias="a_e918a4938bdc4b63b4920f65ca59e76e" name="a3i_producerreporttitleslate" to="a3i_producerreporttitleslate" from="a3i_producerreporttitleslateid" link-type="outer" visible="false">
+            <attribute name="a3i_producer" />
+            <attribute name="a3i_commissioningbroadcaster" />
+          </link-entity>
+          <link-entity alias="a_489bed309dfc4d73a67841753be850dc" name="a3i_programme" to="a3i_programme" from="a3i_programmeid" link-type="outer" visible="false">
+            <attribute name="a3i_contenttype" />
+          </link-entity>
+          <attribute name="modifiedon" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.104</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="All Producer Reports" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

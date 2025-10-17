@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{aaee2f8b-31fe-ee11-9f8a-002248c6f58c}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_firstlookid">
+          <cell name="a3i_name" width="200" />
+          <cell name="a3i_contenttype2" width="116" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="a3i_firstlook">
+          <attribute name="a3i_name" />
+          <attribute name="a3i_firstlookid" />
+          <attribute name="a3i_contenttype2" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.138</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="First Look Content Type" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

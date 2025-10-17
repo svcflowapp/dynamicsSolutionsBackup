@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{b67c1c3a-3c50-4054-bce3-31a707590388}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab name="tab_2" id="b1459abd-4906-45d3-8de4-e2151552a755" IsUserDefined="0" locklevel="0" showlabel="true">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_2_section_1" id="333d04ae-4570-4e0b-b9e4-a5ac6050ecf4" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115" height="auto">
+                  <labels>
+                    <label description="Summary" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3d35017f-e062-4e82-bce0-77476949249c}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b5658570-ed88-40ec-809e-c18a3316910c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Primary First Look" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_primaryfirstlook" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_primaryfirstlook" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{25cf193d-ba29-4ca6-a1fa-42f7a86c8e31}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7111cf97-207f-4a9d-a679-b1e6d8857046}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Term Length" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_termofextensiondecimal" classid="{C3EFE0C3-0EC6-42BE-8349-CBD9079DFD8E}" datafieldname="a3i_termofextensiondecimal" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{e21b8bf1-7540-420a-8439-96558f605fdb}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bdb6732e-b24e-4c29-82cc-6ef0d7e56ce5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Start Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_startdate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_startdate" disabled="false" />
+                      </cell>
+                      <cell locklevel="0" id="{33e7f05e-ac67-46d8-824c-a4cc271e1c92}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7d12bc88-5011-4f37-a71e-973ecfa79314}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="End Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_enddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_enddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6ddddb0e-0431-4921-816e-c2f4fd0898d2}" visible="false" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{7ea39cfd-8963-4abc-883b-f384ebe91bbc}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell locklevel="0" id="{bf1fd51f-aee6-405a-b2d8-76384e859533}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="New QV control 1713868455362" languagecode="1033" />
+                        </labels>
+                        <control id="QuickviewControl1713868455362" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="a3i_primaryfirstlook">
+                          <parameters>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="a3i_firstlook"&gt;794b5460-36fe-ee11-9f89-002248c822f2&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                            <HideQuickFormBorder>false</HideQuickFormBorder>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{61eb0e85-4249-47a4-bee3-c4cf0bd94f58}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{0e9193fc-b4cf-4525-bc46-6d9479ef0076}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="General Notes Extension" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_generalnotesextension" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_generalnotesextension" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_2_section_2" id="9b6adaf4-44e0-4a6b-92ac-bd208ca96f62" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115" height="auto">
+                  <labels>
+                    <label description="Global Recoupable Investment" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d9e7e4d1-036f-4267-834b-c3a15307373c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Currency" languagecode="1033" />
+                        </labels>
+                        <control id="transactioncurrencyid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="transactioncurrencyid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8c3acf19-21f3-486d-a1c5-30c0892203ad}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Total value of extension" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_totalvalueofextension" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_totalvalueofextension" disabled="false" uniqueid="{8c102b85-e3bd-a3bb-b191-7ca529e5c326}" />
+                      </cell>
+                      <cell id="{a8b6f195-7a29-4d12-b6ef-8b529954e1a3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Year 1 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_year1valueccy" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_year1valueccy" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{11a8126b-31ef-4027-9c54-13813b013cc1}" locklevel="0" colspan="1" rowspan="4">
+                        <labels>
+                          <label description="Payment Terms" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_paymentterms" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_paymentterms" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{afc37bb2-88c6-4848-956b-33c217cebbed}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{064c745d-5964-4d7e-8e45-60793f343fcd}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Year 2 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_year2valueccy" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_year2valueccy" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell locklevel="0" id="{3b01f9b2-4c83-46ba-9f25-b1fdff0a5caf}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                      <cell id="{9bdc2424-5cb0-4b28-9a51-26f92222954a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Year 3 CCY" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_year3valueccy" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_year3valueccy" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_2_section_4" id="1b5ab61b-f68f-4496-ba2c-a90a40304ac9" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Key Terms" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row />
+                    <row>
+                      <cell id="{b87c3749-40c9-4268-a7c0-7bc4f3f965a4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Development Fund" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_developmentfund" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_developmentfund" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{956073eb-9099-48e6-b14c-fca5b753abaf}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Development Fund Comments" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_developmentfundcomments" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_developmentfundcomments" disabled="false" />
+                      </cell>
+                      <cell id="{6adda2c5-9b67-4ecb-8bb3-b620a8b7fca3}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Share of Net Receipts" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_shareofnetreceipts" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_shareofnetreceipts" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7a873a74-cce5-423f-ab5f-090630d29192}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Minimum Commitment" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_minimumcommitment" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_minimumcommitment" disabled="false" />
+                      </cell>
+                      <cell id="{ffd8904e-b0a8-4ebf-a181-afdbea2d6ce5}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Cross Collateralisation" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_crosscollateralisation" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_crosscollateralisation" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a5cd8694-d247-47f6-a3fa-a600c0988cdb}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Excluded Rights" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_excludedrights" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_excludedrights" disabled="false" />
+                      </cell>
+                      <cell id="{1aca9ea0-b8cb-4a71-8108-dbf2c6b58bf7}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Key People" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_keypeople" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_keypeople" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{150f1c27-3c44-45fc-803e-449a434c3782}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Standard Commission Rate" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_standardcommissionrate" classid="{533B9E00-756B-4312-95A0-DC888637AC78}" datafieldname="a3i_standardcommissionrate" disabled="false" />
+                      </cell>
+                      <cell id="{cda0e0c5-2fd6-4255-958a-d630f94d7d3f}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Matching Right" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_matchingright" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_matchingright" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6d5e0e89-2580-4a81-8bf1-7e24c4e38041}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Automatic Extension" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_automaticextension" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_automaticextension" disabled="false" />
+                      </cell>
+                      <cell id="{0e3b84a7-a427-4312-9e8b-a21672cc5326}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Annual Review" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_annualreview" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_annualreview" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f4e98084-9dcc-4ab3-94c8-efd0096766e9}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="A3MI Credit" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_a3micredit" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_a3micredit" disabled="false" />
+                      </cell>
+                      <cell id="{bb07aa66-5067-4352-98ef-e069e1d3964e}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Run-off Period" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_runoffperiod" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_runoffperiod" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b2006312-7877-426c-bc5e-5be4557d1a3d}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="Passive Participation" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_passiveparticipation" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_passiveparticipation" disabled="false" />
+                      </cell>
+                      <cell id="{8dddbd64-878e-48c3-9361-f043b9618183}" locklevel="0" colspan="1" rowspan="1" auto="true">
+                        <labels>
+                          <label description="First Right to Acquire the Producer" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_firstrighttoacquiretheproducer" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_firstrighttoacquiretheproducer" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{2a7918f2-7553-4823-add5-25ce6e422c7a}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{fee82cbc-c087-403b-b6fe-4a368d2784c9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{91fc7528-6399-47a4-b0f8-60dc9529a56f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b92b3aee-8ac9-4fa6-abf2-dcbde8bd20fb}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{a5650d9a-3012-46e8-b231-557363ed0378}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{cad78147-bbb0-4e19-af2b-00bb13e30780}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{3305df67-5959-42ac-bb4c-2fbe89e9f527}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{df38feda-39a8-4b7d-8d82-ce3aeb888575}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

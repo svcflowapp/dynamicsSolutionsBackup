@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{e9c718e8-f252-46c0-bb14-2b4ccd23cb0d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" preview="1" icon="1" select="1" jump="a3i_programmename">
+        <row id="a3i_programmeid" name="result">
+          <cell name="a3i_programmename" width="300" />
+          <cell name="a3i_ip" width="100" />
+          <cell name="a3i_contenttype" width="100" />
+          <cell name="a3i_genre" width="100" />
+          <cell name="a3i_localversion" width="100" />
+          <cell name="a3i_localtitle" width="102" />
+          <cell name="a3i_websitelink" width="115" />
+          <cell name="a3i_rightstrackerid" width="145" />
+          <cell name="ownerid" width="100" />
+          <cell name="modifiedon" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch mapping="logical" version="1.0" distinct="true">
+        <entity name="a3i_programme">
+          <attribute name="a3i_programmename" />
+          <attribute name="ownerid" />
+          <attribute name="a3i_ip" />
+          <attribute name="a3i_programmeid" />
+          <attribute name="modifiedon" />
+          <order descending="true" attribute="modifiedon" />
+          <attribute name="a3i_genre" />
+          <attribute name="a3i_localversion" />
+          <attribute name="a3i_contenttype" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <link-entity name="a3i_ip" alias="aa" link-type="inner" from="a3i_ipid" to="a3i_ip">
+            <filter type="and">
+              <condition attribute="a3i_ipclassnew" operator="eq" value="430830004" />
+            </filter>
+          </link-entity>
+          <attribute name="a3i_localtitle" />
+          <attribute name="a3i_websitelink" />
+          <attribute name="a3i_rightstrackerid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Programmes" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

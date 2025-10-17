@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{4549d6bb-f90d-eb11-a813-000d3a86a78c}</formid>
+    <IntroducedVersion>1.0.0.28</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab id="ACBA75B7-97B6-4116-AA55-51312992B721" name="tab_1" showlabel="false" labelid="{aab90b7a-79ca-4ebd-841a-ec91847594e5}">
+          <labels>
+            <label description="Tab" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section id="AD49B5BF-256F-46A8-9C75-947146172EB9" name="tab_1_column_1_section_1" columns="1" showlabel="false" showbar="false" IsUserDefined="0" labelwidth="130" labelid="{dae37d23-2aa7-453c-a6eb-45912a9f9847}">
+                  <labels>
+                    <label description="Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{a30a561e-f0df-4fd6-984a-be272e9726f6}" locklevel="0" labelid="{5595b335-daea-43be-a5b8-67a139672089}">
+                        <labels>
+                          <label description="Content Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_contenttype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_contenttype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6d71ab89-17dc-4f40-b404-af1382960696}" locklevel="0">
+                        <labels>
+                          <label description="IP Type" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_iptype" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_iptype" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{218ec4ea-62a7-47ab-863d-d63577addf29}" locklevel="0" labelid="{1651f7b0-5611-46f6-9a2e-e3d023491d2a}">
+                        <labels>
+                          <label description="Genre" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_genre" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_genre" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Programme Main" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

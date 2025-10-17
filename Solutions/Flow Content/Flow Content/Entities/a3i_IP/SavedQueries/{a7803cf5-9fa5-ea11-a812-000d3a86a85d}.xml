@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{a7803cf5-9fa5-ea11-a812-000d3a86a85d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_ipname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_ipid">
+          <cell name="a3i_ipname" width="200" />
+          <cell name="a3i_formatsmaterialsnotes" width="100" disableSorting="1" />
+          <cell name="a3i_formatsmaterialsavailable" width="100" disableSorting="1" />
+          <cell name="a3i_biblecreated" width="100" />
+          <cell name="a3i_optionpackcreated" width="100" />
+          <cell name="a3i_optionpacklastupdated" width="100" />
+          <cell name="modifiedon" width="100" />
+          <cell name="ownerid" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="a3i_ip">
+          <attribute name="a3i_ipname" />
+          <attribute name="a3i_biblecreated" />
+          <attribute name="a3i_optionpackcreated" />
+          <attribute name="a3i_optionpacklastupdated" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="modifiedon" />
+          <attribute name="ownerid" />
+          <order attribute="modifiedon" descending="true" />
+          <attribute name="a3i_formatsmaterialsnotes" />
+          <attribute name="a3i_formatsmaterialsavailable" />
+          <attribute name="a3i_ipid" />
+          <link-entity name="a3i_programme" alias="ab" link-type="inner" from="a3i_ip" to="a3i_ipid">
+            <filter type="and">
+              <condition attribute="a3i_contenttype" operator="eq" value="430830002" />
+            </filter>
+          </link-entity>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="IP (Formats)" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="IP with a related Programme that is content type Format" languagecode="1033" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

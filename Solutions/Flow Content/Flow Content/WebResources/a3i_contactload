@@ -1,0 +1,18 @@
+function hideField(executionContext) {
+
+	var formContext = executionContext.getFormContext();
+  	var formType = formContext.ui.getFormType();   
+
+  	if (formType == 1) {
+
+    		formContext.getControl("a3i_editpurchasingcountries").setVisible(false);  
+
+   	else {
+
+    		formContext.getControl("a3i_editpurchasingcountries").setVisible(true);  
+
+    }
+
+  }   
+
+}

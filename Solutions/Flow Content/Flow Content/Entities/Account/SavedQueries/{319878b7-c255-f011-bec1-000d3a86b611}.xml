@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{319878b7-c255-f011-bec1-000d3a86b611}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="name" select="1" icon="1" preview="1">
+        <row name="result" id="accountid">
+          <cell name="name" width="200" />
+          <cell name="a3i_prestigetier" width="112" />
+          <cell name="a3i_address1country" width="150" imageproviderfunctionname="ViewChangeColumnName" imageproviderwebresource="$webresource:a3i_ViewColumnNameChange" />
+          <cell name="primarycontactid" width="133" />
+          <cell name="websiteurl" width="155" />
+          <cell name="address1_city" width="173" />
+          <cell name="description" width="224" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="account">
+          <attribute name="name" />
+          <attribute name="a3i_prestigetier" />
+          <attribute name="a3i_address1country" />
+          <attribute name="primarycontactid" />
+          <order attribute="name" descending="false" />
+          <attribute name="accountid" />
+          <attribute name="websiteurl" />
+          <attribute name="address1_city" />
+          <attribute name="description" />
+          <filter type="and">
+            <condition attribute="a3i_organisationtype" operator="contain-values">
+              <value>430830012</value>
+            </condition>
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.17</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Festival Organisations" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

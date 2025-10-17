@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{1ed69564-6785-42d4-ac08-f00bf48371ab}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_versiondisplayname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_versionid">
+          <cell name="a3i_rightstrackerid" width="150" />
+          <cell name="a3i_versiondisplayname" width="300" />
+          <cell name="a3i_leadversion" width="50" />
+          <cell name="a3i_marketable" width="50" />
+          <cell name="a3i_deliverable" width="50" />
+          <cell name="a3i_typicalslotlength" width="100" />
+          <cell name="a3i_projecteddeliverydate" width="100" />
+          <cell name="a3i_fullydelivereddate" width="100" />
+          <cell name="a3i_episodecount" width="50" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>1</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_version">
+          <attribute name="a3i_versionid" />
+          <attribute name="a3i_versiondisplayname" />
+          <attribute name="a3i_rightstrackerid" />
+          <order attribute="a3i_versiondisplayname" descending="true" />
+          <attribute name="a3i_leadversion" />
+          <attribute name="a3i_marketable" />
+          <attribute name="a3i_deliverable" />
+          <attribute name="a3i_typicalslotlength" />
+          <attribute name="a3i_projecteddeliverydate" />
+          <attribute name="a3i_fullydelivereddate" />
+          <attribute name="a3i_episodecount" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Version Advanced Find View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

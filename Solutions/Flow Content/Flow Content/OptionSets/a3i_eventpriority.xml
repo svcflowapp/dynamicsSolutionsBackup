@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="a3i_eventpriority" localizedName="Event Priority" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>1.0.0.44</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <displaynames>
+    <displayname description="Event Priority" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="430830001" IsHidden="0">
+      <labels>
+        <label description="Awaiting Input" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830000" IsHidden="0">
+      <labels>
+        <label description="N/A" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830002" IsHidden="0">
+      <labels>
+        <label description="Scripted Events - Priority 1 (High)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830003" IsHidden="0">
+      <labels>
+        <label description="Scripted Events - Priority 2 (Medium)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830005" IsHidden="0">
+      <labels>
+        <label description="Unscripted Events - Priority 1 (High)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830006" IsHidden="0">
+      <labels>
+        <label description="Unscripted Events - Priority 2 (Medium)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830008" IsHidden="0">
+      <labels>
+        <label description="Format Events - Priority 1 (High)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830009" IsHidden="0">
+      <labels>
+        <label description="Format Events - Priority 2 (Medium)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830013" IsHidden="0">
+      <labels>
+        <label description="Producer Events - Priority 1 (High)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830014" IsHidden="0">
+      <labels>
+        <label description="Producer Events - Priority 2 (Medium)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830007" IsHidden="0">
+      <labels>
+        <label description="Licensing Events - Priority 1 (High)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830010" IsHidden="0">
+      <labels>
+        <label description="Licensing Events - Priority 2 (Medium)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830015" IsHidden="0">
+      <labels>
+        <label description="FAST (or O&amp;O) Events - Priority 1 (High)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830004" IsHidden="0">
+      <labels>
+        <label description="FAST (or O&amp;O) Events - Priority 2 (High)" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830012" IsHidden="0">
+      <labels>
+        <label description="Constructed Reality Events" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830016" IsHidden="0">
+      <labels>
+        <label description="Premium Factual Events" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830017" IsHidden="0">
+      <labels>
+        <label description="Natural History Events" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="430830011" IsHidden="0">
+      <labels>
+        <label description="Scripted Format Events" languagecode="1033" />
+      </labels>
+    </option>
+    <option value="430830018" IsHidden="0">
+      <labels>
+        <label description="UK Upfronts Event" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

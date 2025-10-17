@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{d7e82b14-4b89-ea11-a811-000d3a86a85d}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_countryname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_countryid">
+          <cell name="a3i_countryname" width="300" />
+          <cell name="a3i_countrycode" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_country">
+          <attribute name="a3i_countryid" />
+          <attribute name="a3i_countryname" />
+          <attribute name="a3i_countrycode" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <order attribute="a3i_countrycode" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Countries" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

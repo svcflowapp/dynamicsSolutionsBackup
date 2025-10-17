@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{5e7d710a-bfae-ec11-983f-00224800634a}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_producerdevelopmentfundid">
+          <cell name="a3i_name" width="200" />
+          <cell name="a3i_year" width="100" />
+          <cell name="a3i_termstartdate" width="125" />
+          <cell name="a3i_termenddate" width="125" />
+          <cell name="a3i_developmentspendbudget" width="200" />
+          <cell name="a3i_developmentspendactual" width="200" />
+          <cell name="a3i_developmentspendfundsavailable" width="200" />
+          <cell name="a3i_discretionarybudget" width="175" />
+          <cell name="a3i_discretionaryactual" width="175" />
+          <cell name="a3i_discretionaryfundsavailable" width="175" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_producerdevelopmentfund">
+          <attribute name="a3i_producerdevelopmentfundid" />
+          <attribute name="a3i_developmentspendactual" />
+          <attribute name="a3i_developmentspendbudget" />
+          <attribute name="a3i_developmentspendfundsavailable" />
+          <attribute name="a3i_discretionarybudget" />
+          <attribute name="a3i_discretionaryactual" />
+          <attribute name="a3i_discretionaryfundsavailable" />
+          <attribute name="a3i_termenddate" />
+          <attribute name="a3i_termstartdate" />
+          <attribute name="a3i_name" />
+          <attribute name="a3i_year" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Child Producer Development Pots" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="View for First Look/Organisation" languagecode="1033" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

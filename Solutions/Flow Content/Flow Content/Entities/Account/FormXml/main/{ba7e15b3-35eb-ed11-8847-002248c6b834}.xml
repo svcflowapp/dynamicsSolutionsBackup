@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{ba7e15b3-35eb-ed11-8847-002248c6b834}</formid>
+    <IntroducedVersion>1.0.0.6</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls" showImage="true">
+      <ancestor id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+      <hiddencontrols>
+        <data id="address1_addressid" datafieldname="address1_addressid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+        <data id="address2_addressid" datafieldname="address2_addressid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+      </hiddencontrols>
+      <tabs>
+        <tab name="SUMMARY_TAB" id="{3b0b63a9-d379-689a-0ec3-e71eb4c6a841}" IsUserDefined="0" showlabel="true" expanded="true" locklevel="0" labelid="{00afda97-e95c-44f2-b332-0f28bb1c7b13}">
+          <labels>
+            <label description="Summary" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="ACCOUNT_INFORMATION" showlabel="false" showbar="false" id="{0eb92e6c-bcb8-0d52-a188-d81543ddb7cd}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" celllabelposition="Left" labelid="{61399f2c-566d-459c-96d7-20d99a772caf}">
+                  <labels>
+                    <label description="ACCOUNT INFORMATION" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b0e82a7e-5683-d90c-308a-0d779377ea8a}" showlabel="true" labelid="{c9726556-0a91-4e71-9c2a-17440b932afb}">
+                        <labels>
+                          <label description="Organisation Name" languagecode="1033" />
+                        </labels>
+                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f9be6f65-0925-42ea-8805-42ca98e8bae1}" locklevel="0" showlabel="true" labelid="{ca77a79d-573f-4203-ab78-8e8e5cf33b8b}">
+                        <labels>
+                          <label description="Organisation Type" languagecode="1033" />
+                        </labels>
+                        <control disabled="false" id="a3i_organisationtype" classid="{4AA28AB7-9C13-4F57-A73D-AD894D048B5F}" datafieldname="a3i_organisationtype" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{33085884-20f5-4edc-8673-b2d8e2279f53}" locklevel="0" colspan="1" rowspan="1" labelid="{c0ac75d0-7cb1-4ff2-b76f-4d6e52321d51}">
+                        <labels>
+                          <label description="Prestige Tier" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_prestigetier" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_prestigetier" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{43fd8c10-0c2d-488c-81e2-371df5fd22a7}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Country" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_address1country" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_address1country" disabled="false">
+                          <parameters>
+                            <DisableViewPicker>true</DisableViewPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="SUMMARY_TAB_section_5" id="57ed41fe-8684-4d63-b609-41ca91ba23e9" IsUserDefined="0" locklevel="0" showlabel="false" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" labelid="{12905cda-30dd-4789-a0b5-67d4ffa90933}">
+                  <labels>
+                    <label description="New Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b187688c-8410-5990-16ec-e153968ab583}" showlabel="true" locklevel="0" colspan="1" rowspan="1" labelid="{a3f21f67-b5bc-4105-a18b-033ca3f97ad4}">
+                        <labels>
+                          <label description="Primary Contact" languagecode="1033" />
+                        </labels>
+                        <control id="primarycontactid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="primarycontactid" disabled="false">
+                          <parameters>
+                            <FilterRelationshipName>contact_customer_accounts</FilterRelationshipName>
+                            <DependentAttributeName>contact.parentcustomerid</DependentAttributeName>
+                            <DependentAttributeType>account</DependentAttributeType>
+                            <AllowFilterOff>true</AllowFilterOff>
+                            <AutoResolve>true</AutoResolve>
+                            <DisableMru>false</DisableMru>
+                            <DisableQuickFind>false</DisableQuickFind>
+                            <DisableViewPicker>false</DisableViewPicker>
+                            <DefaultViewId>{A2D479C5-53E3-4C69-ADDD-802327E67A0D}</DefaultViewId>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0F664FFF-E39E-4676-9191-CBA16972B21D}" colspan="1" showlabel="false" rowspan="1" labelid="{8091175d-d3b5-4bb8-89af-793b4a5b66f1}">
+                        <labels>
+                          <label description="Primary Contact" languagecode="1033" />
+                        </labels>
+                        <control id="contactquickform" classid="{5C5600E0-1D6E-4205-A272-BE80DA87FD42}" datafieldname="primarycontactid" disabled="false">
+                          <parameters>
+                            <QuickForms>&lt;QuickFormIds&gt;&lt;QuickFormId entityname="contact"&gt;29DE27BC-A257-4F29-99CF-BAB4A84E688F&lt;/QuickFormId&gt;&lt;/QuickFormIds&gt;</QuickForms>
+                            <ControlMode>Edit</ControlMode>
+                            <DisplayAsCustomer360Tile>false</DisplayAsCustomer360Tile>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8e24c7e3-6a40-5abb-eadb-254eba5478e2}" showlabel="true" colspan="1" auto="false" rowspan="7" labelid="{7a703d4a-66d7-49d2-9052-ee853ecc98f9}">
+                        <labels>
+                          <label description="CONTACTS" languagecode="1033" />
+                        </labels>
+                        <control id="Contacts" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}">
+                          <parameters>
+                            <ViewId>{73BC2D9B-4E0E-424C-8839-ED59D6817E3A}</ViewId>
+                            <IsUserView>false</IsUserView>
+                            <RelationshipName>contact_customer_accounts</RelationshipName>
+                            <TargetEntityType>contact</TargetEntityType>
+                            <AutoExpand>Auto</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <ViewIds />
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>Grid</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>false</EnableChartPicker>
+                            <RecordsPerPage>6</RecordsPerPage>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <events>
+        <event name="onload" application="true" active="true">
+          <InternalHandlers>
+            <Handler functionName="AppCommon.Account.Instance.ra_onload" libraryName="AppCommon/Account/Account_main_system_library.js" handlerUniqueId="7927DD68-5AC5-4E9A-B39A-44F62467656A" enabled="true" />
+          </InternalHandlers>
+        </event>
+      </events>
+      <header id="{d5a03552-1183-4347-a237-1f894ba449eb}" columns="111" celllabelposition="Top" labelwidth="115">
+        <rows>
+          <row>
+            <cell id="{54b2d0a2-eb77-b3cd-b60a-03ea6944e98e}" locklevel="1" showlabel="true" labelid="{820edbc7-4ba1-4c9b-adfa-446254321af7}">
+              <labels>
+                <label description="Owner" languagecode="1033" />
+              </labels>
+              <control id="header_ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+            </cell>
+            <cell id="{e3ab9fd7-f3ed-465d-8903-ee94c40bce67}" showlabel="false" labelid="{5659b38f-2fa9-4435-bd01-85e240444ae9}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c152d19a-7e4f-40e6-98a4-60ff3bb6a5b6}" showlabel="false" labelid="{1a068140-440f-46bf-85af-98f43d6f361c}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <clientresources>
+        <internalresources>
+          <clientincludes>
+            <internaljscriptfile src="$webresource:AppCommon/Account/Account_main_system_library.js" />
+          </clientincludes>
+        </internalresources>
+      </clientresources>
+      <Navigation>
+        <NavBar>
+          <NavBarByRelationshipItem RelationshipName="Account_CustomerAddress" Id="navAddresses" Sequence="10" Area="Info" Show="false">
+            <Privileges>
+              <Privilege Entity="" Privilege="ReadActivity" />
+            </Privileges>
+            <Titles>
+              <Title LCID="1033" Text="Addresses" />
+              <Title LCID="1025" Text="Addresses" />
+              <Title LCID="1026" Text="Addresses" />
+              <Title LCID="1027" Text="Addresses" />
+              <Title LCID="1029" Text="Addresses" />
+              <Title LCID="1030" Text="Addresses" />
+              <Title LCID="1031" Text="Addresses" />
+              <Title LCID="1032" Text="Addresses" />
+              <Title LCID="3082" Text="Addresses" />
+              <Title LCID="1061" Text="Addresses" />
+              <Title LCID="1069" Text="Addresses" />
+              <Title LCID="1035" Text="Addresses" />
+              <Title LCID="1036" Text="Addresses" />
+              <Title LCID="1110" Text="Addresses" />
+              <Title LCID="1037" Text="Addresses" />
+              <Title LCID="1081" Text="Addresses" />
+              <Title LCID="1050" Text="Addresses" />
+              <Title LCID="1038" Text="Addresses" />
+              <Title LCID="1057" Text="Addresses" />
+              <Title LCID="1040" Text="Addresses" />
+              <Title LCID="1041" Text="Addresses" />
+              <Title LCID="1087" Text="Addresses" />
+              <Title LCID="1042" Text="Addresses" />
+              <Title LCID="1063" Text="Addresses" />
+              <Title LCID="1062" Text="Addresses" />
+              <Title LCID="1086" Text="Addresses" />
+              <Title LCID="1044" Text="Addresses" />
+              <Title LCID="1043" Text="Addresses" />
+              <Title LCID="1045" Text="Addresses" />
+              <Title LCID="1046" Text="Addresses" />
+              <Title LCID="2070" Text="Addresses" />
+              <Title LCID="1048" Text="Addresses" />
+              <Title LCID="1049" Text="Addresses" />
+              <Title LCID="1051" Text="Addresses" />
+              <Title LCID="1060" Text="Addresses" />
+              <Title LCID="3098" Text="Addresses" />
+              <Title LCID="2074" Text="Addresses" />
+              <Title LCID="1053" Text="Addresses" />
+              <Title LCID="1054" Text="Addresses" />
+              <Title LCID="1055" Text="Addresses" />
+              <Title LCID="1058" Text="Addresses" />
+              <Title LCID="1066" Text="Addresses" />
+              <Title LCID="2052" Text="Addresses" />
+              <Title LCID="3076" Text="Addresses" />
+              <Title LCID="1028" Text="Addresses" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="account_parent_account" Id="navSubAccts" TitleResourceId="Label_SubAccounts" Sequence="10" Area="Info" Show="false">
+            <Privileges>
+              <Privilege Entity="" Privilege="ReadActivity" />
+            </Privileges>
+            <Titles>
+              <Title LCID="1033" Text="Accounts" />
+              <Title LCID="1025" Text="Accounts" />
+              <Title LCID="1026" Text="Accounts" />
+              <Title LCID="1027" Text="Accounts" />
+              <Title LCID="1029" Text="Accounts" />
+              <Title LCID="1030" Text="Accounts" />
+              <Title LCID="1031" Text="Accounts" />
+              <Title LCID="1032" Text="Accounts" />
+              <Title LCID="3082" Text="Accounts" />
+              <Title LCID="1061" Text="Accounts" />
+              <Title LCID="1069" Text="Accounts" />
+              <Title LCID="1035" Text="Accounts" />
+              <Title LCID="1036" Text="Accounts" />
+              <Title LCID="1110" Text="Accounts" />
+              <Title LCID="1037" Text="Accounts" />
+              <Title LCID="1081" Text="Accounts" />
+              <Title LCID="1050" Text="Accounts" />
+              <Title LCID="1038" Text="Accounts" />
+              <Title LCID="1057" Text="Accounts" />
+              <Title LCID="1040" Text="Accounts" />
+              <Title LCID="1041" Text="Accounts" />
+              <Title LCID="1087" Text="Accounts" />
+              <Title LCID="1042" Text="Accounts" />
+              <Title LCID="1063" Text="Accounts" />
+              <Title LCID="1062" Text="Accounts" />
+              <Title LCID="1086" Text="Accounts" />
+              <Title LCID="1044" Text="Accounts" />
+              <Title LCID="1043" Text="Accounts" />
+              <Title LCID="1045" Text="Accounts" />
+              <Title LCID="1046" Text="Accounts" />
+              <Title LCID="2070" Text="Accounts" />
+              <Title LCID="1048" Text="Accounts" />
+              <Title LCID="1049" Text="Accounts" />
+              <Title LCID="1051" Text="Accounts" />
+              <Title LCID="1060" Text="Accounts" />
+              <Title LCID="3098" Text="Accounts" />
+              <Title LCID="2074" Text="Accounts" />
+              <Title LCID="1053" Text="Accounts" />
+              <Title LCID="1054" Text="Accounts" />
+              <Title LCID="1055" Text="Accounts" />
+              <Title LCID="1058" Text="Accounts" />
+              <Title LCID="1066" Text="Accounts" />
+              <Title LCID="2052" Text="Accounts" />
+              <Title LCID="3076" Text="Accounts" />
+              <Title LCID="1028" Text="Accounts" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="account_customer_relationship_customer" Id="navRelationships" TitleResourceId="Left_Nav_Area_Relationships" Sequence="10" Area="Info" Show="false">
+            <Privileges>
+              <Privilege Entity="" Privilege="ReadActivity" />
+            </Privileges>
+            <Titles>
+              <Title LCID="1033" Text="CustomerRelationship" />
+              <Title LCID="1025" Text="CustomerRelationship" />
+              <Title LCID="1026" Text="CustomerRelationship" />
+              <Title LCID="1027" Text="CustomerRelationship" />
+              <Title LCID="1029" Text="CustomerRelationship" />
+              <Title LCID="1030" Text="CustomerRelationship" />
+              <Title LCID="1031" Text="CustomerRelationship" />
+              <Title LCID="1032" Text="CustomerRelationship" />
+              <Title LCID="3082" Text="CustomerRelationship" />
+              <Title LCID="1061" Text="CustomerRelationship" />
+              <Title LCID="1069" Text="CustomerRelationship" />
+              <Title LCID="1035" Text="CustomerRelationship" />
+              <Title LCID="1036" Text="CustomerRelationship" />
+              <Title LCID="1110" Text="CustomerRelationship" />
+              <Title LCID="1037" Text="CustomerRelationship" />
+              <Title LCID="1081" Text="CustomerRelationship" />
+              <Title LCID="1050" Text="CustomerRelationship" />
+              <Title LCID="1038" Text="CustomerRelationship" />
+              <Title LCID="1057" Text="CustomerRelationship" />
+              <Title LCID="1040" Text="CustomerRelationship" />
+              <Title LCID="1041" Text="CustomerRelationship" />
+              <Title LCID="1087" Text="CustomerRelationship" />
+              <Title LCID="1042" Text="CustomerRelationship" />
+              <Title LCID="1063" Text="CustomerRelationship" />
+              <Title LCID="1062" Text="CustomerRelationship" />
+              <Title LCID="1086" Text="CustomerRelationship" />
+              <Title LCID="1044" Text="CustomerRelationship" />
+              <Title LCID="1043" Text="CustomerRelationship" />
+              <Title LCID="1045" Text="CustomerRelationship" />
+              <Title LCID="1046" Text="CustomerRelationship" />
+              <Title LCID="2070" Text="CustomerRelationship" />
+              <Title LCID="1048" Text="CustomerRelationship" />
+              <Title LCID="1049" Text="CustomerRelationship" />
+              <Title LCID="1051" Text="CustomerRelationship" />
+              <Title LCID="1060" Text="CustomerRelationship" />
+              <Title LCID="3098" Text="CustomerRelationship" />
+              <Title LCID="2074" Text="CustomerRelationship" />
+              <Title LCID="1053" Text="CustomerRelationship" />
+              <Title LCID="1054" Text="CustomerRelationship" />
+              <Title LCID="1055" Text="CustomerRelationship" />
+              <Title LCID="1058" Text="CustomerRelationship" />
+              <Title LCID="1066" Text="CustomerRelationship" />
+              <Title LCID="2052" Text="CustomerRelationship" />
+              <Title LCID="3076" Text="CustomerRelationship" />
+              <Title LCID="1028" Text="CustomerRelationship" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="hardcoded_{B7196B13-6B9D-42CD-BD58-B19A3953126F}navProcessSessions" Sequence="9700" Area="ProcessCenter" Id="navProcessSessions" Show="false">
+            <Titles>
+              <Title LCID="1033" Text="Dialog Sessions" />
+              <Title LCID="1025" Text="Dialog Sessions" />
+              <Title LCID="1026" Text="Dialog Sessions" />
+              <Title LCID="1027" Text="Dialog Sessions" />
+              <Title LCID="1029" Text="Dialog Sessions" />
+              <Title LCID="1030" Text="Dialog Sessions" />
+              <Title LCID="1031" Text="Dialog Sessions" />
+              <Title LCID="1032" Text="Dialog Sessions" />
+              <Title LCID="3082" Text="Dialog Sessions" />
+              <Title LCID="1061" Text="Dialog Sessions" />
+              <Title LCID="1069" Text="Dialog Sessions" />
+              <Title LCID="1035" Text="Dialog Sessions" />
+              <Title LCID="1036" Text="Dialog Sessions" />
+              <Title LCID="1110" Text="Dialog Sessions" />
+              <Title LCID="1037" Text="Dialog Sessions" />
+              <Title LCID="1081" Text="Dialog Sessions" />
+              <Title LCID="1050" Text="Dialog Sessions" />
+              <Title LCID="1038" Text="Dialog Sessions" />
+              <Title LCID="1057" Text="Dialog Sessions" />
+              <Title LCID="1040" Text="Dialog Sessions" />
+              <Title LCID="1041" Text="Dialog Sessions" />
+              <Title LCID="1087" Text="Dialog Sessions" />
+              <Title LCID="1042" Text="Dialog Sessions" />
+              <Title LCID="1063" Text="Dialog Sessions" />
+              <Title LCID="1062" Text="Dialog Sessions" />
+              <Title LCID="1086" Text="Dialog Sessions" />
+              <Title LCID="1044" Text="Dialog Sessions" />
+              <Title LCID="1043" Text="Dialog Sessions" />
+              <Title LCID="1045" Text="Dialog Sessions" />
+              <Title LCID="1046" Text="Dialog Sessions" />
+              <Title LCID="2070" Text="Dialog Sessions" />
+              <Title LCID="1048" Text="Dialog Sessions" />
+              <Title LCID="1049" Text="Dialog Sessions" />
+              <Title LCID="1051" Text="Dialog Sessions" />
+              <Title LCID="1060" Text="Dialog Sessions" />
+              <Title LCID="3098" Text="Dialog Sessions" />
+              <Title LCID="2074" Text="Dialog Sessions" />
+              <Title LCID="1053" Text="Dialog Sessions" />
+              <Title LCID="1054" Text="Dialog Sessions" />
+              <Title LCID="1055" Text="Dialog Sessions" />
+              <Title LCID="1058" Text="Dialog Sessions" />
+              <Title LCID="1066" Text="Dialog Sessions" />
+              <Title LCID="2052" Text="Dialog Sessions" />
+              <Title LCID="3076" Text="Dialog Sessions" />
+              <Title LCID="1028" Text="Dialog Sessions" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="hardcoded_{B7196B13-6B9D-42CD-BD58-B19A3953126F}navAsyncOperations" Sequence="9500" Area="ProcessCenter" Id="navAsyncOperations" Show="false">
+            <Titles>
+              <Title LCID="1033" Text="Workflows" />
+              <Title LCID="1025" Text="Workflows" />
+              <Title LCID="1026" Text="Workflows" />
+              <Title LCID="1027" Text="Workflows" />
+              <Title LCID="1029" Text="Workflows" />
+              <Title LCID="1030" Text="Workflows" />
+              <Title LCID="1031" Text="Workflows" />
+              <Title LCID="1032" Text="Workflows" />
+              <Title LCID="3082" Text="Workflows" />
+              <Title LCID="1061" Text="Workflows" />
+              <Title LCID="1069" Text="Workflows" />
+              <Title LCID="1035" Text="Workflows" />
+              <Title LCID="1036" Text="Workflows" />
+              <Title LCID="1110" Text="Workflows" />
+              <Title LCID="1037" Text="Workflows" />
+              <Title LCID="1081" Text="Workflows" />
+              <Title LCID="1050" Text="Workflows" />
+              <Title LCID="1038" Text="Workflows" />
+              <Title LCID="1057" Text="Workflows" />
+              <Title LCID="1040" Text="Workflows" />
+              <Title LCID="1041" Text="Workflows" />
+              <Title LCID="1087" Text="Workflows" />
+              <Title LCID="1042" Text="Workflows" />
+              <Title LCID="1063" Text="Workflows" />
+              <Title LCID="1062" Text="Workflows" />
+              <Title LCID="1086" Text="Workflows" />
+              <Title LCID="1044" Text="Workflows" />
+              <Title LCID="1043" Text="Workflows" />
+              <Title LCID="1045" Text="Workflows" />
+              <Title LCID="1046" Text="Workflows" />
+              <Title LCID="2070" Text="Workflows" />
+              <Title LCID="1048" Text="Workflows" />
+              <Title LCID="1049" Text="Workflows" />
+              <Title LCID="1051" Text="Workflows" />
+              <Title LCID="1060" Text="Workflows" />
+              <Title LCID="3098" Text="Workflows" />
+              <Title LCID="2074" Text="Workflows" />
+              <Title LCID="1053" Text="Workflows" />
+              <Title LCID="1054" Text="Workflows" />
+              <Title LCID="1055" Text="Workflows" />
+              <Title LCID="1058" Text="Workflows" />
+              <Title LCID="1066" Text="Workflows" />
+              <Title LCID="2052" Text="Workflows" />
+              <Title LCID="3076" Text="Workflows" />
+              <Title LCID="1028" Text="Workflows" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="opportunity_parent_account" Sequence="1" Area="Sales" Id="navOppsParent" Show="false">
+            <Titles>
+              <Title LCID="1033" Text="Deals" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="a3i_OrderBookTitleSlate_Account" Sequence="10000" Area="Info" Id="nav_a3i_OrderBookTitleSlate_Account" Show="false">
+            <Titles>
+              <Title LCID="1033" Text="Order Book Title Slates" />
+            </Titles>
+          </NavBarByRelationshipItem>
+        </NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+              <Title LCID="1025" Text="Common" />
+              <Title LCID="1026" Text="Common" />
+              <Title LCID="1027" Text="Common" />
+              <Title LCID="1029" Text="Common" />
+              <Title LCID="1030" Text="Common" />
+              <Title LCID="1031" Text="Common" />
+              <Title LCID="1032" Text="Common" />
+              <Title LCID="3082" Text="Common" />
+              <Title LCID="1061" Text="Common" />
+              <Title LCID="1069" Text="Common" />
+              <Title LCID="1035" Text="Common" />
+              <Title LCID="1036" Text="Common" />
+              <Title LCID="1110" Text="Common" />
+              <Title LCID="1037" Text="Common" />
+              <Title LCID="1081" Text="Common" />
+              <Title LCID="1050" Text="Common" />
+              <Title LCID="1038" Text="Common" />
+              <Title LCID="1057" Text="Common" />
+              <Title LCID="1040" Text="Common" />
+              <Title LCID="1041" Text="Common" />
+              <Title LCID="1087" Text="Common" />
+              <Title LCID="1042" Text="Common" />
+              <Title LCID="1063" Text="Common" />
+              <Title LCID="1062" Text="Common" />
+              <Title LCID="1086" Text="Common" />
+              <Title LCID="1044" Text="Common" />
+              <Title LCID="1043" Text="Common" />
+              <Title LCID="1045" Text="Common" />
+              <Title LCID="1046" Text="Common" />
+              <Title LCID="2070" Text="Common" />
+              <Title LCID="1048" Text="Common" />
+              <Title LCID="1049" Text="Common" />
+              <Title LCID="1051" Text="Common" />
+              <Title LCID="1060" Text="Common" />
+              <Title LCID="3098" Text="Common" />
+              <Title LCID="2074" Text="Common" />
+              <Title LCID="1053" Text="Common" />
+              <Title LCID="1054" Text="Common" />
+              <Title LCID="1055" Text="Common" />
+              <Title LCID="1058" Text="Common" />
+              <Title LCID="1066" Text="Common" />
+              <Title LCID="2052" Text="Common" />
+              <Title LCID="3076" Text="Common" />
+              <Title LCID="1028" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+              <Title LCID="1025" Text="Sales" />
+              <Title LCID="1026" Text="Sales" />
+              <Title LCID="1027" Text="Sales" />
+              <Title LCID="1029" Text="Sales" />
+              <Title LCID="1030" Text="Sales" />
+              <Title LCID="1031" Text="Sales" />
+              <Title LCID="1032" Text="Sales" />
+              <Title LCID="3082" Text="Sales" />
+              <Title LCID="1061" Text="Sales" />
+              <Title LCID="1069" Text="Sales" />
+              <Title LCID="1035" Text="Sales" />
+              <Title LCID="1036" Text="Sales" />
+              <Title LCID="1110" Text="Sales" />
+              <Title LCID="1037" Text="Sales" />
+              <Title LCID="1081" Text="Sales" />
+              <Title LCID="1050" Text="Sales" />
+              <Title LCID="1038" Text="Sales" />
+              <Title LCID="1057" Text="Sales" />
+              <Title LCID="1040" Text="Sales" />
+              <Title LCID="1041" Text="Sales" />
+              <Title LCID="1087" Text="Sales" />
+              <Title LCID="1042" Text="Sales" />
+              <Title LCID="1063" Text="Sales" />
+              <Title LCID="1062" Text="Sales" />
+              <Title LCID="1086" Text="Sales" />
+              <Title LCID="1044" Text="Sales" />
+              <Title LCID="1043" Text="Sales" />
+              <Title LCID="1045" Text="Sales" />
+              <Title LCID="1046" Text="Sales" />
+              <Title LCID="2070" Text="Sales" />
+              <Title LCID="1048" Text="Sales" />
+              <Title LCID="1049" Text="Sales" />
+              <Title LCID="1051" Text="Sales" />
+              <Title LCID="1060" Text="Sales" />
+              <Title LCID="3098" Text="Sales" />
+              <Title LCID="2074" Text="Sales" />
+              <Title LCID="1053" Text="Sales" />
+              <Title LCID="1054" Text="Sales" />
+              <Title LCID="1055" Text="Sales" />
+              <Title LCID="1058" Text="Sales" />
+              <Title LCID="1066" Text="Sales" />
+              <Title LCID="2052" Text="Sales" />
+              <Title LCID="3076" Text="Sales" />
+              <Title LCID="1028" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+              <Title LCID="1025" Text="Service" />
+              <Title LCID="1026" Text="Service" />
+              <Title LCID="1027" Text="Service" />
+              <Title LCID="1029" Text="Service" />
+              <Title LCID="1030" Text="Service" />
+              <Title LCID="1031" Text="Service" />
+              <Title LCID="1032" Text="Service" />
+              <Title LCID="3082" Text="Service" />
+              <Title LCID="1061" Text="Service" />
+              <Title LCID="1069" Text="Service" />
+              <Title LCID="1035" Text="Service" />
+              <Title LCID="1036" Text="Service" />
+              <Title LCID="1110" Text="Service" />
+              <Title LCID="1037" Text="Service" />
+              <Title LCID="1081" Text="Service" />
+              <Title LCID="1050" Text="Service" />
+              <Title LCID="1038" Text="Service" />
+              <Title LCID="1057" Text="Service" />
+              <Title LCID="1040" Text="Service" />
+              <Title LCID="1041" Text="Service" />
+              <Title LCID="1087" Text="Service" />
+              <Title LCID="1042" Text="Service" />
+              <Title LCID="1063" Text="Service" />
+              <Title LCID="1062" Text="Service" />
+              <Title LCID="1086" Text="Service" />
+              <Title LCID="1044" Text="Service" />
+              <Title LCID="1043" Text="Service" />
+              <Title LCID="1045" Text="Service" />
+              <Title LCID="1046" Text="Service" />
+              <Title LCID="2070" Text="Service" />
+              <Title LCID="1048" Text="Service" />
+              <Title LCID="1049" Text="Service" />
+              <Title LCID="1051" Text="Service" />
+              <Title LCID="1060" Text="Service" />
+              <Title LCID="3098" Text="Service" />
+              <Title LCID="2074" Text="Service" />
+              <Title LCID="1053" Text="Service" />
+              <Title LCID="1054" Text="Service" />
+              <Title LCID="1055" Text="Service" />
+              <Title LCID="1058" Text="Service" />
+              <Title LCID="1066" Text="Service" />
+              <Title LCID="2052" Text="Service" />
+              <Title LCID="3076" Text="Service" />
+              <Title LCID="1028" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+              <Title LCID="1025" Text="Marketing" />
+              <Title LCID="1026" Text="Marketing" />
+              <Title LCID="1027" Text="Marketing" />
+              <Title LCID="1029" Text="Marketing" />
+              <Title LCID="1030" Text="Marketing" />
+              <Title LCID="1031" Text="Marketing" />
+              <Title LCID="1032" Text="Marketing" />
+              <Title LCID="3082" Text="Marketing" />
+              <Title LCID="1061" Text="Marketing" />
+              <Title LCID="1069" Text="Marketing" />
+              <Title LCID="1035" Text="Marketing" />
+              <Title LCID="1036" Text="Marketing" />
+              <Title LCID="1110" Text="Marketing" />
+              <Title LCID="1037" Text="Marketing" />
+              <Title LCID="1081" Text="Marketing" />
+              <Title LCID="1050" Text="Marketing" />
+              <Title LCID="1038" Text="Marketing" />
+              <Title LCID="1057" Text="Marketing" />
+              <Title LCID="1040" Text="Marketing" />
+              <Title LCID="1041" Text="Marketing" />
+              <Title LCID="1087" Text="Marketing" />
+              <Title LCID="1042" Text="Marketing" />
+              <Title LCID="1063" Text="Marketing" />
+              <Title LCID="1062" Text="Marketing" />
+              <Title LCID="1086" Text="Marketing" />
+              <Title LCID="1044" Text="Marketing" />
+              <Title LCID="1043" Text="Marketing" />
+              <Title LCID="1045" Text="Marketing" />
+              <Title LCID="1046" Text="Marketing" />
+              <Title LCID="2070" Text="Marketing" />
+              <Title LCID="1048" Text="Marketing" />
+              <Title LCID="1049" Text="Marketing" />
+              <Title LCID="1051" Text="Marketing" />
+              <Title LCID="1060" Text="Marketing" />
+              <Title LCID="3098" Text="Marketing" />
+              <Title LCID="2074" Text="Marketing" />
+              <Title LCID="1053" Text="Marketing" />
+              <Title LCID="1054" Text="Marketing" />
+              <Title LCID="1055" Text="Marketing" />
+              <Title LCID="1058" Text="Marketing" />
+              <Title LCID="1066" Text="Marketing" />
+              <Title LCID="2052" Text="Marketing" />
+              <Title LCID="3076" Text="Marketing" />
+              <Title LCID="1028" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+              <Title LCID="1025" Text="Process Sessions" />
+              <Title LCID="1026" Text="Process Sessions" />
+              <Title LCID="1027" Text="Process Sessions" />
+              <Title LCID="1029" Text="Process Sessions" />
+              <Title LCID="1030" Text="Process Sessions" />
+              <Title LCID="1031" Text="Process Sessions" />
+              <Title LCID="1032" Text="Process Sessions" />
+              <Title LCID="3082" Text="Process Sessions" />
+              <Title LCID="1061" Text="Process Sessions" />
+              <Title LCID="1069" Text="Process Sessions" />
+              <Title LCID="1035" Text="Process Sessions" />
+              <Title LCID="1036" Text="Process Sessions" />
+              <Title LCID="1110" Text="Process Sessions" />
+              <Title LCID="1037" Text="Process Sessions" />
+              <Title LCID="1081" Text="Process Sessions" />
+              <Title LCID="1050" Text="Process Sessions" />
+              <Title LCID="1038" Text="Process Sessions" />
+              <Title LCID="1057" Text="Process Sessions" />
+              <Title LCID="1040" Text="Process Sessions" />
+              <Title LCID="1041" Text="Process Sessions" />
+              <Title LCID="1087" Text="Process Sessions" />
+              <Title LCID="1042" Text="Process Sessions" />
+              <Title LCID="1063" Text="Process Sessions" />
+              <Title LCID="1062" Text="Process Sessions" />
+              <Title LCID="1086" Text="Process Sessions" />
+              <Title LCID="1044" Text="Process Sessions" />
+              <Title LCID="1043" Text="Process Sessions" />
+              <Title LCID="1045" Text="Process Sessions" />
+              <Title LCID="1046" Text="Process Sessions" />
+              <Title LCID="2070" Text="Process Sessions" />
+              <Title LCID="1048" Text="Process Sessions" />
+              <Title LCID="1049" Text="Process Sessions" />
+              <Title LCID="1051" Text="Process Sessions" />
+              <Title LCID="1060" Text="Process Sessions" />
+              <Title LCID="3098" Text="Process Sessions" />
+              <Title LCID="2074" Text="Process Sessions" />
+              <Title LCID="1053" Text="Process Sessions" />
+              <Title LCID="1054" Text="Process Sessions" />
+              <Title LCID="1055" Text="Process Sessions" />
+              <Title LCID="1058" Text="Process Sessions" />
+              <Title LCID="1066" Text="Process Sessions" />
+              <Title LCID="2052" Text="Process Sessions" />
+              <Title LCID="3076" Text="Process Sessions" />
+              <Title LCID="1028" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions />
+      <DisplayConditions FallbackForm="true" Order="21">
+        <Role Id="{3E0C724B-7DF7-EA11-A815-000D3A86A85D}" />
+        <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
+        <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+      </DisplayConditions>
+      <formLibraries>
+        <Library name="msdyn_/Account/AssetCommon.Account.Library.js" libraryUniqueId="{19c3d0d7-6864-4018-9bd8-e43354de5805}" />
+        <Library name="$webresource:msdyn_SalesOmniChannel/SalesPhoneNumber.Library.js" libraryUniqueId="{510ec0e5182d48c6a6fa213aedca527b}" />
+      </formLibraries>
+      <footer id="{f9cb00b4-90db-44ad-8779-fe5cec04320c}" celllabelposition="Top" labelwidth="115" columns="111" celllabelalignment="Left">
+        <rows />
+      </footer>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Awarding Body - Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Updated default Account form." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

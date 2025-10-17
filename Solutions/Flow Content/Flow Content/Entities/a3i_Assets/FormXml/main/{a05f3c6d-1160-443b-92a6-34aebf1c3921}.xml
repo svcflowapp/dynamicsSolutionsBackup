@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a05f3c6d-1160-443b-92a6-34aebf1c3921}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{c2c250ff-af7d-4c66-af16-77f3319435c6}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="50%">
+              <sections>
+                <section showlabel="true" showbar="false" IsUserDefined="0" id="{71d801d3-9750-448f-ad95-7dbe1dadb90e}" columns="1" name="General">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{4be3bb61-bd49-4cf6-8963-775a58ee7fe5}" visible="false">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{c1203615-2d54-450b-8f5f-4cd0759cff8c}" visible="false">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cfb2012b-b21f-4307-8bad-5325a63c0dca}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Series" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_series" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_series" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{43af7d60-80c6-4953-b119-077a8b29307d}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Programme" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_programme" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_programme" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{cc87878c-e552-4273-afaa-3386d190b298}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Tier" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_tier" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_tier" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{009ff0f2-b0eb-46c1-aa12-cea0d6274af3}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Marketing TX Qtr" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_marketingtxqtr" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_marketingtxqtr" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{963abf1c-07aa-4665-a5b0-956a18660bd4}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Marketing TX Year" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_marketingtxyear" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_marketingtxyear" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1ac4c5ec-9e5a-4b71-9a6e-b599dc34a642}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Marketing Lead" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_marketinglead" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_marketinglead" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f140c143-30a1-4613-98ea-3dc9d061ddee}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Marketing Support " languagecode="1033" />
+                        </labels>
+                        <control id="a3i_marketingsupport" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_marketingsupport" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_8" id="07437f1d-fb3c-47cf-9d11-cdbd8944c491" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Press " languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ef5daa13-df6c-4d1b-bd46-d11ed8b3f8c8}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Press Pack" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_presspack" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_presspack" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{140d882a-b31a-4b20-935d-ddd3a2e1ee26}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Press Release - Announced" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_pressreleaseannounced" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_pressreleaseannounced" disabled="false" uniqueid="{df0152e5-4d04-44a7-a93d-96e18ed3253e}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a2dd6326-6b1c-475d-9d04-68a20fdefd3a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Press Release - Announced Date" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_pressreleaseannounceddate" classid="{5B773807-9FB2-42DB-97C3-7A91EFF8ADFF}" datafieldname="a3i_pressreleaseannounceddate" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bd651c78-aea4-48c5-9d73-a9fc17df2ef1}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="EPK" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_epk" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_epk" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_5" id="60a47863-8216-430e-a86b-92926f6802e8" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Art and Sales" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{9e49ef32-c93c-45f9-b082-4c2ec5514bdb}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Pre-Sale Key Art/Lead Image" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_presalekeyartleadimage" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_presalekeyartleadimage" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{95ec0898-10c8-48a1-b84e-6c35e184edbe}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Sales Promo/Sizzle" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_salespromosizzle" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_salespromosizzle" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4fbc4878-8350-4247-9f7c-83f4af616028}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Launch Promo/Pre-Titles" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_launchpromopretitles" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_launchpromopretitles" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e25ce41c-ae58-4cfb-9658-3a7450c633d9}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Iconic/Launch Key Art" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_iconiclaunchkeyart" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_iconiclaunchkeyart" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+            <column width="50%">
+              <sections>
+                <section name="_section_817" id="fc64c6b3-1adf-4b44-a6df-49b631010b86" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Photography" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2fc386c8-9816-4c19-b327-dcd94587246a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Photography - Gallery" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_photographygallery" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_photographygallery" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7862f84f-e8a0-4843-9aec-182b3d1a0686}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Photography - Unit" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_photographyunit" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_photographyunit" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e1a83af5-f592-44a0-a92d-a523f69f632c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Photography - BTS" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_photographybts" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_photographybts" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{32e5e02c-ffd8-41e0-9bf1-24b749e777c2}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Photography - First Look" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_photographyfirstlook" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_photographyfirstlook" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{8fdb6bfd-0adf-4665-b75f-720240d8244a}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Photography - Plates" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_photographyplates" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_photographyplates" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1f06b111-30e3-48db-8506-355c164776d5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Photography - Portrait" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_photographyportrait" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_photographyportrait" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="null_section_7" id="1372a323-426e-48bc-982f-b14adee14697" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Other" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{371a1abe-07cf-40b0-be9c-a3f985bc9d50}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Website Page" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_websitepage" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_websitepage" disabled="false" uniqueid="{43347012-cada-4bc8-9c08-21fda6e2d707}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{be5ceae2-a903-4edd-b322-5da8b91ffe9b}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Marketing Plan" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_marketingplan" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_marketingplan" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d6b102ba-eec2-40bf-8a03-aa91ae56d607}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Early Pitch Deck" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_earlypitchdeck" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_earlypitchdeck" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f01910b5-b485-4e2a-a152-e6605931a712}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Screeners/Episodes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_screenersepisodes" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_screenersepisodes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2f7ab3bf-630c-489a-8ac6-78b50f3c1607}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Social Media Assets" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_socialmediaassets" classid="{3EF39988-22BB-4F0B-BBBE-64B5A3748AEE}" datafieldname="a3i_socialmediaassets" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{17363433-e5d9-44a6-a2b3-ea7aeb448c8f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Delivery Complete?" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_deliverycomplete" classid="{F9A8A302-114E-466A-B582-6771B2AE0D92}" datafieldname="a3i_deliverycomplete" disabled="false" uniqueid="{f2b5a098-2929-4ae7-bb8d-e1111178097a}" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="_section_491" id="7e439ae9-562a-47ae-b06c-3450a21953c2" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Notes" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{96a5259f-7e85-4482-9ad8-8a9e5d22dba2}" locklevel="0" colspan="1" rowspan="4" auto="true">
+                        <labels>
+                          <label description="Regional Tiering Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_regionaltieringnotes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_regionaltieringnotes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row>
+                      <cell id="{fd3e10ed-e66e-4f85-b0a7-a0f538060d5a}" locklevel="0" colspan="1" rowspan="4" auto="true">
+                        <labels>
+                          <label description="Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_notes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_notes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{baf2b569-e6b7-4afd-a87e-0d7f9a413a66}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{0515548d-7dd6-449d-a3a3-775883fb1e62}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{f62659bc-aec0-4cd1-bd71-5f388e98c2f5}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{39fed57e-ccc0-44e0-885a-24d64507e458}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{3d90360b-00ab-45b4-9c0a-054dcc60c5e7}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{27b83f6f-a7d5-4813-b3ff-0069a8c069a9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{38e71e42-269d-4ab3-ab63-7fe4a2766c0e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c05bfa87-30cb-403d-9886-08f7aabf4dfa}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+      <controlDescriptions>
+        <controlDescription forControl="{43347012-cada-4bc8-9c08-21fda6e2d707}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_websitepage</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">a3i_websitepage</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">a3i_websitepage</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">a3i_websitepage</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{f2b5a098-2929-4ae7-bb8d-e1111178097a}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_deliverycomplete</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">a3i_deliverycomplete</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">a3i_deliverycomplete</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">a3i_deliverycomplete</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+        <controlDescription forControl="{df0152e5-4d04-44a7-a93d-96e18ed3253e}">
+          <customControl id="{67FAC785-CD58-4F9F-ABB3-4B7DDC6ED5ED}">
+            <parameters>
+              <datafieldname>a3i_pressreleaseannounced</datafieldname>
+            </parameters>
+          </customControl>
+          <customControl formFactor="1" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">a3i_pressreleaseannounced</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="2" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">a3i_pressreleaseannounced</value>
+            </parameters>
+          </customControl>
+          <customControl formFactor="0" name="MscrmControls.FieldControls.ToggleControl">
+            <parameters>
+              <value type="TwoOptions">a3i_pressreleaseannounced</value>
+            </parameters>
+          </customControl>
+        </controlDescription>
+      </controlDescriptions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

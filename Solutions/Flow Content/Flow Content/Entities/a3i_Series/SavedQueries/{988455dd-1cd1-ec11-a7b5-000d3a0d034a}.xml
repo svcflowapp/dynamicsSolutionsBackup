@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{988455dd-1cd1-ec11-a7b5-000d3a0d034a}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_seriesname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_seriesid">
+          <cell name="a3i_producer1" width="262" />
+          <cell name="a3i_seriesname" width="200" />
+          <cell name="a3i_aafadvance" width="120" />
+          <cell name="a3i_aaflifetimesales" width="140" />
+          <cell name="a3i_aafyear13sales" width="140" />
+          <cell name="a3i_aafmargin" width="125" />
+          <cell name="a3i_aafnpv" width="100" />
+          <cell name="a3i_irr" width="105" />
+          <cell name="a3i_aafactualsalestodate" width="180" />
+          <cell name="a3i_aafdelivery" width="120" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_series">
+          <attribute name="a3i_seriesname" />
+          <attribute name="a3i_seriesid" />
+          <attribute name="a3i_aafadvance" />
+          <attribute name="a3i_aaflifetimesales" />
+          <attribute name="a3i_aafyear13sales" />
+          <attribute name="a3i_aafmargin" />
+          <attribute name="a3i_aafnpv" />
+          <attribute name="a3i_irr" />
+          <attribute name="a3i_aafactualsalestodate" />
+          <attribute name="a3i_aafdelivery" />
+          <filter type="and">
+            <condition attribute="a3i_aafadvance" operator="not-null" />
+          </filter>
+          <attribute name="a3i_producer1" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.96</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="AAF Report" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

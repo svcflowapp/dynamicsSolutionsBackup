@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{a0d37519-697e-43fc-931b-de357b87bf88}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_name" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_firstlookextensionid">
+          <cell name="a3i_name" width="94" />
+          <cell name="a3i_termofextensiondecimal" width="99" />
+          <cell name="a3i_totalvalueofextension" width="100" />
+          <cell name="a3i_primaryfirstlook" width="100" />
+          <cell name="a3i_startdate" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_firstlookextension">
+          <attribute name="a3i_firstlookextensionid" />
+          <attribute name="a3i_name" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="a3i_primaryfirstlook" />
+          <attribute name="a3i_totalvalueofextension" />
+          <attribute name="a3i_termofextensiondecimal" />
+          <attribute name="a3i_startdate" />
+          <order attribute="a3i_startdate" descending="true" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active First Look Extensions" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

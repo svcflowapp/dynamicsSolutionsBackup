@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{019732ec-11c9-466b-83d6-c3a54f953208}</savedqueryid>
+    <layoutxml>
+      <grid name="a3i_websiteactivities" jump="a3i_websiteactivity" select="1" icon="1" preview="1">
+        <row name="a3i_websiteactivity" id="a3i_websiteactivityid">
+          <cell name="a3i_websiteactivity" width="300" />
+          <cell name="a3i_contact" width="100" />
+          <cell name="a3i_programme" width="100" />
+          <cell name="a3i_series" width="100" />
+          <cell name="a3i_video" width="100" />
+          <cell name="a3i_date" width="100" />
+          <cell name="a3i_viewtype" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>2</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_websiteactivity">
+          <attribute name="a3i_websiteactivityid" />
+          <attribute name="a3i_websiteactivity" />
+          <order attribute="a3i_websiteactivity" descending="false" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="a3i_contact" />
+          <attribute name="a3i_date" />
+          <attribute name="a3i_programme" />
+          <attribute name="a3i_video" />
+          <attribute name="a3i_viewtype" />
+          <attribute name="a3i_series" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.44</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Website Activity Associated View" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

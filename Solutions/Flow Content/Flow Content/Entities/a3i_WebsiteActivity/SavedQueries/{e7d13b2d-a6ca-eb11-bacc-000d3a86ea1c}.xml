@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{e7d13b2d-a6ca-eb11-bacc-000d3a86ea1c}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_websiteactivity" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_websiteactivityid">
+          <cell name="a3i_websiteactivity" width="300" />
+          <cell name="a3i_contact" width="100" />
+          <cell name="a_57d0437a07264466b3efc77387ec0357.parentcustomerid" width="146" />
+          <cell name="a3i_programme" width="256" />
+          <cell name="a3i_viewtype" width="100" />
+          <cell name="a3i_video" width="100" />
+          <cell name="a3i_timewatched" width="120" />
+          <cell name="a3i_date" width="100" />
+          <cell name="a_2d25b3a01e014a9ab86905b3884b6580.a3i_contenttype" width="100" />
+          <cell name="a_57d0437a07264466b3efc77387ec0357.ownerid" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="a3i_websiteactivity">
+          <attribute name="a3i_websiteactivity" />
+          <attribute name="a3i_websiteactivityid" />
+          <attribute name="a3i_contact" />
+          <attribute name="a3i_date" />
+          <attribute name="a3i_programme" />
+          <attribute name="a3i_video" />
+          <attribute name="a3i_viewtype" />
+          <link-entity alias="a_57d0437a07264466b3efc77387ec0357" name="contact" to="a3i_contact" from="contactid" link-type="outer" visible="false">
+            <attribute name="parentcustomerid" />
+            <attribute name="ownerid" />
+          </link-entity>
+          <link-entity alias="a_2d25b3a01e014a9ab86905b3884b6580" name="a3i_programme" to="a3i_programme" from="a3i_programmeid" link-type="outer" visible="false">
+            <attribute name="a3i_contenttype" />
+          </link-entity>
+          <order attribute="a3i_date" descending="true" />
+          <attribute name="a3i_timewatched" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.66</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Series subgrid view" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

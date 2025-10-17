@@ -1,0 +1,1242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="a3i_a3i_assets_MarketingLead_systemuser" />
+  <EntityRelationship Name="a3i_a3i_assets_MarketingSupport_systemuser" />
+  <EntityRelationship Name="a3i_a3i_assets_Programme_a3i_programme" />
+  <EntityRelationship Name="a3i_a3i_assets_Series_a3i_series" />
+  <EntityRelationship Name="a3i_a3i_assets_Title_a3i_series" />
+  <EntityRelationship Name="a3i_a3i_ip_RelatedIP_a3i_relatedip" />
+  <EntityRelationship Name="a3i_a3i_options_Consultant_systemuser" />
+  <EntityRelationship Name="a3i_a3i_producerdevelopmentfund_FirstLookExte" />
+  <EntityRelationship Name="a3i_a3i_programme_ActiveOriginal_a3i_programm" />
+  <EntityRelationship Name="a3i_a3i_programme_LinktoAssets_a3i_series" />
+  <EntityRelationship Name="a3i_a3i_series_a3i_PrimaryConsultant_cont" />
+  <EntityRelationship Name="a3i_a3i_series_BAContact_systemuser" />
+  <EntityRelationship Name="a3i_a3i_series_BusinessAffairsContact2_system" />
+  <EntityRelationship Name="a3i_a3i_series_LinktoAssets_a3i_assets" />
+  <EntityRelationship Name="a3i_a3i_sharepointdocumentindex_Programme_a3i" />
+  <EntityRelationship Name="a3i_Account_Address1Country_a3i_Country" />
+  <EntityRelationship Name="a3i_Account_CommissioningCountry_a3i_Country" />
+  <EntityRelationship Name="a3i_AuditIP_IP_a3i_IP" />
+  <EntityRelationship Name="a3i_auditip_ProcessSession" />
+  <EntityRelationship Name="a3i_AuditSeries_CommissioningBroadcasterC" />
+  <EntityRelationship Name="a3i_AuditSeries_CommissioningBroadcasterP" />
+  <EntityRelationship Name="a3i_AuditSeries_CoProducerCurrent_Account" />
+  <EntityRelationship Name="a3i_AuditSeries_CoProducerPrevious_Accoun" />
+  <EntityRelationship Name="a3i_AuditSeries_CountryofOriginCurrent_a3" />
+  <EntityRelationship Name="a3i_AuditSeries_CountryofOriginPrevious_a" />
+  <EntityRelationship Name="a3i_AuditSeries_IP_a3i_IP" />
+  <EntityRelationship Name="a3i_auditseries_ProcessSession" />
+  <EntityRelationship Name="a3i_AuditSeries_ProductionCompanyCurrent_" />
+  <EntityRelationship Name="a3i_AuditSeries_ProductionCompanyPrevious" />
+  <EntityRelationship Name="a3i_AuditSeries_Programme_a3i_Programme" />
+  <EntityRelationship Name="a3i_AuditSeries_Series_a3i_Series" />
+  <EntityRelationship Name="a3i_BroadcastPlatform_CommissioningCountr" />
+  <EntityRelationship Name="a3i_broadcastplatform_MainLanguage_a3i_language" />
+  <EntityRelationship Name="a3i_BroadcastPlatform_ParentOrganisation_" />
+  <EntityRelationship Name="a3i_broadcastplatform_ProcessSession" />
+  <EntityRelationship Name="a3i_Contact_Address1Country_a3i_Country" />
+  <EntityRelationship Name="a3i_Contact_Assistant_Contact" />
+  <EntityRelationship Name="a3i_contact_country" />
+  <EntityRelationship Name="a3i_contact_ProductionCountry_a3i_country" />
+  <EntityRelationship Name="a3i_country_ProcessSession" />
+  <EntityRelationship Name="a3i_episode_ProcessSession" />
+  <EntityRelationship Name="a3i_export_ProcessSession" />
+  <EntityRelationship Name="a3i_Export_Related_Broadcast" />
+  <EntityRelationship Name="a3i_Export_Related_Contact" />
+  <EntityRelationship Name="a3i_Export_Related_Deal" />
+  <EntityRelationship Name="a3i_Export_Related_Episode" />
+  <EntityRelationship Name="a3i_Export_Related_IP" />
+  <EntityRelationship Name="a3i_Export_Related_Organisation" />
+  <EntityRelationship Name="a3i_Export_Related_Programme" />
+  <EntityRelationship Name="a3i_Export_Related_Series" />
+  <EntityRelationship Name="a3i_Export_Related_Version" />
+  <EntityRelationship Name="a3i_Export_Related_Website_Activity" />
+  <EntityRelationship Name="a3i_FirstLook_Organisation_Account" />
+  <EntityRelationship Name="a3i_firstlook_ProcessSession" />
+  <EntityRelationship Name="a3i_FirstLookExtension_PrimaryFirstLook_a" />
+  <EntityRelationship Name="a3i_firstlookextension_ProcessSession" />
+  <EntityRelationship Name="a3i_flowvariables_ProcessSession" />
+  <EntityRelationship Name="a3i_IP_FormatProgramme_a3i_Programme" />
+  <EntityRelationship Name="a3i_IP_LastAudit_a3i_AuditIP" />
+  <EntityRelationship Name="a3i_ip_ProcessSession" />
+  <EntityRelationship Name="a3i_Language_a3i_Country_a3i_Country" />
+  <EntityRelationship Name="a3i_language_ProcessSession" />
+  <EntityRelationship Name="a3i_notificationdigest_ProcessSession" />
+  <EntityRelationship Name="a3i_Options_a3i_Country_a3i_Country" />
+  <EntityRelationship Name="a3i_Options_a3i_DealSeries_a3i_DealSeries" />
+  <EntityRelationship Name="a3i_options_DealName_opportunity" />
+  <EntityRelationship Name="a3i_Options_Language_a3i_Language" />
+  <EntityRelationship Name="a3i_Options_Licensee_Account" />
+  <EntityRelationship Name="a3i_options_LPSD_opportunity" />
+  <EntityRelationship Name="a3i_options_ParentAccountId_opportunity" />
+  <EntityRelationship Name="a3i_options_ProcessSession" />
+  <EntityRelationship Name="a3i_Options_Programme_a3i_Programme" />
+  <EntityRelationship Name="a3i_options_Programme1_a3i_programme" />
+  <EntityRelationship Name="a3i_options_SalesExecutive_opportunity" />
+  <EntityRelationship Name="a3i_Options_SalesManager_SystemUser" />
+  <EntityRelationship Name="a3i_Options_Series_a3i_Series" />
+  <EntityRelationship Name="a3i_options_StartDatelookup_opportunity" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Broadcast" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Contact" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Deal" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Episode" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_IntegrationLog" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_IP" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Option" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Organisation" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Programme" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Series" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Version" />
+  <EntityRelationship Name="a3i_PowerAutomateLog_Related_Website_Act" />
+  <EntityRelationship Name="a3i_PRD_a3i_Programme" />
+  <EntityRelationship Name="a3i_PRD_PRTS" />
+  <EntityRelationship Name="a3i_PRD_SalesExecutive" />
+  <EntityRelationship Name="a3i_ProducerDevelopmentFund_a3i_Year_a3i_" />
+  <EntityRelationship Name="a3i_ProducerDevelopmentFund_Account" />
+  <EntityRelationship Name="a3i_ProducerDevelopmentFund_FirstLook" />
+  <EntityRelationship Name="a3i_programme_CompanionShow_a3i_programme" />
+  <EntityRelationship Name="a3i_programme_CountryofOrigin_a3i_country" />
+  <EntityRelationship Name="a3i_Programme_IP_a3i_IP" />
+  <EntityRelationship Name="a3i_programme_Language_a3i_language" />
+  <EntityRelationship Name="a3i_programme_ProcessSession" />
+  <EntityRelationship Name="a3i_PRSET_ProducerReportTerritory" />
+  <EntityRelationship Name="a3i_PRSET_SaleExec" />
+  <EntityRelationship Name="a3i_PRTS_CommissioningBroadcaster" />
+  <EntityRelationship Name="a3i_PRTS_Producer" />
+  <EntityRelationship Name="a3i_PRTS_Programme" />
+  <EntityRelationship Name="a3i_PRTS_Series" />
+  <EntityRelationship Name="a3i_PRTS_Year" />
+  <EntityRelationship Name="a3i_qcfacility_ProcessSession" />
+  <EntityRelationship Name="a3i_region_country" />
+  <EntityRelationship Name="a3i_rightstrackercurrencymapping_ProcessSession" />
+  <EntityRelationship Name="a3i_Series_a3i_Version" />
+  <EntityRelationship Name="a3i_series_ActivityPointers" />
+  <EntityRelationship Name="a3i_series_Appointments" />
+  <EntityRelationship Name="a3i_Series_Bank_Account" />
+  <EntityRelationship Name="a3i_Series_BroadcastPlatform_a3i_Broadcas" />
+  <EntityRelationship Name="a3i_Series_CommissioningBroadcaster2_a3i_" />
+  <EntityRelationship Name="a3i_series_CompanionShowSeries_a3i_series" />
+  <EntityRelationship Name="a3i_Series_Contact_Contact" />
+  <EntityRelationship Name="a3i_series_ContractingCommissioningBroadcasterNew_a3i_broadcastplatform" />
+  <EntityRelationship Name="a3i_series_ContractingProducer1New_account" />
+  <EntityRelationship Name="a3i_series_ContractingProducer2New_account" />
+  <EntityRelationship Name="a3i_Series_CoProducer_Account" />
+  <EntityRelationship Name="a3i_Series_CountryofOrigin_a3i_Country" />
+  <EntityRelationship Name="a3i_series_Emails" />
+  <EntityRelationship Name="a3i_Series_ExternalProductionConsultant_C" />
+  <EntityRelationship Name="a3i_Series_IP_a3i_IP" />
+  <EntityRelationship Name="a3i_Series_KeyCreative_Contact" />
+  <EntityRelationship Name="a3i_Series_LastAudit_a3i_AuditSeries" />
+  <EntityRelationship Name="a3i_series_PhoneCalls" />
+  <EntityRelationship Name="a3i_Series_PrimaryConsultancyContact_Cont" />
+  <EntityRelationship Name="a3i_series_ProcessSession" />
+  <EntityRelationship Name="a3i_Series_Producer1_Account" />
+  <EntityRelationship Name="a3i_Series_Producer2_Account" />
+  <EntityRelationship Name="a3i_Series_Programme_a3i_Programme" />
+  <EntityRelationship Name="a3i_series_SharePointDocumentLocations" />
+  <EntityRelationship Name="a3i_series_SharePointDocuments" />
+  <EntityRelationship Name="a3i_SeriesDevelopmentSpend_Account" />
+  <EntityRelationship Name="a3i_SeriesDevelopmentSpend_FirstLook" />
+  <EntityRelationship Name="a3i_SeriesDevelopmentSpend_ProdDevFund" />
+  <EntityRelationship Name="a3i_SeriesDevelopmentSpend_Series" />
+  <EntityRelationship Name="a3i_SharePointdocumentindex_Series_a3i_Se" />
+  <EntityRelationship Name="a3i_SystemUser_TerritoryCoOwner" />
+  <EntityRelationship Name="a3i_Version_a3i_Episode" />
+  <EntityRelationship Name="a3i_Version_a3i_QCFacility_a3i_QCFacility" />
+  <EntityRelationship Name="a3i_version_ProcessSession" />
+  <EntityRelationship Name="a3i_WebsiteActivity_Contact_Contact" />
+  <EntityRelationship Name="a3i_websiteactivity_ProcessSession" />
+  <EntityRelationship Name="a3i_WebsiteActivity_Programme_a3i_Program" />
+  <EntityRelationship Name="a3i_WebsiteActivity_Series_a3i_Series" />
+  <EntityRelationship Name="Account_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Account_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="activityfileattachment_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="ActivityMimeAttachment_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="activitymonitor_ProcessSession" />
+  <EntityRelationship Name="ActivityParty_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="adminsettingsentity_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="adx_AccountContentAccessLevel" />
+  <EntityRelationship Name="adx_accountproduct" />
+  <EntityRelationship Name="adx_invitation_ActivityPointers" />
+  <EntityRelationship Name="adx_invitation_Appointments" />
+  <EntityRelationship Name="adx_invitation_Emails" />
+  <EntityRelationship Name="adx_invitation_PhoneCalls" />
+  <EntityRelationship Name="adx_portalcomment_SharePointDocuments" />
+  <EntityRelationship Name="adx_webpage_SharePointDocuments" />
+  <EntityRelationship Name="adx_webrole_account" />
+  <EntityRelationship Name="adx_website_SharePointDocuments" />
+  <EntityRelationship Name="adx_website_sponsor" />
+  <EntityRelationship Name="Annotation_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Annotation_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="appaction_ProcessSession" />
+  <EntityRelationship Name="appelement_ProcessSession" />
+  <EntityRelationship Name="applicationuser_ProcessSession" />
+  <EntityRelationship Name="appmodulecomponentedge_ProcessSession" />
+  <EntityRelationship Name="appmodulecomponentnode_ProcessSession" />
+  <EntityRelationship Name="Appointment_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Appointment_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="appsetting_ProcessSession" />
+  <EntityRelationship Name="appusersetting_ProcessSession" />
+  <EntityRelationship Name="Attachment_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bookableresource_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="BookableResource_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bookableresourcebooking_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="BookableResourceBooking_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bookableresourcebookingexchangesyncidmapping_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bookableresourcebookingheader_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="BookableResourceBookingHeader_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bookableresourcecategory_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="BookableResourceCategory_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bookableresourcecategoryassn_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="BookableResourceCategoryAssn_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bookableresourcecharacteristic_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="BookableResourceCharacteristic_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bookableresourcegroup_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="BookableResourceGroup_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bookingstatus_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="BookingStatus_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bot_ProcessSession" />
+  <EntityRelationship Name="botcomponent_ProcessSession" />
+  <EntityRelationship Name="BulkOperation_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="bulkoperationlog_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="business_unit_a3i_assets" />
+  <EntityRelationship Name="business_unit_a3i_auditip" />
+  <EntityRelationship Name="business_unit_a3i_auditseries" />
+  <EntityRelationship Name="business_unit_a3i_broadcastplatform" />
+  <EntityRelationship Name="business_unit_a3i_export" />
+  <EntityRelationship Name="business_unit_a3i_firstlook" />
+  <EntityRelationship Name="business_unit_a3i_firstlookextension" />
+  <EntityRelationship Name="business_unit_a3i_ip" />
+  <EntityRelationship Name="business_unit_a3i_options" />
+  <EntityRelationship Name="business_unit_a3i_powerautomatelog" />
+  <EntityRelationship Name="business_unit_a3i_producerdevelopmentfund" />
+  <EntityRelationship Name="business_unit_a3i_producerreportdata" />
+  <EntityRelationship Name="business_unit_a3i_producerreportsalesexecterritory" />
+  <EntityRelationship Name="business_unit_a3i_producerreportterritory" />
+  <EntityRelationship Name="business_unit_a3i_producerreporttitleslate" />
+  <EntityRelationship Name="business_unit_a3i_programme" />
+  <EntityRelationship Name="business_unit_a3i_relatedip" />
+  <EntityRelationship Name="business_unit_a3i_series" />
+  <EntityRelationship Name="business_unit_a3i_seriesdevelopmentspend" />
+  <EntityRelationship Name="business_unit_a3i_sharepointdocumentindex" />
+  <EntityRelationship Name="business_unit_a3i_version" />
+  <EntityRelationship Name="business_unit_a3i_websiteactivity" />
+  <EntityRelationship Name="business_unit_a3i_year" />
+  <EntityRelationship Name="BusinessDataLocalizedLabel_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="BusinessUnit_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="BusinessUnit_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="BusinessUnitNewsArticle_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Campaign_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Campaign_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="CampaignActivity_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="CampaignActivity_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="CampaignResponse_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="CampaignResponse_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="canvasappextendedmetadata_ProcessSession" />
+  <EntityRelationship Name="cascadegrantrevokeaccessrecordstracker_ProcessSession" />
+  <EntityRelationship Name="cascadegrantrevokeaccessversiontracker_ProcessSession" />
+  <EntityRelationship Name="catalog_ProcessSession" />
+  <EntityRelationship Name="catalogassignment_ProcessSession" />
+  <EntityRelationship Name="Category_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="channelaccessprofile_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="ChannelAccessProfile_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ChannelAccessProfileRule_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ChannelAccessProfileRuleItem_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="characteristic_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="Characteristic_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="childincidentcount_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="comment_ProcessSession" />
+  <EntityRelationship Name="commitment_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Competitor_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Competitor_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="CompetitorAddress_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Connection_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Connection_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="connectionreference_ProcessSession" />
+  <EntityRelationship Name="ConnectionRole_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="ConnectionRole_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="connector_ProcessSession" />
+  <EntityRelationship Name="ConstraintBasedGroup_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="constraintbasedgroup_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Contact_a3i_InactiveProfiles_Contact" />
+  <EntityRelationship Name="Contact_PreviousIncumbent_Contact" />
+  <EntityRelationship Name="Contact_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Contact_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Contract_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Contract_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ContractDetail_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="ContractDetail_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ContractTemplate_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="ContractTemplate_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="conversationtranscript_ProcessSession" />
+  <EntityRelationship Name="ConvertRule_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="crf68_othercontracts_SharePointDocuments" />
+  <EntityRelationship Name="customapi_ProcessSession" />
+  <EntityRelationship Name="customapirequestparameter_ProcessSession" />
+  <EntityRelationship Name="customapiresponseproperty_ProcessSession" />
+  <EntityRelationship Name="CustomerAddress_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="CustomerAddress_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="CustomerOpportunityRole_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="CustomerOpportunityRole_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="CustomerRelationship_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="datalakefolder_ProcessSession" />
+  <EntityRelationship Name="datalakefolderpermission_ProcessSession" />
+  <EntityRelationship Name="datalakeworkspace_ProcessSession" />
+  <EntityRelationship Name="datalakeworkspacepermission_ProcessSession" />
+  <EntityRelationship Name="datasyncstate_ProcessSession" />
+  <EntityRelationship Name="Discount_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Discount_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="DiscountType_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="DiscountType_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="DuplicateRule_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="DuplicateRuleCondition_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="dynamicproperty_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="dynamicpropertyassociation_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="dynamicpropertyinstance_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="dynamicpropertyoptionsetitem_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="email_acceptingentity_queue" />
+  <EntityRelationship Name="email_acceptingentity_systemuser" />
+  <EntityRelationship Name="email_email_CorrelatedActivityId" />
+  <EntityRelationship Name="Email_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Email_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="EmailServerProfile_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="entitlement_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="Entitlement_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="entitlementchannel_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="entitlementchannel_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="entitlemententityallocationtypemapping_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="entitlementtemplate_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="EntitlementTemplate_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="entitlementtemplatechannel_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="entityanalyticsconfig_SyncErrors" />
+  <EntityRelationship Name="entityindex_SyncErrors" />
+  <EntityRelationship Name="environmentvariabledefinition_ProcessSession" />
+  <EntityRelationship Name="environmentvariablevalue_ProcessSession" />
+  <EntityRelationship Name="Equipment_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Equipment_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ExpiredProcess_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="ExpiredProcess_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="exportsolutionupload_ProcessSession" />
+  <EntityRelationship Name="externalparty_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="ExternalParty_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="externalpartyitem_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="ExternalPartyItem_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Fax_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Fax_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="featurecontrolsetting_ProcessSession" />
+  <EntityRelationship Name="Feedback_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="FieldPermission_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="FieldSecurityProfile_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="FileAttachment_ActivityPointer_DescriptionBlobId" />
+  <EntityRelationship Name="FileAttachment_Email_DescriptionBlobId" />
+  <EntityRelationship Name="FileAttachment_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="flowmachine_ProcessSession" />
+  <EntityRelationship Name="flowmachinegroup_ProcessSession" />
+  <EntityRelationship Name="Goal_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Goal_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="goalrollupquery_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="GoalRollupQuery_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="holidaywrapper_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="holidaywrapper_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ImportMap_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Incident_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Incident_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="IncidentResolution_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="indexattributes_SyncErrors" />
+  <EntityRelationship Name="InternalAddress_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="internalcatalogassignment_ProcessSession" />
+  <EntityRelationship Name="Invoice_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Invoice_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="InvoiceDetail_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="InvoiceDetail_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="KbArticle_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="KbArticle_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="KbArticleComment_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="KbArticleTemplate_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="KbArticleTemplate_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="keyvaultreference_ProcessSession" />
+  <EntityRelationship Name="knowledgearticle_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="KnowledgeArticle_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="knowledgearticleincident_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="KnowledgeArticleIncident_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="KnowledgeArticleViews_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="KnowledgeBaseRecord_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="KnowledgeBaseRecord_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Lead_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Lead_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="LeadAddress_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="leadtoopportunitysalesprocess_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="LeadToOpportunitySalesProcess_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Letter_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Letter_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="List_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="List_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="listoperation_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="lk_a3i_assets_createdby" />
+  <EntityRelationship Name="lk_a3i_assets_modifiedby" />
+  <EntityRelationship Name="lk_a3i_auditip_createdby" />
+  <EntityRelationship Name="lk_a3i_auditip_modifiedby" />
+  <EntityRelationship Name="lk_a3i_auditseries_createdby" />
+  <EntityRelationship Name="lk_a3i_auditseries_modifiedby" />
+  <EntityRelationship Name="lk_a3i_broadcastplatform_createdby" />
+  <EntityRelationship Name="lk_a3i_broadcastplatform_modifiedby" />
+  <EntityRelationship Name="lk_a3i_country_createdby" />
+  <EntityRelationship Name="lk_a3i_country_modifiedby" />
+  <EntityRelationship Name="lk_a3i_export_createdby" />
+  <EntityRelationship Name="lk_a3i_export_modifiedby" />
+  <EntityRelationship Name="lk_a3i_firstlook_createdby" />
+  <EntityRelationship Name="lk_a3i_firstlook_modifiedby" />
+  <EntityRelationship Name="lk_a3i_firstlookextension_createdby" />
+  <EntityRelationship Name="lk_a3i_firstlookextension_modifiedby" />
+  <EntityRelationship Name="lk_a3i_flowvariables_createdby" />
+  <EntityRelationship Name="lk_a3i_flowvariables_modifiedby" />
+  <EntityRelationship Name="lk_a3i_ip_createdby" />
+  <EntityRelationship Name="lk_a3i_ip_modifiedby" />
+  <EntityRelationship Name="lk_a3i_language_createdby" />
+  <EntityRelationship Name="lk_a3i_language_modifiedby" />
+  <EntityRelationship Name="lk_a3i_notificationdigest_createdby" />
+  <EntityRelationship Name="lk_a3i_notificationdigest_modifiedby" />
+  <EntityRelationship Name="lk_a3i_options_createdby" />
+  <EntityRelationship Name="lk_a3i_options_modifiedby" />
+  <EntityRelationship Name="lk_a3i_powerautomatelog_createdby" />
+  <EntityRelationship Name="lk_a3i_powerautomatelog_modifiedby" />
+  <EntityRelationship Name="lk_a3i_producerdevelopmentfund_createdby" />
+  <EntityRelationship Name="lk_a3i_producerdevelopmentfund_modifiedby" />
+  <EntityRelationship Name="lk_a3i_producerreportdata_createdby" />
+  <EntityRelationship Name="lk_a3i_producerreportdata_modifiedby" />
+  <EntityRelationship Name="lk_a3i_producerreportsalesexecterritory_createdby" />
+  <EntityRelationship Name="lk_a3i_producerreportsalesexecterritory_modifiedby" />
+  <EntityRelationship Name="lk_a3i_producerreportterritory_createdby" />
+  <EntityRelationship Name="lk_a3i_producerreportterritory_modifiedby" />
+  <EntityRelationship Name="lk_a3i_producerreporttitleslate_createdby" />
+  <EntityRelationship Name="lk_a3i_producerreporttitleslate_modifiedby" />
+  <EntityRelationship Name="lk_a3i_programme_createdby" />
+  <EntityRelationship Name="lk_a3i_programme_modifiedby" />
+  <EntityRelationship Name="lk_a3i_relatedip_createdby" />
+  <EntityRelationship Name="lk_a3i_relatedip_modifiedby" />
+  <EntityRelationship Name="lk_a3i_series_createdby" />
+  <EntityRelationship Name="lk_a3i_series_modifiedby" />
+  <EntityRelationship Name="lk_a3i_seriesdevelopmentspend_createdby" />
+  <EntityRelationship Name="lk_a3i_seriesdevelopmentspend_modifiedby" />
+  <EntityRelationship Name="lk_a3i_sharepointdocumentindex_createdby" />
+  <EntityRelationship Name="lk_a3i_sharepointdocumentindex_modifiedby" />
+  <EntityRelationship Name="lk_a3i_version_createdby" />
+  <EntityRelationship Name="lk_a3i_version_modifiedby" />
+  <EntityRelationship Name="lk_a3i_websiteactivity_createdby" />
+  <EntityRelationship Name="lk_a3i_websiteactivity_modifiedby" />
+  <EntityRelationship Name="lk_a3i_year_createdby" />
+  <EntityRelationship Name="lk_a3i_year_modifiedby" />
+  <EntityRelationship Name="mailbox_email_ReceivingMailboxId" />
+  <EntityRelationship Name="mailbox_processsessions" unmodified="1" />
+  <EntityRelationship Name="Mailbox_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="MailMergeTemplate_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="MailMergeTemplate_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="managedidentity_ProcessSession" />
+  <EntityRelationship Name="marketingformdisplayattributes_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="metric_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Metric_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="msa_account_managingpartner" />
+  <EntityRelationship Name="msdyn_actioncardregarding_ProcessSession" />
+  <EntityRelationship Name="msdyn_actioncardrolesetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_adaptivecardconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_aibdataset_ProcessSession" />
+  <EntityRelationship Name="msdyn_aibdatasetfile_ProcessSession" />
+  <EntityRelationship Name="msdyn_aibdatasetrecord_ProcessSession" />
+  <EntityRelationship Name="msdyn_aibdatasetscontainer_ProcessSession" />
+  <EntityRelationship Name="msdyn_aibfile_ProcessSession" />
+  <EntityRelationship Name="msdyn_aibfileattacheddata_ProcessSession" />
+  <EntityRelationship Name="msdyn_aiconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_aicontactsuggestion_ProcessSession" />
+  <EntityRelationship Name="msdyn_aifptrainingdocument_ProcessSession" />
+  <EntityRelationship Name="msdyn_aimodel_ProcessSession" />
+  <EntityRelationship Name="msdyn_aiodimage_ProcessSession" />
+  <EntityRelationship Name="msdyn_aiodlabel_ProcessSession" />
+  <EntityRelationship Name="msdyn_aiodtrainingboundingbox_ProcessSession" />
+  <EntityRelationship Name="msdyn_aiodtrainingimage_ProcessSession" />
+  <EntityRelationship Name="msdyn_aitemplate_ProcessSession" />
+  <EntityRelationship Name="msdyn_analysiscomponent_ProcessSession" />
+  <EntityRelationship Name="msdyn_analysisjob_ProcessSession" />
+  <EntityRelationship Name="msdyn_analysisresult_ProcessSession" />
+  <EntityRelationship Name="msdyn_analysisresultdetail_ProcessSession" />
+  <EntityRelationship Name="msdyn_analyticsadminsettings_ProcessSession" />
+  <EntityRelationship Name="msdyn_analyticsforcs_ProcessSession" />
+  <EntityRelationship Name="msdyn_appconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_applicationextension_ProcessSession" />
+  <EntityRelationship Name="msdyn_applicationtabtemplate_ProcessSession" />
+  <EntityRelationship Name="msdyn_assetcategorytemplateassociation_ProcessSession" />
+  <EntityRelationship Name="msdyn_assettemplateassociation_ProcessSession" />
+  <EntityRelationship Name="msdyn_assignmentmap_ProcessSession" />
+  <EntityRelationship Name="msdyn_assignmentrule_ProcessSession" />
+  <EntityRelationship Name="msdyn_attribute_ProcessSession" />
+  <EntityRelationship Name="msdyn_attributevalue_ProcessSession" />
+  <EntityRelationship Name="msdyn_autocapturerule_ProcessSession" />
+  <EntityRelationship Name="msdyn_autocapturesettings_ProcessSession" />
+  <EntityRelationship Name="msdyn_callablecontext_ProcessSession" />
+  <EntityRelationship Name="msdyn_caseenrichment_ProcessSession" />
+  <EntityRelationship Name="msdyn_casesuggestionrequestpayload_ProcessSession" />
+  <EntityRelationship Name="msdyn_casetopic_incident_ProcessSession" />
+  <EntityRelationship Name="msdyn_casetopic_ProcessSession" />
+  <EntityRelationship Name="msdyn_casetopicsetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_casetopicsummary_ProcessSession" />
+  <EntityRelationship Name="msdyn_channelprovider_ProcessSession" />
+  <EntityRelationship Name="msdyn_collabgraphresource_ProcessSession" />
+  <EntityRelationship Name="msdyn_contactsuggestionrule_ProcessSession" />
+  <EntityRelationship Name="msdyn_contactsuggestionruleset_ProcessSession" />
+  <EntityRelationship Name="msdyn_conversationdata_ProcessSession" />
+  <EntityRelationship Name="msdyn_customerasset_ActivityPointers" />
+  <EntityRelationship Name="msdyn_customerasset_Appointments" />
+  <EntityRelationship Name="msdyn_customerasset_Emails" />
+  <EntityRelationship Name="msdyn_customerasset_PhoneCalls" />
+  <EntityRelationship Name="msdyn_customerasset_ProcessSession" />
+  <EntityRelationship Name="msdyn_customerassetattachment_ProcessSession" />
+  <EntityRelationship Name="msdyn_customerassetcategory_ProcessSession" />
+  <EntityRelationship Name="msdyn_dataanalyticsreport_csrmanager_ProcessSession" />
+  <EntityRelationship Name="msdyn_dataanalyticsreport_ksinsights_ProcessSession" />
+  <EntityRelationship Name="msdyn_dataanalyticsreport_ProcessSession" />
+  <EntityRelationship Name="msdyn_databaseversion_ProcessSession" />
+  <EntityRelationship Name="msdyn_dataflow_ProcessSession" />
+  <EntityRelationship Name="msdyn_dataflowrefreshhistory_ProcessSession" />
+  <EntityRelationship Name="msdyn_datainsightsandanalyticsfeature_ProcessSession" />
+  <EntityRelationship Name="msdyn_dealmanageraccess_ProcessSession" />
+  <EntityRelationship Name="msdyn_dealmanagersettings_ProcessSession" />
+  <EntityRelationship Name="msdyn_entitylinkchatconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_entityrankingrule_ProcessSession" />
+  <EntityRelationship Name="msdyn_entityrefreshhistory_ProcessSession" />
+  <EntityRelationship Name="msdyn_extendedusersetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_federatedarticle_ProcessSession" />
+  <EntityRelationship Name="msdyn_federatedarticleincident_ProcessSession" />
+  <EntityRelationship Name="msdyn_flowcardtype_ProcessSession" />
+  <EntityRelationship Name="msdyn_forecastconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_forecastdefinition_ProcessSession" />
+  <EntityRelationship Name="msdyn_forecastinstance_ProcessSession" />
+  <EntityRelationship Name="msdyn_forecastrecurrence_ProcessSession" />
+  <EntityRelationship Name="msdyn_functionallocation_ProcessSession" />
+  <EntityRelationship Name="msdyn_gdprdata_ProcessSession" />
+  <EntityRelationship Name="msdyn_helppage_ProcessSession" />
+  <EntityRelationship Name="msdyn_icebreakersconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_insightsid_salesaccelerationinsights" />
+  <EntityRelationship Name="msdyn_iotalert_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotdevice_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotdevicecategory_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotdevicecommand_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotdevicecommanddefinition_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotdevicedatahistory_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotdeviceproperty_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotdeviceregistrationhistory_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotdevicevisualizationconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotfieldmapping_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotpropertydefinition_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotprovider_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotproviderinstance_ProcessSession" />
+  <EntityRelationship Name="msdyn_iotsettings_ProcessSession" />
+  <EntityRelationship Name="msdyn_iottocaseprocess_ProcessSession" />
+  <EntityRelationship Name="msdyn_kalanguagesetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_kbattachment_ProcessSession" />
+  <EntityRelationship Name="msdyn_kbenrichment_ProcessSession" />
+  <EntityRelationship Name="msdyn_kbkeywordsdescsuggestionsetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_kmfederatedsearchconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_kmpersonalizationsetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_knowledgearticleimage_ProcessSession" />
+  <EntityRelationship Name="msdyn_knowledgearticletemplate_ProcessSession" />
+  <EntityRelationship Name="msdyn_knowledgeinteractioninsight_ProcessSession" />
+  <EntityRelationship Name="msdyn_knowledgemanagementsetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_knowledgepersonalfilter_ProcessSession" />
+  <EntityRelationship Name="msdyn_knowledgesearchfilter_ProcessSession" />
+  <EntityRelationship Name="msdyn_knowledgesearchinsight_ProcessSession" />
+  <EntityRelationship Name="msdyn_kpieventdata_ProcessSession" />
+  <EntityRelationship Name="msdyn_kpieventdefinition_ProcessSession" />
+  <EntityRelationship Name="msdyn_leadmodelconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_macrosession_ProcessSession" />
+  <EntityRelationship Name="msdyn_migrationtracker_ProcessSession" />
+  <EntityRelationship Name="msdyn_modelpreviewstatus_ProcessSession" />
+  <EntityRelationship Name="msdyn_msdyn_accountkpiitem_account_accountkpiid" />
+  <EntityRelationship Name="msdyn_msdyn_functionallocation_account" />
+  <EntityRelationship Name="msdyn_msdyn_segment_account" />
+  <EntityRelationship Name="msdyn_msdyn_warranty_account" />
+  <EntityRelationship Name="msdyn_msteamssetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_msteamssettingsv2_ProcessSession" />
+  <EntityRelationship Name="msdyn_notesanalysisconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_notificationfield_ProcessSession" />
+  <EntityRelationship Name="msdyn_notificationtemplate_ProcessSession" />
+  <EntityRelationship Name="msdyn_opportunitymodelconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_paneconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_panetabconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_panetoolconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_playbookactivity_ProcessSession" />
+  <EntityRelationship Name="msdyn_playbookactivity_SharePointDocumentLocations" />
+  <EntityRelationship Name="msdyn_playbookactivity_SharePointDocuments" />
+  <EntityRelationship Name="msdyn_playbookactivityattribute_ProcessSession" />
+  <EntityRelationship Name="msdyn_playbookcategory_ProcessSession" />
+  <EntityRelationship Name="msdyn_playbookinstance_ActivityPointers" />
+  <EntityRelationship Name="msdyn_playbookinstance_Appointments" />
+  <EntityRelationship Name="msdyn_playbookinstance_Emails" />
+  <EntityRelationship Name="msdyn_playbookinstance_PhoneCalls" />
+  <EntityRelationship Name="msdyn_playbookinstance_ProcessSession" />
+  <EntityRelationship Name="msdyn_playbooktemplate_ProcessSession" />
+  <EntityRelationship Name="msdyn_pminferredtask_ProcessSession" />
+  <EntityRelationship Name="msdyn_pmrecording_ProcessSession" />
+  <EntityRelationship Name="msdyn_postalbum_ActivityPointers" />
+  <EntityRelationship Name="msdyn_postalbum_Appointments" />
+  <EntityRelationship Name="msdyn_postalbum_Emails" />
+  <EntityRelationship Name="msdyn_postalbum_PhoneCalls" />
+  <EntityRelationship Name="msdyn_postalbum_ProcessSession" />
+  <EntityRelationship Name="msdyn_postconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_postruleconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_predictivemodelscore_ProcessSession" />
+  <EntityRelationship Name="msdyn_predictivescore_ProcessSession" />
+  <EntityRelationship Name="msdyn_productivityactioninputparameter_ProcessSession" />
+  <EntityRelationship Name="msdyn_productivityactionoutputparameter_ProcessSession" />
+  <EntityRelationship Name="msdyn_productivityagentscript_ProcessSession" />
+  <EntityRelationship Name="msdyn_productivityagentscriptstep_ProcessSession" />
+  <EntityRelationship Name="msdyn_productivitymacroactiontemplate_ProcessSession" />
+  <EntityRelationship Name="msdyn_productivitymacroconnector_ProcessSession" />
+  <EntityRelationship Name="msdyn_productivitymacrosolutionconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_productivityparameterdefinition_ProcessSession" />
+  <EntityRelationship Name="msdyn_property_ProcessSession" />
+  <EntityRelationship Name="msdyn_propertyassetassociation_ProcessSession" />
+  <EntityRelationship Name="msdyn_propertylog_ProcessSession" />
+  <EntityRelationship Name="msdyn_propertytemplateassociation_ProcessSession" />
+  <EntityRelationship Name="msdyn_recording_ProcessSession" />
+  <EntityRelationship Name="msdyn_relationshipinsightsunifiedconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_richtextfile_ProcessSession" />
+  <EntityRelationship Name="msdyn_salesaccelerationsettings_ProcessSession" />
+  <EntityRelationship Name="msdyn_salesassignmentsetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_salesinsightssettings_ProcessSession" />
+  <EntityRelationship Name="msdyn_salesroutingrun_ProcessSession" />
+  <EntityRelationship Name="msdyn_salessuggestion_ActivityPointers" />
+  <EntityRelationship Name="msdyn_salessuggestion_Appointments" />
+  <EntityRelationship Name="msdyn_salessuggestion_Emails" />
+  <EntityRelationship Name="msdyn_salessuggestion_PhoneCalls" />
+  <EntityRelationship Name="msdyn_salestag_ProcessSession" />
+  <EntityRelationship Name="msdyn_segment_ProcessSession" />
+  <EntityRelationship Name="msdyn_segmentcatalogue_ProcessSession" />
+  <EntityRelationship Name="msdyn_sequence_ProcessSession" />
+  <EntityRelationship Name="msdyn_sequencestat_ProcessSession" />
+  <EntityRelationship Name="msdyn_sequencetarget_ProcessSession" />
+  <EntityRelationship Name="msdyn_sequencetargetstep_ProcessSession" />
+  <EntityRelationship Name="msdyn_serviceconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyn_sessiondata_ProcessSession" />
+  <EntityRelationship Name="msdyn_sessionparticipantdata_ProcessSession" />
+  <EntityRelationship Name="msdyn_sessiontemplate_ProcessSession" />
+  <EntityRelationship Name="msdyn_siconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_sikeyvalueconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_slakpi_ProcessSession" />
+  <EntityRelationship Name="msdyn_smartassistconfig_ProcessSession" />
+  <EntityRelationship Name="msdyn_solutionhealthrule_ProcessSession" />
+  <EntityRelationship Name="msdyn_solutionhealthruleargument_ProcessSession" />
+  <EntityRelationship Name="msdyn_solutionhealthruleset_ProcessSession" />
+  <EntityRelationship Name="msdyn_suggestioninteraction_ProcessSession" />
+  <EntityRelationship Name="msdyn_suggestionrequestpayload_ProcessSession" />
+  <EntityRelationship Name="msdyn_suggestionsmodelsummary_ProcessSession" />
+  <EntityRelationship Name="msdyn_suggestionssetting_ProcessSession" />
+  <EntityRelationship Name="msdyn_swarm_ActivityPointers" />
+  <EntityRelationship Name="msdyn_swarm_Appointments" />
+  <EntityRelationship Name="msdyn_swarm_Emails" />
+  <EntityRelationship Name="msdyn_swarm_PhoneCalls" />
+  <EntityRelationship Name="msdyn_teamschatassociation_ProcessSession" />
+  <EntityRelationship Name="msdyn_teamschatsuggestion_ProcessSession" />
+  <EntityRelationship Name="msdyn_teamscollaboration_ProcessSession" />
+  <EntityRelationship Name="msdyn_teamsdialeradminsettings_ProcessSession" />
+  <EntityRelationship Name="msdyn_templateforproperties_ProcessSession" />
+  <EntityRelationship Name="msdyn_templateparameter_ProcessSession" />
+  <EntityRelationship Name="msdyn_tour_ProcessSession" />
+  <EntityRelationship Name="msdyn_unifiedroutingsetuptracker_ProcessSession" />
+  <EntityRelationship Name="msdyn_untrackedappointment_ProcessSession" />
+  <EntityRelationship Name="msdyn_upgraderun_ProcessSession" />
+  <EntityRelationship Name="msdyn_upgradestep_ProcessSession" />
+  <EntityRelationship Name="msdyn_upgradeversion_ProcessSession" />
+  <EntityRelationship Name="msdyn_wallsavedquery_ProcessSession" />
+  <EntityRelationship Name="msdyn_wallsavedqueryusersettings_ProcessSession" />
+  <EntityRelationship Name="msdyn_workqueuestate_ProcessSession" />
+  <EntityRelationship Name="msdyn_workqueueusersetting_ProcessSession" />
+  <EntityRelationship Name="msdynce_botcontent_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_addtocalendarstyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_appointmentactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_appointmentactivitymarketingtemplate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_basestyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_buttonstyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_cdnconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_cdsaconnectorconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_codestyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_columnstyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_contentblock_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_contentblockstyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_contentsettings_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_contentsettings_Appointments" />
+  <EntityRelationship Name="msdyncrm_contentsettings_Emails" />
+  <EntityRelationship Name="msdyncrm_contentsettings_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_contentsettings_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_createleadactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_customerinsightsinfo_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_customerjourney_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_customerjourney_Appointments" />
+  <EntityRelationship Name="msdyncrm_customerjourney_Emails" />
+  <EntityRelationship Name="msdyncrm_customerjourney_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_customerjourney_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_customerjourneycustomchannelactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_customerjourneyiteration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_customerjourneyruntimestate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_customerjourneytemplate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_customerjourneyworkflowlink_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_defaultmarketingsetting_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_delaydatetimeactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_delaydurationactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_deprecatedcustomtileactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_deprecatedeventactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_deprecatedformsprosurveyactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_deprecatedpageactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_designerfeatureavailability_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_digitalassetsconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_dividerstyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_emailkeypoint_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_featureconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_file_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_formpage_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_formpagetemplate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_generalstyles_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_geopin_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_gpt3log_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_gwennolfeatureconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_gwennolspamscoreactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_gwennolspamscorerequest_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_imagestyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_keyword_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_launchworkflowactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_layoutstyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_leadentityfield_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_leadscore_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_leadscore_v2_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_leadscoremodel_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_leadscoremodel_Appointments" />
+  <EntityRelationship Name="msdyncrm_leadscoremodel_Emails" />
+  <EntityRelationship Name="msdyncrm_leadscoremodel_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_leadscoremodel_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_leadscoringconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_leadtoopportunity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinaccount_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_linkedinaccount_Appointments" />
+  <EntityRelationship Name="msdyncrm_linkedinaccount_Emails" />
+  <EntityRelationship Name="msdyncrm_linkedinaccount_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_linkedinaccount_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinactivity_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_linkedinactivity_Appointments" />
+  <EntityRelationship Name="msdyncrm_linkedinactivity_Emails" />
+  <EntityRelationship Name="msdyncrm_linkedinactivity_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_linkedinactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinaudience_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedincampaign_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedincampaignactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinfieldmapping_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_linkedinfieldmapping_Appointments" />
+  <EntityRelationship Name="msdyncrm_linkedinfieldmapping_Emails" />
+  <EntityRelationship Name="msdyncrm_linkedinfieldmapping_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_linkedinfieldmapping_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinform_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_linkedinform_Appointments" />
+  <EntityRelationship Name="msdyncrm_linkedinform_Emails" />
+  <EntityRelationship Name="msdyncrm_linkedinform_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_linkedinform_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinformanswer_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_linkedinformanswer_Appointments" />
+  <EntityRelationship Name="msdyncrm_linkedinformanswer_Emails" />
+  <EntityRelationship Name="msdyncrm_linkedinformanswer_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_linkedinformanswer_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinformquestion_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_linkedinformquestion_Appointments" />
+  <EntityRelationship Name="msdyncrm_linkedinformquestion_Emails" />
+  <EntityRelationship Name="msdyncrm_linkedinformquestion_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_linkedinformquestion_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinformsubmission_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_linkedinformsubmission_Appointments" />
+  <EntityRelationship Name="msdyncrm_linkedinformsubmission_Emails" />
+  <EntityRelationship Name="msdyncrm_linkedinformsubmission_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_linkedinformsubmission_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinleadmatchingstrategy_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_linkedinleadmatchingstrategy_Appointments" />
+  <EntityRelationship Name="msdyncrm_linkedinleadmatchingstrategy_Emails" />
+  <EntityRelationship Name="msdyncrm_linkedinleadmatchingstrategy_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_linkedinleadmatchingstrategy_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_linkedinuserprofile_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_linkedinuserprofile_Appointments" />
+  <EntityRelationship Name="msdyncrm_linkedinuserprofile_Emails" />
+  <EntityRelationship Name="msdyncrm_linkedinuserprofile_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_linkedinuserprofile_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_listform_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_liveentitydependency_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingdataimport_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingdynamiccontentmetadata_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_marketingdynamiccontentmetadata_Appointments" />
+  <EntityRelationship Name="msdyncrm_marketingdynamiccontentmetadata_Emails" />
+  <EntityRelationship Name="msdyncrm_marketingdynamiccontentmetadata_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_marketingdynamiccontentmetadata_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingemail_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingemailactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingemaildynamiccontentmetadata_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_marketingemaildynamiccontentmetadata_Appointments" />
+  <EntityRelationship Name="msdyncrm_marketingemaildynamiccontentmetadata_Emails" />
+  <EntityRelationship Name="msdyncrm_marketingemaildynamiccontentmetadata_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_marketingemaildynamiccontentmetadata_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingemailtemplate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingemailtest_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingemailtestattribute_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingemailtestsend_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_marketingemailtestsend_Appointments" />
+  <EntityRelationship Name="msdyncrm_marketingemailtestsend_Emails" />
+  <EntityRelationship Name="msdyncrm_marketingemailtestsend_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_marketingemailtestsend_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingfieldsubmission_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingform_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingformactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingformfield_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingformsubmission_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingformtemplate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingformwhitelistrule_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingpage_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingpageconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_marketingpagetemplate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_matchingstrategy_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_matchingstrategyattribute_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_migration_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_migration_Appointments" />
+  <EntityRelationship Name="msdyncrm_migration_Emails" />
+  <EntityRelationship Name="msdyncrm_migration_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_migration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_mktactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_msdyncrm_customerjourneyiteration_appointment" />
+  <EntityRelationship Name="msdyncrm_msdyncrm_customerjourneyiteration_phonecall" />
+  <EntityRelationship Name="msdyncrm_networkpage_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_personalizedpage_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_personalizedpagefield_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_phonecallactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_phonecallactivitymarketingtemplate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_portalsettings_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_postingishts_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_qrcodestyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_quicksendemail_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_quotainfoentity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_reaction_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_recordupdateactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_redirecturl_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_segment_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_segmentactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_segmenttemplate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_setupdomain_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_socialpost_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_socialpostingconfiguration_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_socialpostingconsent_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_sourceactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_splitteractivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_taskactivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_taskactivitymarketingtemplate_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_textstyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_triggeractivity_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_uicconfig_ActivityPointers" />
+  <EntityRelationship Name="msdyncrm_uicconfig_Appointments" />
+  <EntityRelationship Name="msdyncrm_uicconfig_Emails" />
+  <EntityRelationship Name="msdyncrm_uicconfig_PhoneCalls" />
+  <EntityRelationship Name="msdyncrm_uicconfig_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_usergeoregion_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_usersetting_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_video_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_videostyle_ProcessSession" />
+  <EntityRelationship Name="msdyncrm_website_ProcessSession" />
+  <EntityRelationship Name="msdynmkt_phonecall_JourneyId_msdynmkt_journey" />
+  <EntityRelationship Name="msevtmgt_attendeepass_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_authenticationsettings_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_bpf_9623d46752ae497989f62ac0d11dad99_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_bucket_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_building_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_checkin_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_checkin_Appointments" />
+  <EntityRelationship Name="msevtmgt_checkin_Emails" />
+  <EntityRelationship Name="msevtmgt_checkin_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_checkin_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_customregistrationfield_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_entitycounter_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_event_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_event_Appointments" />
+  <EntityRelationship Name="msevtmgt_event_Emails" />
+  <EntityRelationship Name="msevtmgt_event_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_event_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventadministration_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventcustomregistrationfield_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventmanagementactivity_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventmanagementconfiguration_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventpurchase_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_eventpurchase_Appointments" />
+  <EntityRelationship Name="msevtmgt_eventpurchase_Emails" />
+  <EntityRelationship Name="msevtmgt_eventpurchase_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_eventpurchase_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventpurchaseattendee_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_eventpurchaseattendee_Appointments" />
+  <EntityRelationship Name="msevtmgt_eventpurchaseattendee_Emails" />
+  <EntityRelationship Name="msevtmgt_eventpurchaseattendee_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_eventpurchaseattendee_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventpurchasecontact_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventpurchasepass_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_eventpurchasepass_Appointments" />
+  <EntityRelationship Name="msevtmgt_eventpurchasepass_Emails" />
+  <EntityRelationship Name="msevtmgt_eventpurchasepass_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_eventpurchasepass_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventregistration_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_eventregistration_Appointments" />
+  <EntityRelationship Name="msevtmgt_eventregistration_Emails" />
+  <EntityRelationship Name="msevtmgt_eventregistration_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_eventregistration_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventteammember_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_eventvendor_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_file_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_hotel_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_hotel_Appointments" />
+  <EntityRelationship Name="msevtmgt_hotel_Emails" />
+  <EntityRelationship Name="msevtmgt_hotel_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_hotel_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_hotelroomallocation_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_hotelroomallocation_Appointments" />
+  <EntityRelationship Name="msevtmgt_hotelroomallocation_Emails" />
+  <EntityRelationship Name="msevtmgt_hotelroomallocation_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_hotelroomallocation_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_hotelroomreservation_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_hotelroomreservation_Appointments" />
+  <EntityRelationship Name="msevtmgt_hotelroomreservation_Emails" />
+  <EntityRelationship Name="msevtmgt_hotelroomreservation_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_hotelroomreservation_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_layout_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_layout_Appointments" />
+  <EntityRelationship Name="msevtmgt_layout_Emails" />
+  <EntityRelationship Name="msevtmgt_layout_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_layout_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_pass_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_registrationresponse_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_room_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_room_Appointments" />
+  <EntityRelationship Name="msevtmgt_room_Emails" />
+  <EntityRelationship Name="msevtmgt_room_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_room_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_roomreservation_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_session_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_session_Appointments" />
+  <EntityRelationship Name="msevtmgt_session_Emails" />
+  <EntityRelationship Name="msevtmgt_session_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_session_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_sessionregistration_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_sessionregistration_Appointments" />
+  <EntityRelationship Name="msevtmgt_sessionregistration_Emails" />
+  <EntityRelationship Name="msevtmgt_sessionregistration_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_sessionregistration_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_sessiontrack_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_sessiontrack_Appointments" />
+  <EntityRelationship Name="msevtmgt_sessiontrack_Emails" />
+  <EntityRelationship Name="msevtmgt_sessiontrack_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_sessiontrack_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_speaker_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_speaker_Appointments" />
+  <EntityRelationship Name="msevtmgt_speaker_Emails" />
+  <EntityRelationship Name="msevtmgt_speaker_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_speaker_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_speakerengagement_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_speakerengagement_Appointments" />
+  <EntityRelationship Name="msevtmgt_speakerengagement_Emails" />
+  <EntityRelationship Name="msevtmgt_speakerengagement_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_speakerengagement_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_sponsorablearticle_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_sponsorablearticle_Appointments" />
+  <EntityRelationship Name="msevtmgt_sponsorablearticle_Emails" />
+  <EntityRelationship Name="msevtmgt_sponsorablearticle_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_sponsorablearticle_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_sponsorship_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_sponsorship_Appointments" />
+  <EntityRelationship Name="msevtmgt_sponsorship_Emails" />
+  <EntityRelationship Name="msevtmgt_sponsorship_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_sponsorship_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_venue_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_venue_Appointments" />
+  <EntityRelationship Name="msevtmgt_venue_Emails" />
+  <EntityRelationship Name="msevtmgt_venue_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_venue_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_waitlistitem_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_webapplication_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_webinarconfiguration_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_webinarconfiguration_Appointments" />
+  <EntityRelationship Name="msevtmgt_webinarconfiguration_Emails" />
+  <EntityRelationship Name="msevtmgt_webinarconfiguration_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_webinarconfiguration_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_webinarconsent_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_webinarprovider_ActivityPointers" />
+  <EntityRelationship Name="msevtmgt_webinarprovider_Appointments" />
+  <EntityRelationship Name="msevtmgt_webinarprovider_Emails" />
+  <EntityRelationship Name="msevtmgt_webinarprovider_PhoneCalls" />
+  <EntityRelationship Name="msevtmgt_webinarprovider_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_webinartype_ProcessSession" />
+  <EntityRelationship Name="msevtmgt_websiteentityconfiguration_ProcessSession" />
+  <EntityRelationship Name="msfp_alert_ProcessSession" />
+  <EntityRelationship Name="msfp_alertrule_ProcessSession" />
+  <EntityRelationship Name="msfp_emailtemplate_ProcessSession" />
+  <EntityRelationship Name="msfp_fileresponse_ProcessSession" />
+  <EntityRelationship Name="msfp_localizedemailtemplate_ProcessSession" />
+  <EntityRelationship Name="msfp_project_ProcessSession" />
+  <EntityRelationship Name="msfp_question_ProcessSession" />
+  <EntityRelationship Name="msfp_questionresponse_ProcessSession" />
+  <EntityRelationship Name="msfp_satisfactionmetric_ProcessSession" />
+  <EntityRelationship Name="msfp_survey_ProcessSession" />
+  <EntityRelationship Name="msfp_surveyinvite_ProcessSession" />
+  <EntityRelationship Name="msfp_surveyreminder_ProcessSession" />
+  <EntityRelationship Name="msfp_surveyresponse_ProcessSession" />
+  <EntityRelationship Name="msfp_unsubscribedrecipient_ProcessSession" />
+  <EntityRelationship Name="msgdpr_gdprconfiguration_ProcessSession" />
+  <EntityRelationship Name="msgdpr_gdprconsentchangerecord_ProcessSession" />
+  <EntityRelationship Name="mspp_adplacement_ActivityPointers" />
+  <EntityRelationship Name="mspp_adplacement_Appointments" />
+  <EntityRelationship Name="mspp_adplacement_Emails" />
+  <EntityRelationship Name="mspp_adplacement_PhoneCalls" />
+  <EntityRelationship Name="mspp_pollplacement_ActivityPointers" />
+  <EntityRelationship Name="mspp_pollplacement_Appointments" />
+  <EntityRelationship Name="mspp_pollplacement_Emails" />
+  <EntityRelationship Name="mspp_pollplacement_PhoneCalls" />
+  <EntityRelationship Name="mspp_publishingstatetransitionrule_ActivityPointers" />
+  <EntityRelationship Name="mspp_publishingstatetransitionrule_Appointments" />
+  <EntityRelationship Name="mspp_publishingstatetransitionrule_Emails" />
+  <EntityRelationship Name="mspp_publishingstatetransitionrule_PhoneCalls" />
+  <EntityRelationship Name="mspp_redirect_ActivityPointers" />
+  <EntityRelationship Name="mspp_redirect_Appointments" />
+  <EntityRelationship Name="mspp_redirect_Emails" />
+  <EntityRelationship Name="mspp_redirect_PhoneCalls" />
+  <EntityRelationship Name="mspp_shortcut_ActivityPointers" />
+  <EntityRelationship Name="mspp_shortcut_Appointments" />
+  <EntityRelationship Name="mspp_shortcut_Emails" />
+  <EntityRelationship Name="mspp_shortcut_PhoneCalls" />
+  <EntityRelationship Name="mspp_website_ActivityPointers" />
+  <EntityRelationship Name="mspp_website_Appointments" />
+  <EntityRelationship Name="mspp_website_Emails" />
+  <EntityRelationship Name="mspp_website_PhoneCalls" />
+  <EntityRelationship Name="NewProcess_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="NewProcess_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="OfflineCommandDefinition_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Opportunity_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Opportunity_SharepointDocumentLocation" unmodified="1" />
+  <EntityRelationship Name="Opportunity_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="OpportunityClose_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="OpportunityProduct_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="OpportunityProduct_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="opportunitysalesprocess_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="OpportunitySalesProcess_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="OrderClose_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="organization_a3i_country" />
+  <EntityRelationship Name="organization_a3i_flowvariables" />
+  <EntityRelationship Name="organization_a3i_language" />
+  <EntityRelationship Name="organization_a3i_notificationdigest" />
+  <EntityRelationship Name="Organization_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="organizationdatasyncsubscription_ProcessSession" />
+  <EntityRelationship Name="organizationdatasyncsubscriptionentity_ProcessSession" />
+  <EntityRelationship Name="organizationsetting_ProcessSession" />
+  <EntityRelationship Name="owner_a3i_assets" />
+  <EntityRelationship Name="owner_a3i_auditip" />
+  <EntityRelationship Name="owner_a3i_auditseries" />
+  <EntityRelationship Name="owner_a3i_broadcastplatform" />
+  <EntityRelationship Name="owner_a3i_export" />
+  <EntityRelationship Name="owner_a3i_firstlook" />
+  <EntityRelationship Name="owner_a3i_firstlookextension" />
+  <EntityRelationship Name="owner_a3i_ip" />
+  <EntityRelationship Name="owner_a3i_options" />
+  <EntityRelationship Name="owner_a3i_powerautomatelog" />
+  <EntityRelationship Name="owner_a3i_producerdevelopmentfund" />
+  <EntityRelationship Name="owner_a3i_producerreportdata" />
+  <EntityRelationship Name="owner_a3i_producerreportsalesexecterritory" />
+  <EntityRelationship Name="owner_a3i_producerreportterritory" />
+  <EntityRelationship Name="owner_a3i_producerreporttitleslate" />
+  <EntityRelationship Name="owner_a3i_programme" />
+  <EntityRelationship Name="owner_a3i_relatedip" />
+  <EntityRelationship Name="owner_a3i_series" />
+  <EntityRelationship Name="owner_a3i_seriesdevelopmentspend" />
+  <EntityRelationship Name="owner_a3i_sharepointdocumentindex" />
+  <EntityRelationship Name="owner_a3i_version" />
+  <EntityRelationship Name="owner_a3i_websiteactivity" />
+  <EntityRelationship Name="owner_a3i_year" />
+  <EntityRelationship Name="package_ProcessSession" />
+  <EntityRelationship Name="pdfsetting_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="PhoneCall_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="PhoneCall_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="phonetocaseprocess_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="PhoneToCaseProcess_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="position_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="Position_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="PostFollow_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="powerpagecomponent_mspp_webrole_account" />
+  <EntityRelationship Name="PriceLevel_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="PriceLevel_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="privilegesremovalsetting_ProcessSession" />
+  <EntityRelationship Name="privilegesremovalsetting_SyncErrors" />
+  <EntityRelationship Name="ProcessSession_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ProcessStage_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="processstageparameter_ProcessSession" />
+  <EntityRelationship Name="ProcessTrigger_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Product_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Product_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ProductAssociation_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="ProductAssociation_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ProductPriceLevel_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="ProductPriceLevel_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ProductSubstitute_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="ProductSubstitute_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="profilerule_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="provisionlanguageforuser_ProcessSession" />
+  <EntityRelationship Name="Publisher_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Queue_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Queue_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="QueueItem_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="QueueItem_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Quote_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Quote_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="QuoteClose_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="QuoteDetail_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="QuoteDetail_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ratingmodel_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="RatingModel_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ratingvalue_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="RatingValue_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="RecurringAppointmentMaster_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="RecurringAppointmentMaster_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="relationshipattribute_SyncErrors" />
+  <EntityRelationship Name="RelationshipRole_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Report_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Report_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ReportCategory_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Resource_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ResourceGroup_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ResourceGroupExpansion_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="resourcespec_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="revokeinheritedaccessrecordstracker_ProcessSession" />
+  <EntityRelationship Name="Role_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="rollupfield_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="RollupField_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="routingrule_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="routingruleitem_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SalesLiterature_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SalesLiterature_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SalesLiteratureItem_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="salesliteratureitem_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SalesOrder_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SalesOrder_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SalesOrderDetail_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SalesOrderDetail_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="salesprocessinstance_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SavedQuery_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SavedQueryVisualization_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="sensitivitylabel_email_SensitivityLabelId" />
+  <EntityRelationship Name="Service_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Service_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="ServiceAppointment_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="ServiceAppointment_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="serviceplan_ProcessSession" />
+  <EntityRelationship Name="serviceplan_SyncErrors" />
+  <EntityRelationship Name="serviceplanmapping_ProcessSession" />
+  <EntityRelationship Name="settingdefinition_ProcessSession" />
+  <EntityRelationship Name="SharePointDocumentLocation_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SharePointDocumentLocation_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SharePointSite_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SharePointSite_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Site_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Site_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SLA_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="slabase_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SLAItem_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SLAKPIInstance_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SocialActivity_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SocialActivity_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SocialProfile_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SocialProfile_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Solution_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="solutioncomponentattributeconfiguration_ProcessSession" />
+  <EntityRelationship Name="solutioncomponentbatchconfiguration_ProcessSession" />
+  <EntityRelationship Name="solutioncomponentconfiguration_ProcessSession" />
+  <EntityRelationship Name="solutioncomponentrelationshipconfiguration_ProcessSession" />
+  <EntityRelationship Name="stagesolutionupload_ProcessSession" />
+  <EntityRelationship Name="Subject_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Subject_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SyncError_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="SystemUser_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="SystemUser_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="systemuserauthorizationchangetracker_ProcessSession" />
+  <EntityRelationship Name="systemuserauthorizationchangetracker_SyncErrors" />
+  <EntityRelationship Name="Task_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Task_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="team_a3i_assets" />
+  <EntityRelationship Name="team_a3i_auditip" />
+  <EntityRelationship Name="team_a3i_auditseries" />
+  <EntityRelationship Name="team_a3i_broadcastplatform" />
+  <EntityRelationship Name="team_a3i_export" />
+  <EntityRelationship Name="team_a3i_firstlook" />
+  <EntityRelationship Name="team_a3i_firstlookextension" />
+  <EntityRelationship Name="team_a3i_ip" />
+  <EntityRelationship Name="team_a3i_options" />
+  <EntityRelationship Name="team_a3i_powerautomatelog" />
+  <EntityRelationship Name="team_a3i_producerdevelopmentfund" />
+  <EntityRelationship Name="team_a3i_producerreportdata" />
+  <EntityRelationship Name="team_a3i_producerreportsalesexecterritory" />
+  <EntityRelationship Name="team_a3i_producerreportterritory" />
+  <EntityRelationship Name="team_a3i_producerreporttitleslate" />
+  <EntityRelationship Name="team_a3i_programme" />
+  <EntityRelationship Name="team_a3i_relatedip" />
+  <EntityRelationship Name="team_a3i_series" />
+  <EntityRelationship Name="team_a3i_seriesdevelopmentspend" />
+  <EntityRelationship Name="team_a3i_sharepointdocumentindex" />
+  <EntityRelationship Name="team_a3i_version" />
+  <EntityRelationship Name="team_a3i_websiteactivity" />
+  <EntityRelationship Name="team_a3i_year" />
+  <EntityRelationship Name="Team_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Team_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="teammobileofflineprofilemembership_ProcessSession" />
+  <EntityRelationship Name="TeamTemplate_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Template_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Template_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="Territory_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="Territory_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="theme_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="topic_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="topichistory_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="topicmodel_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="topicmodelconfiguration_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="topicmodelexecutionhistory_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="TransactionCurrency_a3i_FirstLook" />
+  <EntityRelationship Name="TransactionCurrency_a3i_FirstLookExtension" />
+  <EntityRelationship Name="TransactionCurrency_a3i_ProducerDevelopmentFund" />
+  <EntityRelationship Name="TransactionCurrency_a3i_Series" />
+  <EntityRelationship Name="TransactionCurrency_a3i_SeriesDevelopmentSpend" />
+  <EntityRelationship Name="TranslationProcess_ProcessSessions" unmodified="1" />
+  <EntityRelationship Name="TranslationProcess_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="UoM_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="UoMSchedule_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="user_a3i_assets" />
+  <EntityRelationship Name="user_a3i_auditip" />
+  <EntityRelationship Name="user_a3i_auditseries" />
+  <EntityRelationship Name="user_a3i_broadcastplatform" />
+  <EntityRelationship Name="user_a3i_export" />
+  <EntityRelationship Name="user_a3i_firstlook" />
+  <EntityRelationship Name="user_a3i_firstlookextension" />
+  <EntityRelationship Name="user_a3i_ip" />
+  <EntityRelationship Name="user_a3i_options" />
+  <EntityRelationship Name="user_a3i_powerautomatelog" />
+  <EntityRelationship Name="user_a3i_producerdevelopmentfund" />
+  <EntityRelationship Name="user_a3i_producerreportdata" />
+  <EntityRelationship Name="user_a3i_producerreportsalesexecterritory" />
+  <EntityRelationship Name="user_a3i_producerreportterritory" />
+  <EntityRelationship Name="user_a3i_producerreporttitleslate" />
+  <EntityRelationship Name="user_a3i_programme" />
+  <EntityRelationship Name="user_a3i_relatedip" />
+  <EntityRelationship Name="user_a3i_series" />
+  <EntityRelationship Name="user_a3i_seriesdevelopmentspend" />
+  <EntityRelationship Name="user_a3i_sharepointdocumentindex" />
+  <EntityRelationship Name="user_a3i_version" />
+  <EntityRelationship Name="user_a3i_websiteactivity" />
+  <EntityRelationship Name="user_a3i_year" />
+  <EntityRelationship Name="usermapping_ProcessSession" unmodified="1" />
+  <EntityRelationship Name="usermobileofflineprofilemembership_ProcessSession" />
+  <EntityRelationship Name="UserQuery_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="UserQueryVisualization_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="virtualentitymetadata_ProcessSession" />
+  <EntityRelationship Name="Workflow_SyncErrors" unmodified="1" />
+  <EntityRelationship Name="workflowbinary_ProcessSession" />
+</EntityRelationships>

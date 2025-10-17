@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{5fc6f095-3b35-ee11-bdf4-002248c6f4e0}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_seriesname" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_seriesid">
+          <cell name="a3i_seriesname" width="200" />
+          <cell name="a3i_broadcastplatform" width="210" />
+          <cell name="a3i_producer1" width="170" />
+          <cell name="a3i_txdate" width="100" />
+          <cell name="a3i_deliverydate" width="142" />
+          <cell name="a3i_runtime" width="100" />
+          <cell name="a_529082316b34465e823204dcc6e3977b.a3i_contenttype" width="194" />
+          <cell name="a_529082316b34465e823204dcc6e3977b.a3i_genre" width="153" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="true">
+        <entity name="a3i_series">
+          <attribute name="a3i_seriesname" />
+          <attribute name="a3i_seriesid" />
+          <attribute name="a3i_broadcastplatform" />
+          <attribute name="a3i_producer1" />
+          <attribute name="a3i_txdate" />
+          <attribute name="a3i_deliverydate" />
+          <attribute name="a3i_runtime" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+            <filter type="and">
+              <condition attribute="a3i_txdate" operator="on-or-after" value="2023-07-01" />
+              <condition attribute="a3i_txdate" operator="on-or-before" value="2023-09-30" />
+            </filter>
+          </filter>
+          <link-entity alias="a_529082316b34465e823204dcc6e3977b" name="a3i_programme" to="a3i_programme" from="a3i_programmeid" link-type="outer" visible="false">
+            <attribute name="a3i_contenttype" />
+            <attribute name="a3i_genre" />
+          </link-entity>
+          <order attribute="a3i_deliverydate" descending="false" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.129</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Series TXing - Q3" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

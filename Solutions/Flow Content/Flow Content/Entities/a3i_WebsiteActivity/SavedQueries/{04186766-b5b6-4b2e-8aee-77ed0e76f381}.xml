@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>0</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>1</isdefault>
+    <savedqueryid>{04186766-b5b6-4b2e-8aee-77ed0e76f381}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="a3i_websiteactivity" select="1" icon="1" preview="1">
+        <row name="result" id="a3i_websiteactivityid">
+          <cell name="a3i_websiteactivity" width="300" />
+          <cell name="a3i_contact" width="100" />
+          <cell name="a_c1024b0739724ad48e86b165f7312d2f.parentcustomerid" width="151" />
+          <cell name="a3i_programme" width="157" />
+          <cell name="a3i_series" width="186" />
+          <cell name="a3i_viewtype" width="100" />
+          <cell name="a3i_video" width="100" />
+          <cell name="a3i_timewatched" width="120" />
+          <cell name="a3i_date" width="100" />
+          <cell name="a_6fe9d1bec833408386f144e84ccea070.a3i_contenttype" width="100" />
+          <cell name="a_c1024b0739724ad48e86b165f7312d2f.ownerid" width="100" />
+          <cell name="a_c1024b0739724ad48e86b165f7312d2f.a3i_purchasingcountriesmulti" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" mapping="logical">
+        <entity name="a3i_websiteactivity">
+          <attribute name="a3i_websiteactivityid" />
+          <attribute name="a3i_websiteactivity" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="a3i_contact" />
+          <attribute name="a3i_programme" />
+          <attribute name="a3i_date" />
+          <attribute name="a3i_video" />
+          <attribute name="a3i_series" />
+          <attribute name="a3i_viewtype" />
+          <order attribute="a3i_date" descending="true" />
+          <order attribute="a3i_websiteactivity" descending="false" />
+          <link-entity alias="a_6fe9d1bec833408386f144e84ccea070" name="a3i_programme" to="a3i_programme" from="a3i_programmeid" link-type="outer" visible="false">
+            <attribute name="a3i_contenttype" />
+          </link-entity>
+          <link-entity alias="a_c1024b0739724ad48e86b165f7312d2f" name="contact" to="a3i_contact" from="contactid" link-type="outer" visible="false">
+            <attribute name="parentcustomerid" />
+            <attribute name="ownerid" />
+            <attribute name="a3i_purchasingcountriesmulti" />
+          </link-entity>
+          <attribute name="a3i_timewatched" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>1.0.0.44</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Active Website Activities" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

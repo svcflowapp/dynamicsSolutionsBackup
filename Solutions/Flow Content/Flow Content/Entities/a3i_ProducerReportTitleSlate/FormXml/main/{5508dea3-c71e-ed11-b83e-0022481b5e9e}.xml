@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{5508dea3-c71e-ed11-b83e-0022481b5e9e}</formid>
+    <IntroducedVersion>1.0.0.104</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{68807c12-8449-483d-ae99-800d20c726e7}" IsUserDefined="1" labelid="{df4e89d6-4d9d-4a0e-bd4d-79f07541f362}" name="tab_general">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{112e69a1-e69a-4462-960f-9be3db8e01f1}" labelid="{c1ed653b-560d-446b-a758-c733ca06a322}" name="tab_general_section_general">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3141bbc7-4038-4c21-b2ad-ec122bd84ad5}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Series" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_series" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_series" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6d061a8a-487a-4004-bcdd-91c83679260f}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Year" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_year" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_year" disabled="false">
+                          <parameters>
+                            <DefaultViewId>{FB551675-C3C9-450F-8DCE-E0C7D5483E3A}</DefaultViewId>
+                            <AvailableViewIds>{FB551675-C3C9-450F-8DCE-E0C7D5483E3A},{9F6228D6-50E2-EC11-BB3D-0022481AB00D},{84EA46DA-5C9C-4B4C-BA03-6E43C0261E30},{76F97BC3-A46A-4374-B392-F400653107DF}</AvailableViewIds>
+                            <DisableViewPicker>true</DisableViewPicker>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{5df47c1f-0bf9-41b1-b266-a91cf1b5882e}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Programme" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_programme" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_programme" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{628eabf3-b560-434d-b1c1-08709a8ed62c}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Producer" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_producer" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_producer" disabled="true" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f255f2b7-9c60-43b5-91c4-482409857740}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Commissioning Broadcaster" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_commissioningbroadcaster" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="a3i_commissioningbroadcaster" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="tab_general_section_notes" id="87da7439-46d4-449f-93c4-ac60a097739d" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="Notes" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{b868a237-6c2f-4195-b490-f29c9f0abaa3}" locklevel="0" colspan="1" rowspan="6" showlabel="false" auto="true">
+                        <labels>
+                          <label description="Content Producer Notes" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_contentproducernotes" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="a3i_contentproducernotes" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row>
+                      <cell locklevel="0" id="{abe9dabf-08c7-414a-a119-705080a620d7}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab name="tab_hidden" id="b94b57b8-2a86-4cd0-9766-6ff453e72da8" IsUserDefined="0" locklevel="0" showlabel="true" visible="false">
+          <labels>
+            <label description="Hidden" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="tab_hidden_section_general" id="74b9cc98-5fd4-4502-b09a-ffac02be4a40" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{f7965dd4-e8d6-4907-968f-db50ebceabd7}" labelid="{49a39c4d-75d3-461a-8fa1-d9e3ceb04792}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="a3i_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="a3i_name" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{f7ab3f65-a6c2-437a-b6c6-057e3c76c131}" labelid="{86a40749-5ecc-4ff3-bbf1-8466fb611895}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{fe9b681c-d8ee-480c-997a-666a66b8c407}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{c9e14141-cb7d-4ae0-baf7-dc316466c3dd}" showlabel="false" labelid="{c9cb5c9f-7270-4f74-b067-4d51d85521e2}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{82ad79d5-83b7-4403-854c-214191b55656}" showlabel="false" labelid="{4ccab269-5ad2-4cc4-903e-25fc902c11f3}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{c158ea0f-63c4-4859-a91b-05e0f92cd1be}" showlabel="false" labelid="{3514857b-8d87-4b91-96b1-67f9eb73c880}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{b8815ac8-869a-4b8e-8c02-1661b783aa22}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{9a00b322-3a7c-419b-8dd0-a5eb07d25570}" showlabel="false" labelid="{23662224-70c7-4806-ba2f-f6c152ef0337}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{61bbec38-65a1-46b4-a035-b134d524e508}" showlabel="false" labelid="{ae40794f-2c1d-46fd-b6ae-8577122ab465}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{726bd48e-7f79-49d3-b852-61609ee1ee8b}" showlabel="false" labelid="{fb5762ab-f038-4591-b436-e36ac02c7f2e}">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="1" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Main Form" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A custom form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

@@ -1,0 +1,1646 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps_2": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_12eb3"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      },
+      "shared_excelonlinebusiness-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedexcelonlinebusiness_e1bc7"
+        },
+        "api": {
+          "name": "shared_excelonlinebusiness"
+        }
+      },
+      "shared_sharepointonline": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedsharepointonline_b7aba"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      },
+      "shared_onedriveforbusiness": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedonedriveforbusiness_04c9b"
+        },
+        "api": {
+          "name": "shared_onedriveforbusiness"
+        }
+      },
+      "shared_excelonlinebusiness": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedexcelonlinebusiness_9250f"
+        },
+        "api": {
+          "name": "shared_excelonlinebusiness"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedoffice365_48fa5"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "recurrence": {
+            "frequency": "Day",
+            "interval": 1,
+            "timeZone": "GMT Standard Time",
+            "schedule": {
+              "hours": [
+                "23"
+              ],
+              "minutes": [
+                0
+              ]
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "69c9335e-e2ec-4736-9eac-3971ff27578f"
+          },
+          "type": "Recurrence"
+        }
+      },
+      "actions": {
+        "Scope": {
+          "actions": {
+            "Variables": {
+              "actions": {
+                "Loop_Set_Sales_Slate_Site": {
+                  "foreach": "@outputs('Get_Sales_Slate_Site')?['body/value']",
+                  "actions": {
+                    "Set_Sales_Slate_Site": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "10c0f3a6-11ee-4fc2-b297-fd02a76c2ea7"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Site",
+                        "value": "@items('Loop_Set_Sales_Slate_Site')?['a3i_value']"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Get_Sales_Slate_Site": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d63a607a-abdd-4d74-bc51-a694c9b5b3ac"
+                  },
+                  "type": "Foreach"
+                },
+                "Get_Sales_Slate_Site": {
+                  "runAfter": {
+                    "Loop_Set_Sales_Slate_ID": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d1f6b76a-a5db-455b-b80f-cc823bd43918"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_2",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_flowvariableses",
+                      "$filter": "a3i_name eq 'SalesSlateSite'"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Loop_Set_Sales_Slate_ID": {
+                  "foreach": "@outputs('Get_Sales_Slate_ID')?['body/value']",
+                  "actions": {
+                    "Set_Sales_Slate_ID": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "3069234f-2382-4632-85af-86b123c9f4d6"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "ID",
+                        "value": "@items('Loop_Set_Sales_Slate_ID')?['a3i_value']"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Get_Sales_Slate_ID": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d903d41e-4838-408c-9e39-10ef5e10b012"
+                  },
+                  "type": "Foreach"
+                },
+                "Get_Sales_Slate_Folder": {
+                  "runAfter": {
+                    "Loop_Set_Sales_Slate_Site": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d1f6b76a-a5db-455b-b80f-cc823bd43918"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_2",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_flowvariableses",
+                      "$filter": "a3i_name eq 'SalesSlateFolder'"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Loop_Set_Sales_Slate_Folder": {
+                  "foreach": "@outputs('Get_Sales_Slate_Folder')?['body/value']",
+                  "actions": {
+                    "Set_Sales_Slate_Folder": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "90b87d5b-e9a4-41d9-be68-abfbe45aa833"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Folder",
+                        "value": "@items('Loop_Set_Sales_Slate_Folder')?['a3i_value']"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Get_Sales_Slate_Folder": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "814be16f-8f40-4691-9ce1-378c473bd989"
+                  },
+                  "type": "Foreach"
+                },
+                "Get_Environment": {
+                  "runAfter": {
+                    "Loop_Set_Sales_Slate_Folder": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d1f6b76a-a5db-455b-b80f-cc823bd43918"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_2",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_flowvariableses",
+                      "$filter": "a3i_name eq 'Environment'"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Loop_Set_Environment": {
+                  "foreach": "@outputs('Get_Environment')?['body/value']",
+                  "actions": {
+                    "Set_Environment": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "580aa53c-919d-4dac-b985-3f5cdeb700c7"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Environment",
+                        "value": "@items('Loop_Set_Environment')?['a3i_value']"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Get_Environment": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "e5968a3d-41e3-4e47-974c-91045296e676"
+                  },
+                  "type": "Foreach"
+                },
+                "Get_Error_Email": {
+                  "runAfter": {
+                    "Loop_Set_Environment": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d1f6b76a-a5db-455b-b80f-cc823bd43918"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_2",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_flowvariableses",
+                      "$filter": "a3i_name eq 'ErrorEmail'"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Loop_Set_Error_Email": {
+                  "foreach": "@outputs('Get_Error_Email')?['body/value']",
+                  "actions": {
+                    "Set_Error_Email": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "3a0c5bca-9302-4caa-b369-8b51e04d4cfa"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "ErrorEmail",
+                        "value": "@items('Loop_Set_Error_Email')?['a3i_value']"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Get_Error_Email": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "c22b7fc2-4424-414c-b0f3-faa7eeb33313"
+                  },
+                  "type": "Foreach"
+                },
+                "Get_URL": {
+                  "runAfter": {
+                    "Loop_Set_Error_Email": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d1f6b76a-a5db-455b-b80f-cc823bd43918"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_2",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_flowvariableses",
+                      "$filter": "a3i_name eq 'URL'"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Loop_Set_Power_Automate_Log": {
+                  "foreach": "@outputs('Get_URL')?['body/value']",
+                  "actions": {
+                    "Set_Power_Automate_Log": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "db3867cb-865d-4aa8-bd6f-75114f384782"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "PALog",
+                        "value": "@{items('Loop_Set_Power_Automate_Log')?['a3i_value']}a3i_powerautomatelog&id=@{outputs('Create_Power_Automate_Log')?['body/a3i_powerautomatelogid']}"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Get_URL": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "6e69c178-bfbc-4eea-97ad-948e8b125042"
+                  },
+                  "type": "Foreach"
+                },
+                "Create_Power_Automate_Log": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "750fbdea-bdc1-4f9a-ae70-b67d783cc213"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_2",
+                      "operationId": "CreateRecord",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_powerautomatelogs",
+                      "item/a3i_name": "Series. Export Sales Slate - @{utcNow()}",
+                      "item/a3i_cloudflow": 430830000,
+                      "item/a3i_runhistory": "@concat('https://unitedkingdom.flow.microsoft.com/manage/environments/',workflow()['tags']['environmentName'],'/flows/',workflow()['name'],'/runs/',workflow()['run']['name'])"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Get_Sales_Slate_ID": {
+                  "runAfter": {
+                    "Create_Power_Automate_Log": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "d1f6b76a-a5db-455b-b80f-cc823bd43918"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_2",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_flowvariableses",
+                      "$filter": "a3i_name eq 'SalesSlateID'"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "1b5e1cd3-aca6-47f6-bda2-0ed343ef55eb"
+              },
+              "type": "Scope"
+            },
+            "Sales_Slate": {
+              "actions": {
+                "Parse_JSON_for_Sales_Slate_Data": {
+                  "runAfter": {
+                    "Compose": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "e817ef9e-82bf-42b8-a346-6b9ec5a91688"
+                  },
+                  "type": "ParseJson",
+                  "inputs": {
+                    "content": "@outputs('Get_Sales_Slate_data')?['body/value']",
+                    "schema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "@@odata.type": {
+                            "type": "string"
+                          },
+                          "@@odata.id": {
+                            "type": "string"
+                          },
+                          "@@odata.etag": {
+                            "type": "string"
+                          },
+                          "@@odata.editLink": {
+                            "type": "string"
+                          },
+                          "a3i_seriesname": {
+                            "type": "string"
+                          },
+                          "a3i_rightstrackerid": {
+                            "type": "string"
+                          },
+                          "_a3i_producer1_value@OData.Community.Display.V1.FormattedValue": {
+                            "type": "string"
+                          },
+                          "_a3i_producer1_value@Microsoft.Dynamics.CRM.associatednavigationproperty": {
+                            "type": "string"
+                          },
+                          "_a3i_producer1_value@Microsoft.Dynamics.CRM.lookuplogicalname": {
+                            "type": "string"
+                          },
+                          "_a3i_producer1_value@odata.type": {
+                            "type": "string"
+                          },
+                          "_a3i_producer1_value": {
+                            "type": "string"
+                          },
+                          "_a3i_broadcastplatform_value@OData.Community.Display.V1.FormattedValue": {
+                            "type": "string"
+                          },
+                          "_a3i_broadcastplatform_value@Microsoft.Dynamics.CRM.associatednavigationproperty": {
+                            "type": "string"
+                          },
+                          "_a3i_broadcastplatform_value@Microsoft.Dynamics.CRM.lookuplogicalname": {
+                            "type": "string"
+                          },
+                          "_a3i_broadcastplatform_value@odata.type": {
+                            "type": "string"
+                          },
+                          "_a3i_broadcastplatform_value": {
+                            "type": "string"
+                          },
+                          "a3i_runtime": {
+                            "type": "string"
+                          },
+                          "a3i_definition@OData.Community.Display.V1.FormattedValue": {
+                            "type": "string"
+                          },
+                          "a3i_definition": {
+                            "type": "string"
+                          },
+                          "a3i_yearofproduction": {
+                            "type": "string"
+                          },
+                          "a3i_txdate@OData.Community.Display.V1.FormattedValue": {
+                            "type": "string"
+                          },
+                          "a3i_txdate@odata.type": {
+                            "type": "string"
+                          },
+                          "a3i_txdate": {
+                            "type": "string"
+                          },
+                          "a3i_txdatestatusnew@OData.Community.Display.V1.FormattedValue": {
+                            "type": "string"
+                          },
+                          "a3i_txdatestatusnew": {
+                            "type": "integer"
+                          },
+                          "a3i_deliverydate@OData.Community.Display.V1.FormattedValue": {
+                            "type": "string"
+                          },
+                          "a3i_deliverydate@odata.type": {
+                            "type": "string"
+                          },
+                          "a3i_deliverydate": {
+                            "type": "string"
+                          },
+                          "a3i_deliverydatestatus@OData.Community.Display.V1.FormattedValue": {
+                            "type": "string"
+                          },
+                          "a3i_deliverydatestatus": {},
+                          "a3i_seriesid@odata.type": {
+                            "type": "string"
+                          },
+                          "a3i_seriesid": {
+                            "type": "string"
+                          },
+                          "a3i_Producer1@odata.associationLink": {
+                            "type": "string"
+                          },
+                          "a3i_Producer1@odata.navigationLink": {
+                            "type": "string"
+                          },
+                          "a3i_BroadcastPlatform@odata.associationLink": {
+                            "type": "string"
+                          },
+                          "a3i_BroadcastPlatform@odata.navigationLink": {
+                            "type": "string"
+                          },
+                          "a3i_Programme@odata.associationLink": {
+                            "type": "string"
+                          },
+                          "a3i_Programme@odata.navigationLink": {
+                            "type": "string"
+                          },
+                          "a3i_Programme": {
+                            "type": "object",
+                            "properties": {
+                              "@@odata.type": {
+                                "type": "string"
+                              },
+                              "@@odata.id": {
+                                "type": "string"
+                              },
+                              "@@odata.editLink": {
+                                "type": "string"
+                              },
+                              "a3i_contenttype@OData.Community.Display.V1.FormattedValue": {
+                                "type": "string"
+                              },
+                              "a3i_contenttype": {
+                                "type": "integer"
+                              },
+                              "a3i_genre@OData.Community.Display.V1.FormattedValue": {
+                                "type": "string"
+                              },
+                              "a3i_genre": {
+                                "type": "string"
+                              },
+                              "a3i_websitelink": {},
+                              "a3i_localversion@OData.Community.Display.V1.FormattedValue": {
+                                "type": "string"
+                              },
+                              "a3i_localversion": {},
+                              "a3i_programmeid@odata.type": {
+                                "type": "string"
+                              },
+                              "a3i_programmeid": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "a3i_synopsis": {
+                            "type": "string"
+                          },
+                          "a3i_txqtrest@OData.Community.Display.V1.FormattedValue": {
+                            "type": "string"
+                          },
+                          "a3i_txqtrest": {
+                            "type": "integer"
+                          },
+                          "a3i_txyearest@OData.Community.Display.V1.FormattedValue": {
+                            "type": "string"
+                          },
+                          "a3i_txyearest": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": []
+                      }
+                    }
+                  }
+                },
+                "Add_all_Sales_Slate_data_into_excel_file": {
+                  "foreach": "@body('Select_Sales_Slate_data_for_entry_into_file')",
+                  "actions": {
+                    "Add_a_row_into_a_table": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "f4b87157-13c3-4323-a2b2-0b60680d60a4",
+                        "tableId": "Table"
+                      },
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "host": {
+                          "connectionName": "shared_excelonlinebusiness-1",
+                          "operationId": "AddRowV2",
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness"
+                        },
+                        "parameters": {
+                          "source": "me",
+                          "drive": "b!N8vFdlglNEOnl4buqw4Pukb019C0WZdDtP_kAlBi9RXRi4cE4OkFRZqw23yRdAzl",
+                          "file": "@outputs('Create_Temp_Sales_Slate')?['body/Id']",
+                          "table": "Table",
+                          "item": "@items('Add_all_Sales_Slate_data_into_excel_file')"
+                        },
+                        "authentication": "@parameters('$authentication')"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Select_Sales_Slate_data_for_entry_into_file": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "db26d3fb-b7a2-4349-ac0e-fd71157ad073"
+                  },
+                  "type": "Foreach"
+                },
+                "Delay": {
+                  "runAfter": {
+                    "Check_if_Skip_Token_Blank": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "75ba563c-6ad4-4c79-8f8a-f3cbe5a278ff"
+                  },
+                  "type": "Wait",
+                  "inputs": {
+                    "interval": {
+                      "count": 2,
+                      "unit": "Minute"
+                    }
+                  }
+                },
+                "Create_Sales_Slate": {
+                  "runAfter": {
+                    "Get_fully_loaded_Sales_Slate_excel_file": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "e2138b56-52d6-4e35-ae73-a0077159fb4c"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_sharepointonline",
+                      "operationId": "CreateFile",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                    },
+                    "parameters": {
+                      "dataset": "@variables('Site')",
+                      "folderPath": "/Shared Documents/General/@{variables('Folder')}",
+                      "name": "SalesSlate-@{formatDateTime(utcNow(),'dd-MM-yyyy')}.xlsx",
+                      "body": "@body('Get_fully_loaded_Sales_Slate_excel_file')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  },
+                  "runtimeConfiguration": {
+                    "contentTransfer": {
+                      "transferMode": "Chunked"
+                    }
+                  }
+                },
+                "Get_Sales_Slate_data": {
+                  "runAfter": {
+                    "Create_Temp_Sales_Slate": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "cdde5ed2-92c0-4987-86b0-cfbfb71d9535"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_commondataserviceforapps_2",
+                      "operationId": "ListRecords",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                    },
+                    "parameters": {
+                      "entityName": "a3i_serieses",
+                      "$select": "a3i_seriesname,a3i_rightstrackerid,_a3i_producer1_value,_a3i_broadcastplatform_value,_a3i_commissioningbroadcaster2_value,a3i_runtime,a3i_definition,a3i_yearofproduction,a3i_txdate,a3i_txdatestatusnew,a3i_txqtrest,a3i_txyearest,a3i_deliverydate,a3i_deliverydatestatus,a3i_newsynopsis,a3i_seriesid",
+                      "$filter": "(statecode eq 0 and a3i_seriesstatus eq 430830002) and (a3i_Programme/a3i_iptype eq 430830000)",
+                      "$orderby": "a3i_seriesname asc",
+                      "$expand": "a3i_Programme($select=a3i_contenttype,a3i_genre,a3i_websitelink,a3i_localversion,a3i_logline)"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Get_Sales_Slate": {
+                  "runAfter": {},
+                  "metadata": {
+                    "b!N8vFdlglNEOnl4buqw4Pukb019C0WZdDtP_kAlBi9RXRi4cE4OkFRZqw23yRdAzl.01QU7D7I2T4CEVE2ROKBC3NXYRT5RPQ7R4": "/Sales Slate.xlsx",
+                    "operationMetadataId": "df1a307e-8832-4fae-970b-8bc58b6778a6",
+                    "b!N8vFdlglNEOnl4buqw4Pukb019C0WZdDtP_kAlBi9RXRi4cE4OkFRZqw23yRdAzl.01QU7D7I7PXBDRG5VSUFFLIHRPNM7EELQP": "/Sales Slate.xlsx",
+                    "b!N8vFdlglNEOnl4buqw4Pukb019C0WZdDtP_kAlBi9RXRi4cE4OkFRZqw23yRdAzl.01QU7D7I4HRDEMJ3SNERHIZPLPEFSEF4Y2": "/Sales Slate - Test.xlsx",
+                    "b!N8vFdlglNEOnl4buqw4Pukb019C0WZdDtP_kAlBi9RXRi4cE4OkFRZqw23yRdAzl.01QU7D7I7QRBTK5RVIPBHIGB7LVO4NNRBR": "/Sales Slate.xlsx"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_onedriveforbusiness",
+                      "operationId": "GetFileMetadata",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+                    },
+                    "parameters": {
+                      "id": "@variables('ID')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Create_Temp_Sales_Slate": {
+                  "runAfter": {
+                    "Get_Sales_Slate_Content": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "8c039050-ecbf-4364-b7b9-f76f495d00cf"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_onedriveforbusiness",
+                      "operationId": "CreateFile",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+                    },
+                    "parameters": {
+                      "folderPath": "/",
+                      "name": "Sales Slate Temp @{variables('Environment')}.xlsx",
+                      "body": "@body('Get_Sales_Slate_Content')"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  },
+                  "runtimeConfiguration": {
+                    "contentTransfer": {
+                      "transferMode": "Chunked"
+                    }
+                  }
+                },
+                "Get_Sales_Slate_Content": {
+                  "runAfter": {
+                    "Get_Sales_Slate": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "09dc61b4-1d6f-48f1-a6f4-3fec1fdcf3ab"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_onedriveforbusiness",
+                      "operationId": "GetFileContent",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+                    },
+                    "parameters": {
+                      "id": "@variables('ID')",
+                      "inferContentType": true
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Delete_Row_1": {
+                  "runAfter": {
+                    "Delay": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "8da8cfc6-3292-4704-86cc-480104f5bd78",
+                    "tableId": "Table"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_excelonlinebusiness",
+                      "operationId": "DeleteItem",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness"
+                    },
+                    "parameters": {
+                      "source": "me",
+                      "drive": "b!N8vFdlglNEOnl4buqw4Pukb019C0WZdDtP_kAlBi9RXRi4cE4OkFRZqw23yRdAzl",
+                      "file": "@outputs('Create_Temp_Sales_Slate')?['body/Id']",
+                      "table": "Table",
+                      "idColumn": "Title",
+                      "id": "1"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Delete_Row_2": {
+                  "runAfter": {
+                    "Delete_Row_1": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "0df3a04c-d478-4e38-91ec-ba8294961c56",
+                    "tableId": "Table"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_excelonlinebusiness",
+                      "operationId": "DeleteItem",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness"
+                    },
+                    "parameters": {
+                      "source": "me",
+                      "drive": "b!N8vFdlglNEOnl4buqw4Pukb019C0WZdDtP_kAlBi9RXRi4cE4OkFRZqw23yRdAzl",
+                      "file": "@outputs('Create_Temp_Sales_Slate')?['body/Id']",
+                      "table": "Table",
+                      "idColumn": "Title",
+                      "id": "2"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Compose": {
+                  "runAfter": {
+                    "Select": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "56e7e83c-2be5-4bc3-b6d2-faae42fa9131"
+                  },
+                  "type": "Compose",
+                  "inputs": "@outputs('Get_Sales_Slate_data')?['body/value']"
+                },
+                "Delay_After_Deletion": {
+                  "runAfter": {
+                    "Delete_Row_2": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "5362d632-d2b9-42ab-a3e1-6dc2d19f1dba"
+                  },
+                  "type": "Wait",
+                  "inputs": {
+                    "interval": {
+                      "count": 2,
+                      "unit": "Minute"
+                    }
+                  }
+                },
+                "Get_fully_loaded_Sales_Slate_excel_file": {
+                  "runAfter": {
+                    "Delay_After_Deletion": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "8466562d-5481-4681-9930-d66fed5a558a"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_onedriveforbusiness",
+                      "operationId": "GetFileContent",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+                    },
+                    "parameters": {
+                      "id": "@outputs('Create_Temp_Sales_Slate')?['body/Id']",
+                      "inferContentType": true
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Skip_Token": {
+                  "runAfter": {
+                    "Add_all_Sales_Slate_data_into_excel_file": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "e291a922-06fb-4bc1-a630-8783369869c1"
+                  },
+                  "type": "Compose",
+                  "inputs": "@if\n(\n    empty\n    (\n        outputs('Get_Sales_Slate_data')?['body/@odata.nextLink']\n    ),\n    '',\n    decodeUriComponent\n    (\n        last\n        (\n            split\n            (\n                uriQuery(outputs('Get_Sales_Slate_data')?['body/@odata.nextLink']),\n                'skiptoken='\n            )\n        )\n    )\n)"
+                },
+                "Check_if_Skip_Token_Blank": {
+                  "actions": {},
+                  "runAfter": {
+                    "Skip_Token": [
+                      "Succeeded"
+                    ]
+                  },
+                  "else": {
+                    "actions": {
+                      "Get_Further_Sales_Slate_data_": {
+                        "runAfter": {},
+                        "metadata": {
+                          "operationMetadataId": "cdde5ed2-92c0-4987-86b0-cfbfb71d9535"
+                        },
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "host": {
+                            "connectionName": "shared_commondataserviceforapps_2",
+                            "operationId": "ListRecords",
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                          },
+                          "parameters": {
+                            "entityName": "a3i_serieses",
+                            "$select": "a3i_seriesname,a3i_rightstrackerid,_a3i_producer1_value,_a3i_broadcastplatform_value,_a3i_commissioningbroadcaster2_value,a3i_runtime,a3i_definition,a3i_yearofproduction,a3i_txdate,a3i_txdatestatusnew,a3i_txqtrest,a3i_txyearest,a3i_deliverydate,a3i_deliverydatestatus,a3i_newsynopsis,a3i_seriesid",
+                            "$filter": "(statecode eq 0 and a3i_seriesstatus eq 430830002) and (a3i_Programme/a3i_iptype eq 430830000)",
+                            "$orderby": "a3i_seriesname asc",
+                            "$expand": "a3i_Programme($select=a3i_contenttype,a3i_genre,a3i_websitelink,a3i_localversion)",
+                            "$skiptoken": "@outputs('Skip_Token')"
+                          },
+                          "authentication": "@parameters('$authentication')"
+                        }
+                      },
+                      "Parse_JSON_for_Sales_Slate_Data_Further": {
+                        "runAfter": {
+                          "Get_Further_Sales_Slate_data_": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "e817ef9e-82bf-42b8-a346-6b9ec5a91688"
+                        },
+                        "type": "ParseJson",
+                        "inputs": {
+                          "content": "@outputs('Get_Further_Sales_Slate_data_')?['body/value']",
+                          "schema": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "@@odata.type": {
+                                  "type": "string"
+                                },
+                                "@@odata.id": {
+                                  "type": "string"
+                                },
+                                "@@odata.etag": {
+                                  "type": "string"
+                                },
+                                "@@odata.editLink": {
+                                  "type": "string"
+                                },
+                                "a3i_seriesname": {
+                                  "type": "string"
+                                },
+                                "a3i_rightstrackerid": {
+                                  "type": "string"
+                                },
+                                "_a3i_producer1_value@OData.Community.Display.V1.FormattedValue": {
+                                  "type": "string"
+                                },
+                                "_a3i_producer1_value@Microsoft.Dynamics.CRM.associatednavigationproperty": {
+                                  "type": "string"
+                                },
+                                "_a3i_producer1_value@Microsoft.Dynamics.CRM.lookuplogicalname": {
+                                  "type": "string"
+                                },
+                                "_a3i_producer1_value@odata.type": {
+                                  "type": "string"
+                                },
+                                "_a3i_producer1_value": {
+                                  "type": "string"
+                                },
+                                "_a3i_broadcastplatform_value@OData.Community.Display.V1.FormattedValue": {
+                                  "type": "string"
+                                },
+                                "_a3i_broadcastplatform_value@Microsoft.Dynamics.CRM.associatednavigationproperty": {
+                                  "type": "string"
+                                },
+                                "_a3i_broadcastplatform_value@Microsoft.Dynamics.CRM.lookuplogicalname": {
+                                  "type": "string"
+                                },
+                                "_a3i_broadcastplatform_value@odata.type": {
+                                  "type": "string"
+                                },
+                                "_a3i_broadcastplatform_value": {
+                                  "type": "string"
+                                },
+                                "a3i_runtime": {
+                                  "type": "string"
+                                },
+                                "a3i_definition@OData.Community.Display.V1.FormattedValue": {
+                                  "type": "string"
+                                },
+                                "a3i_definition": {
+                                  "type": "string"
+                                },
+                                "a3i_yearofproduction": {
+                                  "type": "string"
+                                },
+                                "a3i_txdate@OData.Community.Display.V1.FormattedValue": {
+                                  "type": "string"
+                                },
+                                "a3i_txdate@odata.type": {
+                                  "type": "string"
+                                },
+                                "a3i_txdate": {
+                                  "type": "string"
+                                },
+                                "a3i_txdatestatusnew@OData.Community.Display.V1.FormattedValue": {
+                                  "type": "string"
+                                },
+                                "a3i_txdatestatusnew": {
+                                  "type": "integer"
+                                },
+                                "a3i_deliverydate@OData.Community.Display.V1.FormattedValue": {
+                                  "type": "string"
+                                },
+                                "a3i_deliverydate@odata.type": {
+                                  "type": "string"
+                                },
+                                "a3i_deliverydate": {
+                                  "type": "string"
+                                },
+                                "a3i_deliverydatestatus@OData.Community.Display.V1.FormattedValue": {
+                                  "type": "string"
+                                },
+                                "a3i_deliverydatestatus": {},
+                                "a3i_seriesid@odata.type": {
+                                  "type": "string"
+                                },
+                                "a3i_seriesid": {
+                                  "type": "string"
+                                },
+                                "a3i_Producer1@odata.associationLink": {
+                                  "type": "string"
+                                },
+                                "a3i_Producer1@odata.navigationLink": {
+                                  "type": "string"
+                                },
+                                "a3i_BroadcastPlatform@odata.associationLink": {
+                                  "type": "string"
+                                },
+                                "a3i_BroadcastPlatform@odata.navigationLink": {
+                                  "type": "string"
+                                },
+                                "a3i_Programme@odata.associationLink": {
+                                  "type": "string"
+                                },
+                                "a3i_Programme@odata.navigationLink": {
+                                  "type": "string"
+                                },
+                                "a3i_Programme": {
+                                  "type": "object",
+                                  "properties": {
+                                    "@@odata.type": {
+                                      "type": "string"
+                                    },
+                                    "@@odata.id": {
+                                      "type": "string"
+                                    },
+                                    "@@odata.editLink": {
+                                      "type": "string"
+                                    },
+                                    "a3i_contenttype@OData.Community.Display.V1.FormattedValue": {
+                                      "type": "string"
+                                    },
+                                    "a3i_contenttype": {
+                                      "type": "integer"
+                                    },
+                                    "a3i_genre@OData.Community.Display.V1.FormattedValue": {
+                                      "type": "string"
+                                    },
+                                    "a3i_genre": {
+                                      "type": "string"
+                                    },
+                                    "a3i_websitelink": {},
+                                    "a3i_localversion@OData.Community.Display.V1.FormattedValue": {
+                                      "type": "string"
+                                    },
+                                    "a3i_localversion": {},
+                                    "a3i_programmeid@odata.type": {
+                                      "type": "string"
+                                    },
+                                    "a3i_programmeid": {
+                                      "type": "string"
+                                    }
+                                  }
+                                },
+                                "a3i_newsynopsis": {
+                                  "type": "string"
+                                },
+                                "a3i_txqtrest@OData.Community.Display.V1.FormattedValue": {
+                                  "type": "string"
+                                },
+                                "a3i_txqtrest": {
+                                  "type": "integer"
+                                },
+                                "a3i_txyearest@OData.Community.Display.V1.FormattedValue": {
+                                  "type": "string"
+                                },
+                                "a3i_txyearest": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": []
+                            }
+                          }
+                        }
+                      },
+                      "Select_Sales_Slate_data_for_entry_into_file_Further": {
+                        "runAfter": {
+                          "Parse_JSON_for_Sales_Slate_Data_Further": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "4afa2ebc-66ce-4d7b-847b-32e803dc2bb7"
+                        },
+                        "type": "Select",
+                        "inputs": {
+                          "from": "@body('Parse_JSON_for_Sales_Slate_Data_Further')",
+                          "select": {
+                            "Title": "@item()['a3i_seriesname']",
+                            "Available": "",
+                            "Genre": "@item()?['a3i_Programme']?['a3i_genre@OData.Community.Display.V1.FormattedValue']",
+                            "Production Company": "@item()?['_a3i_producer1_value@OData.Community.Display.V1.FormattedValue']",
+                            "Commissioning Broadcaster": "@item()?['_a3i_broadcastplatform_value@OData.Community.Display.V1.FormattedValue']",
+                            "Run Time": "@item()['a3i_runtime']",
+                            "Quality": "@item()?['a3i_definition@OData.Community.Display.V1.FormattedValue']",
+                            "Prod Year": "@item()['a3i_yearofproduction']",
+                            "TX Date": "@item()?['a3i_txdate@OData.Community.Display.V1.FormattedValue']",
+                            "TX Date Status": "@item()?['a3i_txdatestatusnew@OData.Community.Display.V1.FormattedValue']",
+                            "First Episode Due": "@item()?['a3i_deliverydate@OData.Community.Display.V1.FormattedValue']",
+                            "First Episode Delivery Status": "@item()?['a3i_deliverydatestatus@OData.Community.Display.V1.FormattedValue']",
+                            "Synopsis": "@if(empty(item()?['a3i_newsynopsis']), item()?['a3i_Programme']?['a3i_logline'], item()?['a3i_newsynopsis'])",
+                            "Link": "@if(empty(item()?['a3i_Programme']?['a3i_websitelink']),'',concat('=HYPERLINK(\"',item()?['a3i_Programme']?['a3i_websitelink'],'\",\"',item()?['a3i_Programme']?['a3i_websitelink'],'\")'))",
+                            "Rightstracker ID": "@item()?['a3i_rightstrackerid']",
+                            "Local Version": "@item()?['a3i_Programme']?['a3i_localversion@OData.Community.Display.V1.FormattedValue']",
+                            "Content Type": "@item()?['a3i_Programme']?['a3i_contenttype@OData.Community.Display.V1.FormattedValue']"
+                          }
+                        }
+                      },
+                      "Add_all_Sales_Slate_data_into_excel_file_further": {
+                        "foreach": "@body('Select_Sales_Slate_data_for_entry_into_file_Further')",
+                        "actions": {
+                          "Add_a_row_into_a_table_further": {
+                            "runAfter": {},
+                            "metadata": {
+                              "operationMetadataId": "f4b87157-13c3-4323-a2b2-0b60680d60a4",
+                              "tableId": "Table"
+                            },
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "host": {
+                                "connectionName": "shared_excelonlinebusiness",
+                                "operationId": "AddRowV2",
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_excelonlinebusiness"
+                              },
+                              "parameters": {
+                                "source": "me",
+                                "drive": "b!N8vFdlglNEOnl4buqw4Pukb019C0WZdDtP_kAlBi9RXRi4cE4OkFRZqw23yRdAzl",
+                                "file": "@outputs('Create_Temp_Sales_Slate')?['body/Id']",
+                                "table": "Table",
+                                "item": "@items('Add_all_Sales_Slate_data_into_excel_file_further')"
+                              },
+                              "authentication": "@parameters('$authentication')"
+                            }
+                          }
+                        },
+                        "runAfter": {
+                          "Select_Sales_Slate_data_for_entry_into_file_Further": [
+                            "Succeeded"
+                          ]
+                        },
+                        "metadata": {
+                          "operationMetadataId": "124a7577-fc31-4b53-90df-5438b9be1055"
+                        },
+                        "type": "Foreach"
+                      }
+                    }
+                  },
+                  "expression": {
+                    "equals": [
+                      "@outputs('Skip_Token')",
+                      ""
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "7e1dbeb0-1367-4705-8404-54f74c090c51"
+                  },
+                  "type": "If"
+                },
+                "Select_Sales_Slate_data_for_entry_into_file": {
+                  "runAfter": {
+                    "Parse_JSON_for_Sales_Slate_Data": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "4afa2ebc-66ce-4d7b-847b-32e803dc2bb7"
+                  },
+                  "type": "Select",
+                  "inputs": {
+                    "from": "@body('Parse_JSON_for_Sales_Slate_Data')",
+                    "select": {
+                      "Title": "@item()['a3i_seriesname']",
+                      "Available": "",
+                      "Genre": "@item()?['a3i_Programme']?['a3i_genre@OData.Community.Display.V1.FormattedValue']",
+                      "Production Company": "@item()?['_a3i_producer1_value@OData.Community.Display.V1.FormattedValue']",
+                      "Commissioning Broadcaster": "@item()?['_a3i_broadcastplatform_value@OData.Community.Display.V1.FormattedValue']",
+                      "Run Time": "@item()['a3i_runtime']",
+                      "Quality": "@item()?['a3i_definition@OData.Community.Display.V1.FormattedValue']",
+                      "Prod Year": "@item()['a3i_yearofproduction']",
+                      "TX Date": "@item()?['a3i_txdate@OData.Community.Display.V1.FormattedValue']",
+                      "TX Date Status": "@item()?['a3i_txdatestatusnew@OData.Community.Display.V1.FormattedValue']",
+                      "First Episode Due": "@item()?['a3i_deliverydate@OData.Community.Display.V1.FormattedValue']",
+                      "First Episode Delivery Status": "@item()?['a3i_deliverydatestatus@OData.Community.Display.V1.FormattedValue']",
+                      "Synopsis": "@if(empty(item()?['a3i_newsynopsis']), item()?['a3i_Programme']?['a3i_logline'], item()?['a3i_newsynopsis'])",
+                      "Link": "@if(empty(item()?['a3i_Programme']?['a3i_websitelink']),'',concat('=HYPERLINK(\"',item()?['a3i_Programme']?['a3i_websitelink'],'\",\"',item()?['a3i_Programme']?['a3i_websitelink'],'\")'))",
+                      "Rightstracker ID": "@item()?['a3i_rightstrackerid']",
+                      "Local Version": "@item()?['a3i_Programme']?['a3i_localversion@OData.Community.Display.V1.FormattedValue']",
+                      "Content Type": "@item()?['a3i_Programme']?['a3i_contenttype@OData.Community.Display.V1.FormattedValue']"
+                    }
+                  }
+                },
+                "Select": {
+                  "runAfter": {
+                    "Get_Sales_Slate_data": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f7437abb-6f1a-4205-9960-ddc2f28aedc9"
+                  },
+                  "type": "Select",
+                  "inputs": {
+                    "from": "@body('Get_Sales_Slate_data')?['value']",
+                    "select": {
+                      "Synopsis": "@if(empty(item()?['a3i_newsynopsis']), item()?['a3i_Programme']?['a3i_logline'], item()?['a3i_newsynopsis'])"
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "Archive_Past_Files": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e5189cab-3246-4c1c-b68e-755d23683d42"
+              },
+              "type": "Scope"
+            },
+            "Clear_Data": {
+              "actions": {
+                "Delay_15_Minutes": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "8bbfdade-e8c2-48d1-9606-a4186bb03c8f"
+                  },
+                  "type": "Wait",
+                  "inputs": {
+                    "interval": {
+                      "count": 15,
+                      "unit": "Minute"
+                    }
+                  }
+                },
+                "Delete_file": {
+                  "runAfter": {
+                    "Delay_15_Minutes": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "870c6a95-0f42-45b7-a16f-ebca40ef1629"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_onedriveforbusiness",
+                      "operationId": "DeleteFile",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_onedriveforbusiness"
+                    },
+                    "parameters": {
+                      "id": "@outputs('Create_Temp_Sales_Slate')?['body/Id']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                }
+              },
+              "runAfter": {
+                "Sales_Slate": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "62427faa-226c-49db-b254-6eeda4cdcd87"
+              },
+              "type": "Scope"
+            },
+            "Archive_Past_Files": {
+              "actions": {
+                "Get_Folder": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "2c7e7db3-55a1-4682-b048-b6ca81d5ec70"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_sharepointonline",
+                      "operationId": "GetFolderMetadataByPath",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                    },
+                    "parameters": {
+                      "dataset": "@variables('Site')",
+                      "path": "/Shared Documents/General/@{variables('Folder')}"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "List_Folder": {
+                  "runAfter": {
+                    "Get_Folder": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "0569ea04-feee-42f6-aa74-8b9bad7541b8"
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "host": {
+                      "connectionName": "shared_sharepointonline",
+                      "operationId": "ListFolder",
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                    },
+                    "parameters": {
+                      "dataset": "@variables('Site')",
+                      "id": "@outputs('Get_Folder')?['body/Id']"
+                    },
+                    "authentication": "@parameters('$authentication')"
+                  }
+                },
+                "Loop_Archive": {
+                  "foreach": "@body('List_Folder')",
+                  "actions": {
+                    "Check_if_Archive_Folder": {
+                      "actions": {},
+                      "runAfter": {},
+                      "else": {
+                        "actions": {
+                          "Move_file": {
+                            "runAfter": {},
+                            "metadata": {
+                              "operationMetadataId": "86149324-63d8-4992-b3d5-44dc74eaf508"
+                            },
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "host": {
+                                "connectionName": "shared_sharepointonline",
+                                "operationId": "MoveFileAsync",
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                              },
+                              "parameters": {
+                                "dataset": "@variables('Site')",
+                                "parameters/sourceFileId": "@item()?['Id']",
+                                "parameters/destinationDataset": "@variables('Site')",
+                                "parameters/destinationFolderPath": "/Shared Documents/General/@{variables('Folder')}/Archive",
+                                "parameters/nameConflictBehavior": 1
+                              },
+                              "authentication": "@parameters('$authentication')"
+                            }
+                          }
+                        }
+                      },
+                      "expression": {
+                        "equals": [
+                          "@item()?['Name']",
+                          "Archive"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "caf6bf93-0f3c-4be6-8f1b-abdac84925f7"
+                      },
+                      "type": "If"
+                    }
+                  },
+                  "runAfter": {
+                    "List_Folder": [
+                      "Succeeded"
+                    ]
+                  },
+                  "metadata": {
+                    "operationMetadataId": "e779ab53-c0bb-4880-a8f0-0685ac2cd02a"
+                  },
+                  "type": "Foreach"
+                }
+              },
+              "runAfter": {
+                "Variables": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "e8814c91-be7a-4162-984d-fb5284950508"
+              },
+              "type": "Scope"
+            }
+          },
+          "runAfter": {
+            "Initialize_Error_Email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d65780d6-7caf-4a30-9e99-3d756c7c6cb3"
+          },
+          "type": "Scope"
+        },
+        "Success": {
+          "actions": {
+            "Set_Power_Automate_Log_Succeeded": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "9b36fdb0-5b0a-421c-870d-e4ec5cd46356"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "recordId": "@outputs('Create_Power_Automate_Log')?['body/a3i_powerautomatelogid']",
+                  "item/statuscode": 3
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Scope": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ae41e8e4-4f2d-42df-9993-ed9fae649846"
+          },
+          "type": "Scope"
+        },
+        "Failure": {
+          "actions": {
+            "Send_Failure_Email": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "080dc842-25e1-4172-a2f6-0357ff4b18a8"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_office365",
+                  "operationId": "SendEmailV2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                },
+                "parameters": {
+                  "emailMessage/To": "@variables('ErrorEmail')",
+                  "emailMessage/Subject": "@{variables('Environment')} - Series. Export Sales Slate - Failed to Create Sales Slate",
+                  "emailMessage/Body": "<p>Access the <a href=\"@{variables('PALog')}\">Power Automate Log</a>&nbsp;</p>",
+                  "emailMessage/Importance": "Normal"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_Power_Automate_Log_Failed": {
+              "runAfter": {
+                "Send_Failure_Email": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "629c8c53-1834-4c35-9d07-9462a992842b"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps_2",
+                  "operationId": "UpdateRecord",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "entityName": "a3i_powerautomatelogs",
+                  "recordId": "@outputs('Create_Power_Automate_Log')?['body/a3i_powerautomatelogid']",
+                  "item/statuscode": 3
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Scope": [
+              "Failed",
+              "Skipped",
+              "TimedOut"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "7679575f-f9f7-4fde-a0fa-3d9c97ee20f4"
+          },
+          "type": "Scope"
+        },
+        "Initialize_Site": {
+          "runAfter": {
+            "Initialize_ID": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9e9303f6-0116-4b0b-923d-2af6616c9977"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Site",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_Folder": {
+          "runAfter": {
+            "Initialize_Site": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6e6f0473-edab-4e24-baaf-db4f8c5ed86c"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Folder",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_Power_Automate_Log": {
+          "runAfter": {
+            "Initialize_Folder": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "dcde5108-bfcb-4728-9804-a37a063d5cc7"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "PALog",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_ID": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "e32e0d79-7f11-49d7-889e-cf6d90cfa432"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ID",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_Environment": {
+          "runAfter": {
+            "Initialize_Power_Automate_Log": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "0947ae52-61f8-4682-9a6c-f6b253b87435"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Environment",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Initialize_Error_Email": {
+          "runAfter": {
+            "Initialize_Environment": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a4a163a5-1cd6-49ad-acac-e038cada07e4"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ErrorEmail",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}
