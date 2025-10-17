@@ -1,0 +1,234 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_microsoftforms": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedmicrosoftforms_6077c"
+        },
+        "api": {
+          "name": "shared_microsoftforms"
+        }
+      },
+      "shared_sharepointonline": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedsharepointonline_b7aba"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_new_response_is_submitted": {
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "190f624d-2c00-405e-8fbe-13291478612d"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_microsoftforms",
+              "operationId": "CreateFormWebhook",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftforms"
+            },
+            "parameters": {
+              "form_id": "pMzyl4mYdk6zYJ17Vi32hQFv0Q4iUuhGuA0k6o0cbjJUMU9GOEJPT1Q2SkVYTkZMNEUxTkFJMUVFNy4u"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_response_details": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "fb053a58-4355-4aee-99ce-b03aa6c8cfa4"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_microsoftforms",
+              "operationId": "GetFormResponseById",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftforms"
+            },
+            "parameters": {
+              "form_id": "pMzyl4mYdk6zYJ17Vi32hQFv0Q4iUuhGuA0k6o0cbjJUMU9GOEJPT1Q2SkVYTkZMNEUxTkFJMUVFNy4u",
+              "response_id": "@triggerOutputs()?['body/resourceData/responseId']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose_Unwanted_Characters": {
+          "runAfter": {
+            "Get_response_details": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4625357e-abef-4c8d-8dae-a915363eaedb"
+          },
+          "type": "Compose",
+          "inputs": [
+            "[",
+            "]"
+          ]
+        },
+        "Compose_String_to_Modify": {
+          "runAfter": {
+            "Compose_Unwanted_Characters": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "ebd042bd-c58c-43f2-9e59-3d59a51e4e32"
+          },
+          "type": "Compose",
+          "inputs": "@outputs('Get_response_details')?['body/r4e4f2c2c19784d32801d3a93b6211eef']"
+        },
+        "Select": {
+          "runAfter": {
+            "Compose_String_to_Modify": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e828f9c6-1557-4aa7-8394-4cb858a07807"
+          },
+          "type": "Select",
+          "inputs": {
+            "from": "@range(0, length(outputs('Compose_String_to_Modify')))\r\n",
+            "select": "@if(contains(outputs('Compose_Unwanted_Characters'), substring(outputs('Compose_String_to_Modify'),item(), 1)),'',substring(outputs('Compose_String_to_Modify'),item(), 1))"
+          }
+        },
+        "Compose": {
+          "runAfter": {
+            "Select": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5ad5e8e2-556d-4720-9eee-f4f9a582f16f"
+          },
+          "type": "Compose",
+          "inputs": "@join(body('Select'),'')"
+        },
+        "Condition": {
+          "actions": {
+            "Compose_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "592a7fac-221f-432b-8e9d-57478551cc36"
+              },
+              "type": "Compose",
+              "inputs": "@replace(outputs('Compose'),',',variables('NewLine'))"
+            },
+            "Create_item": {
+              "runAfter": {
+                "Compose_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "8ca1e6d6-82b6-417e-9d34-2f8288f437ab"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_sharepointonline",
+                  "operationId": "PostItem",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                },
+                "parameters": {
+                  "dataset": "https://all3media.sharepoint.com/sites/A3I-HumanResources",
+                  "table": "2fc74389-0d7a-4d31-9185-607679378894",
+                  "item/Name/Claims": "@outputs('Get_response_details')?['body/responder']",
+                  "item/Event": "@outputs('Compose_2')",
+                  "item/Invited_x003f_": false
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_variable": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Create_item_2": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "8ca1e6d6-82b6-417e-9d34-2f8288f437ab"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_sharepointonline",
+                    "operationId": "PostItem",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                  },
+                  "parameters": {
+                    "dataset": "https://all3media.sharepoint.com/sites/A3I-HumanResources",
+                    "table": "2fc74389-0d7a-4d31-9185-607679378894",
+                    "item/Name/Claims": "@outputs('Get_response_details')?['body/responder']",
+                    "item/Event": "@outputs('Compose')",
+                    "item/Invited_x003f_": false
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              }
+            }
+          },
+          "expression": {
+            "contains": [
+              "@outputs('Compose')",
+              ","
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4aaed410-4691-4acc-8f29-b97bf733e84b"
+          },
+          "type": "If"
+        },
+        "Initialize_variable": {
+          "runAfter": {
+            "Compose": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "e2775acf-0f64-416d-ba06-7f9db9d211a3"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "NewLine",
+                "type": "string",
+                "value": "\n"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

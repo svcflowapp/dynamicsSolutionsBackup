@@ -1,0 +1,318 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_microsoftforms": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedmicrosoftforms_6077c"
+        },
+        "api": {
+          "name": "shared_microsoftforms"
+        }
+      },
+      "shared_sharepointonline": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedsharepointonline_b7aba"
+        },
+        "api": {
+          "name": "shared_sharepointonline"
+        }
+      },
+      "shared_office365": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedoffice365_53f2c"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "a3i_sharedcommondataserviceforapps_61216"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_a_new_response_is_submitted": {
+          "splitOn": "@triggerOutputs()?['body/value']",
+          "metadata": {
+            "operationMetadataId": "190f624d-2c00-405e-8fbe-13291478612d"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_microsoftforms",
+              "operationId": "CreateFormWebhook",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftforms"
+            },
+            "parameters": {
+              "form_id": "pMzyl4mYdk6zYJ17Vi32hQFv0Q4iUuhGuA0k6o0cbjJUNkFTQUUwVDBXOUdWMTVKVTVRTERPSzdaSy4u"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Get_response_details": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "fb053a58-4355-4aee-99ce-b03aa6c8cfa4"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_microsoftforms",
+              "operationId": "GetFormResponseById",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftforms"
+            },
+            "parameters": {
+              "form_id": "pMzyl4mYdk6zYJ17Vi32hQFv0Q4iUuhGuA0k6o0cbjJUNkFTQUUwVDBXOUdWMTVKVTVRTERPSzdaSy4u",
+              "response_id": "@triggerOutputs()?['body/resourceData/responseId']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Create_item": {
+          "runAfter": {
+            "Compose": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "8ca1e6d6-82b6-417e-9d34-2f8288f437ab"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_sharepointonline",
+              "operationId": "PostItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+            },
+            "parameters": {
+              "dataset": "https://all3media.sharepoint.com/sites/A3I-HumanResources",
+              "table": "06f598a7-7cda-4d6c-988c-dcca3caf08a5",
+              "item/Name/Claims": "@outputs('Get_response_details')?['body/responder']",
+              "item/LearningLunch": "@outputs('Compose')",
+              "item/Invited_x003f_": false
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Compose": {
+          "runAfter": {
+            "Initialize_variable_-_Error_Environment": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "05121d65-a143-460c-be38-198a8f6f9a9c"
+          },
+          "type": "Compose",
+          "inputs": "@replace(replace(outputs('Get_response_details')?['body/r819ce8d63f8647ebbd384114e68f8201'],'[',''),']','')"
+        },
+        "Initialize_variable_-_Error_Email": {
+          "runAfter": {
+            "Get_response_details": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9ae68698-c496-49d7-8acd-16aa3c31614a"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ErrorEmail",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Send_an_email_(V2)": {
+          "runAfter": {
+            "Scope_-_Error_Environment": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fe9a173e-76e4-4858-bbeb-1b78a6a7a622"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "@variables('ErrorEmail')",
+              "emailMessage/Subject": "Intranet. Learning Lunch Sign Up - @{variables('ErrorEnvironment')}",
+              "emailMessage/Body": "<p>Hi,<br>\n<br>\nThe cloud flow has failed. It is designed to take information from a Microsoft Form and deposit it into a SharePoint list<br>\n<br>\n<strong>Form</strong>:<br>\nLive - <a href=\"https://forms.office.com/Pages/DesignPageV2.aspx?lang=en-GB&amp;subpage=design&amp;FormId=pMzyl4mYdk6zYJ17Vi32hQFv0Q4iUuhGuA0k6o0cbjJUNkFTQUUwVDBXOUdWMTVKVTVRTERPSzdaSy4u\">Link</a><br>\nTest - <a href=\"https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&amp;lang=en-GB&amp;subpage=design&amp;id=pMzyl4mYdk6zYJ17Vi32hQFv0Q4iUuhGuA0k6o0cbjJUNkhNS1Y3SkFNVlY5WDNNS1JDM0ZXNjBISC4u\">Link</a><br>\nDev - <a href=\"https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&amp;lang=en-GB&amp;subpage=design&amp;id=pMzyl4mYdk6zYJ17Vi32hQFv0Q4iUuhGuA0k6o0cbjJUN0tIQk5LWFVVVFY4TVgxQ0lGRkNBQzlBMy4u\">Link</a><br>\n<br>\n<strong>List:<br>\n</strong>Live - <a href=\"https://all3media.sharepoint.com/sites/A3I-HumanResources/Lists/Learning%20Lunch%20Sign%20Ups/AllItems.aspx\">Link</a><br>\nTest - <a href=\"https://all3media.sharepoint.com/sites/A3I-HumanResources/Lists/Learning%20Lunch%20Sign%20Ups%20TEST/AllItems.aspx\">Link</a><br>\nDev - <a href=\"https://all3media.sharepoint.com/sites/A3I-HumanResources/Lists/Learning%20Lunch%20Sign%20Ups%20DEV/AllItems.aspx\">Link</a><br>\n<br>\n<strong>Cloud Flow:</strong><br>\nLive - <br>\nTest -<br>\nDev - <a href=\"https://make.powerautomate.com/environments/f98c243e-288b-4602-8642-e4c84c1b5fdb/solutions/~preferred/flows/228cbc57-ba3d-65df-7e84-76115d740633/details?v3=false\">Link</a><br>\n<br>\nThanks,<br>\nFail Bot&nbsp;</p>",
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Scope_-_Error_Email": {
+          "actions": {
+            "List_rows_from_selected_environment": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "ec6dc80b-963b-416a-8eac-fa91692dd1ea"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecordsWithOrganization",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "organization": "current",
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'ErrorEmail'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each": {
+              "foreach": "@outputs('List_rows_from_selected_environment')?['body/value']",
+              "actions": {
+                "Set_variable": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "1e77bf6a-c34f-4a87-9f92-425251a8983f"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "ErrorEmail",
+                    "value": "@items('Apply_to_each')?['a3i_value']"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_from_selected_environment": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "19192aea-4acb-469e-bd79-159501623b57"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Create_item": [
+              "Failed",
+              "Skipped",
+              "TimedOut"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c0160cc4-1258-4973-ba92-6e6933a33ba3"
+          },
+          "type": "Scope"
+        },
+        "Scope_-_Error_Environment": {
+          "actions": {
+            "List_rows_from_selected_environment_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "2c0113b7-f0bb-4763-a6ec-089976c9be16"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_commondataserviceforapps",
+                  "operationId": "ListRecordsWithOrganization",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                },
+                "parameters": {
+                  "organization": "current",
+                  "entityName": "a3i_flowvariableses",
+                  "$filter": "a3i_name eq 'Environment'"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Apply_to_each_2": {
+              "foreach": "@outputs('List_rows_from_selected_environment_2')?['body/value']",
+              "actions": {
+                "Set_variable_2": {
+                  "runAfter": {},
+                  "metadata": {
+                    "operationMetadataId": "0cbcb8b0-9075-4c7c-b88c-d020b2e2a42c"
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "ErrorEnvironment",
+                    "value": "@items('Apply_to_each_2')?['a3i_value']"
+                  }
+                }
+              },
+              "runAfter": {
+                "List_rows_from_selected_environment_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "869067a4-62f2-43bc-989b-6deb022fc1ed"
+              },
+              "type": "Foreach"
+            }
+          },
+          "runAfter": {
+            "Scope_-_Error_Email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9f016cbf-452b-4cca-a7d3-29eebf743ba0"
+          },
+          "type": "Scope"
+        },
+        "Initialize_variable_-_Error_Environment": {
+          "runAfter": {
+            "Initialize_variable_-_Error_Email": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "1ac4abab-2293-44ad-a6d3-52698cfee88a"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ErrorEnvironment",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

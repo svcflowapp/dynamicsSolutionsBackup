@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.25094.157" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25094.157" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.25094.00157">
+  <SolutionManifest>
+    <UniqueName>Intranet</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Intranet " languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Solution for Intranet (People Hub) specific elements - such as workflows. " languagecode="1033" />
+    </Descriptions>
+    <Version>1.0.0.3</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>all3media</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="All3Media" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>a3i</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>43083</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="29" id="{0a006d1f-d7ce-ed11-a7c6-002248c6bd64}" behavior="0" />
+      <RootComponent type="29" id="{35407da2-c3de-ed11-a7c6-002248c6bdfe}" behavior="0" />
+      <RootComponent type="29" id="{80604048-abcf-ed11-a7c6-002248c6b834}" behavior="0" />
+      <RootComponent type="29" id="{bc0614c5-c2c8-ed11-b596-6045bd0d5792}" behavior="0" />
+      <RootComponent type="29" id="{e468fd02-c7c8-ed11-b596-6045bd0d5792}" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="a3i_flowvariables" displayName="Flow Variables" solution="Active" />
+        <Dependent type="29" displayName="Intranet. Learning Lunch Sign Up" id="{bc0614c5-c2c8-ed11-b596-6045bd0d5792}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="a3i_sharedcommondataserviceforapps_61216" solution="Active" id.connectionreferencelogicalname="a3i_sharedcommondataserviceforapps_61216" />
+        <Dependent type="29" displayName="Intranet. Learning Lunch Sign Up" id="{bc0614c5-c2c8-ed11-b596-6045bd0d5792}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="a3i_sharedoffice365_48fa5" solution="Active" id.connectionreferencelogicalname="a3i_sharedoffice365_48fa5" />
+        <Dependent type="29" displayName="Intranet. Training Sign Up" id="{35407da2-c3de-ed11-a7c6-002248c6bdfe}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="a3i_sharedsharepointonline_b7aba" solution="Active" id.connectionreferencelogicalname="a3i_sharedsharepointonline_b7aba" />
+        <Dependent type="29" displayName="Intranet. Staff Event Sign Up" id="{0a006d1f-d7ce-ed11-a7c6-002248c6bd64}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="a3i_sharedsharepointonline_b7aba" solution="Active" id.connectionreferencelogicalname="a3i_sharedsharepointonline_b7aba" />
+        <Dependent type="29" displayName="Intranet. Feedback" id="{80604048-abcf-ed11-a7c6-002248c6b834}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="a3i_sharedsharepointonline_b7aba" solution="Active" id.connectionreferencelogicalname="a3i_sharedsharepointonline_b7aba" />
+        <Dependent type="29" displayName="Intranet. Learning Lunch Sign Up" id="{bc0614c5-c2c8-ed11-b596-6045bd0d5792}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="a3i_sharedsharepointonline_b7aba" solution="Active" id.connectionreferencelogicalname="a3i_sharedsharepointonline_b7aba" />
+        <Dependent type="29" displayName="Intranet. Buddy Sign Up" id="{e468fd02-c7c8-ed11-b596-6045bd0d5792}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_sharedoffice365users_44c48" solution="Active" id.connectionreferencelogicalname="new_sharedoffice365users_44c48" />
+        <Dependent type="29" displayName="Intranet. Training Sign Up" id="{35407da2-c3de-ed11-a7c6-002248c6bdfe}" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>
